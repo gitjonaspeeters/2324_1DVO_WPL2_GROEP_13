@@ -74,7 +74,7 @@ export default {
 }
 #navigation-container{
     margin: 2rem auto 0 auto;
-    width: 115rem;
+    width: 110rem;
     max-width: 100%;
 }
 nav{
