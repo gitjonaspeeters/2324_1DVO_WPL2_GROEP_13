@@ -50,8 +50,17 @@
             </div>
         </nav>
     </div>
+    <!-- searchbar -->
+    <div id="search-container">
+        <div id="search">
+            <div id="search-inhoud">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Search...">
+                <i class="fa-solid fa-chevron-up"></i>
+            </div>
+        </div>
+    </div>
 </template>
-
 <script>
 export default {
     name: "NavigationBar"
@@ -64,7 +73,7 @@ export default {
     /* border: 1px solid red; */
 }
 #navigation-container{
-    margin: 1rem auto 0 auto;
+    margin: 2rem auto 0 auto;
     width: 115rem;
     max-width: 100%;
 }
@@ -143,6 +152,32 @@ nav p{
     align-items: center;
     text-decoration: none;
 }
-
+/* searchbar */
+#search-container{
+    margin: 1rem auto 0 auto;
+    max-width: 100%;
+}
+#search{
+    display: flex;
+    justify-content: center;
+}
+#search-inhoud{
+    background-color: #D9D9D9;
+    height: 0.1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    border-radius: 10rem;
+    gap: 1rem;
+}
+#search-inhoud i {
+    font-size: 1.3rem;
+}
+#search-inhoud input {
+    background-color: #D9D9D9;
+    border: none;
+    font-size: 1.2rem;
+}
 
 </style>
