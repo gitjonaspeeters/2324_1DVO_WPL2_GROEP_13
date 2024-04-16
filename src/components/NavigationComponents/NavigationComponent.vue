@@ -1,5 +1,55 @@
 <template>
-    <p>Dit is nav</p>
+    <div id="navigation-container">
+        <nav>
+            <div id="navigation-left">
+                <img src="../../../assets/Comfortmeubel_1.png">
+            </div>
+            <div id="navigation-main">
+                <div class="navigation-main-section">
+                    <a href="#">
+                        <i class="fa-solid fa-book"></i>
+                        <p>Catogorieen</p></a>
+                </div>
+                <div class="navigation-main-section">
+                    <a href="#">
+                        <i class="fa-solid fa-house"></i>
+                        <p>Ruimtes</p></a>
+                </div>
+                <div class="navigation-main-section">
+                    <a href="#">
+                        <i class="fa-solid fa-layer-group"></i>
+                        <p>Alle items</p></a>
+                </div>
+                <div class="navigation-main-section">
+                    <a href="#">
+                        <i class="fa-solid fa-users"></i>
+                        <p>OVer Ons</p>
+                    </a>
+                </div>
+                <div class="navigation-main-search">
+                    <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+                </div>
+            </div>
+            <div id="navigation-right">
+                <div class="navigation-right-sextion">
+                    <a href="#">
+                        <i class="fa-solid fa-user"></i>
+                    </a>
+                    
+                </div>
+                <div class="navigation-right-sextion">
+                    <a href="#">
+                        <i class="fa-solid fa-heart"></i>
+                    </a>
+                </div>
+                <div id="navigation-right-sextion">
+                    <a href="#">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </a>             
+                </div>
+            </div>
+        </nav>
+    </div>
 </template>
 
 <script>
@@ -7,3 +57,92 @@ export default {
     name: "NavigationBar"
 }
 </script>
+<style scoped>
+*{
+    margin: 0;
+    padding: 0;
+    /* border: 1px solid red; */
+}
+#navigation-container{
+    margin: 1rem auto 0 auto;
+    width: 115rem;
+    max-width: 100%;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#navigation-left {
+    display: flex;
+    align-items: center;
+}
+#navigation-left img{
+    width: 10rem;
+}
+#navigation-main{
+    height: 0.1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    background-color: #D9D9D9;
+    border-radius: 10rem;
+    gap: 1rem;
+}
+.navigation-main-section{
+    padding-right: 1rem;
+    display: flex;
+    justify-content: center;
+    border-right: 1px solid #B8B8B8;
+}
+.navigation-main-section a{
+    display: flex;
+    color: #000000;
+    align-items: center;
+    text-decoration: none;
+    gap: 1rem;
+}
+.navigation-main-search{
+    display: flex;
+    align-items: center;
+}
+.navigation-main-search a{
+    color: #000000;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+nav i{
+    font-size: 1.3rem;
+}
+nav p{
+    font-size: 1.2rem;
+}
+/* recherkant navigatie */
+#navigation-right{
+    height: 0.1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    background-color: #D9D9D9;
+    border-radius: 10rem;
+    gap: 1rem;
+}
+.navigation-right-sextion{
+    padding-right: 1rem;
+    display: flex;
+    justify-content: center;
+    border-right: 1px solid #B8B8B8;
+}
+
+.navigation-right-sextion a, #navigation-right-sextion a{
+    display: flex;
+    color: #000000;
+    align-items: center;
+    text-decoration: none;
+}
+
+
+</style>
