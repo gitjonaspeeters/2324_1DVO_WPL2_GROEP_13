@@ -1,9 +1,16 @@
 <template>
-  <div class="main-banner" id="main-banner">
-    <div class="imgban" id="imgban4"></div>
-    <div class="imgban" id="imgban3"></div>
-    <div class="imgban" id="imgban2"></div>
-    <div class="imgban" id="imgban1"></div>
+  <div>
+
+    <div v-for="(slide, index) in slides" :key="index" v-show="index === currentSlideIndex">
+      <img :src="slide.imageUrl" style="width:100%">
+      <div style="text-align:center">
+        <span class="dot" v-for="(slide, index) in slides" :key="index" @click="currentSlide(index)"
+          :class="{ 'active': index === currentSlideIndex }"></span>
+      </div>
+
+    </div>
+
+
   </div>
 </template>
 
@@ -11,88 +18,62 @@
 export default {
   data() {
     return {
-      bannerStatus: 0, // Start from first image (index 0)
-      bannerTimer: 4000,
-      images: [
-        { id: "imgban1",},
-        { id: "imgban2", imageUrl: "../assets/Untitled-2.png" },
-        { id: "imgban3", imageUrl: "../assets/Untitled-3.png" },
-        { id: "imgban4", imageUrl: "../assets/Untitled-4.png" },
-      ],
+      currentSlideIndex: 0,
+      slides: [
+        { imageUrl: "../../assets/Untitled-1.png", caption: "Caption Text" },
+        { imageUrl: "../../assets/Untitled-2.png", caption: "Caption Two" },
+        { imageUrl: "../../assets/Untitled-3.png", caption: "Caption Three" },
+      ]
     };
   },
-  computed: {
-    currentImage() {
-      return this.images[this.bannerStatus];
-    },
-  },
   mounted() {
-    this.intervalId = setInterval(this.advanceBanner, this.bannerTimer);
-  },
-  beforeDestroy() {
-    clearInterval(this.intervalId);
+    this.showSlides();
   },
   methods: {
-    advanceBanner() {
-      this.bannerStatus = (this.bannerStatus + 1) % this.images.length; // Loop through images
+    showSlides() {
+      setInterval(() => {
+        this.currentSlideIndex = (this.currentSlideIndex + 1) % this.slides.length;
+      }, 4000);
     },
-  },
+    currentSlide(index) {
+      this.currentSlideIndex = index;
+    }
+  }
 };
 </script>
 
 <style scoped>
-*{
-  margin: 0px;
-  padding: 0px;
+body {
+  font-family: Verdana, sans-serif;
 }
-body{
-  background-color: lightgoldenrodyellow;
+
+img {
+  vertical-align: middle;
 }
-.main-banner{
-  margin: 0 auto;
-  width: 100%;
-  height: 508px;
-  background-color: white;
-  overflow: hidden;
-  position: relative;
-}
-.main-banner .imgban{
-  width: 100%;
+
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
   position: absolute;
-  transition: all ease-in-out 500ms;
-  -webkit-transition: all ease-in-out 500ms;
-  -moz-transition: all ease-in-out 500ms;
-  -o-transition: all ease-in-out 500ms;
-}
-#main-banner{
-  display: flex;
-  height: 508px;
-  background-color: gray;
-}
-.main-banner #imgban1{
-  background-image: url(../assets/Untitled-1.png);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
 }
 
-.main-banner #imgban2{
-  background-image: url(../assets/Untitled-2.png);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
 }
 
-.main-banner #imgban3{
-  background-image: url(./../assets/Untitled-3.png);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+.active {
+  background-color: #717171;
 }
-.main-banner #imgban4{
-  background-image: url(./../assets/Untitled-4.png);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
+
 </style>
