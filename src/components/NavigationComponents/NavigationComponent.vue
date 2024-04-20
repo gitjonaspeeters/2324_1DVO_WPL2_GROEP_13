@@ -27,7 +27,7 @@
                     </a>
                 </div>
                 <div class="navigation-main-search">
-                    <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+                    <a href="#" @click="toggleSearch"><i class="fa-solid fa-magnifying-glass"></i></a>
                 </div>
             </div>
             <div id="navigation-right">
@@ -50,11 +50,31 @@
             </div>
         </nav>
     </div>
+    <!-- searchbar -->
+    <div id="search-container" v-if="searchVisible">
+        <div id="search">
+            <div id="search-inhoud">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Search...">
+                <i class="fa-solid fa-chevron-up" @click="toggleSearch"></i>
+            </div>
+        </div>
+    </div>
 </template>
-
 <script>
 export default {
-    name: "NavigationBar"
+    name: "NavigationBar",
+    data(){
+        return {
+            searchVisible: false
+        }
+    },
+    methods: {
+        toggleSearch(){
+            console.log("er word geklikt");
+            this.searchVisible = !this.searchVisible;
+        }
+    }
 }
 </script>
 <style scoped>
@@ -63,11 +83,16 @@ export default {
     padding: 0;
     /* border: 1px solid red; */
 }
-#navigation-container{
-    margin: 1rem auto 0 auto;
-    width: 115rem;
-    max-width: 100%;
+#navigation-container {
+    position: fixed;
+    top: 2.5rem;
+    z-index: 2;
+    width: 95%; 
+    left: 0;
+    right: 0;
+    margin: 0 auto;
 }
+
 nav{
     display: flex;
     justify-content: space-between;
@@ -143,6 +168,38 @@ nav p{
     align-items: center;
     text-decoration: none;
 }
-
+/* searchbar */
+#search-container {
+    position: fixed;
+    top: 7rem;
+    left: 0;
+    z-index: 3;
+    width: 100%;
+}
+#search{
+    display: flex;
+    justify-content: center;
+}
+#search-inhoud{
+    background-color: #D9D9D9;
+    height: 0.1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    border-radius: 10rem;
+    gap: 1rem;
+}
+#search-inhoud i {
+    font-size: 1.3rem;
+}
+#search-inhoud i:hover{
+    cursor: pointer;
+}
+#search-inhoud input {
+    background-color: #D9D9D9;
+    border: none;
+    font-size: 1.2rem;
+}
 
 </style>
