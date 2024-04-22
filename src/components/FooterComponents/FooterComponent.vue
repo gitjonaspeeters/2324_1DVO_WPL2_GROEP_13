@@ -35,7 +35,7 @@ export default {
 }
 #footer-container{
     margin-top: calc(100% - 120px);
-    background-color: #D9D9D9;
+    background-color: #485059;
 }
 footer{
     width: 95%; 
@@ -47,22 +47,23 @@ footer{
 }
 #footer-left a{
     text-decoration: none;
-    color: #000000;
+    color: #ffffff;
     font-size: 2.5rem;
 }
 #footer-left a:hover{
-    color: #888787;
+    color: #000000;
 }
 #footer-main{
     text-align: center;
     
 }
 #footer-main a{
-    color: #000000;
+    color: #ffffff;
     text-decoration: none;
 }
 #footer-main p{
     font-size: 1.2rem;
+    color: #ffffff;
     font-family: "Century Gothic", sans-serif;
 }
 #footer-main p a{
@@ -74,7 +75,7 @@ footer{
 }
 #footer-right i{
     font-size: 2rem;
-    color: #000000;
+    color: #ffffff;
     margin-left: 0.4rem;
 }
 </style>
