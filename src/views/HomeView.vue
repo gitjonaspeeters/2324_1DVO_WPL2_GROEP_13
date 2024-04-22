@@ -42,10 +42,9 @@ export default {
 };
 </script>
 
+
 <style scoped>
-body {
-  font-family: Verdana, sans-serif;
-}
+
 
 img {
   vertical-align: middle;
