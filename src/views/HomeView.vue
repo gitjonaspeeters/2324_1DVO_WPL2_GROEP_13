@@ -2,6 +2,7 @@
   <div id="head-container">
     <div v-for="(slide, index) in slides" :key="index" v-show="index === currentSlideIndex">
       <img :src="slide.imageUrl" style="width:100%">
+  
       <div style="text-align:center">
         <div class="head-content">
           <h1>{{ slide.headTitle }}</h1>
