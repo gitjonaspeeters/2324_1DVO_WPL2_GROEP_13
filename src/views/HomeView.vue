@@ -3,6 +3,7 @@
 
     <div v-for="(slide, index) in slides" :key="index" v-show="index === currentSlideIndex">
       <img :src="slide.imageUrl" style="width:100%">
+  
       <div style="text-align:center">
         <span class="dot" v-for="(slide, index) in slides" :key="index" @click="currentSlide(index)"
           :class="{ 'active': index === currentSlideIndex }"></span>
@@ -20,9 +21,9 @@ export default {
     return {
       currentSlideIndex: 0,
       slides: [
-        { imageUrl: "../../assets/Untitled-1.png", caption: "Caption Text" },
-        { imageUrl: "../../assets/Untitled-2.png", caption: "Caption Two" },
-        { imageUrl: "../../assets/Untitled-3.png", caption: "Caption Three" },
+        { imageUrl: "/src/assets/Untitled-1.png", caption: "Caption Text" },
+        { imageUrl: "/src/assets/Untitled-2.png", caption: "Caption Two" },
+        { imageUrl: "/src/assets/Untitled-3.png", caption: "Caption Three" },
       ]
     };
   },
