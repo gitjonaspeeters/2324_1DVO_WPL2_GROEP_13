@@ -32,10 +32,9 @@
             </div>
             <div id="navigation-right">
                 <div class="navigation-right-sextion">
-                    <a href="#">
+                    <a href="/login">
                         <i class="fa-solid fa-user"></i>
                     </a>
-                    
                 </div>
                 <div class="navigation-right-sextion">
                     <a href="#">
