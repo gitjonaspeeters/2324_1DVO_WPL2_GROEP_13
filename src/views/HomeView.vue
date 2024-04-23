@@ -28,9 +28,15 @@
               </div>
           </div>
           <div class="product-content">
-            <p>{{ product.productCategorie }}</p>
-            <h1>{{ product.productTitle }}</h1>
-            <p>{{ product.productPrice }}</p>
+            <div class="product-content-left">
+              <p>{{ product.productCategorie }}</p>
+              <h1>{{ product.productTitle }}</h1>
+              <h2>{{ product.productPrice }}</h2>
+            </div>
+            <div class="product-content-right">
+              <i class="fa-solid fa-cart-shopping"></i>
+              <i class="fa-solid fa-plus"></i>
+            </div>
           </div>
         </div>
       </div>
@@ -44,14 +50,14 @@ export default {
     return {
       currentSlideIndex: 0,
       slides: [
-        { imageUrl: "../../assets/Banner1.png", headTitle: "Nieuwe collectie", headText: "Probeer nu onze nieuwe winter collectie!", headButton: "Bekijk"},
-        { imageUrl: "../../assets/Banner1.png", headTitle: "Nieuwe collectie" , headText: "Probeer nu onze nieuwe winter collectie!", headButton: "Bekijk"},
-        { imageUrl: "../../assets/Banner1.png", headTitle: "Nieuwe collectie", headText: "Probeer nu onze nieuwe winter collectie!", headButton: "Bekijk" },
+        { imageUrl: "src/assets/Banner1.png", headTitle: "Nieuwe collectie", headText: "Probeer nu onze nieuwe winter collectie!", headButton: "Bekijk"},
+        { imageUrl: "src/assets/Banner1.png", headTitle: "Nieuwe collectie" , headText: "Probeer nu onze nieuwe winter collectie!", headButton: "Bekijk"},
+        { imageUrl: "src/assets/Banner1.png", headTitle: "Nieuwe collectie", headText: "Probeer nu onze nieuwe winter collectie!", headButton: "Bekijk" },
       ],
       products: [
-        { imageUrl: "../../assets/TiffanySlaapkamer.png" , productTitle: "Tiffany Slaapkamer", productCategorie: "Slaapkamer" , productPrice: "€879,00" },
-        { imageUrl: "../../assets/AndiceKaiWoonkamer.png", productTitle: "Tiffany Slaapkamer", productCategorie: "Slaapkamer" , productPrice: "€879,00" },
-        { imageUrl: "../../assets/LuncieBoucleStoel.png", productTitle: "Tiffany Slaapkamer", productCategorie: "Slaapkamer" , productPrice: "€879,00" }
+        { imageUrl: "src/assets/TiffanySlaapkamer.png" , productTitle: "Tiffany Slaapkamer", productCategorie: "Slaapkamer" , productPrice: "€879,00" },
+        { imageUrl: "src/assets/AndiceKaiWoonkamer.png", productTitle: "Tiffany Slaapkamer", productCategorie: "Slaapkamer" , productPrice: "€879,00" },
+        { imageUrl: "src/assets/LuncieBoucleStoel.png", productTitle: "Tiffany Slaapkamer", productCategorie: "Slaapkamer" , productPrice: "€879,00" }
       ]
     };
   },
@@ -106,7 +112,7 @@ img {
   display: inline-block;
   transition: background-color 0.6s ease;
   position: relative;
-  bottom: 14rem;
+  bottom: 12rem;
 }
 
 .active {
@@ -180,16 +186,39 @@ img {
 }
 .product-like {
   position: absolute;
-  top: 1rem;
-  right: 3px; 
+  top: 1.5rem;
+  right: 5px; 
   background-color: #485059;
-  padding: 0.3rem 0.5rem;
-  border-radius: 5px;
-  
+  padding: 0.1rem 0.5rem;
 }
 .product-like a{
   text-decoration: none;
   color:  #ffffff;
+  font-size: 2rem;
+}
+.product-content{
+  display: flex;
+  justify-content: space-between;
+  font-family: "Century Gothic", sans-serif;
+}
+.product-content-left p{
+  color: #888787;
+  font-size: 1.2rem;
+  margin-left: 0.5rem;
+  margin-top: 0.5rem;
+}
+.product-content-left h1{
+  font-size: 1.8rem;
+  margin-top: -1rem;
+  margin-left: 0.5rem;
+  font-weight: 500;
+}
+.product-content-left h2{
+  color: #000000;
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-left: 0.5rem;
+  margin-top: -0.5rem;
 }
 </style>
 

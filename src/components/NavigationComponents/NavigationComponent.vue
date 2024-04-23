@@ -104,6 +104,7 @@ nav{
 }
 #navigation-left img{
     width: 10rem;
+    color: #ffffff;
 }
 #navigation-main{
     height: 0.1rem;
