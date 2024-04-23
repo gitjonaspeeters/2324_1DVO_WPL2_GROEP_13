@@ -96,13 +96,13 @@ export default {
       currentSlideIndex: 0,
       slides: [
         { imageUrl: "/src/assets/Banner1.png", headTitle: "Nieuwe collectie", headText: "Probeer nu onze nieuwe winter collectie!", headButton: "Bekijk" },
-        { imageUrl: "/src/assets/Banner1.png", headTitle: "Nieuwe collectie", headText: "Probeer nu onze nieuwe winter collectie!", headButton: "Bekijk" },
-        { imageUrl: "/src/assets/Banner1.png", headTitle: "Nieuwe collectie", headText: "Probeer nu onze nieuwe winter collectie!", headButton: "Bekijk" },
+        { imageUrl: "/src/assets/Banner2.png", headTitle: "Nieuwe collectie", headText: "Probeer nu onze nieuwe winter collectie!", headButton: "Bekijk" },
+        { imageUrl: "/src/assets/Banner3.png", headTitle: "Nieuwe collectie", headText: "Probeer nu onze nieuwe winter collectie!", headButton: "Bekijk" },
       ],
       products: [
-        { imageUrl: "/src/assets/TiffanySlaapkamer.png", productTitle: "Tiffany Slaapkamer", productCategorie: "Slaapkamer", productPrice: "€879,00" },
+        { imageUrl: "/src/assets/TiffanySlaapkamer.png", productTitle: "Tiffany", productCategorie: "Slaapkamer", productPrice: "€879,00" },
         { imageUrl: "/src/assets/AndiceKaiWoonkamer.png", productTitle: "Andice Kai", productCategorie: "Woonkamer", productPrice: "€1.189,00" },
-        { imageUrl: "/src/assets/LuncieBoucleStoel.png", productTitle: "Stoel Lucie Bouclé", productCategorie: "Stoelen", productPrice: "€99,00" }
+        { imageUrl: "/src/assets/LuncieBoucleStoel.png", productTitle: "Lucie Bouclé", productCategorie: "Stoelen", productPrice: "€99,00" }
       ]
     };
   },
@@ -460,12 +460,97 @@ margin-left: 0.5rem;
   font-family: Georgia, sans-serif;
   color: #485059;
   background-color: #D9CAC5;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+  border-radius: 3rem 0 0 3rem;
+  font-size: 2.8rem;
+  height: calc(50% - 1rem);
+  width: 100%;
+  display: flex;
+  justify-content: left;
+  padding-left: 10%;
+  align-items: center;
+  margin-top: 3rem;
+  max-height: calc(50% - 1rem); 
+}
+.slogan-content-right{
+  width: calc(50%);
+  z-index: 2;
+  
+}
+.slogan-content-right img{
+  width: 100%;
+}
+@media screen and (max-width: 1584px) {
+  #best-text h1 {
+  font-size:  2.5rem;
+}
+#best-text p {
+  font-size: 1.5rem;
+}
+  .slogan-left-text {
+    font-size: 2.5rem;
+  }
+}
+@media screen and (max-width: 1448px){
+  #best-text h1 {
+  font-size:  1.8rem;
+}
+#best-text p {
+  font-size: 1.3rem;
+}
+  .slogan-left-text {
+    font-size: 1.8rem;
+  } 
+}
+@media screen and (max-width: 1382px){
+  .head-content {
+  bottom: 10rem;
+  left: 4rem;
+
+  max-width: 15rem;
+}
+  .head-content h1 {
+  font-size: 2rem;
 }
 
+.head-content h2 {
+  font-size: 1rem;
+}
 
+.head-content button {
+  font-size: 1rem;
+}
+  .product-content-left p{
+font-size: 1rem;
+}
+
+.product-content-left h1{
+font-size: 1.2rem;
+}
+
+.product-content-left h2{
+font-size: 1rem;
+}
+  .product-like {
+  padding: 0.20rem 0.3rem;
+
+}
+
+.product-like a{
+font-size: 1.2rem;
+}
+
+  .product-content-right a{
+   padding: 0.45rem 0 0.3rem 0;
+}
+
+.product-content-right i{
+  font-size: 1.2rem;
+  padding: 0 0.15rem 0 0.25rem;
+}
+}
 
 @media screen and (max-width: 1000px) {
-  
   #backbtn, #nextbtn {
     display: none;
   }
