@@ -1,4 +1,5 @@
 <template>
+  <body>
   <div class="middle">
     <div class="Container-Return-Home">
       <a href="">Home/categorie</a>
@@ -6,17 +7,15 @@
     <div class="container-First">
       <div class="container-Closet">
         <div class="Closet">
-          <h1 class="hover-effect">Kasten</h1>
+          <h1 class="hover-effect" id="hover-Closet">Kasten</h1>
         </div>
       </div>
       <div class="container-Chair-Desk">
         <div class="Chair">
           <h1 class="hover-effect">Stoelen</h1>
-
         </div>
         <div class="Desk">
           <h1 class="hover-effect">Bureaus</h1>
-
         </div>
       </div>
     </div>
@@ -39,13 +38,17 @@
         </div>
       </div>
     </div>
-
   </div>
+  </body>
 </template>
 <script>
 
 </script>
 <style scoped>
+body {
+  background: #D9CAC5;
+}
+
 .Container-Return-Home {
   margin-bottom: -15px;
 }
@@ -77,6 +80,7 @@ a {
 }
 
 .Home-Accessories {
+  background-image: url("src/assets/HomeAccessories.png");
   background-color: grey;
   width: 1300px;
   height: 316px;
@@ -100,7 +104,10 @@ a {
 }
 
 .Sofa {
-  background-color: grey;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("src/assets/salon-kilimanjaro.jpg");
+  /*background-color: grey;*/
   width: 755px;
   height: 656px;
   margin: 15px 5px 5px 5px;
@@ -109,7 +116,10 @@ a {
 }
 
 .Bed {
-  background-color: grey;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("src/assets/Rectangle 295.png");
+  /*background-color: grey;*/
   width: 513px;
   height: 656px;
   margin: 15px;
@@ -118,7 +128,10 @@ a {
 }
 
 .Chair {
-  background-color: grey;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("src/assets/stoelen.png");
+  /*background-color: grey;*/
   width: 584px;
   height: 316px;
   margin: 15px 5px 5px 5px;
@@ -127,7 +140,10 @@ a {
 }
 
 .Desk {
-  background-color: grey;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("src/assets/Rousseau209741-220bureaustoel20chaise20de20bureau20Hippa201.jpg");
+  /*background-color: grey;*/
   width: 584px;
   height: 316px;
   margin: 15px 5px 5px 5px;
@@ -135,8 +151,24 @@ a {
   align-items: flex-end;
 }
 
+image {
+  background-repeat: no-repeat;
+}
+
+.Sofa image {
+  background-repeat: no-repeat;
+}
+
+.Desk image {
+  width: 584px;
+  height: 316px;
+}
+
 .Closet {
-  background-color: grey;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("src/assets/Kasten.png");
+  /*background-color: grey;*/
   width: 682px;
   height: 656px;
   margin: 15px;
@@ -150,15 +182,19 @@ a {
 }
 
 .hover-effect {
-  background: grey;
 }
 
 .hover-effect:hover {
-  background: lightblue;
+  background: white;
+  opacity: 60%;
   color: black;
   transition: width 1s ease-in-out 1s, height 1s ease-in-out, ease-in-out 1s;
   width: 650px;
   padding: 15px;
+}
+
+#hover-Closet:hover {
+
 }
 
 @media screen and (max-width: 1200px) {
@@ -270,15 +306,15 @@ a {
   }
 
   .hover-effect {
-    background: grey;
   }
 
   .hover-effect:hover {
-    background: lightblue;
+    background: white;
     color: black;
     transition: width 1s ease-in-out 1s, height 1s ease-in-out, ease-in-out 1s;
     width: 650px;
     padding: 15px;
+
   }
 }
 
@@ -312,7 +348,9 @@ a {
   }
 
   .Home-Accessories {
-    background-color: grey;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /*background-color: grey;*/
     width: 402px;
     height: 385px;
     margin: 15px;
@@ -337,7 +375,9 @@ a {
   }
 
   .Sofa {
-    background-color: grey;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /*background-color: grey;*/
     width: 402px;
     height: 385px;
     margin: 15px;
@@ -346,7 +386,8 @@ a {
   }
 
   .Bed {
-    background-color: grey;
+    background-image: url("src/assets/Bedden VD.png");
+    /*background-color: grey;*/
     width: 402px;
     height: 385px;
     margin: 15px;
@@ -355,7 +396,7 @@ a {
   }
 
   .Chair {
-    background-color: grey;
+    /*background-color: grey;*/
     width: 402px;
     height: 385px;
     margin: 15px;
@@ -364,7 +405,7 @@ a {
   }
 
   .Desk {
-    background-color: grey;
+    /*background-color: grey;*/
     width: 402px;
     height: 385px;
     margin: 10px 15px 15px 15px;
@@ -373,7 +414,7 @@ a {
   }
 
   .Closet {
-    background-color: grey;
+    /*background-color: grey;*/
     width: 402px;
     height: 385px;
     margin: 15px;
@@ -391,11 +432,11 @@ a {
   }
 
   .hover-effect {
-    background: grey;
+
   }
 
   .hover-effect:hover {
-    background: lightblue;
+    background: white;
     color: black;
     transition: width 1s ease-in-out 1s, height 1s ease-in-out, ease-in-out 1s;
     width: 650px;
