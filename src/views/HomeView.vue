@@ -460,41 +460,23 @@ margin-left: 0.5rem;
   font-family: Georgia, sans-serif;
   color: #485059;
   background-color: #D9CAC5;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
-  border-radius: 3rem 0 0 3rem;
-  font-size: 2.8rem;
-  height: calc(50% - 1rem);
-  width: 100%;
-  display: flex;
-  justify-content: left;
-  padding-left: 10%;
-  align-items: center;
-  margin-top: 3rem;
-  max-height: calc(50% - 1rem); 
 }
 
-.slogan-content-right{
-  width: calc(50%);
-  z-index: 2;
+
+
+@media screen and (max-width: 1000px) {
   
-}
-.slogan-content-right img{
-  width: 100%;
-}
+  #backbtn, #nextbtn {
+    display: none;
+  }
 
-@media screen and(max-width: 1388px){
+  .gallery {
+    width: 300px;
+  }
 
-}
-@media screen and (max-width: 700px) {
-  #container {
-    display: flex;
-  } 
-  .gallery,
-.gallery1 {
-  width: 1100px;
-  display: block;
-  overflow-x: scroll;
-}
+  .gallery div{
+    width: 200%;
+  }
   .slogan-container{
     display: block;
     padding: 1rem;
