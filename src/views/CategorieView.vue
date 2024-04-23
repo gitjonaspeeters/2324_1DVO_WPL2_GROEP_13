@@ -7,7 +7,7 @@
     <div class="container-First">
       <div class="container-Closet">
         <div class="Closet">
-          <a class="hover-effect" id="hover-Closet">Kasten</a>
+          <a class="hover-effect">Kasten</a>
         </div>
       </div>
       <div class="container-Chair-Desk">
