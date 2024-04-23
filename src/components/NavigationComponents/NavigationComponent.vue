@@ -73,6 +73,7 @@ export default {
         toggleSearch(){
             console.log("er word geklikt");
             this.searchVisible = !this.searchVisible;
+            event.preventDefault();
         }
     }
 }
