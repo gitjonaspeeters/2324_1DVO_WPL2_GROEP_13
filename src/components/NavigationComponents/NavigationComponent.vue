@@ -2,7 +2,7 @@
     <div id="navigation-container">
         <nav>
             <div id="navigation-left">
-                <img src="@/assets/Comfortmeubel_1.png">
+                <img src="@/assets/Comfortmeubel wit.svg">
             </div>
             <div id="navigation-main">
                 <div class="navigation-main-section">
