@@ -400,19 +400,28 @@ img {
 
 
 
-@media screen and (max-width: 1000px) {
-  #container {
-    
-    display: flex;
 
+@media screen and (max-width: 700px) {
+  
 
+  #backbtn, #nextbtn {
+    display: none;
   }
+
+  .gallery {
+    width: 300px;
+  }
+
+  .gallery div{
+    width: 200%;
+  }
+
+  
 
   
   .gallery,
 .gallery1 {
   width: 1100px;
-  display: block;
   overflow-x: scroll;
 }
   
