@@ -5,6 +5,9 @@ import MainView from "../views/Main.vue";
 import TeampageView from "../views/TeampageView.vue";
 import CategorieView from "../views/CategorieView.vue";
 import RuimtesView from "../views/RuimtesView.vue";
+import LoginView from "@/views/LoginView.vue";
+
+
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -38,6 +41,11 @@ const router = createRouter({
       name: "teampage",
       component: TeampageView,
     },
+    {
+      path: "/login",
+      name: "login",
+      component: LoginView,
+    }
   ],
 });
 

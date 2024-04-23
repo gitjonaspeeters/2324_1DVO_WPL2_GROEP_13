@@ -2,13 +2,13 @@
     <div id="navigation-container">
         <nav>
             <div id="navigation-left">
-                <img src="../../../assets/Comfortmeubel_1.png">
+                <img src="@/assets/Comfortmeubel wit.svg">
             </div>
             <div id="navigation-main">
                 <div class="navigation-main-section">
                     <a href="/categorie">
                         <i class="fa-solid fa-book"></i>
-                        <p>Catogorieen</p></a>
+                        <p>Categorieen</p></a>
                 </div>
                 <div class="navigation-main-section">
                     <a href="/ruimtes">
@@ -23,7 +23,7 @@
                 <div class="navigation-main-section">
                     <a href="#">
                         <i class="fa-solid fa-users"></i>
-                        <p>OVer Ons</p>
+                        <p>Over Ons</p>
                     </a>
                 </div>
                 <div class="navigation-main-search">
@@ -32,10 +32,9 @@
             </div>
             <div id="navigation-right">
                 <div class="navigation-right-sextion">
-                    <a href="#">
+                    <a href="/login">
                         <i class="fa-solid fa-user"></i>
                     </a>
-                    
                 </div>
                 <div class="navigation-right-sextion">
                     <a href="#">
@@ -111,7 +110,7 @@ nav{
     justify-content: space-between;
     align-items: center;
     padding: 1.5rem;
-    background-color: #D9D9D9;
+    background-color: #ffffff;
     border-radius: 10rem;
     gap: 1rem;
 }
@@ -123,7 +122,7 @@ nav{
 }
 .navigation-main-section a{
     display: flex;
-    color: #000000;
+    color: #4C4C4C;
     align-items: center;
     text-decoration: none;
     gap: 1rem;
@@ -133,7 +132,7 @@ nav{
     align-items: center;
 }
 .navigation-main-search a{
-    color: #000000;
+    color: #4C4C4C;
     display: flex;
     align-items: center;
     text-decoration: none;
@@ -151,7 +150,7 @@ nav p{
     justify-content: space-between;
     align-items: center;
     padding: 1.5rem;
-    background-color: #D9D9D9;
+    background-color: #ffffff;
     border-radius: 10rem;
     gap: 1rem;
 }
@@ -164,7 +163,7 @@ nav p{
 
 .navigation-right-sextion a, #navigation-right-sextion a{
     display: flex;
-    color: #000000;
+    color: #4C4C4C;
     align-items: center;
     text-decoration: none;
 }
@@ -181,7 +180,8 @@ nav p{
     justify-content: center;
 }
 #search-inhoud{
-    background-color: #D9D9D9;
+    background-color: #ffffff;
+    color: #4C4C4C;
     height: 0.1rem;
     display: flex;
     justify-content: space-between;
@@ -197,7 +197,7 @@ nav p{
     cursor: pointer;
 }
 #search-inhoud input {
-    background-color: #D9D9D9;
+    background-color: #ffffff;
     border: none;
     font-size: 1.2rem;
 }

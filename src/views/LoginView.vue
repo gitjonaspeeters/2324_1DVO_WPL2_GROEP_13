@@ -1,0 +1,170 @@
+<script setup>
+
+</script>
+
+<template>
+  <body>
+  <div id="inlog-page">
+    <div id="left-side">
+      <div id="login-form-kader">
+        <div id="form-kader">
+          <h1>Login</h1>
+          <form id="form" action="">
+            <label for="email"></label>
+            <input type="email" id="email" name="email" placeholder="Email">
+            <label for="password"></label>
+            <input type="password" id="password" name="password" placeholder="Wactwoord">
+            <p id="login">Inloggen</p>
+            <p id="rigister">Rigistreren</p>
+            <div id="remember-button">
+              <section></section><p>Onthouden</p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div id="right-side">
+      <div id="image">
+      </div>
+    </div>
+  </div>
+  </body>
+
+
+</template>
+
+<style scoped>
+* {
+  background-color: #D9CAC5;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Century Gothic", sans-serif;
+}
+
+#inlog-page {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+}
+
+#right-side {
+  display: flex;
+  width: 35vw;
+  align-items: center;
+  justify-content: center;
+}
+
+#left-side {
+  display: flex;
+  width: 50vw;
+  align-items: center;
+  justify-content: center;
+}
+
+#login-form-kader {
+  display: flex;
+}
+
+#form-kader {
+  background-color: #ffffff;
+  width: 416px;
+  height: 480px;
+  border-radius: 40px;
+  padding: 20px 40px 41px 43px;
+}
+
+#form-kader h1 {
+  color: #A67C63;
+  background-color: transparent;
+  margin-bottom: 2rem;
+}
+
+#form {
+  display: flex;
+  flex-direction: column;
+  background-color: #D2D2D2;
+  width: 333px;
+  height: 335px;
+  border-radius: 40px;
+}
+#remember-button {
+  display: flex;
+  background-color: transparent;
+  justify-content: flex-start;
+  margin-top: 0.25rem;
+  margin-left: 5rem;
+}
+#remember-button section {
+  width: 10px;
+  height: 10px;
+  border-radius: 1px;
+  border: 0.5px solid darkblue;
+  margin-right: 5px;
+  align-self: center;
+  mso-border-shadow: yes;
+}
+#remember-button p {
+  background-color: transparent;
+  font-size: 0.75rem;
+}
+#image {
+  width: 100rem;
+  height: 35rem;
+  background-image: url("src/assets/henk.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#form input {
+  width: 215px;
+  height: 36px;
+  background-color: darkblue;
+  color: #ffffff;
+  border-radius: 12px;
+}
+
+#form #email {
+  margin: 5rem auto 0.25rem;
+  background-color: #485059;
+  color: #ffffff;
+}
+
+#form #password {
+  margin: 22px auto;
+  background-color: #485059;
+  color: #ffffff;
+}
+
+#email::placeholder, #password::placeholder {
+  color: #FFFFFF;
+  padding-left: 1rem;
+}
+
+#login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 175px;
+  height: 37.23px;
+  border-radius: 20px;
+  background-color: #A67C63;;
+  color: #ffffff;
+  margin: 10px auto;
+}
+
+#rigister {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 175px;
+  height: 37.23px;
+  border-radius: 20px;
+  background-color: transparent;
+  border: 1px solid #000;
+  color: #000;
+  margin: 0.25rem auto;
+}
+
+</style>
