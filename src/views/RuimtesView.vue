@@ -7,27 +7,27 @@
       <div class="container-First">
         <div class="container-Hallway-Desk">
           <div class="Hallway">
-            <h1 class="hover-effect">Hal</h1>
+            <a class="hover-effect">Hal</a>
           </div>
           <div class="Desk">
-            <h1 class="hover-effect">Bureaus</h1>
+            <a class="hover-effect">Bureaus</a>
           </div>
         </div>
         <div class="container-Livingroom">
           <div class="Livingroom">
-            <h1 class="hover-effect">Woonkamer</h1>
+            <a class="hover-effect">Woonkamer</a>
           </div>
         </div>
       </div>
       <div class="container-Second">
         <div class="container-Bedroom">
           <div class="Bedroom">
-            <h1 class="hover-effect">Slaapkamer</h1>
+            <a class="hover-effect">Slaapkamer</a>
           </div>
         </div>
         <div class="container-Diningroom">
           <div class="Diningroom">
-            <h1 class="hover-effect">Eetkamer</h1>
+            <a class="hover-effect">Eetkamer</a>
           </div>
         </div>
       </div>
@@ -46,17 +46,18 @@
   .Container-Return-Home {
     margin-bottom: -15px;
   }
-  
-  h1 {
-    padding: 15px;
-    color: white;
-  }
-  
-  a {
-    margin: 30px;
+  .Container-Return-Home a{
     text-decoration: none;
     color: #A67C63;
+    font-size: 1rem;
+  }
   
+  
+  a {
+    padding: 15px;
+    color: white;
+     font-size: 2rem;
+    text-decoration: none;
   }
   
   .middle {
@@ -93,6 +94,14 @@
     display: flex;
     align-items: flex-end;
   }
+  .Hallway:hover a{
+    background: white;
+    opacity: 60%;
+    color: black;
+    transition: width 1s ease-in-out 1s, height 1s ease-in-out, ease-in-out 1.5s;
+    width: 650px;
+    padding: 15px;
+  }
   
   .Diningroom {
     background-size: cover;
@@ -105,7 +114,14 @@
     display: flex;
     align-items: flex-end;
   }
-  
+  .Diningroom:hover a{
+    background: white;
+    opacity: 60%;
+    color: black;
+    transition: width 1s ease-in-out 1s, height 1s ease-in-out, ease-in-out 1.5s;
+    width: 650px;
+    padding: 15px;
+  }
   .Livingroom {
     background-size: cover;
     background-repeat: no-repeat;
@@ -117,14 +133,15 @@
     display: flex;
     align-items: flex-end;
   }
-  .chair:hover h1{
+  .Livingroom:hover a{
     background: white;
     opacity: 60%;
     color: black;
-    transition: width 1s ease-in-out 1s, height 1s ease-in-out, ease-in-out 1s;
-    width: 650px;
+    transition: width 1s ease-in-out 1s, height 1s ease-in-out, ease-in-out 1.5s;
+    width: 734px;
     padding: 15px;
   }
+  
   .Desk {
     background-size: cover;
     background-repeat: no-repeat;
@@ -136,12 +153,15 @@
     display: flex;
     align-items: flex-end;
   }
-  
-  image {
-    background-repeat: no-repeat;
+  .Desk:hover a{
+    background: white;
+    opacity: 60%;
+    color: black;
+    transition: width 1s ease-in-out 1s, height 1s ease-in-out, ease-in-out 1.5s;
+    width: 515px;
+    padding: 15px;
   }
-  
-  .Sofa image {
+  image {
     background-repeat: no-repeat;
   }
   
@@ -161,41 +181,35 @@
     display: flex;
     align-items: flex-end;
   }
+  .Bedroom:hover a{
+    background: white;
+    opacity: 60%;
+    color: black;
+    transition: width 1s ease-in-out 1s, height 1s ease-in-out, ease-in-out 1.5s;
+    width: 773px;
+    padding: 15px;
+  }
   
   .container-First {
     display: flex;
     margin: 15px;
   }
   
-  .hover-effect {
-  }
-  
-  .hover-effect:hover {
-    background: white;
-    opacity: 60%;
-    color: black;
-    transition: width 1s ease-in-out 1s, height 1s ease-in-out, ease-in-out 1s;
-    width: 650px;
-    padding: 15px;
-  }
   
   
   @media screen and (max-width: 1200px) {
-    .Container-Return-Home {
-      margin-bottom: -15px;
-      margin-left: 35px;
-    }
-  
-    h1 {
-      padding: 15px;
-      color: white;
-    }
-  
-    a {
-      margin: -5px;
+    .Container-Return-Home a{
       text-decoration: none;
       color: #A67C63;
+      font-size: 1rem;
+    }
   
+  
+    a {
+      padding: 15px;
+      color: white;
+      font-size: 2rem;
+      text-decoration: none;
     }
   
     .middle {
@@ -208,10 +222,18 @@
   
     .Hallway {
       width: 755px;
-      height: 316px;
+      height: 656px;
       margin: 15px;
       display: flex;
       align-items: flex-end;
+    }
+    .Hallway:hover a{
+      background: white;
+      opacity: 60%;
+      color: black;
+      transition: width 1s ease-in-out 1s, height 1s ease-in-out, ease-in-out 1.5s;
+      width: 773px;
+      padding: 15px;
     }
   
     .container-Second {
@@ -226,44 +248,57 @@
       flex-direction: column;
     }
   
-    .container-Closet {
-      display: flex;
-    }
   
     .Livingroom {
       background-color: grey;
       width: 755px;
-      height: 316px;
+      height: 656px;
       margin: -5px 15px 5px 15px;
       display: flex;
       align-items: flex-end;
+    }
+    .Livingroom:hover a{
+      background: white;
+      opacity: 60%;
+      color: black;
+      transition: width 1s ease-in-out 1s, height 1s ease-in-out, ease-in-out 1.5s;
+      width: 773px;
+      padding: 15px;
     }
   
     .Bedroom {
       background-color: grey;
       width: 755px;
-      height: 316px;
+      height: 656px;
       margin: 15px;
       display: flex;
       align-items: flex-end;
     }
-  
-    .Chair {
-      background-color: grey;
-      width: 755px;
-      height: 316px;
-      margin: 5px 15px 5px 15px;
-      display: flex;
-      align-items: flex-end;
+    .Bedroom:hover a{
+      background: white;
+      opacity: 60%;
+      color: black;
+      transition: width 1s ease-in-out 1s, height 1s ease-in-out, ease-in-out 1.5s;
+      width: 773px;
+      padding: 15px;
     }
+  
   
     .Desk {
       background-color: grey;
       width: 755px;
       height: 656px;
-      margin: 5px 15px 5px 15px;
+      margin: 5px 15px 15px 15px;
       display: flex;
       align-items: flex-end;
+    }
+    .Desk:hover a{
+      background: white;
+      opacity: 60%;
+      color: black;
+      transition: width 1s ease-in-out 1s, height 1s ease-in-out, ease-in-out 1.5s;
+      width: 773px;
+      padding: 15px;
     }
   
     .Diningroom {
@@ -274,6 +309,14 @@
       display: flex;
       align-items: flex-end;
     }
+    .Diningroom:hover a{
+      background: white;
+      opacity: 60%;
+      color: black;
+      transition: width 1s ease-in-out 1s, height 1s ease-in-out, ease-in-out 1.5s;
+      width: 773px;
+      padding: 15px;
+    }
   
     .container-First {
       display: flex;
@@ -282,35 +325,21 @@
       flex-wrap: wrap;
       align-content: center;
     }
-  
-    .hover-effect {
-    }
-  
-    .hover-effect:hover {
-      background: white;
-      color: black;
-      transition: width 1s ease-in-out 1s, height 1s ease-in-out, ease-in-out 1s;
-      width: 650px;
-      padding: 15px;
-  
-    }
   }
   
   @media screen and (max-width: 600px) {
-    .Container-Return-Home {
-      margin-bottom: -15px;
-      margin-left: 0px;
-    }
-  
-    h1 {
-      padding: 15px;
-      color: white;
-    }
-  
-    a {
-      margin: 30px;
+    .Container-Return-Home a{
       text-decoration: none;
       color: #A67C63;
+      font-size: 1rem;
+    }
+  
+  
+    a {
+      padding: 15px;
+      color: white;
+      font-size: 2rem;
+      text-decoration: none;
     }
   
     .middle {
@@ -320,10 +349,7 @@
       margin-bottom: -300px;
     }
   
-    .container-Last {
-      display: flex;
-      margin: 15px;
-    }
+  
   
     .Hallway {
       background-size: cover;
@@ -334,6 +360,14 @@
       margin: 15px;
       display: flex;
       align-items: flex-end;
+    }
+    .Hallway:hover a{
+      background: white;
+      opacity: 60%;
+      color: black;
+      transition: width 1s ease-in-out 1s, height 1s ease-in-out, ease-in-out 1.5s;
+      width: 773px;
+      padding: 15px;
     }
   
     .container-Second {
@@ -348,10 +382,6 @@
       flex-direction: column;
     }
   
-    .container-Closet {
-      display: flex;
-    }
-  
     .Diningroom {
       background-size: cover;
       background-repeat: no-repeat;
@@ -362,7 +392,14 @@
       display: flex;
       align-items: flex-end;
     }
-  
+    .Diningroom:hover a{
+      background: white;
+      opacity: 60%;
+      color: black;
+      transition: width 1s ease-in-out 1s, height 1s ease-in-out, ease-in-out 1.5s;
+      width: 773px;
+      padding: 15px;
+    }
     .Bedroom {
       background-image: url("src/assets/Bedden VD.png");
       /*background-color: grey;*/
@@ -372,7 +409,14 @@
       display: flex;
       align-items: flex-end;
     }
-  
+    .Bedroom:hover a{
+      background: white;
+      opacity: 60%;
+      color: black;
+      transition: width 1s ease-in-out 1s, height 1s ease-in-out, ease-in-out 1.5s;
+      width: 773px;
+      padding: 15px;
+    }
     .Livingroom {
       /*background-color: grey;*/
       width: 402px;
@@ -381,7 +425,14 @@
       display: flex;
       align-items: flex-end;
     }
-  
+    .Livingroom:hover a{
+      background: white;
+      opacity: 60%;
+      color: black;
+      transition: width 1s ease-in-out 1s, height 1s ease-in-out, ease-in-out 1.5s;
+      width: 773px;
+      padding: 15px;
+    }
     .Desk {
       /*background-color: grey;*/
       width: 402px;
@@ -390,14 +441,13 @@
       display: flex;
       align-items: flex-end;
     }
-  
-    .Closet {
-      /*background-color: grey;*/
-      width: 402px;
-      height: 385px;
-      margin: 15px;
-      display: flex;
-      align-items: flex-end;
+    .Desk:hover a{
+      background: white;
+      opacity: 60%;
+      color: black;
+      transition: width 1s ease-in-out 1s, height 1s ease-in-out, ease-in-out 1.5s;
+      width: 773px;
+      padding: 15px;
     }
   
     .container-First {
@@ -408,13 +458,6 @@
       align-content: center;
       align-items: center;
     }
-    
-    .hover-effect:hover {
-      background: white;
-      color: black;
-      transition: width 1s ease-in-out 1s, height 1s ease-in-out, ease-in-out 1s;
-      width: 650px;
-      padding: 15px;
-    }
+  
   }
   </style>
