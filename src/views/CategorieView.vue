@@ -2,7 +2,7 @@
   <body>
   <div class="middle">
     <div class="Container-Return-Home">
-      <a href="">Home/categorie</a>
+      <a href="HomeView.vue">Home/Categorieen</a>
     </div>
     <div class="container-First">
       <div class="container-Closet">
@@ -61,7 +61,7 @@ h1 {
 a {
   margin: 30px;
   text-decoration: none;
-  color: black;
+  color: #A67C63;
 
 }
 
@@ -138,7 +138,14 @@ a {
   display: flex;
   align-items: flex-end;
 }
-
+.chair:hover h1{
+  background: white;
+  opacity: 60%;
+  color: black;
+  transition: width 1s ease-in-out 1s, height 1s ease-in-out, ease-in-out 1s;
+  width: 650px;
+  padding: 15px;
+}
 .Desk {
   background-size: cover;
   background-repeat: no-repeat;
@@ -211,7 +218,7 @@ image {
   a {
     margin: -5px;
     text-decoration: none;
-    color: black;
+    color: #A67C63;
 
   }
 
@@ -332,7 +339,7 @@ image {
   a {
     margin: 30px;
     text-decoration: none;
-    color: black;
+    color: #A67C63;
   }
 
   .middle {
