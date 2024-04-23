@@ -6,12 +6,12 @@
             </div>
             <div id="navigation-main">
                 <div class="navigation-main-section">
-                    <a href="#">
+                    <a href="/categorie">
                         <i class="fa-solid fa-book"></i>
                         <p>Categorieen</p></a>
                 </div>
                 <div class="navigation-main-section">
-                    <a href="#">
+                    <a href="/ruimtes">
                         <i class="fa-solid fa-house"></i>
                         <p>Ruimtes</p></a>
                 </div>
