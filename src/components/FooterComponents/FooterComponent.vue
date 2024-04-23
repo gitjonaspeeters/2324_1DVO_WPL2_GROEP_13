@@ -4,79 +4,78 @@ export default {
   name: 'footer',
 };
 </script>
-
 <template>
-  <div class="footer">
-    <div class="iconContainer">
-      <a href="#"><i class="fa-solid fa-circle-chevron-up" id="firstIcon"></i></a>
+  <div id="footer-container">
+        <footer>
+            <div id="footer-left">
+                <a href="#"><i class="fa-solid fa-circle-chevron-up"></i></a>
+            </div>
+            <div id="footer-main">
+                <a href="#"><p>Copyright 2024 ©</p></a>
+                <p><a href="#">Algemene voorwaarden</a> / <a href="#">Cookies</a> / <a href="#">Privacybeleid</a></p>
+            </div>
+            <div id="footer-right">
+                <div class="footer-icons">
+                    <i class="fa-brands fa-cc-visa"></i>
+                    <i class="fa-brands fa-cc-mastercard"></i>
+                </div>
+                <div class="footer-icons">
+                    <i class="fa-brands fa-cc-paypal"></i>
+                    <i class="fa-solid fa-credit-card"></i>
+                </div>
+            </div>
+        </footer>
     </div>
-    <div class="textBox">
-      <p><a href="">Algemene voorwaarden</a> / <a href="">Cookies</a> / <a href="">Privacybeleid</a></p>
-      <p>Copyright 2024 ©</p>
-    </div>
-    <div id="paymentIcons">
-      <div class="upperIcons">
-        <div class="iconContainer">
-          <i class="fa-brands fa-cc-visa"></i>
-        </div>
-        <div class="iconContainer">
-          <i class="fa-brands fa-cc-mastercard"></i>
-        </div>
-      </div>
-      <div class="lowerIcons">
-        <div class="iconContainer">
-          <i class="fa-brands fa-cc-paypal"></i>
-        </div>
-        <div class="iconContainer">
-          <i class="fa-solid fa-credit-card"></i>
-        </div>
-      </div>
-    </div>
-  </div>
 </template>
 
 <style scoped>
-template {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Century Gothic", sans-serif;
+*{
+    margin: 0;
+    padding: 0;
 }
-
-.footer {
-  height: 120px;
-  display: flex;
-  background-color: #d9d9d9;
-  color: #000;
-  align-items: center;
-  text-align: center;
-  justify-content: space-between;
-  margin-top: calc(100% - 120px);
+#footer-container{
+    margin-top: calc(100% - 120px);
+    background-color: #485059;
 }
-.textBox {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-size: 24px;
+footer{
+    width: 95%; 
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
 }
-#paymentIcons {
-  display: flex;
-  margin-right: 0.25rem;
+#footer-left a{
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 2.5rem;
 }
-.iconContainer {
-  margin: 0.25rem;
+#footer-left a:hover{
+    color: #000000;
 }
-#firstIcon{
-  margin-left: 1rem;
+#footer-main{
+    text-align: center;
+    
 }
-.iconContainer i {
-  font-size: 50px;
+#footer-main a{
+    color: #ffffff;
+    text-decoration: none;
 }
-.textBox a {
-  text-decoration: underline;
-  color: #000;
+#footer-main p{
+    font-size: 1.2rem;
+    color: #ffffff;
+    font-family: "Century Gothic", sans-serif;
 }
-a {
-  color: #000;
+#footer-main p a{
+    text-decoration: underline;
+    
+}
+#footer-right{
+    gap: 1rem;
+}
+#footer-right i{
+    font-size: 2rem;
+    color: #ffffff;
+    margin-left: 0.4rem;
 }
 </style>
