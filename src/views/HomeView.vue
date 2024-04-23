@@ -15,23 +15,29 @@
     </div>
   </div>
   <div id="rooms" class="rooms">
-  <div class="gallery-buttons">
-    <img src="/src/assets/leftbtn.png" alt="arrow-left" id="backbtn" @click="scrollLeft">
-    <div class="gallery" id="image-gallery">
-      <div class="images">
-        <span class="image-container"><img src="/src/assets/Gio-zetel 1.png" alt="Reflection image"><span class="overlay">Woonkamer</span></span>
-        <span class="image-container"><img src="/src/assets/38bb9aa5-6065-4770-b199-f74772a637c2 1.png" alt="Reflection image 2"><span class="overlay">Eetkamer</span></span>
-        <span class="image-container"><img src="/src/assets/vanaf-1699-euro 1.png" alt="Corekwadrant image"><span class="overlay">Slaapkamer</span></span>
+    <div class="gallery-buttons">
+      <img src="/src/assets/leftbtn.png" alt="arrow-left" id="backbtn" @click="scrollLeft">
+      <div class="gallery" id="image-gallery">
+        <div class="images">
+          <span class="image-container"><img src="/src/assets/Gio-zetel 1.png" alt="Reflection image"><span
+              class="overlay">Woonkamer</span></span>
+          <span class="image-container"><img src="/src/assets/38bb9aa5-6065-4770-b199-f74772a637c2 1.png"
+              alt="Reflection image 2"><span class="overlay">Eetkamer</span></span>
+          <span class="image-container"><img src="/src/assets/vanaf-1699-euro 1.png" alt="Corekwadrant image"><span
+              class="overlay">Slaapkamer</span></span>
+        </div>
+        <div class="images">
+          <span class="image-container"><img src="/src/assets/Screenshot_1-8 1.png" alt="Seminair image"><span
+              class="overlay">Bureau</span></span>
+          <span class="image-container"><img src="/src/assets/image 2.png" alt="Dashboard of groupwork design"><span
+              class="overlay">Hal</span></span>
+          <span class="image-container"><img src="/src/assets/Gio-zetel 1.png" alt="Reflection image"><span
+              class="overlay">Woonkamer</span></span>
+        </div>
       </div>
-      <div class="images">
-        <span class="image-container"><img src="/src/assets/Screenshot_1-8 1.png" alt="Seminair image"><span class="overlay">Bureau</span></span>
-        <span class="image-container"><img src="/src/assets/image 2.png" alt="Dashboard of groupwork design"><span class="overlay">Hal</span></span>
-        <span class="image-container"><img src="/src/assets/Gio-zetel 1.png" alt="Reflection image"><span class="overlay">Woonkamer</span></span>
-      </div>
+      <img src="/src/assets/rightbtn.png" alt="arrow-right" id="nextbtn" @click="scrollRight">
     </div>
-    <img src="/src/assets/rightbtn.png" alt="arrow-right" id="nextbtn" @click="scrollRight">
   </div>
-</div>
 
 
   <div id="best-container">
@@ -63,6 +69,10 @@
         </div>
       </div>
     </div>
+  </div>
+  <div class="slogan-container">
+    <div class="slogan">Comfort, <br/> Betaalbaar en Betrouwbaar</div>
+    <img src="@/assets/AdobeStock_478155843 1.png" alt="">
   </div>
 </template>
 
@@ -104,12 +114,12 @@ export default {
     },
 
     scrollLeft() {
-  const gallery = document.querySelector('.gallery');
-  gallery.scroll({
-    left: gallery.scrollLeft - 300,
-    behavior: 'smooth'
-  });
-},
+      const gallery = document.querySelector('.gallery');
+      gallery.scroll({
+        left: gallery.scrollLeft - 300,
+        behavior: 'smooth'
+      });
+    },
 
 scrollRight() {
   const gallery = document.querySelector('.gallery');
@@ -121,6 +131,7 @@ scrollRight() {
 toggleCart(index){
   this.products[index].addedToCart = !this.products[index].addedToCart;
 }
+   
 
   }
 };
@@ -294,7 +305,7 @@ margin-left: 0.5rem;
   padding: 0 0.30rem 0 0.5rem;
 }
 
-.rooms{
+.rooms {
   margin-top: -11rem !important;
 }
 
@@ -329,7 +340,7 @@ margin-left: 0.5rem;
 .gallery div img,
 .gallery1 div img {
   width: 100%;
-  
+
 }
 
 .gallery-buttons {
@@ -357,32 +368,37 @@ margin-left: 0.5rem;
 
 
 
-/*Media queries */
+#container {
+  display: grid;
+    grid-template-columns: auto auto;
+}
 
-@media screen and (max-width: 1000px) {
-  #container {
-    display: block;
+#avatar {
+  margin: 2rem;
+  margin-left: 5rem;
+  width: 100%;
+}
 
-  }
+#about {
+  margin: 10rem;
 
-  #avatar {
-    margin: 2rem;
-    margin-left: 5rem;
-    width: 100%;
-  }
+}
 
-  #about {
-    margin: 10rem;
 
-  }
 
-  .gallery,
+.gallery,
   .gallery1 {
-    width: 1100px;
-    display: block;
+    width: 80%;
+    display: flex;
     overflow-x: scroll;
   }
-}
+
+
+  .images {
+    display: flex;
+    gap: 1rem;
+  }
+
 
 .image-container {
   position: relative;
@@ -390,11 +406,11 @@ margin-left: 0.5rem;
 }
 
 .image-container img {
-  transition: filter 0.3s ease; /* Voeg een overgang toe aan de filter eigenschap */
+  transition: filter 0.3s ease;
 }
 
 .image-container:hover img {
-  filter: brightness(70%); 
+  filter: brightness(70%);
 }
 
 .overlay {
@@ -402,40 +418,66 @@ margin-left: 0.5rem;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color : white;
+  color: white;
   font-size: 40px;
   padding: 10px;
   border-radius: 5px;
-  opacity: 0; 
+  opacity: 0;
   transition: opacity 0.3s ease;
 }
 
 .image-container:hover .overlay {
-  opacity: 1; /* Zichtbaar maken bij hover */
+  opacity: 1;
 }
 
 
-@media screen and (min-width: 1000px) {
+.slogan-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  background-color: #BF9A84;
+}
+
+.slogan {
+  font-size: 2rem;
+  font-family: Georgia, sans-serif;
+  color: #485059;
+  padding: 4rem;
+  margin-top: 4rem;
+
+  margin-right: -1rem;
+  border-radius: 40px 0px  0px 40px ;
+  background-color: #D9CAC5;
+}
+
+
+
+@media screen and (max-width: 1000px) {
   #container {
-    display: grid;
-    grid-template-columns: auto auto;
-
-  }
-
-  #avatar {
-    margin-right: 7rem;
-  }
-
-  #about {
-    margin-left: 9rem;
-    width: 50%;
-  }
-
-  .gallery,
-  .gallery1 {
-    width: 1100px;
+    
     display: flex;
-    overflow-x: scroll;
+
+
+  }
+
+  
+  .gallery,
+.gallery1 {
+  width: 1100px;
+  display: block;
+  overflow-x: scroll;
+}
+  
+
+
+
+  .slogan-container{
+    display: block;
+    padding: 1rem;
+    max-width: 100%;
+    height: auto;
   }
 }</style>
 
