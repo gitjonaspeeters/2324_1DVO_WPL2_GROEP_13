@@ -127,6 +127,7 @@ export default {
 
 
 <style scoped>
+
 img {
   vertical-align: middle;
 }
@@ -314,8 +315,8 @@ img {
 
 
 #container {
-  display: block;
-
+  display: grid;
+    grid-template-columns: auto auto;
 }
 
 #avatar {
@@ -329,12 +330,20 @@ img {
 
 }
 
+
+
 .gallery,
-.gallery1 {
-  width: 1100px;
-  display: block;
-  overflow-x: scroll;
-}
+  .gallery1 {
+    width: 80%;
+    display: flex;
+    overflow-x: scroll;
+  }
+
+
+  .images {
+    display: flex;
+    gap: 1rem;
+  }
 
 
 .image-container {
@@ -391,33 +400,30 @@ img {
 
 
 
-@media screen and (min-width: 1000px) {
+@media screen and (max-width: 1000px) {
   #container {
-    display: grid;
-    grid-template-columns: auto auto;
+    
+    display: flex;
+
 
   }
 
-  #avatar {
-    margin-right: 7rem;
-  }
-
-  #about {
-    margin-left: 9rem;
-    width: 50%;
-  }
-
+  
   .gallery,
-  .gallery1 {
-    width: 80%;
-    display: flex;
-    overflow-x: scroll;
-  }
+.gallery1 {
+  width: 1100px;
+  display: block;
+  overflow-x: scroll;
+}
+  
 
 
-  .images {
-    display: flex;
-    gap: 1rem;
+
+  .slogan-container{
+    display: block;
+    padding: 1rem;
+    max-width: 100%;
+    height: auto;
   }
 }</style>
 
