@@ -54,8 +54,10 @@
               <h2>{{ product.productPrice }}</h2>
             </div>
             <div class="product-content-right">
-              <i class="fa-solid fa-cart-shopping"></i>
-              <i class="fa-solid fa-plus"></i>
+              <a @click="toggleCart(index)">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <i class="fa-solid" :class="{ 'fa-solid fa-plus': !product.addedToCart, 'fa-check': product.addedToCart }"></i>
+              </a>
             </div>
           </div>
         </div>
@@ -76,8 +78,8 @@ export default {
       ],
       products: [
         { imageUrl: "/src/assets/TiffanySlaapkamer.png", productTitle: "Tiffany Slaapkamer", productCategorie: "Slaapkamer", productPrice: "€879,00" },
-        { imageUrl: "/src/assets/AndiceKaiWoonkamer.png", productTitle: "Tiffany Slaapkamer", productCategorie: "Slaapkamer", productPrice: "€879,00" },
-        { imageUrl: "/src/assets/LuncieBoucleStoel.png", productTitle: "Tiffany Slaapkamer", productCategorie: "Slaapkamer", productPrice: "€879,00" }
+        { imageUrl: "/src/assets/AndiceKaiWoonkamer.png", productTitle: "Andice Kai", productCategorie: "Woonkamer", productPrice: "€1.189,00" },
+        { imageUrl: "/src/assets/LuncieBoucleStoel.png", productTitle: "Stoel Lucie Bouclé Rug Pu", productCategorie: "Stoelen", productPrice: "€99,00" }
       ]
     };
   },
@@ -115,6 +117,9 @@ scrollRight() {
     left: gallery.scrollLeft + 300,
     behavior: 'smooth'
   });
+},
+toggleCart(index){
+  this.products[index].addedToCart = !this.products[index].addedToCart;
 }
 
   }
@@ -123,6 +128,11 @@ scrollRight() {
 
 
 <style scoped>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 img {
   vertical-align: middle;
 }
@@ -188,6 +198,7 @@ img {
 /* best verkocht */
 #best-container {
   background-color: #D9CAC5;
+  padding: 5rem 0;
 }
 
 #best-products {
@@ -198,7 +209,6 @@ img {
 }
 
 #best-text {
-  padding-top: 5rem;
   width: 80%;
   margin: 0 auto 2rem auto;
 }
@@ -234,16 +244,54 @@ img {
 .product-like {
   position: absolute;
   top: 1rem;
-  right: 3px;
+  right: 4px;
   background-color: #485059;
   padding: 0.3rem 0.5rem;
   border-radius: 5px;
 
 }
 
-.product-like a {
-  text-decoration: none;
-  color: #ffffff;
+.product-like a{
+text-decoration: none;
+color:  #ffffff;
+font-size: 2rem;
+}
+.product-content{
+display: flex;
+justify-content: space-between;
+font-family: "Century Gothic", sans-serif;
+}
+.product-content-left p{
+color: #888787;
+font-size: 1.2rem;
+margin-left: 0.5rem;
+margin-top: 0.5rem;
+}
+.product-content-left h1{
+font-size: 1.5rem;
+margin-left: 0.5rem;
+font-weight: 500;
+}
+.product-content-left h2{
+color: #000000;
+font-weight: bold;
+font-size: 1.2rem;
+margin-left: 0.5rem;
+}
+/* product right */
+.product-content-right{
+  display: flex;
+  align-items: center;
+
+}
+.product-content-right a{
+  background-color: #F2B66D;
+  padding: 0.8rem 0 0.5rem 0;
+  border-radius: 10px;
+}
+.product-content-right i{
+  font-size: 1.5rem;
+  padding: 0 0.30rem 0 0.5rem;
 }
 
 .rooms{
