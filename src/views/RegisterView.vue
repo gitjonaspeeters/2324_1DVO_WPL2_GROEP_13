@@ -8,21 +8,19 @@
     <div id="left-side">
       <div id="login-form-kader">
         <div id="form-kader">
-          <h1>Login</h1>
+          <h1>Registreren</h1>
           <form id="form" action="">
+            <label for="name"></label>
+            <input type="text" id="name" name="name" placeholder="Naam">
+            <label for="first-name"></label>
+            <input type="text" class="input" id="first-name" name="First-name" placeholder="Voornaam">
             <label for="email"></label>
-            <input type="email" id="email" name="email" placeholder="Email">
+            <input type="email" class="input" id="email" name="email" placeholder="Email">
             <label for="password"></label>
-            <input type="password" id="password" name="password" placeholder="Wactwoord">
-            <section>
-              <p id="login">Inloggen</p>
-            </section>
-            <section href="/register">
-              <p id="rigister">Rigistreren</p>
-            </section>
-            <div id="remember-button">
-              <section></section><p>Onthouden</p>
-            </div>
+            <input type="password" class="input" id="password" name="password" placeholder="Wactwoord">
+            <label for="password"></label>
+            <input type="password" id="password2" name="password" placeholder="Herhaal Wactwoord">
+            <p id="rigister">Rigistreren</p>
           </form>
         </div>
       </div>
@@ -73,7 +71,7 @@
 #form-kader {
   background-color: #ffffff;
   width: 416px;
-  height: 480px;
+  height: 600px;
   border-radius: 40px;
   padding: 20px 40px 41px 43px;
 }
@@ -89,73 +87,48 @@
   flex-direction: column;
   background-color: #D2D2D2;
   width: 333px;
-  height: 335px;
+  height: 450px;
   border-radius: 40px;
 }
-#remember-button {
-  display: flex;
-  background-color: transparent;
-  justify-content: flex-start;
-  margin-top: 0.25rem;
-  margin-left: 5rem;
-}
-#remember-button section {
-  width: 10px;
-  height: 10px;
-  border-radius: 1px;
-  border: 0.5px solid darkblue;
-  margin-right: 5px;
-  align-self: center;
-  mso-border-shadow: yes;
-}
-#remember-button p {
-  background-color: transparent;
-  font-size: 0.75rem;
-}
+
 #image {
-  width: 100rem;
-  height: 35rem;
-  background-image: url("src/assets/henk.svg");
+  width: 150rem;
+  height: 60rem;
+  background-image: url("src/assets/undraw_ideation_re_8i2h.svg");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
 }
 
-#form input {
-  width: 215px;
-  height: 36px;
-  background-color: darkblue;
+#form #name {
+  margin: 3rem auto 0.75rem;
+  background-color: #485059;
   color: #ffffff;
   border-radius: 12px;
 }
 
-#form #email {
-  margin: 5rem auto 0.25rem;
+#form .input {
+  margin: 0.75rem auto;
   background-color: #485059;
-  color: #ffffff;
+  color: #FFFFFF;
+  border-radius: 12px;
 }
 
-#form #password {
-  margin: 22px auto;
+#form #password2 {
+  margin: 0.5rem auto 20px;
   background-color: #485059;
   color: #ffffff;
+  border-radius: 12px;
 }
 
-#email::placeholder, #password::placeholder {
+input {
+  height: 40px;
+  width: 270px;
+}
+
+input::placeholder {
   color: #FFFFFF;
   padding-left: 1rem;
-}
-
-#login {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 175px;
-  height: 37.23px;
-  border-radius: 20px;
-  background-color: #A67C63;;
-  color: #ffffff;
-  margin: 10px auto;
 }
 
 #rigister {
@@ -165,10 +138,9 @@
   width: 175px;
   height: 37.23px;
   border-radius: 20px;
-  background-color: transparent;
-  border: 1px solid #000;
-  color: #000;
-  margin: 0.25rem auto;
+  background-color: #A67C63;
+  color: #ffffff;
+  margin: 0.75rem auto;
 }
 
 </style>
