@@ -34,7 +34,6 @@ export default {
     padding: 0;
 }
 #footer-container{
-    margin-top: calc(100% - 120px);
     background-color: #485059;
 }
 footer{

@@ -4,9 +4,9 @@
 
 <template>
   <body>
-  <div id="inlog-page">
-    <div id="left-side">
-      <div id="login-form-kader">
+  <div id="inlog-container">
+    <div id="inlog-left">
+      <div id="registration-form-kaderform-kader">
         <div id="form-kader">
           <h1>Login</h1>
           <form id="form" action="">
@@ -14,12 +14,8 @@
             <input type="email" id="email" name="email" placeholder="Email">
             <label for="password"></label>
             <input type="password" id="password" name="password" placeholder="Wactwoord">
-            <section>
-              <p id="login">Inloggen</p>
-            </section>
-            <section href="/register">
-              <p id="rigister">Rigistreren</p>
-            </section>
+            <a href="#" id="login">Inloggen</a>
+            <a href="/Register" id="rigister">Rigistreren</a>
             <div id="remember-button">
               <section></section><p>Onthouden</p>
             </div>
@@ -27,7 +23,7 @@
         </div>
       </div>
     </div>
-    <div id="right-side">
+    <div id="inlog-right">
       <div id="image">
       </div>
     </div>
@@ -45,28 +41,31 @@
   box-sizing: border-box;
   font-family: "Century Gothic", sans-serif;
 }
+a {
+  background-color: transparent;
+  text-decoration: none;
+}
 
-#inlog-page {
+#inlog-container {
   display: flex;
   flex-direction: row;
   height: 100vh;
 }
 
-#right-side {
+#inlog-right {
   display: flex;
-  width: 35vw;
-  align-items: center;
-  justify-content: center;
+  width: 50vw;
+  margin-right: 10rem;
 }
 
-#left-side {
+#inlog-left {
   display: flex;
   width: 50vw;
   align-items: center;
   justify-content: center;
 }
 
-#login-form-kader {
+#registration-form-kaderform-kader {
   display: flex;
 }
 
@@ -106,15 +105,14 @@
   border: 0.5px solid darkblue;
   margin-right: 5px;
   align-self: center;
-  mso-border-shadow: yes;
 }
 #remember-button p {
   background-color: transparent;
   font-size: 0.75rem;
 }
 #image {
-  width: 100rem;
-  height: 35rem;
+  width: 100%;
+  height: 100%;
   background-image: url("src/assets/henk.svg");
   background-size: contain;
   background-repeat: no-repeat;
@@ -171,4 +169,29 @@
   margin: 0.25rem auto;
 }
 
+@media screen and (max-width: 1050px){
+  #inlog-left {
+    margin-left: 2.5rem;
+  }
+
+  #inlog-right {
+    margin: 0 auto;
+    display: flex;
+    height: 100%;
+  }
+}
+
+@media screen and (max-width: 850px){
+  #inlog-right {
+    display: none;
+  }
+
+  #inlog-left {
+    width: 100vw;
+  }
+
+  #inlog-container {
+    justify-content: center;
+  }
+}
 </style>

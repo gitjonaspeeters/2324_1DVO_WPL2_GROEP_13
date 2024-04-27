@@ -4,9 +4,9 @@
 
 <template>
   <body>
-  <div id="inlog-page">
-    <div id="left-side">
-      <div id="login-form-kader">
+  <div id="registration-container-container">
+    <div id="registration-leftside">
+      <div id="registration-form-kaderform-kader">
         <div id="form-kader">
           <h1>Registreren</h1>
           <form id="form" action="">
@@ -25,7 +25,7 @@
         </div>
       </div>
     </div>
-    <div id="right-side">
+    <div id="registration-rightside">
       <div id="image">
       </div>
     </div>
@@ -44,27 +44,25 @@
   font-family: "Century Gothic", sans-serif;
 }
 
-#inlog-page {
+#registration-container-container {
   display: flex;
   flex-direction: row;
   height: 100vh;
 }
 
-#right-side {
+#registration-rightside {
   display: flex;
   width: 35vw;
-  align-items: center;
-  justify-content: center;
 }
 
-#left-side {
+#registration-leftside {
   display: flex;
   width: 50vw;
   align-items: center;
   justify-content: center;
 }
 
-#login-form-kader {
+#registration-form-kaderform-kader {
   display: flex;
 }
 
@@ -93,7 +91,7 @@
 
 #image {
   width: 150rem;
-  height: 60rem;
+  height: 54rem;
   background-image: url("src/assets/undraw_ideation_re_8i2h.svg");
   background-size: contain;
   background-repeat: no-repeat;
@@ -143,4 +141,28 @@ input::placeholder {
   margin: 0.75rem auto;
 }
 
+@media screen and (max-width: 1050px) {
+  #registration-leftside {
+    margin-left: 2.5rem;
+  }
+
+  #registration-rightside {
+    margin: 0 auto;
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  #registration-rightside {
+    display: none;
+  }
+
+  #registration-leftside {
+    width: 100vw;
+  }
+
+  #registration-container-container {
+    justify-content: center;
+  }
+}
 </style>

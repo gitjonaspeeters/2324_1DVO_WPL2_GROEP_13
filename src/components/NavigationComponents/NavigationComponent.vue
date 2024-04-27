@@ -1,5 +1,5 @@
 <template>
-    <div id="navigation-container">
+    <div id="navigation-container" :style="{ top:navbarTop, 'margin-top': navbarMarginTop }">
         <nav>
             <div id="navigation-left">
                 <img src="@/assets/Comfortmeubel wit.svg">
@@ -65,15 +65,36 @@ export default {
     name: "NavigationBar",
     data(){
         return {
-            searchVisible: false
+            searchVisible: false,
+            prevScrollpos: 0,
+            navbarTop: '2.5rem',
+            navbarOpacity: 1,
+            navbarMarginTop: '0'
         }
     },
     methods: {
         toggleSearch(){
             console.log("er word geklikt");
             this.searchVisible = !this.searchVisible;
+        },
+        handleScroll() {
+          const currentScrollPos = window.pageYOffset
+          if (currentScrollPos > this.prevScrollpos) {
+            this.navbarOpacity = 0
+            this.navbarMarginTop = '-7rem'
+          } else {
+            this.navbarOpacity = 1
+            this.navbarMarginTop = '0'
+          }
+          this.prevScrollpos = currentScrollPos
         }
-    }
+    },
+    mounted() {
+      window.addEventListener('scroll', this.handleScroll)
+    },
+    beforeDestroy() {
+      window.removeEventListener('scroll', this.handleScroll)
+    },
 }
 </script>
 <style scoped>
@@ -90,6 +111,7 @@ export default {
     left: 0;
     right: 0;
     margin: 0 auto;
+    transition: margin-top ease-in-out 1s;
 }
 
 nav{
@@ -201,5 +223,4 @@ nav p{
     border: none;
     font-size: 1.2rem;
 }
-
 </style>
