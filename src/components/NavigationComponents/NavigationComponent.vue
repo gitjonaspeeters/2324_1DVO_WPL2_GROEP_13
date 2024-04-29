@@ -2,9 +2,9 @@
     <div id="navigation-container">
         <nav>
             <div id="navigation-left">
-                <img src="@/assets/Comfortmeubel wit.svg">
+                <router-link to="/home"><img src="@/assets/Comfortmeubel wit.svg"></router-link>
             </div>
-            <div id="navigation-main">
+            <div id="navigation-main" :style="{ top:navbarTop, 'margin-top': navbarMarginTop }">
                 <div class="navigation-main-section">
                     <a href="/categorie">
                         <i class="fa-solid fa-book"></i>
@@ -65,15 +65,37 @@ export default {
     name: "NavigationBar",
     data(){
         return {
-            searchVisible: false
+            searchVisible: false,
+            prevScrollpos: 0,
+            navbarTop: '2.5rem',
+            navbarOpacity: 1,
+            navbarMarginTop: '0'
         }
     },
     methods: {
         toggleSearch(){
             console.log("er word geklikt");
             this.searchVisible = !this.searchVisible;
+
+            event.preventDefault();
+
+        },
+        handleScroll() {
+          const currentScrollPos = window.pageYOffset
+          if (currentScrollPos > this.prevScrollpos) {
+            this.navbarMarginTop = '-12rem'
+          } else {
+            this.navbarMarginTop = '0'
+          }
+          this.prevScrollpos = currentScrollPos
         }
-    }
+    },
+    mounted() {
+      window.addEventListener('scroll', this.handleScroll)
+    },
+    beforeDestroy() {
+      window.removeEventListener('scroll', this.handleScroll)
+    },
 }
 </script>
 <style scoped>
@@ -90,6 +112,7 @@ export default {
     left: 0;
     right: 0;
     margin: 0 auto;
+    transition: 1s margin-top ease-in-out ;
 }
 
 nav{
@@ -103,6 +126,7 @@ nav{
 }
 #navigation-left img{
     width: 10rem;
+    color: #ffffff;
 }
 #navigation-main{
     height: 0.1rem;
@@ -201,5 +225,4 @@ nav p{
     border: none;
     font-size: 1.2rem;
 }
-
 </style>
