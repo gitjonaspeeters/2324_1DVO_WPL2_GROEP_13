@@ -1,10 +1,10 @@
 <template>
-    <div id="navigation-container" :style="{ top:navbarTop, 'margin-top': navbarMarginTop }">
+    <div id="navigation-container">
         <nav>
             <div id="navigation-left">
-                <img src="@/assets/Comfortmeubel wit.svg">
+                <router-link to="/home"><img src="@/assets/Comfortmeubel wit.svg"></router-link>
             </div>
-            <div id="navigation-main">
+            <div id="navigation-main" :style="{ top:navbarTop, 'margin-top': navbarMarginTop }">
                 <div class="navigation-main-section">
                     <a href="#">
                         <i class="fa-solid fa-book"></i>
@@ -80,10 +80,8 @@ export default {
         handleScroll() {
           const currentScrollPos = window.pageYOffset
           if (currentScrollPos > this.prevScrollpos) {
-            this.navbarOpacity = 0
-            this.navbarMarginTop = '-7rem'
+            this.navbarMarginTop = '-12rem'
           } else {
-            this.navbarOpacity = 1
             this.navbarMarginTop = '0'
           }
           this.prevScrollpos = currentScrollPos
@@ -111,7 +109,7 @@ export default {
     left: 0;
     right: 0;
     margin: 0 auto;
-    transition: margin-top ease-in-out 1s;
+    transition: 1s margin-top ease-in-out ;
 }
 
 nav{

@@ -4,9 +4,9 @@
 
 <template>
   <body>
-  <div id="registration-container-container">
+  <div id="registration-container">
     <div id="registration-leftside">
-      <div id="registration-form-kaderform-kader">
+
         <div id="form-kader">
           <h1>Registreren</h1>
           <form id="form" action="">
@@ -20,9 +20,9 @@
             <input type="password" class="input" id="password" name="password" placeholder="Wactwoord">
             <label for="password"></label>
             <input type="password" id="password2" name="password" placeholder="Herhaal Wactwoord">
-            <p id="rigister">Rigistreren</p>
+            <p id="register">Registreren</p>
           </form>
-        </div>
+
       </div>
     </div>
     <div id="registration-rightside">
@@ -44,7 +44,7 @@
   font-family: "Century Gothic", sans-serif;
 }
 
-#registration-container-container {
+#registration-container {
   display: flex;
   flex-direction: row;
   height: 100vh;
@@ -62,9 +62,6 @@
   justify-content: center;
 }
 
-#registration-form-kaderform-kader {
-  display: flex;
-}
 
 #form-kader {
   background-color: #ffffff;
@@ -129,7 +126,7 @@ input::placeholder {
   padding-left: 1rem;
 }
 
-#rigister {
+#register {
   display: flex;
   align-items: center;
   justify-content: center;

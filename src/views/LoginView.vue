@@ -6,21 +6,22 @@
   <body>
   <div id="inlog-container">
     <div id="inlog-left">
-      <div id="registration-form-kaderform-kader">
-        <div id="form-kader">
-          <h1>Login</h1>
-          <form id="form" action="">
-            <label for="email"></label>
-            <input type="email" id="email" name="email" placeholder="Email">
-            <label for="password"></label>
-            <input type="password" id="password" name="password" placeholder="Wactwoord">
-            <a href="#" id="login">Inloggen</a>
-            <a href="/Register" id="rigister">Rigistreren</a>
-            <div id="remember-button">
-              <section></section><p>Onthouden</p>
-            </div>
-          </form>
-        </div>
+
+      <div id="form-kader">
+        <h1>Login</h1>
+        <form id="form" action="">
+          <label for="email"></label>
+          <input type="email" id="email" name="email" placeholder="Email">
+          <label for="password"></label>
+          <input type="password" id="password" name="password" placeholder="Wactwoord">
+          <router-link to="#"><p id="login">Inloggen</p></router-link>
+          <router-link to="/register"><p id="rigister">Rigistreren</p></router-link>
+          <div id="remember-button">
+            <section></section>
+            <p>Onthouden</p>
+          </div>
+        </form>
+
       </div>
     </div>
     <div id="inlog-right">
@@ -41,6 +42,7 @@
   box-sizing: border-box;
   font-family: "Century Gothic", sans-serif;
 }
+
 a {
   background-color: transparent;
   text-decoration: none;
@@ -91,6 +93,7 @@ a {
   height: 335px;
   border-radius: 40px;
 }
+
 #remember-button {
   display: flex;
   background-color: transparent;
@@ -98,6 +101,7 @@ a {
   margin-top: 0.25rem;
   margin-left: 5rem;
 }
+
 #remember-button section {
   width: 10px;
   height: 10px;
@@ -106,10 +110,12 @@ a {
   margin-right: 5px;
   align-self: center;
 }
+
 #remember-button p {
   background-color: transparent;
   font-size: 0.75rem;
 }
+
 #image {
   width: 100%;
   height: 100%;
@@ -169,7 +175,7 @@ a {
   margin: 0.25rem auto;
 }
 
-@media screen and (max-width: 1050px){
+@media screen and (max-width: 1050px) {
   #inlog-left {
     margin-left: 2.5rem;
   }
@@ -181,7 +187,7 @@ a {
   }
 }
 
-@media screen and (max-width: 850px){
+@media screen and (max-width: 850px) {
   #inlog-right {
     display: none;
   }
