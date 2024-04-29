@@ -338,10 +338,13 @@ margin-left: 0.5rem;
 
 }
 
+
+
 .gallery::-webkit-scrollbar,
 .gallery1::-webkit-scrollbar {
   display: none;
 }
+
 
 .gallery div,
 .gallery1 div {
@@ -351,11 +354,13 @@ margin-left: 0.5rem;
   grid-gap: 20px;
   padding: 10px;
   flex: none;
+
 }
 
 .gallery div img,
 .gallery1 div img {
   width: 100%;
+
 }
 
 .gallery-buttons {
@@ -377,7 +382,11 @@ margin-left: 0.5rem;
   width: 50px;
   cursor: pointer;
   margin: 40px;
+
 }
+
+
+
 
 #container {
   display: grid;
@@ -395,6 +404,8 @@ margin-left: 0.5rem;
 
 }
 
+
+
 .gallery,
   .gallery1 {
     width: 80%;
@@ -402,10 +413,12 @@ margin-left: 0.5rem;
     overflow-x: scroll;
   }
 
+
   .images {
     display: flex;
     gap: 1rem;
   }
+
 
 .image-container {
   position: relative;
@@ -562,6 +575,42 @@ font-size: 1.2rem;
   .gallery div{
     width: 200%;
   }
+  .slogan-container{
+    display: block;
+    padding: 1rem;
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+
+@media screen and (max-width: 700px) {
+  
+
+  #backbtn, #nextbtn {
+    display: none;
+  }
+
+  .gallery {
+    width: 300px;
+  }
+
+  .gallery div{
+    width: 200%;
+  }
+
+  
+
+  
+  .gallery,
+.gallery1 {
+  width: 1100px;
+  overflow-x: scroll;
+}
+  
+
+
+
   .slogan-container{
     display: block;
     padding: 1rem;
