@@ -2,16 +2,16 @@
     <div id="navigation-container">
         <nav>
             <div id="navigation-left">
-                <img src="@/assets/Comfortmeubel wit.svg">
+                <router-link to="/home"><img src="@/assets/Comfortmeubel wit.svg"></router-link>
             </div>
-            <div id="navigation-main">
+            <div id="navigation-main" :style="{ top:navbarTop, 'margin-top': navbarMarginTop }">
                 <div class="navigation-main-section">
-                    <a href="#">
+                    <a href="/categorie">
                         <i class="fa-solid fa-book"></i>
                         <p>Categorieen</p></a>
                 </div>
                 <div class="navigation-main-section">
-                    <a href="#">
+                    <a href="/ruimtes">
                         <i class="fa-solid fa-house"></i>
                         <p>Ruimtes</p></a>
                 </div>
@@ -32,10 +32,9 @@
             </div>
             <div id="navigation-right">
                 <div class="navigation-right-sextion">
-                    <a href="#">
+                    <a href="/login">
                         <i class="fa-solid fa-user"></i>
                     </a>
-                    
                 </div>
                 <div class="navigation-right-sextion">
                     <a href="#">
@@ -43,7 +42,7 @@
                     </a>
                 </div>
                 <div id="navigation-right-sextion">
-                    <a href="#">
+                    <a  @click="toggleCartPopup">
                         <i class="fa-solid fa-cart-shopping"></i>
                     </a>             
                 </div>
@@ -60,21 +59,57 @@
             </div>
         </div>
     </div>
+    <!-- Cart Popup -->
+    <div id="cart-popup" v-if="cartPopupVisible" @click="hideCartPopup">
+        <p>Winkelwagen</p>
+
+        
+        <p>Je hebt nog geen items in je winkelwagen</p>
+    </div>
 </template>
+
 <script>
 export default {
     name: "NavigationBar",
     data(){
         return {
-            searchVisible: false
+            searchVisible: false,
+            prevScrollpos: 0,
+            navbarTop: '2.5rem',
+            navbarOpacity: 1,
+            navbarMarginTop: '0',
+            cartPopupVisible: false
         }
     },
     methods: {
         toggleSearch(){
             console.log("er word geklikt");
             this.searchVisible = !this.searchVisible;
+            event.preventDefault();
+        },
+        toggleCartPopup() {
+            console.log("er word geklikt");
+            this.cartPopupVisible = !this.cartPopupVisible;
+        },
+        hideCartPopup() {
+            this.cartPopupVisible = false;
+        },
+        handleScroll() {
+            const currentScrollPos = window.pageYOffset
+            if (currentScrollPos > this.prevScrollpos) {
+                this.navbarMarginTop = '-12rem'
+            } else {
+                this.navbarMarginTop = '0'
+            }
+            this.prevScrollpos = currentScrollPos
         }
-    }
+    },
+    mounted() {
+        window.addEventListener('scroll', this.handleScroll)
+    },
+    beforeDestroy() {
+        window.removeEventListener('scroll', this.handleScroll)
+    },
 }
 </script>
 <style scoped>
@@ -83,6 +118,24 @@ export default {
     padding: 0;
     /* border: 1px solid red; */
 }
+
+#cart-popup {
+    position: fixed;
+    top: 25%; /* Plaats het onder de winkelwagenknop */
+    left: 86%;
+    width: 350px;
+    margin-right: 5px;
+    transform: translateX(-50%);
+    z-index: 999; /* Zorg ervoor dat het bovenop andere elementen staat */
+    background-color: #ffffff;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    
+}
+
+
 #navigation-container {
     position: fixed;
     top: 2.5rem;
@@ -91,6 +144,7 @@ export default {
     left: 0;
     right: 0;
     margin: 0 auto;
+    transition: 1s margin-top ease-in-out ;
 }
 
 nav{
@@ -104,6 +158,7 @@ nav{
 }
 #navigation-left img{
     width: 10rem;
+    color: #ffffff;
 }
 #navigation-main{
     height: 0.1rem;
@@ -202,5 +257,4 @@ nav p{
     border: none;
     font-size: 1.2rem;
 }
-
 </style>
