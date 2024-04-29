@@ -72,6 +72,7 @@ export default {
         toggleSearch(){
             console.log("er word geklikt");
             this.searchVisible = !this.searchVisible;
+            event.preventDefault();
         }
     }
 }
@@ -103,6 +104,7 @@ nav{
 }
 #navigation-left img{
     width: 10rem;
+    color: #ffffff;
 }
 #navigation-main{
     height: 0.1rem;
