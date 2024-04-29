@@ -47,6 +47,7 @@
 <style scoped>
 body {
   background: #D9CAC5;
+  display: flex;
 }
 
 .Container-Return-Home {
