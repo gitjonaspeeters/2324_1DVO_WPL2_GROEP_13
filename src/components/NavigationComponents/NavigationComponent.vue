@@ -2,7 +2,7 @@
     <div id="navigation-container">
         <nav>
             <div id="navigation-left">
-                <router-link to="/home"><img src="@/assets/Comfortmeubel wit.svg"></router-link>
+                <router-link to="/"><img src="@/assets/Comfortmeubel wit.svg"></router-link>
             </div>
             <div id="navigation-main" :style="{ top:navbarTop, 'margin-top': navbarMarginTop }">
                 <div class="navigation-main-section">
