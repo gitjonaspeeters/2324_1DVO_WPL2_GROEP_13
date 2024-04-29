@@ -68,7 +68,6 @@ export default {
             searchVisible: false,
             prevScrollpos: 0,
             navbarTop: '2.5rem',
-            navbarOpacity: 1,
             navbarMarginTop: '0'
         }
     },
@@ -112,7 +111,6 @@ export default {
     left: 0;
     right: 0;
     margin: 0 auto;
-    transition: 1s margin-top ease-in-out ;
 }
 
 nav{
@@ -137,6 +135,7 @@ nav{
     background-color: #ffffff;
     border-radius: 10rem;
     gap: 1rem;
+    transition: margin-top 1s ease-in-out;
 }
 .navigation-main-section{
     padding-right: 1rem;
