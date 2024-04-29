@@ -1,8 +1,8 @@
 <template>
-  <body>
-  <div class="middle">
+  <div class="Everywere">
+  <div class="container">
     <div class="Container-Return-Home">
-      <a href="HomeView.vue">Home/Categorieen</a>
+      <router-link to="/home"><p>Home/Categorieen</p></router-link>
     </div>
     <div class="container-First">
       <div class="container-Closet">
@@ -39,19 +39,22 @@
       </div>
     </div>
   </div>
-  </body>
+</div>
 </template>
 <script>
 
 </script>
 <style scoped>
-body {
+.Everywere {
   background: #D9CAC5;
   display: flex;
+    flex-direction: column;
 }
 
 .Container-Return-Home {
-  margin-bottom: -15px;
+  margin-bottom: -50px;
+    margin-top: 150px;
+    margin-left: 35px;
 }
 
 .Container-Return-Home a {
@@ -84,7 +87,7 @@ a {
 }
 
 .Home-Accessories {
-  background-image: url("src/assets/HomeAccessories.png");
+  background-image: url("src/assets/HomeAccessoriesCategorie.png");
   background-color: grey;
   width: 1300px;
   height: 316px;
@@ -268,7 +271,7 @@ image {
 
   .container-Last {
     display: flex;
-    margin: 15px;
+    margin: 15px 15px 15px 75px;
   }
 
   .Home-Accessories {
@@ -437,7 +440,7 @@ image {
 
   .container-Last {
     display: flex;
-    margin: 15px;
+    margin: 15px 15px 15px 40px;
   }
 
   .Home-Accessories {
