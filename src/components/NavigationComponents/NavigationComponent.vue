@@ -6,12 +6,12 @@
             </div>
             <div id="navigation-main" :style="{ top:navbarTop, 'margin-top': navbarMarginTop }">
                 <div class="navigation-main-section">
-                    <a href="#">
+                    <a href="/categorie">
                         <i class="fa-solid fa-book"></i>
                         <p>Categorieen</p></a>
                 </div>
                 <div class="navigation-main-section">
-                    <a href="#">
+                    <a href="/ruimtes">
                         <i class="fa-solid fa-house"></i>
                         <p>Ruimtes</p></a>
                 </div>
@@ -76,6 +76,9 @@ export default {
         toggleSearch(){
             console.log("er word geklikt");
             this.searchVisible = !this.searchVisible;
+
+            event.preventDefault();
+
         },
         handleScroll() {
           const currentScrollPos = window.pageYOffset
@@ -123,6 +126,7 @@ nav{
 }
 #navigation-left img{
     width: 10rem;
+    color: #ffffff;
 }
 #navigation-main{
     height: 0.1rem;

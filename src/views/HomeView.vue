@@ -15,23 +15,29 @@
     </div>
   </div>
   <div id="rooms" class="rooms">
-  <div class="gallery-buttons">
-    <img src="/src/assets/leftbtn.png" alt="arrow-left" id="backbtn" @click="scrollLeft">
-    <div class="gallery" id="image-gallery">
-      <div class="images">
-        <span class="image-container"><img src="/src/assets/Gio-zetel 1.png" alt="Reflection image"><span class="overlay">Woonkamer</span></span>
-        <span class="image-container"><img src="/src/assets/38bb9aa5-6065-4770-b199-f74772a637c2 1.png" alt="Reflection image 2"><span class="overlay">Eetkamer</span></span>
-        <span class="image-container"><img src="/src/assets/vanaf-1699-euro 1.png" alt="Corekwadrant image"><span class="overlay">Slaapkamer</span></span>
+    <div class="gallery-buttons">
+      <img src="/src/assets/leftbtn.png" alt="arrow-left" id="backbtn" @click="scrollLeft">
+      <div class="gallery" id="image-gallery">
+        <div class="images">
+          <span class="image-container"><img src="/src/assets/Gio-zetel 1.png" alt="Reflection image"><span
+              class="overlay">Woonkamer</span></span>
+          <span class="image-container"><img src="/src/assets/38bb9aa5-6065-4770-b199-f74772a637c2 1.png"
+              alt="Reflection image 2"><span class="overlay">Eetkamer</span></span>
+          <span class="image-container"><img src="/src/assets/vanaf-1699-euro 1.png" alt="Corekwadrant image"><span
+              class="overlay">Slaapkamer</span></span>
+        </div>
+        <div class="images">
+          <span class="image-container"><img src="/src/assets/Screenshot_1-8 1.png" alt="Seminair image"><span
+              class="overlay">Bureau</span></span>
+          <span class="image-container"><img src="/src/assets/image 2.png" alt="Dashboard of groupwork design"><span
+              class="overlay">Hal</span></span>
+          <span class="image-container"><img src="/src/assets/Gio-zetel 1.png" alt="Reflection image"><span
+              class="overlay">Woonkamer</span></span>
+        </div>
       </div>
-      <div class="images">
-        <span class="image-container"><img src="/src/assets/Screenshot_1-8 1.png" alt="Seminair image"><span class="overlay">Bureau</span></span>
-        <span class="image-container"><img src="/src/assets/image 2.png" alt="Dashboard of groupwork design"><span class="overlay">Hal</span></span>
-        <span class="image-container"><img src="/src/assets/Gio-zetel 1.png" alt="Reflection image"><span class="overlay">Woonkamer</span></span>
-      </div>
+      <img src="/src/assets/rightbtn.png" alt="arrow-right" id="nextbtn" @click="scrollRight">
     </div>
-    <img src="/src/assets/rightbtn.png" alt="arrow-right" id="nextbtn" @click="scrollRight">
   </div>
-</div>
 
 
   <div id="best-container">
@@ -48,14 +54,39 @@
             </div>
           </div>
           <div class="product-content">
-            <p>{{ product.productCategorie }}</p>
-            <h1>{{ product.productTitle }}</h1>
-            <p>{{ product.productPrice }}</p>
+            <div class="product-content-left">
+              <p>{{ product.productCategorie }}</p>
+              <h1>{{ product.productTitle }}</h1>
+              <h2>{{ product.productPrice }}</h2>
+            </div>
+            <div class="product-content-right">
+              <a @click="toggleCart(index)">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <i class="fa-solid" :class="{ 'fa-solid fa-plus': !product.addedToCart, 'fa-check': product.addedToCart }"></i>
+              </a>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
+  <div id="slogan-container">
+    <div id="slogan-content">
+      <div class="slogan-content-left">
+        <div class="slogan-left-text">
+          <p>Comfort, <br>
+          Betaalbaar en Betrouwbaar</p>
+        </div>
+      </div>
+      <div class="slogan-content-right">
+        <img src="@/assets/AdobeStock_478155843 1.png" alt="afbeelding home pagina">
+      </div>
+    </div>
+  </div>
+  <!-- <div class="slogan-container">
+    <div class="slogan">Comfort, <br/> Betaalbaar en Betrouwbaar</div>
+    <img src="@/assets/AdobeStock_478155843 1.png" alt="afbeelding home pagina">
+  </div> -->
 </template>
 
 <script>
@@ -65,13 +96,13 @@ export default {
       currentSlideIndex: 0,
       slides: [
         { imageUrl: "/src/assets/Banner1.png", headTitle: "Nieuwe collectie", headText: "Probeer nu onze nieuwe winter collectie!", headButton: "Bekijk" },
-        { imageUrl: "/src/assets/Banner1.png", headTitle: "Nieuwe collectie", headText: "Probeer nu onze nieuwe winter collectie!", headButton: "Bekijk" },
-        { imageUrl: "/src/assets/Banner1.png", headTitle: "Nieuwe collectie", headText: "Probeer nu onze nieuwe winter collectie!", headButton: "Bekijk" },
+        { imageUrl: "/src/assets/Banner2.png", headTitle: "Nieuwe collectie", headText: "Probeer nu onze nieuwe winter collectie!", headButton: "Bekijk" },
+        { imageUrl: "/src/assets/Banner3.png", headTitle: "Nieuwe collectie", headText: "Probeer nu onze nieuwe winter collectie!", headButton: "Bekijk" },
       ],
       products: [
-        { imageUrl: "/src/assets/TiffanySlaapkamer.png", productTitle: "Tiffany Slaapkamer", productCategorie: "Slaapkamer", productPrice: "€879,00" },
-        { imageUrl: "/src/assets/AndiceKaiWoonkamer.png", productTitle: "Tiffany Slaapkamer", productCategorie: "Slaapkamer", productPrice: "€879,00" },
-        { imageUrl: "/src/assets/LuncieBoucleStoel.png", productTitle: "Tiffany Slaapkamer", productCategorie: "Slaapkamer", productPrice: "€879,00" }
+        { imageUrl: "/src/assets/TiffanySlaapkamer.png", productTitle: "Tiffany", productCategorie: "Slaapkamer", productPrice: "€879,00" },
+        { imageUrl: "/src/assets/AndiceKaiWoonkamer.png", productTitle: "Andice Kai", productCategorie: "Woonkamer", productPrice: "€1.189,00" },
+        { imageUrl: "/src/assets/LuncieBoucleStoel.png", productTitle: "Lucie Bouclé", productCategorie: "Stoelen", productPrice: "€99,00" }
       ]
     };
   },
@@ -96,12 +127,12 @@ export default {
     },
 
     scrollLeft() {
-  const gallery = document.querySelector('.gallery');
-  gallery.scroll({
-    left: gallery.scrollLeft - 300,
-    behavior: 'smooth'
-  });
-},
+      const gallery = document.querySelector('.gallery');
+      gallery.scroll({
+        left: gallery.scrollLeft - 300,
+        behavior: 'smooth'
+      });
+    },
 
 scrollRight() {
   const gallery = document.querySelector('.gallery');
@@ -109,7 +140,11 @@ scrollRight() {
     left: gallery.scrollLeft + 300,
     behavior: 'smooth'
   });
+},
+toggleCart(index){
+  this.products[index].addedToCart = !this.products[index].addedToCart;
 }
+   
 
   }
 };
@@ -117,6 +152,11 @@ scrollRight() {
 
 
 <style scoped>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 img {
   vertical-align: middle;
 }
@@ -131,7 +171,6 @@ img {
   text-align: center;
 }
 
-
 .dot {
   height: 15px;
   width: 15px;
@@ -141,7 +180,7 @@ img {
   display: inline-block;
   transition: background-color 0.6s ease;
   position: relative;
-  bottom: 14rem;
+  bottom: 12rem;
 }
 
 .active {
@@ -181,7 +220,8 @@ img {
 
 /* best verkocht */
 #best-container {
-  background-color: #D9CAC5;
+  background-color: #E8DFDC;
+  padding: 5rem 0;
 }
 
 #best-products {
@@ -192,7 +232,6 @@ img {
 }
 
 #best-text {
-  padding-top: 5rem;
   width: 80%;
   margin: 0 auto 2rem auto;
 }
@@ -201,13 +240,13 @@ img {
   color: #485059;
   font-family: Georgia, sans-serif;
   margin-bottom: -1px;
-  font-size: 2.5rem;
+  font-size: 2.8rem;
 }
 
 #best-text p {
   color: #485059;
   font-family: Georgia, sans-serif;
-  font-size: 1.2rem;
+  font-size: 1.8rem;
 }
 
 .best-product {
@@ -228,19 +267,65 @@ img {
 .product-like {
   position: absolute;
   top: 1rem;
-  right: 3px;
+  right: 4px;
   background-color: #485059;
   padding: 0.3rem 0.5rem;
   border-radius: 5px;
 
 }
 
-.product-like a {
-  text-decoration: none;
-  color: #ffffff;
+.product-like a{
+text-decoration: none;
+color:  #ffffff;
+font-size: 2rem;
 }
 
-.rooms{
+.product-content{
+display: flex;
+justify-content: space-between;
+font-family: "Century Gothic", sans-serif;
+}
+
+.product-content-left p{
+color: #888787;
+font-size: 1.2rem;
+margin-left: 0.5rem;
+margin-top: 0.5rem;
+}
+
+.product-content-left h1{
+font-size: 1.5rem;
+margin-left: 0.5rem;
+font-weight: 500;
+}
+
+.product-content-left h2{
+color: #000000;
+font-weight: bold;
+font-size: 1.2rem;
+margin-left: 0.5rem;
+}
+
+/* product right */
+.product-content-right{
+  display: flex;
+  align-items: center;
+}
+
+.product-content-right a{
+  background-color: #F2B66D;
+  padding: 0.8rem 0 0.5rem 0;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.product-content-right i{
+  font-size: 1.5rem;
+  padding: 0 0.30rem 0 0.5rem;
+}
+
+/* carousel home */
+.rooms {
   margin-top: -11rem !important;
 }
 
@@ -253,13 +338,10 @@ img {
 
 }
 
-
-
 .gallery::-webkit-scrollbar,
 .gallery1::-webkit-scrollbar {
   display: none;
 }
-
 
 .gallery div,
 .gallery1 div {
@@ -269,13 +351,11 @@ img {
   grid-gap: 20px;
   padding: 10px;
   flex: none;
-
 }
 
 .gallery div img,
 .gallery1 div img {
   width: 100%;
-  
 }
 
 .gallery-buttons {
@@ -297,38 +377,35 @@ img {
   width: 50px;
   cursor: pointer;
   margin: 40px;
+}
+
+#container {
+  display: grid;
+    grid-template-columns: auto auto;
+}
+
+#avatar {
+  margin: 2rem;
+  margin-left: 5rem;
+  width: 100%;
+}
+
+#about {
+  margin: 10rem;
 
 }
 
-
-
-
-/*Media queries */
-
-@media screen and (max-width: 1000px) {
-  #container {
-    display: block;
-
-  }
-
-  #avatar {
-    margin: 2rem;
-    margin-left: 5rem;
-    width: 100%;
-  }
-
-  #about {
-    margin: 10rem;
-
-  }
-
-  .gallery,
+.gallery,
   .gallery1 {
-    width: 1100px;
-    display: block;
+    width: 80%;
+    display: flex;
     overflow-x: scroll;
   }
-}
+
+  .images {
+    display: flex;
+    gap: 1rem;
+  }
 
 .image-container {
   position: relative;
@@ -336,11 +413,11 @@ img {
 }
 
 .image-container img {
-  transition: filter 0.3s ease; /* Voeg een overgang toe aan de filter eigenschap */
+  transition: filter 0.3s ease;
 }
 
 .image-container:hover img {
-  filter: brightness(70%); 
+  filter: brightness(70%);
 }
 
 .overlay {
@@ -348,40 +425,148 @@ img {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color : white;
+  color: white;
   font-size: 40px;
   padding: 10px;
   border-radius: 5px;
-  opacity: 0; 
+  opacity: 0;
   transition: opacity 0.3s ease;
 }
 
 .image-container:hover .overlay {
-  opacity: 1; /* Zichtbaar maken bij hover */
+  opacity: 1;
 }
 
+/* slogan onderaan home */
+#slogan-container{
+  background-color: #E8DFDC;
+  padding: 5rem 0;
+}
 
-@media screen and (min-width: 1000px) {
-  #container {
-    display: grid;
-    grid-template-columns: auto auto;
+#slogan-content{
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+}
 
+.slogan-content-left{
+ display: flex;
+ justify-content: right;
+ align-items: center;
+ width: calc(50%);
+  margin-right: -0.5rem;
+}
+.slogan-left-text {
+  font-family: Georgia, sans-serif;
+  color: #485059;
+  background-color: #D9CAC5;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+  border-radius: 3rem 0 0 3rem;
+  font-size: 2.8rem;
+  height: calc(50% - 1rem);
+  width: 100%;
+  display: flex;
+  justify-content: left;
+  padding-left: 10%;
+  align-items: center;
+  margin-top: 3rem;
+  max-height: calc(50% - 1rem); 
+}
+.slogan-content-right{
+  width: calc(50%);
+  z-index: 2;
+  
+}
+.slogan-content-right img{
+  width: 100%;
+}
+@media screen and (max-width: 1584px) {
+  #best-text h1 {
+  font-size:  2.5rem;
+}
+#best-text p {
+  font-size: 1.5rem;
+}
+  .slogan-left-text {
+    font-size: 2.5rem;
+  }
+}
+@media screen and (max-width: 1448px){
+  #best-text h1 {
+  font-size:  1.8rem;
+}
+#best-text p {
+  font-size: 1.3rem;
+}
+  .slogan-left-text {
+    font-size: 1.8rem;
+  } 
+}
+@media screen and (max-width: 1382px){
+  .head-content {
+  bottom: 10rem;
+  left: 4rem;
+
+  max-width: 15rem;
+}
+  .head-content h1 {
+  font-size: 2rem;
+}
+
+.head-content h2 {
+  font-size: 1rem;
+}
+
+.head-content button {
+  font-size: 1rem;
+}
+  .product-content-left p{
+font-size: 1rem;
+}
+
+.product-content-left h1{
+font-size: 1.2rem;
+}
+
+.product-content-left h2{
+font-size: 1rem;
+}
+  .product-like {
+  padding: 0.20rem 0.3rem;
+
+}
+
+.product-like a{
+font-size: 1.2rem;
+}
+
+  .product-content-right a{
+   padding: 0.45rem 0 0.3rem 0;
+}
+
+.product-content-right i{
+  font-size: 1.2rem;
+  padding: 0 0.15rem 0 0.25rem;
+}
+}
+
+@media screen and (max-width: 1000px) {
+  #backbtn, #nextbtn {
+    display: none;
   }
 
-  #avatar {
-    margin-right: 7rem;
+  .gallery {
+    width: 300px;
   }
 
-  #about {
-    margin-left: 9rem;
-    width: 50%;
+  .gallery div{
+    width: 200%;
   }
-
-  .gallery,
-  .gallery1 {
-    width: 1100px;
-    display: flex;
-    overflow-x: scroll;
+  .slogan-container{
+    display: block;
+    padding: 1rem;
+    max-width: 100%;
+    height: auto;
   }
 }</style>
 
