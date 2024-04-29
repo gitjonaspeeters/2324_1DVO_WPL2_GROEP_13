@@ -1,11 +1,17 @@
 import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
 import AboutView from "../views/AboutView.vue";
+
 import MainView from "../views/Main.vue";
 import TeampageView from "../views/TeampageView.vue";
 import CategorieView from "../views/CategorieView.vue";
 import RuimtesView from "../views/RuimtesView.vue";
+
+import TeampageView from "../views/TeampageView.vue"
+
 import LoginView from "@/views/LoginView.vue";
+import RegisterView from "@/views/RegisterView.vue";
+import AccountView from "../views/AccountView.vue";
 
 
 const router = createRouter({
@@ -23,8 +29,8 @@ const router = createRouter({
     },
     {
       path: "/",
-      name: "main",
-      component: MainView,
+      name: "home",
+      component: HomeView,
     },
     {
       path: "/home",
@@ -45,6 +51,16 @@ const router = createRouter({
       path: "/login",
       name: "login",
       component: LoginView,
+    },
+    {
+      path: "/register",
+      name: "register",
+      component: RegisterView,
+    },
+    {
+      path: "/account",
+      name: "account",
+      component: AccountView,
     }
   ],
 });

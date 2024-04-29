@@ -4,26 +4,27 @@
 
 <template>
   <body>
-  <div id="inlog-page">
-    <div id="left-side">
-      <div id="login-form-kader">
-        <div id="form-kader">
-          <h1>Login</h1>
-          <form id="form" action="">
-            <label for="email"></label>
-            <input type="email" id="email" name="email" placeholder="Email">
-            <label for="password"></label>
-            <input type="password" id="password" name="password" placeholder="Wactwoord">
-            <p id="login">Inloggen</p>
-            <p id="rigister">Rigistreren</p>
-            <div id="remember-button">
-              <section></section><p>Onthouden</p>
-            </div>
-          </form>
-        </div>
+  <div id="inlog-container">
+    <div id="inlog-left">
+
+      <div id="form-kader">
+        <h1>Login</h1>
+        <form id="form" action="">
+          <label for="email"></label>
+          <input type="email" id="email" name="email" placeholder="Email">
+          <label for="password"></label>
+          <input type="password" id="password" name="password" placeholder="Wactwoord">
+          <router-link to="#"><p id="login">Inloggen</p></router-link>
+          <router-link to="/register"><p id="rigister">Rigistreren</p></router-link>
+          <div id="remember-button">
+            <section></section>
+            <p>Onthouden</p>
+          </div>
+        </form>
+
       </div>
     </div>
-    <div id="right-side">
+    <div id="inlog-right">
       <div id="image">
       </div>
     </div>
@@ -42,27 +43,31 @@
   font-family: "Century Gothic", sans-serif;
 }
 
-#inlog-page {
+a {
+  background-color: transparent;
+  text-decoration: none;
+}
+
+#inlog-container {
   display: flex;
   flex-direction: row;
   height: 100vh;
 }
 
-#right-side {
+#inlog-right {
   display: flex;
-  width: 35vw;
-  align-items: center;
-  justify-content: center;
+  width: 50vw;
+  margin-right: 10rem;
 }
 
-#left-side {
+#inlog-left {
   display: flex;
   width: 50vw;
   align-items: center;
   justify-content: center;
 }
 
-#login-form-kader {
+#registration-form-kaderform-kader {
   display: flex;
 }
 
@@ -88,6 +93,7 @@
   height: 335px;
   border-radius: 40px;
 }
+
 #remember-button {
   display: flex;
   background-color: transparent;
@@ -95,6 +101,7 @@
   margin-top: 0.25rem;
   margin-left: 5rem;
 }
+
 #remember-button section {
   width: 10px;
   height: 10px;
@@ -102,15 +109,16 @@
   border: 0.5px solid darkblue;
   margin-right: 5px;
   align-self: center;
-  mso-border-shadow: yes;
 }
+
 #remember-button p {
   background-color: transparent;
   font-size: 0.75rem;
 }
+
 #image {
-  width: 100rem;
-  height: 35rem;
+  width: 100%;
+  height: 100%;
   background-image: url("src/assets/henk.svg");
   background-size: contain;
   background-repeat: no-repeat;
@@ -167,4 +175,29 @@
   margin: 0.25rem auto;
 }
 
+@media screen and (max-width: 1050px) {
+  #inlog-left {
+    margin-left: 2.5rem;
+  }
+
+  #inlog-right {
+    margin: 0 auto;
+    display: flex;
+    height: 100%;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  #inlog-right {
+    display: none;
+  }
+
+  #inlog-left {
+    width: 100vw;
+  }
+
+  #inlog-container {
+    justify-content: center;
+  }
+}
 </style>
