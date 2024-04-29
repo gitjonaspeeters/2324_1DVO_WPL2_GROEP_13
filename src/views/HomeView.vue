@@ -54,18 +54,39 @@
             </div>
           </div>
           <div class="product-content">
-            <p>{{ product.productCategorie }}</p>
-            <h1>{{ product.productTitle }}</h1>
-            <p>{{ product.productPrice }}</p>
+            <div class="product-content-left">
+              <p>{{ product.productCategorie }}</p>
+              <h1>{{ product.productTitle }}</h1>
+              <h2>{{ product.productPrice }}</h2>
+            </div>
+            <div class="product-content-right">
+              <a @click="toggleCart(index)">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <i class="fa-solid" :class="{ 'fa-solid fa-plus': !product.addedToCart, 'fa-check': product.addedToCart }"></i>
+              </a>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <div class="slogan-container">
-    <div class="slogan">Comfort, <br/> Betaalbaar en Betrouwbaar</div>
-    <img src="@/assets/AdobeStock_478155843 1.png" alt="">
+  <div id="slogan-container">
+    <div id="slogan-content">
+      <div class="slogan-content-left">
+        <div class="slogan-left-text">
+          <p>Comfort, <br>
+          Betaalbaar en Betrouwbaar</p>
+        </div>
+      </div>
+      <div class="slogan-content-right">
+        <img src="@/assets/AdobeStock_478155843 1.png" alt="afbeelding home pagina">
+      </div>
+    </div>
   </div>
+  <!-- <div class="slogan-container">
+    <div class="slogan">Comfort, <br/> Betaalbaar en Betrouwbaar</div>
+    <img src="@/assets/AdobeStock_478155843 1.png" alt="afbeelding home pagina">
+  </div> -->
 </template>
 
 <script>
@@ -75,13 +96,13 @@ export default {
       currentSlideIndex: 0,
       slides: [
         { imageUrl: "/src/assets/Banner1.png", headTitle: "Nieuwe collectie", headText: "Probeer nu onze nieuwe winter collectie!", headButton: "Bekijk" },
-        { imageUrl: "/src/assets/Banner1.png", headTitle: "Nieuwe collectie", headText: "Probeer nu onze nieuwe winter collectie!", headButton: "Bekijk" },
-        { imageUrl: "/src/assets/Banner1.png", headTitle: "Nieuwe collectie", headText: "Probeer nu onze nieuwe winter collectie!", headButton: "Bekijk" },
+        { imageUrl: "/src/assets/Banner2.png", headTitle: "Nieuwe collectie", headText: "Probeer nu onze nieuwe winter collectie!", headButton: "Bekijk" },
+        { imageUrl: "/src/assets/Banner3.png", headTitle: "Nieuwe collectie", headText: "Probeer nu onze nieuwe winter collectie!", headButton: "Bekijk" },
       ],
       products: [
-        { imageUrl: "/src/assets/TiffanySlaapkamer.png", productTitle: "Tiffany Slaapkamer", productCategorie: "Slaapkamer", productPrice: "€879,00" },
-        { imageUrl: "/src/assets/AndiceKaiWoonkamer.png", productTitle: "Tiffany Slaapkamer", productCategorie: "Slaapkamer", productPrice: "€879,00" },
-        { imageUrl: "/src/assets/LuncieBoucleStoel.png", productTitle: "Tiffany Slaapkamer", productCategorie: "Slaapkamer", productPrice: "€879,00" }
+        { imageUrl: "/src/assets/TiffanySlaapkamer.png", productTitle: "Tiffany", productCategorie: "Slaapkamer", productPrice: "€879,00" },
+        { imageUrl: "/src/assets/AndiceKaiWoonkamer.png", productTitle: "Andice Kai", productCategorie: "Woonkamer", productPrice: "€1.189,00" },
+        { imageUrl: "/src/assets/LuncieBoucleStoel.png", productTitle: "Lucie Bouclé", productCategorie: "Stoelen", productPrice: "€99,00" }
       ]
     };
   },
@@ -113,13 +134,17 @@ export default {
       });
     },
 
-    scrollRight() {
-      const gallery = document.querySelector('.gallery');
-      gallery.scroll({
-        left: gallery.scrollLeft + 300,
-        behavior: 'smooth'
-      });
-    }
+scrollRight() {
+  const gallery = document.querySelector('.gallery');
+  gallery.scroll({
+    left: gallery.scrollLeft + 300,
+    behavior: 'smooth'
+  });
+},
+toggleCart(index){
+  this.products[index].addedToCart = !this.products[index].addedToCart;
+}
+   
 
   }
 };
@@ -127,7 +152,11 @@ export default {
 
 
 <style scoped>
-
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 img {
   vertical-align: middle;
 }
@@ -142,7 +171,6 @@ img {
   text-align: center;
 }
 
-
 .dot {
   height: 15px;
   width: 15px;
@@ -152,7 +180,7 @@ img {
   display: inline-block;
   transition: background-color 0.6s ease;
   position: relative;
-  bottom: 14rem;
+  bottom: 12rem;
 }
 
 .active {
@@ -192,7 +220,8 @@ img {
 
 /* best verkocht */
 #best-container {
-  background-color: #D9CAC5;
+  background-color: #E8DFDC;
+  padding: 5rem 0;
 }
 
 #best-products {
@@ -203,7 +232,6 @@ img {
 }
 
 #best-text {
-  padding-top: 5rem;
   width: 80%;
   margin: 0 auto 2rem auto;
 }
@@ -212,13 +240,13 @@ img {
   color: #485059;
   font-family: Georgia, sans-serif;
   margin-bottom: -1px;
-  font-size: 2.5rem;
+  font-size: 2.8rem;
 }
 
 #best-text p {
   color: #485059;
   font-family: Georgia, sans-serif;
-  font-size: 1.2rem;
+  font-size: 1.8rem;
 }
 
 .best-product {
@@ -239,18 +267,64 @@ img {
 .product-like {
   position: absolute;
   top: 1rem;
-  right: 3px;
+  right: 4px;
   background-color: #485059;
   padding: 0.3rem 0.5rem;
   border-radius: 5px;
 
 }
 
-.product-like a {
-  text-decoration: none;
-  color: #ffffff;
+.product-like a{
+text-decoration: none;
+color:  #ffffff;
+font-size: 2rem;
 }
 
+.product-content{
+display: flex;
+justify-content: space-between;
+font-family: "Century Gothic", sans-serif;
+}
+
+.product-content-left p{
+color: #888787;
+font-size: 1.2rem;
+margin-left: 0.5rem;
+margin-top: 0.5rem;
+}
+
+.product-content-left h1{
+font-size: 1.5rem;
+margin-left: 0.5rem;
+font-weight: 500;
+}
+
+.product-content-left h2{
+color: #000000;
+font-weight: bold;
+font-size: 1.2rem;
+margin-left: 0.5rem;
+}
+
+/* product right */
+.product-content-right{
+  display: flex;
+  align-items: center;
+}
+
+.product-content-right a{
+  background-color: #F2B66D;
+  padding: 0.8rem 0 0.5rem 0;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.product-content-right i{
+  font-size: 1.5rem;
+  padding: 0 0.30rem 0 0.5rem;
+}
+
+/* carousel home */
 .rooms {
   margin-top: -11rem !important;
 }
@@ -264,13 +338,10 @@ img {
 
 }
 
-
-
 .gallery::-webkit-scrollbar,
 .gallery1::-webkit-scrollbar {
   display: none;
 }
-
 
 .gallery div,
 .gallery1 div {
@@ -280,13 +351,11 @@ img {
   grid-gap: 20px;
   padding: 10px;
   flex: none;
-
 }
 
 .gallery div img,
 .gallery1 div img {
   width: 100%;
-
 }
 
 .gallery-buttons {
@@ -308,11 +377,7 @@ img {
   width: 50px;
   cursor: pointer;
   margin: 40px;
-
 }
-
-
-
 
 #container {
   display: grid;
@@ -330,8 +395,6 @@ img {
 
 }
 
-
-
 .gallery,
   .gallery1 {
     width: 80%;
@@ -339,12 +402,10 @@ img {
     overflow-x: scroll;
   }
 
-
   .images {
     display: flex;
     gap: 1rem;
   }
-
 
 .image-container {
   position: relative;
@@ -376,34 +437,120 @@ img {
   opacity: 1;
 }
 
-
-.slogan-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-  background-color: #BF9A84;
+/* slogan onderaan home */
+#slogan-container{
+  background-color: #E8DFDC;
+  padding: 5rem 0;
 }
 
-.slogan {
-  font-size: 2rem;
+#slogan-content{
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.slogan-content-left{
+ display: flex;
+ justify-content: right;
+ align-items: center;
+ width: calc(50%);
+  margin-right: -0.5rem;
+}
+.slogan-left-text {
   font-family: Georgia, sans-serif;
   color: #485059;
-  padding: 4rem;
-  margin-top: 4rem;
-
-  margin-right: -1rem;
-  border-radius: 40px 0px  0px 40px ;
   background-color: #D9CAC5;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+  border-radius: 3rem 0 0 3rem;
+  font-size: 2.8rem;
+  height: calc(50% - 1rem);
+  width: 100%;
+  display: flex;
+  justify-content: left;
+  padding-left: 10%;
+  align-items: center;
+  margin-top: 3rem;
+  max-height: calc(50% - 1rem); 
+}
+.slogan-content-right{
+  width: calc(50%);
+  z-index: 2;
+  
+}
+.slogan-content-right img{
+  width: 100%;
+}
+@media screen and (max-width: 1584px) {
+  #best-text h1 {
+  font-size:  2.5rem;
+}
+#best-text p {
+  font-size: 1.5rem;
+}
+  .slogan-left-text {
+    font-size: 2.5rem;
+  }
+}
+@media screen and (max-width: 1448px){
+  #best-text h1 {
+  font-size:  1.8rem;
+}
+#best-text p {
+  font-size: 1.3rem;
+}
+  .slogan-left-text {
+    font-size: 1.8rem;
+  } 
+}
+@media screen and (max-width: 1382px){
+  .head-content {
+  bottom: 10rem;
+  left: 4rem;
+
+  max-width: 15rem;
+}
+  .head-content h1 {
+  font-size: 2rem;
 }
 
+.head-content h2 {
+  font-size: 1rem;
+}
 
+.head-content button {
+  font-size: 1rem;
+}
+  .product-content-left p{
+font-size: 1rem;
+}
 
+.product-content-left h1{
+font-size: 1.2rem;
+}
 
-@media screen and (max-width: 700px) {
-  
+.product-content-left h2{
+font-size: 1rem;
+}
+  .product-like {
+  padding: 0.20rem 0.3rem;
 
+}
+
+.product-like a{
+font-size: 1.2rem;
+}
+
+  .product-content-right a{
+   padding: 0.45rem 0 0.3rem 0;
+}
+
+.product-content-right i{
+  font-size: 1.2rem;
+  padding: 0 0.15rem 0 0.25rem;
+}
+}
+
+@media screen and (max-width: 1000px) {
   #backbtn, #nextbtn {
     display: none;
   }
@@ -415,19 +562,6 @@ img {
   .gallery div{
     width: 200%;
   }
-
-  
-
-  
-  .gallery,
-.gallery1 {
-  width: 1100px;
-  overflow-x: scroll;
-}
-  
-
-
-
   .slogan-container{
     display: block;
     padding: 1rem;

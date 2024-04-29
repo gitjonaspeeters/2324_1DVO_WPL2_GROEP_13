@@ -34,7 +34,6 @@ export default {
     padding: 0;
 }
 #footer-container{
-   
     background-color: #485059;
 }
 footer{
