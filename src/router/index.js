@@ -7,7 +7,7 @@ import TeampageView from "../views/TeampageView.vue";
 import CategorieView from "../views/CategorieView.vue";
 import RuimtesView from "../views/RuimtesView.vue";
 
-import TeampageView from "../views/TeampageView.vue"
+
 
 import LoginView from "@/views/LoginView.vue";
 import RegisterView from "@/views/RegisterView.vue";
@@ -32,11 +32,7 @@ const router = createRouter({
       name: "home",
       component: HomeView,
     },
-    {
-      path: "/home",
-      name: "home",
-      component: HomeView,
-    },
+    
     {
       path: "/about",
       name: "about",
