@@ -57,7 +57,7 @@ const router = createRouter({
       path: "/account",
       name: "account",
       component: AccountView,
-    }
+    },
   ],
 });
 
