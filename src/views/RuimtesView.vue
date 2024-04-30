@@ -1,8 +1,8 @@
 <template>
-    <body>
-    <div class="middle">
+    <div class="Everywere">
+    <div class="container">
       <div class="Container-Return-Home">
-        <a href="HomeView.vue">Home/Ruimtes</a>
+        <router-link to="/home"><p>Home/ruimtes</p></router-link>      
       </div>
       <div class="container-First">
         <div class="container-Hallway-Desk">
@@ -33,18 +33,22 @@
       </div>
     </div>
   
-    </body>
+  </div>
   </template>
   <script>
   
   </script>
   <style scoped>
-  body {
+  .Everywere {
     background: #D9CAC5;
+    display: flex;
+    flex-direction: column;
   }
   
   .Container-Return-Home {
-    margin-bottom: -15px;
+    margin-bottom: -50px;
+    margin-top: 150px;
+    margin-left: 15px;
   }
   .Container-Return-Home a{
     text-decoration: none;
@@ -86,7 +90,7 @@
   .Hallway {
     background-size: cover;
     background-repeat: no-repeat;
-    background-image: url("src/assets/image 2.png");
+    background-image: url("src/assets/RuimtesImage2.png");
     /*background-color: grey;*/
     width: 510px;;
     height: 316px;
@@ -106,7 +110,7 @@
   .Diningroom {
     background-size: cover;
     background-repeat: no-repeat;
-    background-image: url("src/assets/38bb9aa5-6065-4770-b199-f74772a637c2 1.png");
+    background-image: url("src/assets/EetkamerImageRuimtes.png");
     /*background-color: grey;*/
     width: 487px;
     height: 680px;
@@ -125,7 +129,7 @@
   .Livingroom {
     background-size: cover;
     background-repeat: no-repeat;
-    background-image: url("src/assets/Gio-zetel 1.png");
+    background-image: url("src/assets/WoonkamerImageRuimtes.png");
     /*background-color: grey;*/
     width: 737px;
     height: 656px;
@@ -145,7 +149,7 @@
   .Desk {
     background-size: cover;
     background-repeat: no-repeat;
-    background-image: url("src/assets/Screenshot_1-8 1.png");
+    background-image: url("src/assets/BureaImageRuimtes.png");
     /*background-color: grey;*/
     width: 518px;
     height: 316px;
@@ -173,7 +177,7 @@
   .Bedroom{
     background-size: cover;
     background-repeat: no-repeat;
-    background-image: url("src/assets/vanaf-1699-euro 1.png");
+    background-image: url("src/assets/SlaapkamerImageRuimtes.png");
     /*background-color: grey;*/
     width: 777px;
     height: 673px;

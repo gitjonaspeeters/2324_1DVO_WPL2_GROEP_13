@@ -1,8 +1,8 @@
 <template>
-  <body>
-  <div class="middle">
+  <div class="Everywere">
+  <div class="container">
     <div class="Container-Return-Home">
-      <a href="HomeView.vue">Home/Categorieen</a>
+      <router-link to="/home"><p>Home/Categorieen</p></router-link>
     </div>
     <div class="container-First">
       <div class="container-Closet">
@@ -39,18 +39,22 @@
       </div>
     </div>
   </div>
-  </body>
+</div>
 </template>
 <script>
 
 </script>
 <style scoped>
-body {
+.Everywere {
   background: #D9CAC5;
+  display: flex;
+    flex-direction: column;
 }
 
 .Container-Return-Home {
-  margin-bottom: -15px;
+  margin-bottom: -50px;
+    margin-top: 150px;
+    margin-left: 35px;
 }
 
 .Container-Return-Home a {
@@ -83,7 +87,7 @@ a {
 }
 
 .Home-Accessories {
-  background-image: url("src/assets/HomeAccessories.png");
+  background-image: url("src/assets/HomeAccessoriesCategorie.png");
   background-color: grey;
   width: 1300px;
   height: 316px;
@@ -241,7 +245,7 @@ image {
   }
 
   .Container-Return-Home {
-    margin-bottom: -15px;
+            margin: 150px 14px -42px 87px;
   }
 
   .Container-Return-Home a {
@@ -267,7 +271,7 @@ image {
 
   .container-Last {
     display: flex;
-    margin: 15px;
+    margin: 15px 15px 15px 75px;
   }
 
   .Home-Accessories {
@@ -284,7 +288,7 @@ image {
     opacity: 60%;
     color: black;
     transition: width 1s ease-in-out 1s, height 1s ease-in-out, ease-in-out 1.5s;
-    width: 650px;
+    width: 1500px;
     padding: 15px;
   }
 
@@ -318,7 +322,7 @@ image {
     opacity: 60%;
     color: black;
     transition: width 1s ease-in-out 1s, height 1s ease-in-out, ease-in-out 1.5s;
-    width: 650px;
+    width: 1500px;
     padding: 15px;
   }
 
@@ -336,7 +340,7 @@ image {
     opacity: 60%;
     color: black;
     transition: width 1s ease-in-out 1s, height 1s ease-in-out, ease-in-out 1.5s;
-    width: 650px;
+    width: 1500px;
     padding: 15px;
   }
 
@@ -354,7 +358,7 @@ image {
     opacity: 60%;
     color: black;
     transition: width 1s ease-in-out 1s, height 1s ease-in-out, ease-in-out 1.5s;
-    width: 650px;
+    width: 1500px;
     padding: 15px;
   }
 
@@ -362,7 +366,7 @@ image {
     background-color: grey;
     width: 755px;
     height: 316px;
-    margin: 5px 15px 5px 15px;
+    margin: 5px 15px -5px 15px;
     display: flex;
     align-items: flex-end;
   }
@@ -372,7 +376,7 @@ image {
     opacity: 60%;
     color: black;
     transition: width 1s ease-in-out 1s, height 1s ease-in-out, ease-in-out 1.5s;
-    width: 650px;
+    width: 1500px;
     padding: 15px;
   }
 
@@ -390,7 +394,7 @@ image {
     opacity: 60%;
     color: black;
     transition: width 1s ease-in-out 1s, height 1s ease-in-out, ease-in-out 1.5s;
-    width: 650px;
+    width: 1500px;
     padding: 15px;
   }
 
@@ -436,7 +440,7 @@ image {
 
   .container-Last {
     display: flex;
-    margin: 15px;
+    margin: 15px 15px 15px 40px;
   }
 
   .Home-Accessories {
