@@ -3,11 +3,11 @@
 </script>
 
 <template>
-  <div id="inlog-container">
+  <div id="account-container">
     <h1>Account information</h1>
     <hr>
-    <div id="accountinfo-image" class="input-container">
-      <div id="inlog-left">
+    <div id="accountinfo-image">
+      <div id="account-left">
         <form id="form" action="">
           <div class="input">
             <input type="text" id="name" name="name" placeholder="Name">
@@ -27,7 +27,7 @@
           </div>
         </form>
       </div>
-      <div id="inlog-right">
+      <div id="account-right">
         <div id="image">
         </div>
       </div>
@@ -44,7 +44,7 @@
   font-family: "Century Gothic", sans-serif;
 }
 
-#inlog-container {
+#account-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -52,14 +52,14 @@
   height: 100%;
 }
 
-#inlog-right {
+#account-right {
   display: flex;
   width: 60vw;
   margin-right: 10rem;
   height: 65rem;
 }
 
-#inlog-left {
+#account-left {
   display: flex;
   width: 40vw;
   justify-content: center;
@@ -135,11 +135,11 @@ hr {
 
 
 @media screen and (max-width: 1050px) {
-  #inlog-left {
+  #account-left {
     margin-left: 2.5rem;
   }
 
-  #inlog-right {
+  #account-right {
     margin: 0 auto;
     display: flex;
     height: 100%;
@@ -147,15 +147,16 @@ hr {
 }
 
 @media screen and (max-width: 850px) {
-  #inlog-right {
+  #account-right {
     display: none;
+    margin: 0;
   }
 
-  #inlog-left {
+  #account-left {
     width: 100vw;
   }
 
-  #inlog-container {
+  #account-container {
     justify-content: center;
   }
 }
