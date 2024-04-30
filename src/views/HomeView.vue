@@ -39,7 +39,7 @@
     </div>
   </div>
 
-
+<!-- best products -->
   <div id="best-container">
     <div id="best-content">
       <div id="best-text">
@@ -83,10 +83,6 @@
       </div>
     </div>
   </div>
-  <!-- <div class="slogan-container">
-    <div class="slogan">Comfort, <br/> Betaalbaar en Betrouwbaar</div>
-    <img src="@/assets/AdobeStock_478155843 1.png" alt="afbeelding home pagina">
-  </div> -->
 </template>
 
 <script>
@@ -503,6 +499,9 @@ margin-left: 0.5rem;
   } 
 }
 @media screen and (max-width: 1382px){
+  .dot{
+    bottom: 9rem;
+  }
   .head-content {
   bottom: 10rem;
   left: 4rem;
@@ -562,11 +561,115 @@ font-size: 1.2rem;
   .gallery div{
     width: 200%;
   }
+
   .slogan-container{
     display: block;
     padding: 1rem;
     max-width: 100%;
     height: auto;
   }
-}</style>
+
+  .dot{
+    bottom: 9rem;
+  }
+
+  /* best products */
+  #best-products{
+    flex-direction: column;
+    align-items: center;
+  }
+  .best-product {
+  width: 100%;
+  margin-right: 0;
+  margin-bottom: 3rem;
+}
+.best-product:last-child {
+  margin-bottom: 0;
+}
+.product-like {
+  padding: 0.40rem 0.6rem;
+
+}
+
+.product-like a{
+font-size: 1.5rem;
+}
+
+.product-content-left p{
+font-size: 1.5rem;
+}
+
+.product-content-left h1{
+font-size: 1.7rem;
+}
+
+.product-content-left h2{
+font-size: 1.5rem;
+}
+
+.product-content-right a{
+   padding: 0.90rem 0 0.6rem 0;
+}
+
+.product-content-right i{
+  font-size: 2.4rem;
+  padding: 0 0.30rem 0 0.50rem;
+}
+
+/* slogan */
+#slogan-content{
+  flex-direction: column;
+}
+
+.slogan-content-left{
+ width: 100%;
+  margin-right: 0;
+}
+
+.slogan-left-text {
+  box-shadow: none;
+  border-radius: 0;
+  font-size: 2.8rem;
+  height: calc(50% - 1rem);
+  width: 100%;
+  display: flex;
+  justify-content: left;
+  padding-left: 10%;
+  align-items: center;
+  margin-top: 3rem;
+  max-height: calc(50% - 1rem); 
+}
+.slogan-content-right{
+  width: 100%;
+  z-index: 0;
+  
+}
+.slogan-content-right img{
+  width: 100%;
+  border-radius: 0;
+}
+}
+
+@media screen and (max-width: 600px){
+  .product-content-left p{
+font-size: 1rem;
+}
+
+.product-content-left h1{
+font-size: 1.2rem;
+}
+
+.product-content-left h2{
+font-size: 1rem;
+}
+.product-content-right a{
+   padding: 0.45rem 0 0.3rem 0;
+}
+
+.product-content-right i{
+  font-size: 1.2rem;
+  padding: 0 0.15rem 0 0.25rem;
+}
+}
+</style>
 
