@@ -2,7 +2,7 @@
     <div id="navigation-container">
         <nav>
             <div id="navigation-left">
-                <router-link to="/home"><img src="@/assets/Comfortmeubel wit.svg"></router-link>
+                <router-link to="/"><img src="@/assets/Comfortmeubel wit.svg"></router-link>
             </div>
             <div id="navigation-main" :style="{ top:navbarTop, 'margin-top': navbarMarginTop }">
                 <div class="navigation-main-section">
@@ -100,6 +100,33 @@
         <p><strong>Totaal: €3800</strong></p>
         <button type="button" class="cart-button btn btn-warning">Bekijk winkelwagen</button>
     </div>
+    <!-- navigation media screen -->
+    <div id="media-navigation-container">
+        <div id="media-navigation-main">
+            <div class="media-navigation-main-section">
+                <a href="/categorie">
+                    <i class="fa-solid fa-book"></i>
+                    <p>Categorieen</p></a>
+            </div>
+            <div class="media-navigation-main-section">
+                <a href="/ruimtes">
+                    <i class="fa-solid fa-house"></i>
+                    <p>Ruimtes</p></a>
+            </div>
+            <div class="media-navigation-main-section">
+                <a href="#">
+                    <i class="fa-solid fa-layer-group"></i>
+                    <p>Alle items</p></a>
+            </div>
+            <div class="media-navigation-main-section">
+                <a href="#">
+                    <i class="fa-solid fa-users"></i>
+                    <p>Over Ons</p>
+                </a>
+            </div>
+        </div>
+</div>
+
 </template>
 
 <script>
@@ -110,9 +137,13 @@ export default {
             searchVisible: false,
             prevScrollpos: 0,
             navbarTop: '2.5rem',
+
             navbarOpacity: 1,
             navbarMarginTop: '0',
             cartPopupVisible: false
+
+            navbarMarginTop: '0'
+
         }
     },
     methods: {
@@ -204,7 +235,6 @@ export default {
     left: 0;
     right: 0;
     margin: 0 auto;
-    transition: 1s margin-top ease-in-out ;
 }
 
 nav{
@@ -229,6 +259,7 @@ nav{
     background-color: #ffffff;
     border-radius: 10rem;
     gap: 1rem;
+    transition: margin-top 1s ease-in-out;
 }
 .navigation-main-section{
     padding-right: 1rem;
@@ -316,5 +347,42 @@ nav p{
     background-color: #ffffff;
     border: none;
     font-size: 1.2rem;
+}
+#media-navigation-container{
+    display: none;
+}
+
+/* media querys */
+@media screen and (max-width: 1382px){
+    #navigation-main{
+     display: none;
+    }
+    #media-navigation-container{
+        display: block;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        z-index: 3;
+    }
+    #media-navigation-main{
+        height: 4rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2.5rem  1.5rem;
+        background-color: #ffffff;
+        gap: 1rem;
+    }
+    .media-navigation-main-section{
+        text-align: center;
+    }
+    .media-navigation-main-section a{
+        text-decoration: none;
+        color: #4C4C4C;
+
+    }
+    .media-navigation-main-section i{
+        font-size: 1.5rem;
+    }
 }
 </style>

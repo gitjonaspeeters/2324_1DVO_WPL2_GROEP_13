@@ -2,8 +2,7 @@ import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
 import AboutView from "../views/AboutView.vue";
 
-import MainView from "../views/Main.vue";
-import TeampageView from "../views/TeampageView.vue";
+
 import CategorieView from "../views/CategorieView.vue";
 import RuimtesView from "../views/RuimtesView.vue";
 
@@ -32,7 +31,6 @@ const router = createRouter({
       name: "home",
       component: HomeView,
     },
-    
     {
       path: "/about",
       name: "about",
@@ -57,7 +55,7 @@ const router = createRouter({
       path: "/account",
       name: "account",
       component: AccountView,
-    }
+    },
   ],
 });
 
