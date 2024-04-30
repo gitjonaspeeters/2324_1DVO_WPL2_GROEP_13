@@ -4,7 +4,7 @@
             <div id="navigation-left">
                 <router-link to="/"><img src="@/assets/Comfortmeubel wit.svg"></router-link>
             </div>
-            <div id="navigation-main" :style="{ top:navbarTop, 'margin-top': navbarMarginTop }">
+            <div id="navigation-main" :style="{ 'margin-top': navbarMarginTop }">
                 <div class="navigation-main-section">
                     <a href="/categorie">
                         <i class="fa-solid fa-book"></i>
@@ -131,50 +131,51 @@
 
 <script>
 export default {
-    name: "NavigationBar",
-    data(){
-        return {
-            searchVisible: false,
-            prevScrollpos: 0,
-            navbarTop: '2.5rem',
+  name: "NavigationBar",
+  data() {
+    return {
+      searchVisible: false,
+      prevScrollpos: 0,
+      navbarTop: '2.5rem',
 
-            navbarOpacity: 1,
-            navbarMarginTop: '0',
-            cartPopupVisible: false,
+      navbarOpacity: 1,
+      navbarMarginTop: '0',
+      cartPopupVisible: false,
 
-            navbarMarginTop: '0'
-
+    }
+  },
+  methods: {
+    toggleSearch() {
+      console.log("er word geklikt");
+      this.searchVisible = !this.searchVisible;
+      event.preventDefault();
+    },
+    toggleCartPopup() {
+      console.log("er word geklikt");
+      this.cartPopupVisible = !this.cartPopupVisible;
+    },
+    hideCartPopup() {
+      this.cartPopupVisible = false;
+    },
+    handleScroll() {
+      const currentScrollPos = window.pageYOffset
+      if (currentScrollPos > this.prevScrollpos) {
+        this.navbarMarginTop = '-12rem'
+        if (this.searchVisible === true) {
+          this.toggleSearch();
         }
-    },
-    methods: {
-        toggleSearch(){
-            console.log("er word geklikt");
-            this.searchVisible = !this.searchVisible;
-            event.preventDefault();
-        },
-        toggleCartPopup() {
-            console.log("er word geklikt");
-            this.cartPopupVisible = !this.cartPopupVisible;
-        },
-        hideCartPopup() {
-            this.cartPopupVisible = false;
-        },
-        handleScroll() {
-            const currentScrollPos = window.pageYOffset
-            if (currentScrollPos > this.prevScrollpos) {
-                this.navbarMarginTop = '-12rem'
-            } else {
-                this.navbarMarginTop = '0'
-            }
-            this.prevScrollpos = currentScrollPos
-        }
-    },
-    mounted() {
-        window.addEventListener('scroll', this.handleScroll)
-    },
-    beforeDestroy() {
-        window.removeEventListener('scroll', this.handleScroll)
-    },
+      } else {
+        this.navbarMarginTop = '0'
+      }
+      this.prevScrollpos = currentScrollPos
+    }
+  },
+  mounted() {
+    window.addEventListener('scroll', this.handleScroll)
+  },
+  beforeDestroy() {
+    window.removeEventListener('scroll', this.handleScroll)
+  },
 }
 </script>
 <style scoped>
