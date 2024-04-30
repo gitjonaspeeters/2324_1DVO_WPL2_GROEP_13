@@ -42,7 +42,7 @@
                     </a>
                 </div>
                 <div id="navigation-right-sextion">
-                    <a href="#">
+                    <a  @click="toggleCartPopup">
                         <i class="fa-solid fa-cart-shopping"></i>
                     </a>             
                 </div>
@@ -59,7 +59,76 @@
             </div>
         </div>
     </div>
+    <!-- Cart Popup -->
+    <div id="cart-popup" v-if="cartPopupVisible" @click="hideCartPopup">
+        <h4>Winkelwagen</h4>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-4">
+                    <img src="@/assets/image 2.png" alt="product">
+                </div>
+                <div class="product-text col-7">
+                    <p>Slaapkamer Ivette</p>
+                    <p><strong>€2.534,00</strong>   </p>
+                    <p>Aantal</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4">
+                    <img src="@/assets/image 2.png" alt="product">
+                </div>
+                <div class="product-text col-7">
+                    <p>Slaapkamer Ivette</p>
+                    <p><strong>€2.534,00</strong>   </p>
+                    <p>Aantal</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4">
+                    <img src="@/assets/image 2.png" alt="product">
+                </div>
+                <div class="product-text col-7">
+                    <p>Slaapkamer Ivette</p>
+                    <p><strong>€2.534,00</strong>   </p>
+                    <p>Aantal</p>
+                </div>
+            </div>
+            
+            
+        </div>
+        <p><strong>Totaal: €3800</strong></p>
+        <button type="button" class="cart-button btn btn-warning">Bekijk winkelwagen</button>
+    </div>
+    <!-- navigation media screen -->
+    <div id="media-navigation-container">
+        <div id="media-navigation-main">
+            <div class="media-navigation-main-section">
+                <a href="/categorie">
+                    <i class="fa-solid fa-book"></i>
+                    <p>Categorieen</p></a>
+            </div>
+            <div class="media-navigation-main-section">
+                <a href="/ruimtes">
+                    <i class="fa-solid fa-house"></i>
+                    <p>Ruimtes</p></a>
+            </div>
+            <div class="media-navigation-main-section">
+                <a href="#">
+                    <i class="fa-solid fa-layer-group"></i>
+                    <p>Alle items</p></a>
+            </div>
+            <div class="media-navigation-main-section">
+                <a href="#">
+                    <i class="fa-solid fa-users"></i>
+                    <p>Over Ons</p>
+                </a>
+            </div>
+        </div>
+</div>
+
 </template>
+
 <script>
 export default {
     name: "NavigationBar",
@@ -68,32 +137,43 @@ export default {
             searchVisible: false,
             prevScrollpos: 0,
             navbarTop: '2.5rem',
+
+            navbarOpacity: 1,
+            navbarMarginTop: '0',
+            cartPopupVisible: false,
+
             navbarMarginTop: '0'
+
         }
     },
     methods: {
         toggleSearch(){
             console.log("er word geklikt");
             this.searchVisible = !this.searchVisible;
-
             event.preventDefault();
-
+        },
+        toggleCartPopup() {
+            console.log("er word geklikt");
+            this.cartPopupVisible = !this.cartPopupVisible;
+        },
+        hideCartPopup() {
+            this.cartPopupVisible = false;
         },
         handleScroll() {
-          const currentScrollPos = window.pageYOffset
-          if (currentScrollPos > this.prevScrollpos) {
-            this.navbarMarginTop = '-12rem'
-          } else {
-            this.navbarMarginTop = '0'
-          }
-          this.prevScrollpos = currentScrollPos
+            const currentScrollPos = window.pageYOffset
+            if (currentScrollPos > this.prevScrollpos) {
+                this.navbarMarginTop = '-12rem'
+            } else {
+                this.navbarMarginTop = '0'
+            }
+            this.prevScrollpos = currentScrollPos
         }
     },
     mounted() {
-      window.addEventListener('scroll', this.handleScroll)
+        window.addEventListener('scroll', this.handleScroll)
     },
     beforeDestroy() {
-      window.removeEventListener('scroll', this.handleScroll)
+        window.removeEventListener('scroll', this.handleScroll)
     },
 }
 </script>
@@ -103,6 +183,50 @@ export default {
     padding: 0;
     /* border: 1px solid red; */
 }
+
+#cart-popup {
+    position: fixed;
+    top: 15%; /* Plaats het onder de winkelwagenknop */
+    left: 86%;
+    width: 350px;
+    margin-right: 5px;
+    transform: translateX(-50%);
+    z-index: 999; /* Zorg ervoor dat het bovenop andere elementen staat */
+    background-color: #ffffff;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: margin-top 1s ease-in-out;
+    
+}
+
+#cart-popup img {
+    width: 100%;
+    height: auto;
+    padding: 0.3rem;
+}
+
+#cart-popup h4 {
+    color: #485059;
+    padding: 0.5rem;
+}
+
+.product-text {
+    padding: 0.5rem;
+}
+
+#cart-popup .row {
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #ccc;
+}
+
+.cart-button {
+    align-items: right;
+    padding: 3px;
+    margin-top: 1rem;
+}
+
 #navigation-container {
     position: fixed;
     top: 2.5rem;
@@ -223,5 +347,42 @@ nav p{
     background-color: #ffffff;
     border: none;
     font-size: 1.2rem;
+}
+#media-navigation-container{
+    display: none;
+}
+
+/* media querys */
+@media screen and (max-width: 1382px){
+    #navigation-main{
+     display: none;
+    }
+    #media-navigation-container{
+        display: block;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        z-index: 3;
+    }
+    #media-navigation-main{
+        height: 4rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2.5rem  1.5rem;
+        background-color: #ffffff;
+        gap: 1rem;
+    }
+    .media-navigation-main-section{
+        text-align: center;
+    }
+    .media-navigation-main-section a{
+        text-decoration: none;
+        color: #4C4C4C;
+
+    }
+    .media-navigation-main-section i{
+        font-size: 1.5rem;
+    }
 }
 </style>
