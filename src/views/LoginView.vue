@@ -13,9 +13,9 @@
           <label for="email"></label>
           <input type="email" id="email" name="email" placeholder="Email">
           <label for="password"></label>
-          <input type="password" id="password" name="password" placeholder="Wactwoord">
+          <input type="password" id="password" name="password" placeholder="Wachtwoord">
           <router-link to="#"><p id="login">Inloggen</p></router-link>
-          <router-link to="/register"><p id="rigister">Rigistreren</p></router-link>
+          <router-link to="/register"><p id="register">Registreren</p></router-link>
           <div id="remember-button">
             <section></section>
             <p>Onthouden</p>
@@ -65,10 +65,6 @@ a {
   width: 50vw;
   align-items: center;
   justify-content: center;
-}
-
-#registration-form-kaderform-kader {
-  display: flex;
 }
 
 #form-kader {
@@ -126,11 +122,11 @@ a {
 }
 
 #form input {
-  width: 215px;
+  width: 250px;
   height: 36px;
   background-color: darkblue;
-  color: #ffffff;
   border-radius: 12px;
+  padding-left: 20px;
 }
 
 #form #email {
@@ -147,7 +143,6 @@ a {
 
 #email::placeholder, #password::placeholder {
   color: #FFFFFF;
-  padding-left: 1rem;
 }
 
 #login {
@@ -162,7 +157,7 @@ a {
   margin: 10px auto;
 }
 
-#rigister {
+#register {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -173,6 +168,16 @@ a {
   border: 1px solid #000;
   color: #000;
   margin: 0.25rem auto;
+}
+
+#login:hover {
+  background-color: #b08972;
+}
+
+#register:hover {
+  border: none;
+  background-color: #485059;
+  color: #ffffff;
 }
 
 @media screen and (max-width: 1050px) {
@@ -194,6 +199,7 @@ a {
 
   #inlog-left {
     width: 100vw;
+    margin: 0;
   }
 
   #inlog-container {

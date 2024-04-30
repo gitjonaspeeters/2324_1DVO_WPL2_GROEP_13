@@ -17,9 +17,9 @@
             <label for="email"></label>
             <input type="email" class="input" id="email" name="email" placeholder="Email">
             <label for="password"></label>
-            <input type="password" class="input" id="password" name="password" placeholder="Wactwoord">
+            <input type="password" class="input" id="password" name="password" placeholder="Wachtwoord">
             <label for="password"></label>
-            <input type="password" id="password2" name="password" placeholder="Herhaal Wactwoord">
+            <input type="password" id="password2" name="password" placeholder="Herhaal Wachtwoord">
             <p id="register">Registreren</p>
           </form>
 
@@ -88,7 +88,6 @@
 
 #image {
   width: 150rem;
-  height: 54rem;
   background-image: url("src/assets/undraw_ideation_re_8i2h.svg");
   background-size: contain;
   background-repeat: no-repeat;
@@ -119,11 +118,11 @@
 input {
   height: 40px;
   width: 270px;
+  padding-left: 20px;
 }
 
 input::placeholder {
   color: #FFFFFF;
-  padding-left: 1rem;
 }
 
 #register {
@@ -136,6 +135,12 @@ input::placeholder {
   background-color: #A67C63;
   color: #ffffff;
   margin: 0.75rem auto;
+}
+
+#register:hover {
+  border: none;
+  background-color: #485059;
+  color: #ffffff;
 }
 
 @media screen and (max-width: 1050px) {
@@ -156,9 +161,10 @@ input::placeholder {
 
   #registration-leftside {
     width: 100vw;
+    margin: 0;
   }
 
-  #registration-container-container {
+  #registration-container {
     justify-content: center;
   }
 }
