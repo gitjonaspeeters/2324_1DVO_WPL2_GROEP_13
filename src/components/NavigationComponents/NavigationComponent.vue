@@ -59,6 +59,32 @@
             </div>
         </div>
     </div>
+    <!-- navigation media screen -->
+    <div id="media-navigation-container">
+        <div id="media-navigation-main">
+            <div class="media-navigation-main-section">
+                <a href="/categorie">
+                    <i class="fa-solid fa-book"></i>
+                    <p>Categorieen</p></a>
+            </div>
+            <div class="media-navigation-main-section">
+                <a href="/ruimtes">
+                    <i class="fa-solid fa-house"></i>
+                    <p>Ruimtes</p></a>
+            </div>
+            <div class="media-navigation-main-section">
+                <a href="#">
+                    <i class="fa-solid fa-layer-group"></i>
+                    <p>Alle items</p></a>
+            </div>
+            <div class="media-navigation-main-section">
+                <a href="#">
+                    <i class="fa-solid fa-users"></i>
+                    <p>Over Ons</p>
+                </a>
+            </div>
+        </div>
+</div>
 </template>
 <script>
 export default {
@@ -224,5 +250,42 @@ nav p{
     background-color: #ffffff;
     border: none;
     font-size: 1.2rem;
+}
+#media-navigation-container{
+    display: none;
+}
+
+/* media querys */
+@media screen and (max-width: 1382px){
+    #navigation-main{
+     display: none;
+    }
+    #media-navigation-container{
+        display: block;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        z-index: 3;
+    }
+    #media-navigation-main{
+        height: 4rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2.5rem  1.5rem;
+        background-color: #ffffff;
+        gap: 1rem;
+    }
+    .media-navigation-main-section{
+        text-align: center;
+    }
+    .media-navigation-main-section a{
+        text-decoration: none;
+        color: #4C4C4C;
+
+    }
+    .media-navigation-main-section i{
+        font-size: 1.5rem;
+    }
 }
 </style>

@@ -77,4 +77,11 @@ footer{
     color: #ffffff;
     margin-left: 0.4rem;
 }
+
+/* media querys */
+@media screen and (max-width: 1382px){
+    #footer-container{
+        margin-bottom: 5rem;
+    }
+}
 </style>
