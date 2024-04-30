@@ -61,10 +61,44 @@
     </div>
     <!-- Cart Popup -->
     <div id="cart-popup" v-if="cartPopupVisible" @click="hideCartPopup">
-        <p>Winkelwagen</p>
+        <h4>Winkelwagen</h4>
 
-        
-        <p>Je hebt nog geen items in je winkelwagen</p>
+        <div class="container">
+            <div class="row">
+                <div class="col-4">
+                    <img src="@/assets/image 2.png" alt="product">
+                </div>
+                <div class="product-text col-7">
+                    <p>Slaapkamer Ivette</p>
+                    <p><strong>€2.534,00</strong>   </p>
+                    <p>Aantal</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4">
+                    <img src="@/assets/image 2.png" alt="product">
+                </div>
+                <div class="product-text col-7">
+                    <p>Slaapkamer Ivette</p>
+                    <p><strong>€2.534,00</strong>   </p>
+                    <p>Aantal</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4">
+                    <img src="@/assets/image 2.png" alt="product">
+                </div>
+                <div class="product-text col-7">
+                    <p>Slaapkamer Ivette</p>
+                    <p><strong>€2.534,00</strong>   </p>
+                    <p>Aantal</p>
+                </div>
+            </div>
+            
+            
+        </div>
+        <p><strong>Totaal: €3800</strong></p>
+        <button type="button" class="cart-button btn btn-warning">Bekijk winkelwagen</button>
     </div>
 </template>
 
@@ -121,7 +155,7 @@ export default {
 
 #cart-popup {
     position: fixed;
-    top: 25%; /* Plaats het onder de winkelwagenknop */
+    top: 15%; /* Plaats het onder de winkelwagenknop */
     left: 86%;
     width: 350px;
     margin-right: 5px;
@@ -135,6 +169,31 @@ export default {
     
 }
 
+#cart-popup img {
+    width: 100%;
+    height: auto;
+    padding: 0.3rem;
+}
+
+#cart-popup h4 {
+    color: #485059;
+    padding: 0.5rem;
+}
+
+.product-text {
+    padding: 0.5rem;
+}
+
+#cart-popup .row {
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #ccc;
+}
+
+.cart-button {
+    align-items: right;
+    padding: 3px;
+    margin-top: 1rem;
+}
 
 #navigation-container {
     position: fixed;
