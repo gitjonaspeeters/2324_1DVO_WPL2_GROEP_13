@@ -36,11 +36,7 @@ const router = createRouter({
       name: "about",
       component: AboutView,
     },
-    {
-      path: "/teampage",
-      name: "teampage",
-      component: TeampageView,
-    },
+    
     {
       path: "/login",
       name: "login",
