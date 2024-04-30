@@ -140,7 +140,7 @@ export default {
 
             navbarOpacity: 1,
             navbarMarginTop: '0',
-            cartPopupVisible: false
+            cartPopupVisible: false,
 
             navbarMarginTop: '0'
 
