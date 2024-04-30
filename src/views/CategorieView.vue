@@ -245,7 +245,7 @@ image {
   }
 
   .Container-Return-Home {
-    margin-bottom: -15px;
+            margin: 150px 14px -42px 87px;
   }
 
   .Container-Return-Home a {
@@ -288,7 +288,7 @@ image {
     opacity: 60%;
     color: black;
     transition: width 1s ease-in-out 1s, height 1s ease-in-out, ease-in-out 1.5s;
-    width: 650px;
+    width: 1500px;
     padding: 15px;
   }
 
@@ -322,7 +322,7 @@ image {
     opacity: 60%;
     color: black;
     transition: width 1s ease-in-out 1s, height 1s ease-in-out, ease-in-out 1.5s;
-    width: 650px;
+    width: 1500px;
     padding: 15px;
   }
 
@@ -340,7 +340,7 @@ image {
     opacity: 60%;
     color: black;
     transition: width 1s ease-in-out 1s, height 1s ease-in-out, ease-in-out 1.5s;
-    width: 650px;
+    width: 1500px;
     padding: 15px;
   }
 
@@ -358,7 +358,7 @@ image {
     opacity: 60%;
     color: black;
     transition: width 1s ease-in-out 1s, height 1s ease-in-out, ease-in-out 1.5s;
-    width: 650px;
+    width: 1500px;
     padding: 15px;
   }
 
@@ -366,7 +366,7 @@ image {
     background-color: grey;
     width: 755px;
     height: 316px;
-    margin: 5px 15px 5px 15px;
+    margin: 5px 15px -5px 15px;
     display: flex;
     align-items: flex-end;
   }
@@ -376,7 +376,7 @@ image {
     opacity: 60%;
     color: black;
     transition: width 1s ease-in-out 1s, height 1s ease-in-out, ease-in-out 1.5s;
-    width: 650px;
+    width: 1500px;
     padding: 15px;
   }
 
@@ -394,7 +394,7 @@ image {
     opacity: 60%;
     color: black;
     transition: width 1s ease-in-out 1s, height 1s ease-in-out, ease-in-out 1.5s;
-    width: 650px;
+    width: 1500px;
     padding: 15px;
   }
 
