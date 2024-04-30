@@ -166,6 +166,7 @@ export default {
     border: 1px solid #ccc;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: margin-top 1s ease-in-out;
     
 }
 
