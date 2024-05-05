@@ -4,7 +4,7 @@
     <div class="container-return-home">
       <router-link to="/home"><p>Home/Categorieen</p></router-link>
     </div>
-    <div class="container-First">
+    <div class="container-first">
       <div class="container-closet">
         <div class="closet">
           <a class="hover-effect">Kasten</a>
@@ -19,7 +19,7 @@
         </div>
       </div>
     </div>
-    <div class="container-Second">
+    <div class="container-second">
       <div class="container-bed">
         <div class="bed">
           <a class="hover-effect">Bedden</a>
@@ -105,7 +105,7 @@ a {
   padding: 15px;
 }
 
-.container-Second {
+.container-second {
   display: flex;
   margin: -15px 15px 15px 15px;
 }
@@ -234,7 +234,7 @@ image {
   padding: 15px;
 }
 
-.container-First {
+.container-first {
   display: flex;
   margin: 15px;
 }
@@ -291,7 +291,7 @@ image {
     padding: 15px;
   }
 
-  .container-Second {
+  .container-second {
     display: flex;
     margin: -15px 15px 5px 15px;
     flex-direction: column;
@@ -395,7 +395,7 @@ image {
     padding: 15px;
   }
 
-  .container-First {
+  .container-first {
     display: flex;
     margin: 15px;
     flex-direction: column;
@@ -458,7 +458,7 @@ image {
     padding: 15px;
   }
 
-  .container-Second {
+  .container-second {
     display: flex;
     margin: 15px;
     flex-direction: column;
@@ -564,7 +564,7 @@ image {
     padding: 15px;
   }
 
-  .container-First {
+  .container-first {
     display: flex;
     margin: 15px;
     flex-direction: column;
