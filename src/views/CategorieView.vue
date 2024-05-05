@@ -1,39 +1,39 @@
 <template>
-  <div class="Everywere">
+  <div class="everywere">
   <div class="container">
-    <div class="Container-Return-Home">
+    <div class="container-return-home">
       <router-link to="/home"><p>Home/Categorieen</p></router-link>
     </div>
     <div class="container-First">
-      <div class="container-Closet">
-        <div class="Closet">
+      <div class="container-closet">
+        <div class="closet">
           <a class="hover-effect">Kasten</a>
         </div>
       </div>
-      <div class="container-Chair-Desk">
+      <div class="container-Chair-desk">
         <div class="Chair">
           <a class="hover-effect">Stoelen</a>
         </div>
-        <div class="Desk">
+        <div class="desk">
           <a class="hover-effect">Bureaus</a>
         </div>
       </div>
     </div>
     <div class="container-Second">
-      <div class="container-Bed">
-        <div class="Bed">
+      <div class="container-bed">
+        <div class="bed">
           <a class="hover-effect">Bedden</a>
         </div>
       </div>
-      <div class="container-Sofa">
-        <div class="Sofa">
+      <div class="container-sofa">
+        <div class="sofa">
           <a class="hover-effect">Zetels</a>
         </div>
       </div>
     </div>
-    <div class="container-Last">
-      <div class="Container-Home-Accessories">
-        <div class="Home-Accessories">
+    <div class="container-last">
+      <div class="container-home-accessories">
+        <div class="home-accessories">
           <a class="hover-effect">Woonaccessoires</a>
         </div>
       </div>
@@ -45,19 +45,19 @@
 
 </script>
 <style scoped>
-.Everywere {
+.everywere {
   background: #D9CAC5;
   display: flex;
     flex-direction: column;
 }
 
-.Container-Return-Home {
+.container-return-home {
   margin-bottom: -50px;
     margin-top: 150px;
     margin-left: 35px;
 }
 
-.Container-Return-Home a {
+.container-return-home a {
   text-decoration: none;
   color: #A67C63;
   font-size: 1rem;
@@ -81,14 +81,14 @@ a {
   margin-bottom: -1250px;
 }
 
-.container-Last {
+.container-last {
   display: flex;
   margin: 15px;
 }
 
-.Home-Accessories {
-  background-image: url("src/assets/HomeAccessoriesCategorie.png");
-  background-color: grey;
+.home-accessories {
+  background-image: url("src/assets/homeaccessoriesCategorie.png");
+   
   width: 1300px;
   height: 316px;
   margin: 15px;
@@ -96,7 +96,7 @@ a {
   align-items: flex-end;
 }
 
-.Home-Accessories:hover a {
+.home-accessories:hover a {
   background: white;
   opacity: 60%;
   color: black;
@@ -110,16 +110,16 @@ a {
   margin: -15px 15px 15px 15px;
 }
 
-.container-Chair-Desk {
+.container-Chair-desk {
   display: flex;
   flex-direction: column;
 }
 
-.container-Closet {
+.container- closet {
   display: flex;
 }
 
-.Sofa {
+.sofa {
   background-size: cover;
   background-repeat: no-repeat;
   background-image: url("src/assets/salon-kilimanjaro.jpg");
@@ -131,7 +131,7 @@ a {
   align-items: flex-end;
 }
 
-.Sofa:hover a {
+.sofa:hover a {
   background: white;
   opacity: 60%;
   color: black;
@@ -140,7 +140,7 @@ a {
   padding: 15px;
 }
 
-.Bed {
+.bed {
   background-size: cover;
   background-repeat: no-repeat;
   background-image: url("src/assets/Rectangle 295.png");
@@ -151,7 +151,7 @@ a {
   align-items: flex-end;
 }
 
-.Bed:hover a {
+.bed:hover a {
   background: white;
   opacity: 60%;
   color: black;
@@ -180,7 +180,7 @@ a {
   padding: 15px;
 }
 
-.Desk {
+.desk {
   background-size: cover;
   background-repeat: no-repeat;
   background-image: url("src/assets/Rousseau209741-220bureaustoel20chaise20de20bureau20Hippa201.jpg");
@@ -192,7 +192,7 @@ a {
   align-items: flex-end;
 }
 
-.Desk:hover a {
+.desk:hover a {
   background: white;
   opacity: 60%;
   color: black;
@@ -205,16 +205,16 @@ image {
   background-repeat: no-repeat;
 }
 
-.Sofa image {
+.sofa image {
   background-repeat: no-repeat;
 }
 
-.Desk image {
+.desk image {
   width: 584px;
   height: 316px;
 }
 
-.Closet {
+.closet {
   background-size: cover;
   background-repeat: no-repeat;
   background-image: url("src/assets/Kasten.png");
@@ -225,7 +225,7 @@ image {
   align-items: flex-end;
 }
 
-.Closet:hover a {
+.closet:hover a {
   background: white;
   opacity: 60%;
   color: black;
@@ -239,16 +239,16 @@ image {
   margin: 15px;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1050px) {
   body {
     background: #D9CAC5;
   }
 
-  .Container-Return-Home {
-            margin: 150px 14px -42px 87px;
+  .container-return-home {
+   margin: 150px 15px -60px 91px;
   }
 
-  .Container-Return-Home a {
+  .container-return-home a {
     text-decoration: none;
     color: #A67C63;
     font-size: 1rem;
@@ -269,21 +269,20 @@ image {
     margin-bottom: -850px;
   }
 
-  .container-Last {
+  .container-last {
     display: flex;
-    margin: 15px 15px 15px 75px;
+    justify-content: center;
   }
 
-  .Home-Accessories {
-    background-color: grey;
-    width: 755px;
-    height: 316px;
-    margin: 15px;
+  .home-accessories {
+     
+    width: 750px;
+    margin: 25px 15px 25px 15px;
     display: flex;
     align-items: flex-end;
   }
 
-  .Home-Accessories:hover a {
+  .home-accessories:hover a {
     background: white;
     opacity: 60%;
     color: black;
@@ -299,25 +298,24 @@ image {
     align-items: center;
   }
 
-  .container-Chair-Desk {
+  .container-Chair-desk {
     display: flex;
     flex-direction: column;
   }
 
-  .container-Closet {
+  .container- closet {
     display: flex;
   }
 
-  .Sofa {
-    background-color: grey;
-    width: 755px;
-    height: 656px;
-    margin: -5px 15px 5px 15px;
+  .sofa {
+    width: 750px;
+    height: 750px;
+    margin: 25px 15px 25px 15px;
     display: flex;
     align-items: flex-end;
   }
 
-  .Sofa:hover a {
+  .sofa:hover a {
     background: white;
     opacity: 60%;
     color: black;
@@ -326,16 +324,15 @@ image {
     padding: 15px;
   }
 
-  .Bed {
-    background-color: grey;
-    width: 755px;
-    height: 656px;
-    margin: 15px;
+  .bed {
+    width: 750px;
+    height: 750px;
+    margin: 25px 15px 25px 15px;
     display: flex;
     align-items: flex-end;
   }
 
-  .Bed:hover a {
+  .bed:hover a {
     background: white;
     opacity: 60%;
     color: black;
@@ -345,10 +342,10 @@ image {
   }
 
   .Chair {
-    background-color: grey;
-    width: 755px;
-    height: 316px;
-    margin: 5px 15px 5px 15px;
+     
+    width: 750px;
+    height: 750px;
+    margin: 25px 15px 25px 15px;
     display: flex;
     align-items: flex-end;
   }
@@ -362,16 +359,16 @@ image {
     padding: 15px;
   }
 
-  .Desk {
-    background-color: grey;
-    width: 755px;
-    height: 316px;
-    margin: 5px 15px -5px 15px;
+  .desk {
+     
+    width: 750px;
+    height: 750px;
+    margin: 25px 15px 25px 15px;
     display: flex;
     align-items: flex-end;
   }
 
-  .Desk:hover a {
+  .desk:hover a {
     background: white;
     opacity: 60%;
     color: black;
@@ -380,16 +377,16 @@ image {
     padding: 15px;
   }
 
-  .Closet {
-    background-color: grey;
-    width: 755px;
-    height: 656px;
-    margin: 15px 15px 5px 15px;
+  .closet {
+     
+    width: 750px;
+    height: 750px;
+    margin: 25px 15px 25px 15px;
     display: flex;
     align-items: flex-end;
   }
 
-  .Closet:hover a {
+  .closet:hover a {
     background: white;
     opacity: 60%;
     color: black;
@@ -408,16 +405,16 @@ image {
 
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 850px) {
   body {
     background: #D9CAC5;
   }
 
-  .Container-Return-Home {
-    margin-bottom: -15px;
+  .container-return-home {
+    margin: 150PX 0px -50px 78px;
   }
 
-  .Container-Return-Home a {
+  .container-return-home a {
     text-decoration: none;
     color: #A67C63;
     font-size: 1rem;
@@ -438,28 +435,26 @@ image {
     margin-bottom: -300px;
   }
 
-  .container-Last {
+  .container-last {
     display: flex;
-    margin: 15px 15px 15px 40px;
   }
 
-  .Home-Accessories {
+  .home-accessories {
     background-size: cover;
     background-repeat: no-repeat;
-     
-    width: 402px;
-    height: 385px;
-    margin: 15px;
+    width: 360px;
+    height: 360px;
+    margin: 25px 15px 25px 15px;
     display: flex;
     align-items: flex-end;
   }
 
-  .Home-Accessories:hover a {
+  .home-accessories:hover a {
     background: white;
     opacity: 60%;
     color: black;
     transition: width 1s ease-in-out 1s, height 1s ease-in-out, ease-in-out 1.5s;
-    width: 650px;
+    width: 360px;
     padding: 15px;
   }
 
@@ -470,58 +465,57 @@ image {
     align-items: center;
   }
 
-  .container-Chair-Desk {
+  .container-Chair-desk {
     display: flex;
     flex-direction: column;
   }
 
-  .container-Closet {
+  .container- closet {
     display: flex;
   }
 
-  .Sofa {
+  .sofa {
     background-size: cover;
     background-repeat: no-repeat;
      
-    width: 402px;
-    height: 385px;
-    margin: 15px;
+    width: 360px;
+    height: 360px;
+    margin: 25px 15px 25px 15px;
     display: flex;
     align-items: flex-end;
   }
 
-  .Sofa:hover a {
+  .sofa:hover a {
     background: white;
     opacity: 60%;
     color: black;
     transition: width 1s ease-in-out 1s, height 1s ease-in-out, ease-in-out 1.5s;
-    width: 650px;
+    width: 360px;
     padding: 15px;
   }
 
-  .Bed {
-    background-image: url("src/assets/Bedden VD.png");
-     
-    width: 402px;
-    height: 385px;
-    margin: 15px;
+  .bed {
+    background-image: url("src/assets/bedden VD.png");
+    width: 360px;
+    height: 360px;
+    margin: 25px 15px 25px 15px;
     display: flex;
     align-items: flex-end;
   }
 
-  .Bed:hover a {
+  .bed:hover a {
     background: white;
     opacity: 60%;
     color: black;
     transition: width 1s ease-in-out 1s, height 1s ease-in-out, ease-in-out 1.5s;
-    width: 650px;
+    width: 360px;
     padding: 15px;
   }
 
   .Chair {
-    width: 402px;
-    height: 385px;
-    margin: 15px;
+    width: 360px;
+    height: 360px;
+    margin: 25px 15px 25px 15px;
     display: flex;
     align-items: flex-end;
   }
@@ -531,42 +525,42 @@ image {
     opacity: 60%;
     color: black;
     transition: width 1s ease-in-out 1s, height 1s ease-in-out, ease-in-out 1.5s;
-    width: 650px;
+    width: 360px;
     padding: 15px;
   }
 
-  .Desk {
+  .desk {
      
-    width: 402px;
-    height: 385px;
-    margin: 10px 15px 15px 15px;
+    width: 360px;
+    height: 360px;
+    margin: 25px 15px 25px 15px;
     display: flex;
     align-items: flex-end;
   }
 
-  .Desk:hover a {
+  .desk:hover a {
     background: white;
     opacity: 60%;
     color: black;
     transition: width 1s ease-in-out 1s, height 1s ease-in-out, ease-in-out 1.5s;
-    width: 650px;
+    width: 360px;
     padding: 15px;
   }
 
-  .Closet {
+  .closet {
      
-    width: 402px;
-    height: 385px;
-    margin: 15px;
+    width: 360px;
+    height: 360px;
+    margin: 25px 15px 25px 15px;
     display: flex;
     align-items: flex-end;
   }
-  .Closet:hover a{
+  .closet:hover a{
     background: white;
     opacity: 60%;
     color: black;
     transition: width 1s ease-in-out 1s, height 1s ease-in-out, ease-in-out 1.5s;
-    width: 650px;
+    width: 360px;
     padding: 15px;
   }
 
