@@ -88,7 +88,7 @@ hr {
   background-position: center;
 }
 
-.input-container {
+#accountinfo-image {
   display: flex;
   justify-content: center;
   margin-left: 12rem;
