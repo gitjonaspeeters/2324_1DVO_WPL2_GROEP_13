@@ -2,7 +2,7 @@
     <div class="everywere">
     <div class="container">
       <div class="container-return-home">
-        <router-link to="/home"><p>Home/ruimtes</p></router-link>      
+        <router-link to="/"><p>Home/ruimtes</p></router-link>      
       </div>
       <div class="container-first">
         <div class="container-hallway-desk">
