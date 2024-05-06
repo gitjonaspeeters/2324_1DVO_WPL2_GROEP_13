@@ -177,7 +177,7 @@
   .bedroom{
     background-size: cover;
     background-repeat: no-repeat;
-    background-image: url("src/assets/SlaapkamerImageRuimtes.png");
+    background-image: url("src/assets/vanaf-1699-euro.jpeg");
     
     width: 777px;
     height: 673px;

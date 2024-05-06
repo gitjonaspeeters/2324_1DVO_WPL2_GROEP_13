@@ -183,7 +183,7 @@ a {
 .desk {
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url("src/assets/Rousseau209741-220bureaustoel20chaise20de20bureau20Hippa201.jpg");
+  background-image: url("src/assets/BureaImageRuimtes.png");
    
   width: 584px;
   height: 316px;
