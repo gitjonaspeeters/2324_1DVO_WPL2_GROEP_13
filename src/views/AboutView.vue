@@ -65,11 +65,11 @@
     <div id="trust-content">
       <div class="trust-content-left">
         <div class="trust-text-left">
-
+          
         </div>
       </div>
       <div class="trust-image-right">
-          <img>
+          <img src="">
       </div>
     </div>
   </div>
