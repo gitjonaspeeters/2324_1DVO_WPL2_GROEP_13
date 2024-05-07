@@ -18,7 +18,8 @@
     },
     "Description": "De eetkamertafel Maré is volledig uitgevoerd in massief mango hout in een walnoot-kleur en heeft twee half ronde poten.",
     "Stock": 3,
-    "Category": "Dining Tables"
+    "Category": "Dining Tables",
+    "Ruimtes": "Eetkamer"
   },
   {
     "id": "2",
@@ -43,7 +44,8 @@
     },
     "Description": "Deze eetkamertafel hoort binnen de moderne, industriële stijl. Zijn metalen sterpoot en keramisch tafelblad ogen stoer en robuust. Met zijn unieke zwarte sterpoot vormt hij meteen een blikvanger in je interieur.",
     "Stock": 3,
-    "Category": "Dining Tables"
+    "Category": "Dining Tables",
+    "Ruimtes": "Eetkamer"
   },
   {
     "id": "3",
@@ -62,7 +64,8 @@
     },
     "Description": "",
     "Stock": 3,
-    "Category": "Dining Tables"
+    "Category": "Dining Tables",
+    "Ruimtes": "Eetkamer"
   },
   {
     "id": "4",
@@ -83,7 +86,8 @@
     },
     "Description": "Op zoek naar een stoere maar tegelijkertijd elegante eetkamertafel? Dan hebben wij de prachtige Daytona voor jou! Deze trendy eetkamertafel is uitgevoerd in Saja natural notenhout met een X-frame. Het frame is uitgevoerd in metaal met een donkergrijze coating. Een echte eye-catcher! De tafel is verkrijgbaar in diverse afmetingen. Zo is er ook een tafel die in jouw interieur past.",
     "Stock": 3,
-    "Category": "Dining Tables"
+    "Category": "Dining Tables",
+    "Ruimtes": "Eetkamer"
   },
   {
     "id": "5",
@@ -101,7 +105,8 @@
     },
     "Description": "Ovale eettafel met sterpoot",
     "Stock": 3,
-    "Category": "Dining Tables"
+    "Category": "Dining Tables",
+    "Ruimtes": "Eetkamer"
   },
   {
     "id": "6",
@@ -123,7 +128,8 @@
     },
     "Description": "Structuur MDF, spaanderplaat en bekleding stof",
     "Stock": 3,
-    "Category": "Bed"
+    "Category": "Bed",
+    "Ruimtes": "Slaapkamer"
   },
   {
     "id": "7",
@@ -140,7 +146,8 @@
     },
     "Description": "De kinderkamer ELLEN is gerealiseerd in acacia houtdecor waardoor het een warme, zachte uitstraling krijgt. Achter de 2-deurs kleerkast schuilen 6 legplanken en 1 kledingroede.",
     "Stock": 3,
-    "Category": "Bed"
+    "Category": "Bed",
+    "Ruimtes": "Slaapkamer"
   },
   {
     "id": "8",
@@ -165,7 +172,8 @@
     },
     "Description": "Structuur MDF, spaanderplaat en bekleding PU",
     "Stock": 3,
-    "Category": "Bed"
+    "Category": "Bed",
+    "Ruimtes": "Slaapkamer"
   },
   {
     "id": "9",
@@ -184,7 +192,8 @@
     },
     "Description": "The Vogue Bed heeft een massagestoel, muziekinstallatie, werkplek en veel meer.Het bed waar we het over hebben is in alle opzichten indrukwekkend. Je heb zo de beschikking over een bed met indrukwekkende afmetingen, een massagestoel, een geheel eigen muziekinstallatie en een bureaublad voor je laptop. Ook aan het leeslampje en een ingebouwde kast voor je lectuur is gedacht. Koop je het bed, dan kun je zelf bepalen hoe het er uiteindelijk uit komt te zien: het geheel is namelijk modulair opgebouwd. Op die manier voldoet het aan al je wensen en bouw je in een mum van tijd je slaapkamer om tot een luxe verblijf.",
     "Stock": 3,
-    "Category": "Bed"
+    "Category": "Bed",
+    "Ruimtes": "Slaapkamer"
   },
   {
     "id": "10",
@@ -202,7 +211,8 @@
     },
     "Description": "Ontdek deze LIMA hoekzetel die veel zitplaatsen biedt. Bovendien biedt LIMA een ongekend zitcomfort en zachtheid dankzij zijn zachte stoffen bekleding. Verkrijgbaar in verschillende samenstellingen.",
     "Stock": 3,
-    "Category": "Sofa"
+    "Category": "Sofa",
+    "Ruimtes": "Woonkamer"
   },
   {
     "id": "11",
@@ -224,7 +234,12 @@
     },
     "Description": "Ontdek de ruime en stijlvolle Vakkenkast Brussel XL, gemaakt mangohout en afgewerkt met een verfijnde sand finish. Dankzij het strakke en eigentijdse ontwerp biedt deze kast een perfecte combinatie van functionaliteit en stijl. Voorzien van meerdere open vakken en drie greeploze deuren met een handig push-to-open systeem, biedt deze kast voldoende opbergruimte.",
     "Stock": 3,
-    "Category": "Closet"
+    "Category": "Closet",
+    "Ruimtes":  {
+        "Ruimtes1": "Slaapkamer",
+        "Ruimtes2": "Hal"
+    }
+    
   },
   {
     "id": "12",
@@ -241,7 +256,11 @@
     },
     "Description": "Boekenkast Kensington is een ware aanwinst voor je mooiste accessoires! De Shiny Kensington collectie combineert een robuuste uitstraling met een vleugje elegantie. De onderstellen van zilverkleurig, glimmend staal geven deze meubels samen met het grove gerecycled hout een chique, maar toch ook stoer aanzien.",
     "Stock": 3,
-    "Category": "Closet"
+    "Category": "Closet",
+    "Ruimtes":  {
+        "Ruimtes1": "Slaapkamer",
+        "Ruimtes2": "Hal"
+    }
   },
   {
     "id": "13",
@@ -263,7 +282,11 @@
     },
     "Description": "Dressoir Bloomingville heeft vier deuren en biedt genoeg opbergruimte voor al je spullen! De Bloomingville collectie is een verfijnde, luxe collectie gemaakt van segrijn / faux roggehuid van PU leer, zwart eiken en mat gouden details van metaal. Segrijn was populair in de Art Deco periode rond 1920 en geeft je moderne interieur een unieke touch!",
     "Stock": 3,
-    "Category": "Closet"
+    "Category": "Closet",
+    "Ruimtes":  {
+        "Ruimtes1": "Slaapkamer",
+        "Ruimtes2": "Hal"
+    }
   },
   {
     "id": "14",
@@ -281,7 +304,11 @@
     },
     "Description": "Spaanderplaat, MDF en decor + spiegel",
     "Stock": 3,
-    "Category": "Closet"
+    "Category": "Closet",
+    "Ruimtes":  {
+        "Ruimtes1": "Slaapkamer",
+        "Ruimtes2": "Hal"
+    }
   },
   {
     "id": "15",
@@ -298,7 +325,8 @@
     },
     "Description": "Hoeksalon in grijze stof Links of rechts opstelbaar",
     "Stock": 3,
-    "Category": "Sofa"
+    "Category": "Sofa",
+    "Ruimtes": "Woonkamer"
   },
   {
     "id": "16",
@@ -320,7 +348,8 @@
     },
     "Description": "",
     "Stock": 3,
-    "Category": "Chair"
+    "Category": "Sofa",
+    "Ruimtes": "Woonkamer"
   },
   {
     "id": "17",
@@ -342,7 +371,8 @@
     },
     "Description": "Himalaya 900",
     "Stock": 3,
-    "Category": "Chair"
+    "Category": "Sofa",
+    "Ruimtes": "Woonkamer"
   },
   {
     "id": "18",
@@ -364,7 +394,8 @@
     },
     "Description": "Fauteuil Kylie Khaki velvet / Brushed gold geeft een origineel accent aan je leefruimte! Een chique, ronde troon van polyester en geborsteld goud staal.",
     "Stock": 3,
-    "Category": "Chair"
+    "Category": "Sofa",
+    "Ruimtes": "Woonkamer"
   },
   {
     "id": "19",
@@ -386,6 +417,7 @@
     },
     "Description": "Fauteuil Kylie Khaki velvet / Brushed gold geeft een origineel accent aan je leefruimte! Een chique, ronde troon van polyester en geborsteld goud staal.",
     "Stock": 3,
-    "Category": "Chair"
+    "Category": "Sofa",
+    "Ruimtes": "Woonkamer"
   }
 ]
