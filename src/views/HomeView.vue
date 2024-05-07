@@ -97,8 +97,8 @@ export default {
       ],
       products: [
         { imageUrl: "/assets/TiffanySlaapkamer.png", productTitle: "Tiffany", productCategorie: "Slaapkamer", productPrice: "€879,00" },
-        { imageUrl: "/public/assets/AndiceKaiWoonkamer.png", productTitle: "Andice Kai", productCategorie: "Woonkamer", productPrice: "€1.189,00" },
-        { imageUrl: "/public/assets/LuncieBoucleStoel.png", productTitle: "Lucie Bouclé", productCategorie: "Stoelen", productPrice: "€99,00" }
+        { imageUrl: "/assets/AndiceKaiWoonkamer.png", productTitle: "Andice Kai", productCategorie: "Woonkamer", productPrice: "€1.189,00" },
+        { imageUrl: "/assets/LuncieBoucleStoel.png", productTitle: "Lucie Bouclé", productCategorie: "Stoelen", productPrice: "€99,00" }
       ]
     };
   },
