@@ -6,14 +6,14 @@
             </div>
             <div id="navigation-main" :style="{ 'margin-top': navbarMarginTop }">
                 <div class="navigation-main-section">
-                    <a href="/categorie">
+                    <router-link to="/categorie">
                         <i class="fa-solid fa-book"></i>
-                        <p>Categorieen</p></a>
+                        <p>Categorieen</p></router-link>
                 </div>
                 <div class="navigation-main-section">
-                    <a href="/ruimtes">
+                    <router-link  to="/ruimtes">
                         <i class="fa-solid fa-house"></i>
-                        <p>Ruimtes</p></a>
+                        <p>Ruimtes</p></router-link >
                 </div>
                 <div class="navigation-main-section">
                     <a href="#">

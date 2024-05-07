@@ -1,32 +1,32 @@
 <template>
-    <div class="Everywere">
+    <div class="everywere">
     <div class="container">
-      <div class="Container-Return-Home">
-        <router-link to="/home"><p>Home/ruimtes</p></router-link>      
+      <div class="container-return-home">
+        <router-link to="/"><p>Home/ruimtes</p></router-link>      
       </div>
-      <div class="container-First">
-        <div class="container-Hallway-Desk">
-          <div class="Hallway">
+      <div class="container-first">
+        <div class="container-hallway-desk">
+          <div class="hallway">
             <a class="hover-effect">Hal</a>
           </div>
-          <div class="Desk">
+          <div class="desk">
             <a class="hover-effect">Bureaus</a>
           </div>
         </div>
-        <div class="container-Livingroom">
-          <div class="Livingroom">
+        <div class="container-livingroom">
+          <div class="livingroom">
             <a class="hover-effect">Woonkamer</a>
           </div>
         </div>
       </div>
-      <div class="container-Second">
-        <div class="container-Bedroom">
-          <div class="Bedroom">
+      <div class="container-second">
+        <div class="container-bedroom">
+          <div class="bedroom">
             <a class="hover-effect">Slaapkamer</a>
           </div>
         </div>
-        <div class="container-Diningroom">
-          <div class="Diningroom">
+        <div class="container-diningroom">
+          <div class="diningroom">
             <a class="hover-effect">Eetkamer</a>
           </div>
         </div>
@@ -39,18 +39,18 @@
   
   </script>
   <style scoped>
-  .Everywere {
+  .everywere {
     background: #D9CAC5;
     display: flex;
     flex-direction: column;
   }
   
-  .Container-Return-Home {
+  .container-return-home {
     margin-bottom: -50px;
     margin-top: 150px;
     margin-left: 15px;
   }
-  .Container-Return-Home a{
+  .container-return-home a{
     text-decoration: none;
     color: #A67C63;
     font-size: 1rem;
@@ -73,32 +73,32 @@
     margin-bottom: -1250px;
   }
   
-  .container-Second {
+  .container-second {
     display: flex;
     margin: -15px 15px 15px 15px;
   }
   
-  .container-Hallway-Desk {
+  .container-hallway-desk {
     display: flex;
     flex-direction: column;
   }
   
-  .container-Livingroom {
+  .container-livingroom {
     display: flex;
   }
   
-  .Hallway {
+  .hallway {
     background-size: cover;
     background-repeat: no-repeat;
     background-image: url("src/assets/RuimtesImage2.png");
-    /*background-color: grey;*/
+    
     width: 510px;;
     height: 316px;
     margin: 15px 5px 5px 5px;
     display: flex;
     align-items: flex-end;
   }
-  .Hallway:hover a{
+  .hallway:hover a{
     background: white;
     opacity: 60%;
     color: black;
@@ -107,18 +107,18 @@
     padding: 15px;
   }
   
-  .Diningroom {
+  .diningroom {
     background-size: cover;
     background-repeat: no-repeat;
     background-image: url("src/assets/EetkamerImageRuimtes.png");
-    /*background-color: grey;*/
+    
     width: 487px;
     height: 680px;
     margin: 15px 0px 0px -12px;
     display: flex;
     align-items: flex-end;
   }
-  .Diningroom:hover a{
+  .diningroom:hover a{
     background: white;
     opacity: 60%;
     color: black;
@@ -126,18 +126,18 @@
     width: 650px;
     padding: 15px;
   }
-  .Livingroom {
+  .livingroom {
     background-size: cover;
     background-repeat: no-repeat;
     background-image: url("src/assets/WoonkamerImageRuimtes.png");
-    /*background-color: grey;*/
+    
     width: 737px;
     height: 656px;
     margin: 15px 5px 5px 5px;
     display: flex;
     align-items: flex-end;
   }
-  .Livingroom:hover a{
+  .livingroom:hover a{
     background: white;
     opacity: 60%;
     color: black;
@@ -146,18 +146,18 @@
     padding: 15px;
   }
   
-  .Desk {
+  .desk {
     background-size: cover;
     background-repeat: no-repeat;
     background-image: url("src/assets/BureaImageRuimtes.png");
-    /*background-color: grey;*/
+    
     width: 518px;
     height: 316px;
     margin: 15px 5px 5px 0px;
     display: flex;
     align-items: flex-end;
   }
-  .Desk:hover a{
+  .desk:hover a{
     background: white;
     opacity: 60%;
     color: black;
@@ -169,23 +169,23 @@
     background-repeat: no-repeat;
   }
   
-  .Desk image {
+  .desk image {
     width: 584px;
     height: 316px;
   }
   
-  .Bedroom{
+  .bedroom{
     background-size: cover;
     background-repeat: no-repeat;
-    background-image: url("src/assets/SlaapkamerImageRuimtes.png");
-    /*background-color: grey;*/
+    background-image: url("src/assets/vanaf-1699-euro.jpeg");
+    
     width: 777px;
     height: 673px;
     margin: 15px 15px 15px 0px;;
     display: flex;
     align-items: flex-end;
   }
-  .Bedroom:hover a{
+  .bedroom:hover a{
     background: white;
     opacity: 60%;
     color: black;
@@ -194,20 +194,23 @@
     padding: 15px;
   }
   
-  .container-First {
+  .container-first {
     display: flex;
     margin: 15px;
   }
   
   
   
-  @media screen and (max-width: 1200px) {
-    .Container-Return-Home a{
+  @media screen and (max-width: 1050px) {
+    .container-return-home a{
       text-decoration: none;
       color: #A67C63;
       font-size: 1rem;
     }
-  
+    .container-return-home {
+   margin: 150px 15px -60px 91px;
+  }
+
   
     a {
       padding: 15px;
@@ -224,14 +227,14 @@
     }
   
   
-    .Hallway {
-      width: 755px;
-      height: 656px;
-      margin: 15px;
+    .hallway {
+      width: 750px;
+      height: 750px;
+      margin: 25px 15px 25px 15px;
       display: flex;
       align-items: flex-end;
     }
-    .Hallway:hover a{
+    .hallway:hover a{
       background: white;
       opacity: 60%;
       color: black;
@@ -240,28 +243,28 @@
       padding: 15px;
     }
   
-    .container-Second {
+    .container-second {
       display: flex;
       margin: -15px 15px 5px 15px;
       flex-direction: column;
       align-items: center;
     }
   
-    .container-Hallway-Desk {
+    .container-hallway-desk {
       display: flex;
       flex-direction: column;
     }
   
   
-    .Livingroom {
-      background-color: grey;
-      width: 755px;
-      height: 656px;
-      margin: -5px 15px 5px 15px;
+    .livingroom {
+      
+      width: 750px;
+      height: 750px;
+      margin: 25px 15px 25px 15px;
       display: flex;
       align-items: flex-end;
     }
-    .Livingroom:hover a{
+    .livingroom:hover a{
       background: white;
       opacity: 60%;
       color: black;
@@ -270,15 +273,15 @@
       padding: 15px;
     }
   
-    .Bedroom {
-      background-color: grey;
-      width: 755px;
-      height: 656px;
+    .bedroom {
+      
+      width: 750px;
+      height: 750px;
       margin: 15px;
       display: flex;
       align-items: flex-end;
     }
-    .Bedroom:hover a{
+    .bedroom:hover a{
       background: white;
       opacity: 60%;
       color: black;
@@ -288,15 +291,15 @@
     }
   
   
-    .Desk {
-      background-color: grey;
-      width: 755px;
-      height: 656px;
-      margin: 5px 15px 15px 15px;
+    .desk {
+      
+      width: 750px;
+      height: 750px;
+      margin: 25px 15px 25px 15px;
       display: flex;
       align-items: flex-end;
     }
-    .Desk:hover a{
+    .desk:hover a{
       background: white;
       opacity: 60%;
       color: black;
@@ -305,15 +308,15 @@
       padding: 15px;
     }
   
-    .Diningroom {
-      background-color: grey;
-      width: 755px;
-      height: 656px;
-      margin: 15px 15px 5px 15px;
+    .diningroom {
+      
+      width: 750px;
+      height: 750px;
+      margin: 25px 15px 25px 15px;
       display: flex;
       align-items: flex-end;
     }
-    .Diningroom:hover a{
+    .diningroom:hover a{
       background: white;
       opacity: 60%;
       color: black;
@@ -322,7 +325,7 @@
       padding: 15px;
     }
   
-    .container-First {
+    .container-first {
       display: flex;
       margin: 15px;
       flex-direction: column;
@@ -331,13 +334,15 @@
     }
   }
   
-  @media screen and (max-width: 600px) {
-    .Container-Return-Home a{
+  @media screen and (max-width: 850px) {
+    .container-return-home a{
       text-decoration: none;
       color: #A67C63;
       font-size: 1rem;
     }
-  
+  .container-return-home{
+    margin: 150PX 0px -50px 78px;
+  }
   
     a {
       padding: 15px;
@@ -354,18 +359,17 @@
     }
   
   
-  
-    .Hallway {
+    .hallway {
       background-size: cover;
       background-repeat: no-repeat;
-      /*background-color: grey;*/
-      width: 402px;
-      height: 385px;
-      margin: 15px;
+
+      width: 360px;
+      height: 360px;
+      margin: 25px 15px 25px 15px;
       display: flex;
       align-items: flex-end;
     }
-    .Hallway:hover a{
+    .hallway:hover a{
       background: white;
       opacity: 60%;
       color: black;
@@ -374,29 +378,28 @@
       padding: 15px;
     }
   
-    .container-Second {
+    .container-second {
       display: flex;
       margin: 15px;
       flex-direction: column;
       align-items: center;
     }
   
-    .container-Hallway-Desk {
+    .container-hallway-desk {
       display: flex;
       flex-direction: column;
     }
   
-    .Diningroom {
+    .diningroom {
       background-size: cover;
       background-repeat: no-repeat;
-      /*background-color: grey;*/
-      width: 402px;
-      height: 385px;
-      margin: 15px;
+      width: 360px;
+      height: 360px;
+      margin: 25px 15px 25px 15px;
       display: flex;
       align-items: flex-end;
     }
-    .Diningroom:hover a{
+    .diningroom:hover a{
       background: white;
       opacity: 60%;
       color: black;
@@ -404,16 +407,16 @@
       width: 773px;
       padding: 15px;
     }
-    .Bedroom {
+    .bedroom {
       background-image: url("src/assets/Bedden VD.png");
-      /*background-color: grey;*/
-      width: 402px;
-      height: 385px;
-      margin: 15px;
+      
+      width: 360px;
+      height: 360px;
+      margin: 25px 15px 25px 15px;
       display: flex;
       align-items: flex-end;
     }
-    .Bedroom:hover a{
+    .bedroom:hover a{
       background: white;
       opacity: 60%;
       color: black;
@@ -421,15 +424,15 @@
       width: 773px;
       padding: 15px;
     }
-    .Livingroom {
-      /*background-color: grey;*/
-      width: 402px;
-      height: 385px;
-      margin: 15px;
+    .livingroom {
+      
+      width: 360px;
+      height: 360px;
+      margin: 25px 15px 25px 15px;
       display: flex;
       align-items: flex-end;
     }
-    .Livingroom:hover a{
+    .livingroom:hover a{
       background: white;
       opacity: 60%;
       color: black;
@@ -437,15 +440,15 @@
       width: 773px;
       padding: 15px;
     }
-    .Desk {
-      /*background-color: grey;*/
-      width: 402px;
-      height: 385px;
-      margin: 10px 15px 15px 15px;
+    .desk {
+      
+      width: 360px;
+      height: 360px;
+      margin: 25px 15px 25px 15px;
       display: flex;
       align-items: flex-end;
     }
-    .Desk:hover a{
+    .desk:hover a{
       background: white;
       opacity: 60%;
       color: black;
@@ -454,7 +457,7 @@
       padding: 15px;
     }
   
-    .container-First {
+    .container-first {
       display: flex;
       margin: 15px;
       flex-direction: column;

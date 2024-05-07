@@ -1,7 +1,7 @@
 <template>
   <div id="head-container">
     <div v-for="(slide, index) in slides" :key="index" v-show="index === currentSlideIndex">
-      <img :src="slide.imageUrl" style="width:100%">
+      <img class="banner-img" :src="slide.imageUrl" style="width:100%" >
 
       <div style="text-align:center">
         <div class="head-content">
@@ -19,19 +19,19 @@
       <img src="/src/assets/leftbtn.png" alt="arrow-left" id="backbtn" @click="scrollLeft">
       <div class="gallery" id="image-gallery">
         <div class="images">
-          <span class="image-container"><img src="/src/assets/Gio-zetel 1.png" alt="Reflection image"><span
+          <span class="image-container"><img src="/src/assets/Gio-zetel.jpg" alt="Reflection image"><span
               class="overlay">Woonkamer</span></span>
-          <span class="image-container"><img src="/src/assets/38bb9aa5-6065-4770-b199-f74772a637c2 1.png"
+          <span class="image-container"><img src="/src/assets/Tafel.jpg"
               alt="Reflection image 2"><span class="overlay">Eetkamer</span></span>
-          <span class="image-container"><img src="/src/assets/vanaf-1699-euro 1.png" alt="Corekwadrant image"><span
+          <span class="image-container"><img src="/src/assets/vanaf-1699-euro.jpeg" alt="Corekwadrant image"><span
               class="overlay">Slaapkamer</span></span>
         </div>
         <div class="images">
-          <span class="image-container"><img src="/src/assets/Screenshot_1-8 1.png" alt="Seminair image"><span
+          <span class="image-container"><img src="/src/assets/Bureastoel.jpg" alt="Seminair image"><span
               class="overlay">Bureau</span></span>
-          <span class="image-container"><img src="/src/assets/image 2.png" alt="Dashboard of groupwork design"><span
+          <span class="image-container"><img src="/src/assets/RuimtesImage2.png" alt="Dashboard of groupwork design"><span
               class="overlay">Hal</span></span>
-          <span class="image-container"><img src="/src/assets/Gio-zetel 1.png" alt="Reflection image"><span
+          <span class="image-container"><img src="/src/assets/Gio-zetel.jpg" alt="Reflection image"><span
               class="overlay">Woonkamer</span></span>
         </div>
       </div>
@@ -214,6 +214,11 @@ img {
   border: none;
 }
 
+.banner-img img{
+  width: 100%;
+
+}
+
 /* best verkocht */
 #best-container {
   background-color: #E8DFDC;
@@ -352,6 +357,7 @@ margin-left: 0.5rem;
 .gallery div img,
 .gallery1 div img {
   width: 100%;
+  height: 280px;
 }
 
 .gallery-buttons {
@@ -550,17 +556,7 @@ font-size: 1.2rem;
 }
 
 @media screen and (max-width: 1000px) {
-  #backbtn, #nextbtn {
-    display: none;
-  }
-
-  .gallery {
-    width: 300px;
-  }
-
-  .gallery div{
-    width: 200%;
-  }
+ 
 
   .slogan-container{
     display: block;
@@ -651,6 +647,39 @@ font-size: 1.5rem;
 }
 
 @media screen and (max-width: 600px){
+  
+  .banner-img{
+    height: 300px !important;
+    
+  }
+  .rooms {
+    margin-top: -8rem !important;
+  }
+  
+  .gallery{
+    display: block;
+  }
+  .gallery div,
+  .gallery1 div {
+    grid-template-columns: auto;
+    overflow-x: hidden; 
+    width: 102%;
+  }
+
+  .gallery-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #backbtn,
+  #nextbtn,
+  #backbtn1,
+  #nextbtn1 {
+    display: none;
+  }
+  
+  
+  
   .product-content-left p{
 font-size: 1rem;
 }
