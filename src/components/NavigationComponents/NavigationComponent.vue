@@ -8,43 +8,48 @@
                 <div class="navigation-main-section">
                     <router-link to="/categorie">
                         <i class="fa-solid fa-book"></i>
-                        <p>Categorieen</p></router-link>
+                        <p>Categorieën</p>
+                    </router-link>
                 </div>
                 <div class="navigation-main-section">
                     <router-link  to="/ruimtes">
                         <i class="fa-solid fa-house"></i>
-                        <p>Ruimtes</p></router-link >
+                        <p>Ruimtes</p>
+                    </router-link >
                 </div>
                 <div class="navigation-main-section">
-                    <a href="#">
+                    <router-link to="#">
                         <i class="fa-solid fa-layer-group"></i>
-                        <p>Alle items</p></a>
+                        <p>Alle items</p>
+                    </router-link>
                 </div>
                 <div class="navigation-main-section">
-                    <a href="#">
+                    <router-link to="#">
                         <i class="fa-solid fa-users"></i>
                         <p>Over Ons</p>
-                    </a>
+                    </router-link>
                 </div>
                 <div class="navigation-main-search">
-                    <a href="#" @click="toggleSearch"><i class="fa-solid fa-magnifying-glass"></i></a>
+                    <a @click="toggleSearch">
+                      <i class="fa-solid fa-magnifying-glass"></i>
+                    </a>
                 </div>
             </div>
             <div id="navigation-right">
                 <div class="navigation-right-sextion">
-                    <a href="/login">
+                    <router-link :to="loginStore.isLoggedIn? '/account' : '/login'">
                         <i class="fa-solid fa-user"></i>
-                    </a>
+                    </router-link>
                 </div>
                 <div class="navigation-right-sextion">
-                    <a href="#">
+                    <router-link to="/">
                         <i class="fa-solid fa-heart"></i>
-                    </a>
+                    </router-link>
                 </div>
                 <div id="navigation-right-sextion">
-                    <a  @click="toggleCartPopup">
+                    <a @click="toggleCartPopup">
                         <i class="fa-solid fa-cart-shopping"></i>
-                    </a>             
+                    </a>
                 </div>
             </div>
         </nav>
@@ -130,10 +135,13 @@
 </template>
 
 <script>
+import { useLoginStore } from '@/stores/LoginStore.js';
 export default {
   name: "NavigationBar",
   data() {
+    const loginStore = useLoginStore();
     return {
+      loginStore,
       searchVisible: false,
       prevScrollpos: 0,
       navbarTop: '2.5rem',
