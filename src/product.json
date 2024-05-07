@@ -155,8 +155,8 @@
         "Measurement": {
             "Length-Small": "218cm",
             "Width-Small": "150cm",
-            "height-Front": "29cm",
-            "height-back": "92cm"
+            "Height-Front": "29cm",
+            "Height-back": "92cm"
         },
         "Color": {
             "Color1": "Grijs",
@@ -175,7 +175,7 @@
         },
         "name": "Vogue",
         "Price": {
-            "high": "€3.599,00"
+            "High": "€3.599,00"
         },
         "Color": {
             "Color1": "Grijs",
@@ -193,7 +193,7 @@
         },
         "name": "Hoekzetel Lima",
         "Price": {
-            "high": "€1.769,00"
+            "High": "€1.769,00"
         },
         "Color": {
             "Color1": "Grijs",
@@ -212,12 +212,12 @@
         },    
         "name": "Vakkenkast Brussel Sand XL",
         "Measurement": {
-            "height": "200cm",
+            "Height": "200cm",
             "Width": "160cm",
             "Depth": "45cm"
         },
         "Price": {
-            "high": "€1.199,00"
+            "High": "€1.199,00"
         },
         "Color": {
             "Color1": "Grijs"
@@ -234,7 +234,7 @@
         },    
         "name": "Boekenkast Kensington",
         "Price": {
-            "high": "€1.989,00"
+            "High": "€1.989,00"
         },
         "Color": {
             "Color1": "Silver"
@@ -242,5 +242,62 @@
         "Description": "Boekenkast Kensington is een ware aanwinst voor je mooiste accessoires! De Shiny Kensington collectie combineert een robuuste uitstraling met een vleugje elegantie. De onderstellen van zilverkleurig, glimmend staal geven deze meubels samen met het grove gerecycled hout een chique, maar toch ook stoer aanzien.",
         "Stock": true,
         "Category": "Closet"
+    },
+    {
+        "id": "13",
+        "images": {
+            "image1": "images/7521-6.jpg",
+            "image2": "images/7521-5.jpg"
+        },    
+        "name": "Dressoir Bloomville 4-deuren",
+        "Measurement": {
+            "Height": "86cm",
+            "Width": "193cm",
+            "Depth": "45cm"
+        },
+        "Price": {
+            "High": "€2.375,00"
+        },
+        "Color": {
+            "Color1": "Gold"
+        },
+        "Description": "Dressoir Bloomingville heeft vier deuren en biedt genoeg opbergruimte voor al je spullen! De Bloomingville collectie is een verfijnde, luxe collectie gemaakt van segrijn / faux roggehuid van PU leer, zwart eiken en mat gouden details van metaal. Segrijn was populair in de Art Deco periode rond 1920 en geeft je moderne interieur een unieke touch!",
+        "Stock": true,
+        "Category": "Closet"
+    },
+    {
+        "id": "14",
+        "images": {
+            "image1": "images/Rousseau206925-220Kledingkast20armoire20Marc201.jpg",
+            "image2": "images/Rousseau206925-220Kledingkast20armoire20Marc20209.jpg"
+        },    
+        "name": "Kledingkast Marc 4 deuren met 2 spiegels Sonoma",
+        "Measurement": {
+            "Height": "185.1cm",
+            "Width": "159.7cm"
+        },
+        "Price": {
+            "Low": "€315,00"
+        },
+        "Description": "Spaanderplaat, MDF en decor + spiegel",
+        "Stock": true,
+        "Category": "Closet"
+    },
+    {
+        "id": "15",
+        "images": {
+            "image1": "images/Hoeksalongrey.jpg"
+        },    
+        "name": "Hoeksalon Grey",
+        "Measurement": {
+            "Length": "310cm",
+            "Width": "220cm"
+        },
+        "Price": {
+            "High": "€1.199,00"
+        },
+        "Description": "Hoeksalon in grijze stof Links of rechts opstelbaar",
+        "Stock": true,
+        "Category": "Sofa"
     }
 ]
