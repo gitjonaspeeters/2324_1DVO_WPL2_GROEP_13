@@ -1,0 +1,117 @@
+[
+    {
+        "Tabels": [
+            {
+                "product_name": "Eet-tafel",
+                "image_url": "images/Eet-tafel.jpg",
+                "name": "Eetkamertafel Maré Mangohout",
+                "Price": {
+                    "Low": "€699,00",
+                    "Middle": "€799,00",
+                    "High": "€999,00"
+                },
+                "Measurement": {
+                    "Small": "200cm",
+                    "Medium": "240cm",
+                    "Large": "300cm"
+                }
+            },
+            {
+                "product_name": "Heaven-Eet-tafel",
+                "image_url": "images/HEAVEN-EETTAFEL.jpg",
+                "name": "Eettafel Heaven",
+                "Price": {
+                    "Low": "€499,00",
+                    "High": "€599,00"
+                },
+                "Measurement": {
+                    "Length-Small": "160cm",
+                    "Length-Medium": "200cm",
+                    "Width-Small": "90cm",
+                    "Width-Medium": "100cm"
+                },
+                "Color": {
+                    "Color1": "Grijs",
+                    "Color2": "Wit"
+                }
+            },
+            {
+                "product_name": "Jesper-Danish-Oval",
+                "image_url": "images/55-22.jpg",
+                "name": "Jesper Danish Oval",
+                "Price": {
+                    "Low": "€649,00",
+                    "High": "€799,00"
+                },
+                "Measurement": {
+                    "Small": "180cm",
+                    "Large": "210cm"
+                }
+            },
+            {
+                "product_name": "Eettafel-Daytona",
+                "image_url": "images/eettafel-240-daytona-1.jpg",
+                "name": "Eetkamertafel Daytona",
+                "Price": {
+                    "Low": "€949,00",
+                    "Medium": "€1.129,00",
+                    "High": "€1.210,00"
+                },
+                "Measurement": {
+                    "Small": "200cm",
+                    "Medium": "240cm",
+                    "Large": "270cm"
+                }
+            },
+            {
+                "product_name": "Eettafel-Reaphael",
+                "image_url": "images/Raphael_sfeer_Bib_TF2101_ST2105.jpg",
+                "name": "Eetkamertafel Reaphael",
+                "Price": {
+                    "Low": "€774,00"
+                },
+                "Measurement": {
+                    "Length-Small": "230cm",
+                    "Width-Small": "119cm"
+                }
+            }
+        ]
+    },
+    {
+     "Bedroom":[
+        {
+            "product_name": "Bed-Rousseau",
+            "image_url": "images/Rousseau2089519-420Bed20Parma201.jpg",
+            "name": "Bed Parma",
+            "Price": {
+              "Low": "€315,00"
+            },
+            "Measurement": {
+                "Length-Small": "200cm",
+                "Width-Small": "90cm"
+            },
+            "Color": {
+                "Color1": "Grijs",
+                "Color2": "Beige"
+            }
+          },
+          {
+            "product_name": "Bed-Roma",
+            "image_url": "images/Rousseau2089519-420Bed20Roma201.jpg",
+            "name": "Bed Roma",
+            "Price": {
+              "Low": "€215,00"
+            },
+            "Measurement": {
+                "Length-Small": "200cm",
+                "Width-Small": "140cm"
+            },
+            "Color": {
+                "Color1": "Grijs",
+                "Color2": "Beige",
+                "Color3": "Pu zwart"
+            }
+          }
+     ]
+    }
+]
