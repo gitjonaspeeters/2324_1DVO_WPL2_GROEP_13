@@ -235,11 +235,10 @@
     "Description": "Ontdek de ruime en stijlvolle Vakkenkast Brussel XL, gemaakt mangohout en afgewerkt met een verfijnde sand finish. Dankzij het strakke en eigentijdse ontwerp biedt deze kast een perfecte combinatie van functionaliteit en stijl. Voorzien van meerdere open vakken en drie greeploze deuren met een handig push-to-open systeem, biedt deze kast voldoende opbergruimte.",
     "Stock": 3,
     "Category": "Closet",
-    "Ruimtes":  {
-        "Ruimtes1": "Slaapkamer",
-        "Ruimtes2": "Hal"
+    "Ruimtes": {
+      "Ruimtes1": "Slaapkamer",
+      "Ruimtes2": "Hal"
     }
-    
   },
   {
     "id": "12",
@@ -257,9 +256,9 @@
     "Description": "Boekenkast Kensington is een ware aanwinst voor je mooiste accessoires! De Shiny Kensington collectie combineert een robuuste uitstraling met een vleugje elegantie. De onderstellen van zilverkleurig, glimmend staal geven deze meubels samen met het grove gerecycled hout een chique, maar toch ook stoer aanzien.",
     "Stock": 3,
     "Category": "Closet",
-    "Ruimtes":  {
-        "Ruimtes1": "Slaapkamer",
-        "Ruimtes2": "Hal"
+    "Ruimtes": {
+      "Ruimtes1": "Slaapkamer",
+      "Ruimtes2": "Hal"
     }
   },
   {
@@ -283,9 +282,9 @@
     "Description": "Dressoir Bloomingville heeft vier deuren en biedt genoeg opbergruimte voor al je spullen! De Bloomingville collectie is een verfijnde, luxe collectie gemaakt van segrijn / faux roggehuid van PU leer, zwart eiken en mat gouden details van metaal. Segrijn was populair in de Art Deco periode rond 1920 en geeft je moderne interieur een unieke touch!",
     "Stock": 3,
     "Category": "Closet",
-    "Ruimtes":  {
-        "Ruimtes1": "Slaapkamer",
-        "Ruimtes2": "Hal"
+    "Ruimtes": {
+      "Ruimtes1": "Slaapkamer",
+      "Ruimtes2": "Hal"
     }
   },
   {
@@ -305,9 +304,9 @@
     "Description": "Spaanderplaat, MDF en decor + spiegel",
     "Stock": 3,
     "Category": "Closet",
-    "Ruimtes":  {
-        "Ruimtes1": "Slaapkamer",
-        "Ruimtes2": "Hal"
+    "Ruimtes": {
+      "Ruimtes1": "Slaapkamer",
+      "Ruimtes2": "Hal"
     }
   },
   {
@@ -381,10 +380,10 @@
       "image2": "images/S4491_KHAKI_VELVET-6.jpg"
     },
     "Measurement": {
-        "Length": "90cm",
-        "Height-back": "86cm",
-        "Height-Front": "45cm"
-      },
+      "Length": "90cm",
+      "Height-back": "86cm",
+      "Height-Front": "45cm"
+    },
     "name": "Fauteuil Kylie khaki velvet / gold",
     "Price": {
       "High": "€829,00"
@@ -404,10 +403,10 @@
       "image2": "images/S4702_TAUPE_CHENILLE-6.jpg"
     },
     "Measurement": {
-        "Length": "73cm",
-        "Width": "85cm",
-        "Height": "85cm"
-      },
+      "Length": "73cm",
+      "Width": "85cm",
+      "Height": "85cm"
+    },
     "name": "Draaifauteuil Sydney taupe chenille",
     "Price": {
       "High": "€789,00"
@@ -419,5 +418,275 @@
     "Stock": 3,
     "Category": "Sofa",
     "Ruimtes": "Woonkamer"
+  },
+  {
+    "id": "20",
+    "images": {
+      "image1": "images/S4583_CREAM_FUSION-1.jpg",
+      "image2": "images/S4583_CREAM_FUSION-6.jpg"
+    },
+    "Measurement": {
+      "Length": "56cm",
+      "Width": "56cm",
+      "Height": "82.5cm"
+    },
+    "name": "Stoel Alyssa cream fusion",
+    "Price": {
+      "Low": "€225,00"
+    },
+    "Color": {
+      "Color1": "Fusion cream 02"
+    },
+    "Description": "",
+    "Stock": 3,
+    "Category": "Chair",
+    "Ruimtes": {
+        "Ruimtes1": "Eetkamer",
+        "Ruimtes2": "Bureau"
+      }
+  },
+  {
+    "id": "21",
+    "images": {
+      "image1": "images/10bf1d48-6173-47d8-adf8-c30bc16fba4c.jpg",
+      "image2": "images/55-6.jpg"
+    },
+    "Measurement": {},
+    "name": "I_York",
+    "Price": {
+      "Low": "€214,00"
+    },
+    "Description": "Bij deze eetkamerstoel draait alles om klassiek Scandinavisch design. Het traditionele wordt bereikt door de combinatie van strakke lijnen en natuurlijke materialen. De gevlochten zitting is gemaakt van papiertouw, terwijl het frame is gemaakt van met witte olie behandeld eikenhout.",
+    "Stock": 3,
+    "Category": "Chair",
+    "Ruimtes": {
+        "Ruimtes1": "Eetkamer",
+        "Ruimtes2": "Bureau"
+      }
+  },
+  {
+    "id": "22",
+    "images": {
+      "image1": "images/888.jpg",
+      "image2": "images/Sunny-Stoel.jpg"
+    },
+    "Measurement": {},
+    "name": "Sunny Stoel",
+    "Price": {
+      "Low": "€112,00"
+    },
+    "Description": "Eigentijdse, stevige stoel Sunny die kan dienen als keukenstoel of voor aan de tafel in de eetkamer. Zeer gebruiksvriendelijk door het handvat bovenaan in de rugleuning.",
+    "Stock": 3,
+    "Category": "Chair",
+    "Ruimtes": {
+        "Ruimtes1": "Eetkamer",
+        "Ruimtes2": "Bureau"
+      }
+  },
+  {
+    "id": "23",
+    "images": {
+      "image1": "images/1-2.jpg",
+      "image2": "images/2-2.jpg"
+    },
+    "Measurement": {
+      "Length": "56cm",
+      "Width": "56cm",
+      "Height": "82.5cm"
+    },
+    "name": "Prince Stoel",
+    "Price": {
+      "Low": "€99,00"
+    },
+    "Color": {
+      "Color1": "Bruin",
+      "Color2": "Grijs"
+    },
+    "Description": "Eigentijdse, stevige stoel Sunny die kan dienen als keukenstoel of voor aan de tafel in de eetkamer. Zeer gebruiksvriendelijk door het handvat bovenaan in de rugleuning.",
+    "Stock": 3,
+    "Category": "Chair",
+    "Ruimtes": {
+        "Ruimtes1": "Eetkamer",
+        "Ruimtes2": "Bureau"
+      }
+  },
+  {
+    "id": "24",
+    "images": {
+      "image1": "images/1-2.jpg",
+      "image2": "images/2-2.jpg"
+    },
+    "Measurement": {
+      "Length": "158cm",
+      "Width": "6cm",
+      "Height": "188cm"
+    },
+    "name": "Wall art Piano Wibi",
+    "Price": {
+      "High": "€3.589,00"
+    },
+    "Color": {
+      "Color1": "Black/gold"
+    },
+    "Description": "",
+    "Stock": 3,
+    "Category": "Home accessories",
+    "Ruimtes": {
+      "Ruimtes1": "Hal",
+      "Ruimtes2": "Bureau"
+    }
+  },
+  {
+    "id": "25",
+    "images": {
+      "image1": "images/AD-0045-1.jpg"
+    },
+    "Measurement": {
+      "Length": "46cm",
+      "Width": "36,5cm",
+      "Height": "104cm"
+    },
+    "name": "Decoratieobject Beer groot",
+    "Price": {
+      "High": "€559,00"
+    },
+    "Color": {
+      "Color1": "Black/gold"
+    },
+    "Description": "",
+    "Stock": 3,
+    "Category": "Home accessories",
+    "Ruimtes": {
+      "Ruimtes1": "Hal",
+      "Ruimtes2": "Bureau"
+    }
+  },
+  {
+    "id": "26",
+    "images": {
+      "image1": "images/AD-0032-1.jpg",
+      "image2": "images/AD-0032-6.jpg"
+    },
+    "Measurement": {
+      "Length": "21cm",
+      "Width": "7,5cm",
+      "Height": "22cm"
+    },
+    "name": "Deco object Balloonicorn gold",
+    "Price": {
+      "Low": "€35,00"
+    },
+    "Color": {
+      "Color1": "Gold"
+    },
+    "Description": "",
+    "Stock": 3,
+    "Category": "Home accessories",
+    "Ruimtes": {
+      "Ruimtes1": "Hal",
+      "Ruimtes2": "Bureau"
+    }
+  },
+  {
+    "id": "27",
+    "images": {
+      "image1": "images/AD-0046-1.jpg",
+      "image2": "images/AD-0046-4.jpg"
+    },
+    "Measurement": {
+      "Length": "130cm",
+      "Width": "73cm",
+      "Height": "124cm"
+    },
+    "name": "Dog deco object spiegel",
+    "Price": {
+      "High": "€2.129,00"
+    },
+    "Description": "",
+    "Stock": 3,
+    "Category": "Home accessories",
+    "Ruimtes": {
+      "Ruimtes1": "Hal",
+      "Ruimtes2": "Bureau"
+    }
+  },
+  {
+    "id": "28",
+    "images": {
+      "image1": "images/7491-1.jpg",
+      "image2": "images/7491-6.jpg"
+    },
+    "Measurement": {
+      "Length": "150cm",
+      "Width": "60cm",
+      "Height": "76cm"
+    },
+    "name": "Bureau Hunter 3-laden",
+    "Price": {
+      "High": "€1.455,00"
+    },
+    "Color": {
+      "Color1": "Black Rustic"
+    },
+    "Description": "Bureau Hunter is een chique aanvulling voor je kantoor. Een prachtig bureau met 3 laden en gemaakt van zwart eiken fineer en mat gouden details. Zo wordt (thuis)werken een feestje!",
+    "Stock": 3,
+    "Category": "Desk",
+    "Ruimtes": "Bureau"
+  },
+  {
+    "id": "29",
+    "images": {
+      "image1": "images/Cindy2-B18-304-scaled.jpg"
+    },
+    "Measurement": {
+      "Length": "140cm",
+      "Width": "70cm"
+    },
+    "name": "Cindy Bureau",
+    "Price": {
+      "Low": "€145,00"
+    },
+    "Description": "",
+    "Stock": 3,
+    "Category": "Desk",
+    "Ruimtes": "Bureau"
+  },
+  {
+    "id": "30",
+    "images": {
+      "image1": "images/MTL39.jpg"
+    },
+    "Measurement": {
+      "Length": "121cm",
+      "Width": "60cm",
+      "Height": "76cm"
+    },
+    "name": "Bureau MTL39",
+    "Price": {
+      "Low": "€75,00"
+    },
+    "Description": "",
+    "Stock": 3,
+    "Category": "Desk",
+    "Ruimtes": "Bureau"
+  },
+  {
+    "id": "31",
+    "images": {
+      "image1": "images/55-10.jpg"
+    },
+    "Measurement": {
+      "Length": "121cm",
+      "Width": "60cm",
+      "Height": "76cm"
+    },
+    "name": "Bureau York",
+    "Price": {
+      "Medium": "€340,00"
+    },
+    "Description": "Prachtige bureau uit de YORK collectie.",
+    "Stock": 3,
+    "Category": "Desk",
+    "Ruimtes": "Bureau"
   }
 ]
