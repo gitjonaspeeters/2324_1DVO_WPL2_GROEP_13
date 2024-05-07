@@ -8,20 +8,27 @@
                 <div class="navigation-main-section">
                     <router-link to="/categorie">
                         <i class="fa-solid fa-book"></i>
+
                         <p>Categorieën</p>
+
                     </router-link>
                 </div>
                 <div class="navigation-main-section">
-                    <router-link  to="/ruimtes">
+                    <router-link to="/ruimtes">
                         <i class="fa-solid fa-house"></i>
                         <p>Ruimtes</p>
+
+
                     </router-link >
+
                 </div>
                 <div class="navigation-main-section">
                     <router-link to="#">
                         <i class="fa-solid fa-layer-group"></i>
                         <p>Alle items</p>
+
                     </router-link>
+
                 </div>
                 <div class="navigation-main-section">
                     <router-link to="#">
@@ -65,45 +72,77 @@
         </div>
     </div>
     <!-- Cart Popup -->
-    <div id="cart-popup" v-if="cartPopupVisible" @click="hideCartPopup">
-        <h4>Winkelwagen</h4>
+    <div id="cart-popup" v-if="cartPopupVisible">
+        <div class="cart-content">
 
-        <div class="container">
-            <div class="row">
-                <div class="col-4">
-                    <img src="@/assets/image 2.png" alt="product">
+            <h4>Winkelwagen</h4>
+
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-4">
+                        <img src="@/assets/image 2.png" alt="product">
+                    </div>
+                    <div class="product-text col-7">
+                        <p>Slaapkamer Ivette</p>
+                        <p class="price"><strong>€2.534,00</strong> </p>
+                        <div class="quantity">
+                            <div class="quantitydelete-container">
+                                <div class="quantity">
+                                    <button @click="decrement1">-</button>
+                                    <p class="quantity-number">{{ quantity1 }}</p>
+                                    <button @click="increment1">+</button>
+                                </div>
+                                <i class="trash fa-solid fa-trash"></i>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="product-text col-7">
-                    <p>Slaapkamer Ivette</p>
-                    <p><strong>€2.534,00</strong>   </p>
-                    <p>Aantal</p>
+                <div class="row">
+                    <div class="col-4">
+                        <img src="@/assets/image 2.png" alt="product">
+                    </div>
+                    <div class="product-text col-7">
+                        <p>Slaapkamer Ivette</p>
+                        <p class="price"><strong>€2.534,00</strong> </p>
+                        <div class="quantity">
+                            <div class="quantitydelete-container">
+                                <div class="quantity">
+                                    <button @click="decrement2">-</button>
+                                    <p class="quantity-number">{{ quantity2 }}</p>
+                                    <button @click="increment2">+</button>
+                                </div>
+                                <i class="trash fa-solid fa-trash"></i>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+                <div class="row">
+                    <div class="col-4">
+                        <img src="@/assets/image 2.png" alt="product">
+                    </div>
+                    <div class="product-text col-7">
+                        <p>Slaapkamer Ivette</p>
+                        <p class="price"><strong>€2.534,00</strong> </p>
+                        <div class="quantity">
+                            <div class="quantitydelete-container">
+                                <div class="quantity">
+                                    <button @click="decrement3">-</button>
+                                    <p class="quantity-number">{{ quantity3 }}</p>
+                                    <button @click="increment3">+</button>
+                                </div>
+                                <i class="trash fa-solid fa-trash"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
-            <div class="row">
-                <div class="col-4">
-                    <img src="@/assets/image 2.png" alt="product">
-                </div>
-                <div class="product-text col-7">
-                    <p>Slaapkamer Ivette</p>
-                    <p><strong>€2.534,00</strong>   </p>
-                    <p>Aantal</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-4">
-                    <img src="@/assets/image 2.png" alt="product">
-                </div>
-                <div class="product-text col-7">
-                    <p>Slaapkamer Ivette</p>
-                    <p><strong>€2.534,00</strong>   </p>
-                    <p>Aantal</p>
-                </div>
-            </div>
-            
-            
+            <p><strong>Totaal: €3800</strong></p>
+            <router-link to="/cart"><button @click="hideCartPopup" type="button" class="cart-button btn btn-warning">Bekijk
+                    winkelwagen</button></router-link>
+
         </div>
-        <p><strong>Totaal: €3800</strong></p>
-        <button type="button" class="cart-button btn btn-warning">Bekijk winkelwagen</button>
     </div>
     <!-- navigation media screen -->
     <div id="media-navigation-container">
@@ -111,17 +150,20 @@
             <div class="media-navigation-main-section">
                 <a href="/categorie">
                     <i class="fa-solid fa-book"></i>
-                    <p>Categorieen</p></a>
+                    <p>Categorieen</p>
+                </a>
             </div>
             <div class="media-navigation-main-section">
                 <a href="/ruimtes">
                     <i class="fa-solid fa-house"></i>
-                    <p>Ruimtes</p></a>
+                    <p>Ruimtes</p>
+                </a>
             </div>
             <div class="media-navigation-main-section">
                 <a href="#">
                     <i class="fa-solid fa-layer-group"></i>
-                    <p>Alle items</p></a>
+                    <p>Alle items</p>
+                </a>
             </div>
             <div class="media-navigation-main-section">
                 <a href="#">
@@ -130,8 +172,7 @@
                 </a>
             </div>
         </div>
-</div>
-
+    </div>
 </template>
 
 <script>
@@ -145,69 +186,112 @@ export default {
       searchVisible: false,
       prevScrollpos: 0,
       navbarTop: '2.5rem',
+      searchVisible: false,
+            quantity1: 0,
+            quantity2: 0,
+            quantity3: 0,
+            navbarOpacity: 1,
+            navbarMarginTop: '0',
+            cartPopupVisible: false,
 
-      navbarOpacity: 1,
-      navbarMarginTop: '0',
-      cartPopupVisible: false,
 
-    }
-  },
-  methods: {
-    toggleSearch() {
-      console.log("er word geklikt");
-      this.searchVisible = !this.searchVisible;
-      event.preventDefault();
-    },
-    toggleCartPopup() {
-      console.log("er word geklikt");
-      this.cartPopupVisible = !this.cartPopupVisible;
-    },
-    hideCartPopup() {
-      this.cartPopupVisible = false;
-    },
-    handleScroll() {
-      const currentScrollPos = window.pageYOffset
-      if (currentScrollPos > this.prevScrollpos) {
-        this.navbarMarginTop = '-12rem'
-        if (this.searchVisible === true) {
-          this.toggleSearch();
         }
-      } else {
-        this.navbarMarginTop = '0'
-      }
-      this.prevScrollpos = currentScrollPos
-    }
-  },
-  mounted() {
-    window.addEventListener('scroll', this.handleScroll)
-  },
-  beforeDestroy() {
-    window.removeEventListener('scroll', this.handleScroll)
-  },
+    },
+    methods: {
+        increment1() {
+            this.quantity1++;
+            console.log(this.quantity1);
+        },
+        decrement1() {
+            if (this.quantity1 > 0) {
+                this.quantity1--;
+            }
+        },
+
+        increment2() {
+            this.quantity2++;
+            console.log(this.quantity2);
+        },
+        decrement2() {
+            if (this.quantity2 > 0) {
+                this.quantity2--;
+            }
+        },
+
+        increment3() {
+            this.quantity3++;
+            console.log(this.quantity3);
+        },
+        decrement3() {
+            if (this.quantity3 > 0) {
+                this.quantity3--;
+            }
+        },
+
+
+
+
+        toggleSearch() {
+            this.searchVisible = !this.searchVisible;
+            event.preventDefault();
+        },
+        toggleCartPopup() {
+            this.cartPopupVisible = !this.cartPopupVisible;
+        },
+        hideCartPopup() {
+            this.cartPopupVisible = false;
+        },
+        handleScroll() {
+            const currentScrollPos = window.pageYOffset
+            if (currentScrollPos > this.prevScrollpos) {
+                this.navbarMarginTop = '-12rem'
+                if (this.searchVisible === true) {
+                    this.toggleSearch();
+                }
+            } else {
+                this.navbarMarginTop = '0'
+            }
+            this.prevScrollpos = currentScrollPos
+        }
+    },
+    mounted() {
+        window.addEventListener('scroll', this.handleScroll)
+    },
+    beforeDestroy() {
+        window.removeEventListener('scroll', this.handleScroll)
+    },
 }
 </script>
 <style scoped>
-*{
+* {
     margin: 0;
     padding: 0;
     /* border: 1px solid red; */
 }
 
+.cart-content {
+
+    position: relative;
+}
+
 #cart-popup {
     position: fixed;
-    top: 15%; /* Plaats het onder de winkelwagenknop */
+    top: 15%;
+    /* Plaats het onder de winkelwagenknop */
     left: 86%;
     width: 350px;
     margin-right: 5px;
     transform: translateX(-50%);
-    z-index: 999; /* Zorg ervoor dat het bovenop andere elementen staat */
+    z-index: 999;
+    /* Zorg ervoor dat het bovenop andere elementen staat */
     background-color: #ffffff;
     padding: 1rem;
     border: 1px solid #ccc;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: margin-top 1s ease-in-out;
-    
+    padding-bottom: -6rem;
+
 }
 
 #cart-popup img {
@@ -219,10 +303,18 @@ export default {
 #cart-popup h4 {
     color: #485059;
     padding: 0.5rem;
+    width: 90%;
 }
 
 .product-text {
     padding: 0.5rem;
+}
+
+
+
+
+.row {
+    padding-bottom: 6px;
 }
 
 #cart-popup .row {
@@ -232,34 +324,115 @@ export default {
 
 .cart-button {
     align-items: right;
-    padding: 3px;
+    padding: 6px;
+    background-color: #F2B66D;
+    color: white;
     margin-top: 1rem;
+}
+
+.cart-button:hover {
+    background-color: #ef9323;
+}
+
+.quantity {
+    display: flex;
+    align-items: center;
+}
+
+.quantity input {
+    width: 0px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 0 2px;
+
+}
+
+.quantity button {
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: -2px;
+    border: none;
+    background-color: #F2B66D;
+    color: #4C4C4C;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.quantity button:hover {
+    background-color: #ef9323;
+}
+
+.quantity-number {
+    margin: 0 7px;
+}
+
+.quantitydelete-container {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.trash {
+    color: #F2B66D;
+    cursor: pointer;
+    background-color: #485059;
+    padding: 7px;
+    border-radius: 5px;
+}
+
+.trash:hover {
+    background-color: #ef9323;
+}
+
+.price {
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+.col-4 {
+    width: 40% !important;
+}
+
+.btn-close {
+    background-color: #485059;
+    color: white;
+    margin-top: 1rem;
+    position: relative;
+    left: 93%;
+    top: -1.2rem;
+    z-index: 999;
 }
 
 #navigation-container {
     position: fixed;
     top: 2.5rem;
     z-index: 2;
-    width: 95%; 
+    width: 95%;
     left: 0;
     right: 0;
     margin: 0 auto;
 }
 
-nav{
+nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+
 #navigation-left {
     display: flex;
     align-items: center;
 }
-#navigation-left img{
+
+#navigation-left img {
     width: 10rem;
     color: #ffffff;
 }
-#navigation-main{
+
+#navigation-main {
     height: 0.1rem;
     display: flex;
     justify-content: space-between;
@@ -270,37 +443,44 @@ nav{
     gap: 1rem;
     transition: margin-top 1s ease-in-out;
 }
-.navigation-main-section{
+
+.navigation-main-section {
     padding-right: 1rem;
     display: flex;
     justify-content: center;
     border-right: 1px solid #B8B8B8;
 }
-.navigation-main-section a{
+
+.navigation-main-section a {
     display: flex;
     color: #4C4C4C;
     align-items: center;
     text-decoration: none;
     gap: 1rem;
 }
-.navigation-main-search{
+
+.navigation-main-search {
     display: flex;
     align-items: center;
 }
-.navigation-main-search a{
+
+.navigation-main-search a {
     color: #4C4C4C;
     display: flex;
     align-items: center;
     text-decoration: none;
 }
-nav i{
+
+nav i {
     font-size: 1.3rem;
 }
-nav p{
+
+nav p {
     font-size: 1.2rem;
 }
+
 /* recherkant navigatie */
-#navigation-right{
+#navigation-right {
     height: 0.1rem;
     display: flex;
     justify-content: space-between;
@@ -310,19 +490,22 @@ nav p{
     border-radius: 10rem;
     gap: 1rem;
 }
-.navigation-right-sextion{
+
+.navigation-right-sextion {
     padding-right: 1rem;
     display: flex;
     justify-content: center;
     border-right: 1px solid #B8B8B8;
 }
 
-.navigation-right-sextion a, #navigation-right-sextion a{
+.navigation-right-sextion a,
+#navigation-right-sextion a {
     display: flex;
     color: #4C4C4C;
     align-items: center;
     text-decoration: none;
 }
+
 /* searchbar */
 #search-container {
     position: fixed;
@@ -331,11 +514,13 @@ nav p{
     z-index: 3;
     width: 100%;
 }
-#search{
+
+#search {
     display: flex;
     justify-content: center;
 }
-#search-inhoud{
+
+#search-inhoud {
     background-color: #ffffff;
     color: #4C4C4C;
     height: 0.1rem;
@@ -346,51 +531,60 @@ nav p{
     border-radius: 10rem;
     gap: 1rem;
 }
+
 #search-inhoud i {
     font-size: 1.3rem;
 }
-#search-inhoud i:hover{
+
+#search-inhoud i:hover {
     cursor: pointer;
 }
+
 #search-inhoud input {
     background-color: #ffffff;
     border: none;
     font-size: 1.2rem;
 }
-#media-navigation-container{
+
+#media-navigation-container {
     display: none;
 }
 
 /* media querys */
-@media screen and (max-width: 1382px){
-    #navigation-main{
-     display: none;
+@media screen and (max-width: 1382px) {
+    #navigation-main {
+        display: none;
     }
-    #media-navigation-container{
+
+    #media-navigation-container {
         display: block;
         position: fixed;
         bottom: 0;
         width: 100%;
         z-index: 3;
     }
-    #media-navigation-main{
+
+    #media-navigation-main {
         height: 4rem;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 2.5rem  1.5rem;
+        padding: 2.5rem 1.5rem;
         background-color: #ffffff;
         gap: 1rem;
     }
-    .media-navigation-main-section{
+
+    .media-navigation-main-section {
         text-align: center;
     }
-    .media-navigation-main-section a{
+
+    .media-navigation-main-section a {
         text-decoration: none;
         color: #4C4C4C;
 
     }
-    .media-navigation-main-section i{
+
+    .media-navigation-main-section i {
         font-size: 1.5rem;
     }
 }

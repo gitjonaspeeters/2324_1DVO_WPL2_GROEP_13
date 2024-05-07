@@ -5,6 +5,7 @@ import AboutView from "../views/AboutView.vue";
 
 import CategorieView from "../views/CategorieView.vue";
 import RuimtesView from "../views/RuimtesView.vue";
+import CartView from "../views/WinkelwagenView.vue";
 
 
 
@@ -52,6 +53,12 @@ const router = createRouter({
       path: "/account",
       name: "account",
       component: AccountView,
+    },
+    {
+
+      path: "/cart",
+      name: "cart",
+      component: CartView,
     },
     {
       path: "/product",
