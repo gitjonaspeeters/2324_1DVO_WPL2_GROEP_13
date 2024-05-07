@@ -1,4 +1,14 @@
-<script setup>
+<script>
+import { useLoginStore } from '../stores/LoginStore.js';
+
+export default {
+  data() {
+    const loginStore = useLoginStore();
+    return {
+      loginStore,
+    };
+  },
+};
 
 </script>
 
@@ -9,12 +19,12 @@
 
       <div id="form-kader">
         <h1>Login</h1>
-        <form id="form" action="">
+        <form id="form" @submit.prevent="loginStore.login()">
           <label for="email"></label>
-          <input type="email" id="email" name="email" placeholder="Email">
+          <input type="email" id="email" v-model="loginStore.email" name="email" placeholder="Email">
           <label for="password"></label>
-          <input type="password" id="password" name="password" placeholder="Wachtwoord">
-          <router-link to="#"><p id="login">Inloggen</p></router-link>
+          <input type="password" id="password" v-model="loginStore.password" name="password" placeholder="Wachtwoord">
+          <router-link to="#" @click.prevent="loginStore.login()"><p id="login">Inloggen</p></router-link>
           <router-link to="/register"><p id="register">Registreren</p></router-link>
           <div id="remember-button">
             <section></section>

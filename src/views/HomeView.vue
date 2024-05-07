@@ -1,7 +1,7 @@
 <template>
   <div id="head-container">
     <div v-for="(slide, index) in slides" :key="index" v-show="index === currentSlideIndex">
-      <img :src="slide.imageUrl" style="width:100%">
+      <img class="banner-img" :src="slide.imageUrl" style="width:100%" >
 
       <div style="text-align:center">
         <div class="head-content">
@@ -19,19 +19,19 @@
       <img src="/src/assets/leftbtn.png" alt="arrow-left" id="backbtn" @click="scrollLeft">
       <div class="gallery" id="image-gallery">
         <div class="images">
-          <span class="image-container"><img src="/src/assets/Gio-zetel 1.png" alt="Reflection image"><span
+          <span class="image-container"><img src="/src/assets/Gio-zetel.jpg" alt="Reflection image"><span
               class="overlay">Woonkamer</span></span>
-          <span class="image-container"><img src="/src/assets/38bb9aa5-6065-4770-b199-f74772a637c2 1.png"
+          <span class="image-container"><img src="/src/assets/Tafel.jpg"
               alt="Reflection image 2"><span class="overlay">Eetkamer</span></span>
-          <span class="image-container"><img src="/src/assets/vanaf-1699-euro 1.png" alt="Corekwadrant image"><span
+          <span class="image-container"><img src="/src/assets/vanaf-1699-euro.jpeg" alt="Corekwadrant image"><span
               class="overlay">Slaapkamer</span></span>
         </div>
         <div class="images">
-          <span class="image-container"><img src="/src/assets/Screenshot_1-8 1.png" alt="Seminair image"><span
+          <span class="image-container"><img src="/src/assets/Bureastoel.jpg" alt="Seminair image"><span
               class="overlay">Bureau</span></span>
-          <span class="image-container"><img src="/src/assets/image 2.png" alt="Dashboard of groupwork design"><span
+          <span class="image-container"><img src="/src/assets/RuimtesImage2.png" alt="Dashboard of groupwork design"><span
               class="overlay">Hal</span></span>
-          <span class="image-container"><img src="/src/assets/Gio-zetel 1.png" alt="Reflection image"><span
+          <span class="image-container"><img src="/src/assets/Gio-zetel.jpg" alt="Reflection image"><span
               class="overlay">Woonkamer</span></span>
         </div>
       </div>
@@ -79,7 +79,7 @@
         </div>
       </div>
       <div class="slogan-content-right">
-        <img src="@/assets/AdobeStock_478155843 1.png" alt="afbeelding home pagina">
+        <img src="@/assets/Betaalbaar.png" alt="afbeelding home pagina">
       </div>
     </div>
   </div>
@@ -91,14 +91,14 @@ export default {
     return {
       currentSlideIndex: 0,
       slides: [
-        { imageUrl: "/src/assets/Banner1.png", headTitle: "Nieuwe collectie", headText: "Probeer nu onze nieuwe winter collectie!", headButton: "Bekijk" },
-        { imageUrl: "/src/assets/Banner2.png", headTitle: "Nieuwe collectie", headText: "Probeer nu onze nieuwe winter collectie!", headButton: "Bekijk" },
-        { imageUrl: "/src/assets/Banner3.png", headTitle: "Nieuwe collectie", headText: "Probeer nu onze nieuwe winter collectie!", headButton: "Bekijk" },
+        { imageUrl: "/assets/Banner1.png", headTitle: "Nieuwe collectie", headText: "Probeer nu onze nieuwe winter collectie!", headButton: "Bekijk" },
+        { imageUrl: "/assets/Banner2.png", headTitle: "Nieuwe collectie", headText: "Probeer nu onze nieuwe winter collectie!", headButton: "Bekijk" },
+        { imageUrl: "/assets/Banner3.png", headTitle: "Nieuwe collectie", headText: "Probeer nu onze nieuwe winter collectie!", headButton: "Bekijk" },
       ],
       products: [
-        { imageUrl: "/src/assets/TiffanySlaapkamer.png", productTitle: "Tiffany", productCategorie: "Slaapkamer", productPrice: "€879,00" },
-        { imageUrl: "/src/assets/AndiceKaiWoonkamer.png", productTitle: "Andice Kai", productCategorie: "Woonkamer", productPrice: "€1.189,00" },
-        { imageUrl: "/src/assets/LuncieBoucleStoel.png", productTitle: "Lucie Bouclé", productCategorie: "Stoelen", productPrice: "€99,00" }
+        { imageUrl: "/assets/TiffanySlaapkamer.png", productTitle: "Tiffany", productCategorie: "Slaapkamer", productPrice: "€879,00" },
+        { imageUrl: "/assets/AndiceKaiWoonkamer.png", productTitle: "Andice Kai", productCategorie: "Woonkamer", productPrice: "€1.189,00" },
+        { imageUrl: "/assets/LuncieBoucleStoel.png", productTitle: "Lucie Bouclé", productCategorie: "Stoelen", productPrice: "€99,00" }
       ]
     };
   },
@@ -171,7 +171,7 @@ img {
   height: 15px;
   width: 15px;
   margin: 0 2px;
-  background-color: #bbb;
+  background-color: #fff;
   border-radius: 50%;
   display: inline-block;
   transition: background-color 0.6s ease;
@@ -212,6 +212,11 @@ img {
   color: #ffffff;
   background-color: #F2B66D;
   border: none;
+}
+
+.banner-img img{
+  width: 100%;
+
 }
 
 /* best verkocht */
@@ -256,14 +261,14 @@ img {
   padding-top: calc(100% / 1.1);
   background-repeat: no-repeat;
   background-size: cover;
-  border-radius: 2rem;
+  /* border-radius: 2rem; */
   position: relative;
 }
 
 .product-like {
   position: absolute;
   top: 1rem;
-  right: 4px;
+  right: 0;
   background-color: #485059;
   padding: 0.3rem 0.5rem;
   border-radius: 5px;
@@ -352,6 +357,7 @@ margin-left: 0.5rem;
 .gallery div img,
 .gallery1 div img {
   width: 100%;
+  height: 280px;
 }
 
 .gallery-buttons {
@@ -550,17 +556,19 @@ font-size: 1.2rem;
 }
 
 @media screen and (max-width: 1000px) {
-  #backbtn, #nextbtn {
-    display: none;
+  .image-container{
+   
   }
-
-  .gallery {
-    width: 300px;
+  .overlay {
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center
   }
-
-  .gallery div{
-    width: 200%;
-  }
+ 
 
   .slogan-container{
     display: block;
@@ -651,6 +659,39 @@ font-size: 1.5rem;
 }
 
 @media screen and (max-width: 600px){
+  
+  .banner-img{
+    height: 300px !important;
+    
+  }
+  .rooms {
+    margin-top: -8rem !important;
+  }
+  
+  .gallery{
+    display: block;
+  }
+  .gallery div,
+  .gallery1 div {
+    grid-template-columns: auto;
+    overflow-x: hidden; 
+    width: 102%;
+  }
+
+  .gallery-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #backbtn,
+  #nextbtn,
+  #backbtn1,
+  #nextbtn1 {
+    display: none;
+  }
+  
+  
+  
   .product-content-left p{
 font-size: 1rem;
 }
