@@ -79,7 +79,7 @@
         </div>
       </div>
       <div class="slogan-content-right">
-        <img src="@/assets/AdobeStock_478155843 1.png" alt="afbeelding home pagina">
+        <img src="@/assets/Betaalbaar.png" alt="afbeelding home pagina">
       </div>
     </div>
   </div>
@@ -171,7 +171,7 @@ img {
   height: 15px;
   width: 15px;
   margin: 0 2px;
-  background-color: #bbb;
+  background-color: #fff;
   border-radius: 50%;
   display: inline-block;
   transition: background-color 0.6s ease;
@@ -261,14 +261,14 @@ img {
   padding-top: calc(100% / 1.1);
   background-repeat: no-repeat;
   background-size: cover;
-  border-radius: 2rem;
+  /* border-radius: 2rem; */
   position: relative;
 }
 
 .product-like {
   position: absolute;
   top: 1rem;
-  right: 4px;
+  right: 0;
   background-color: #485059;
   padding: 0.3rem 0.5rem;
   border-radius: 5px;
@@ -556,6 +556,18 @@ font-size: 1.2rem;
 }
 
 @media screen and (max-width: 1000px) {
+  .image-container{
+   
+  }
+  .overlay {
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center
+  }
  
 
   .slogan-container{

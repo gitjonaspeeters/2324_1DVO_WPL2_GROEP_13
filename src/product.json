@@ -1,117 +1,303 @@
 [
     {
-        "Tabels": [
-            {
-                "product_name": "Eet-tafel",
-                "image_url": "images/Eet-tafel.jpg",
-                "name": "Eetkamertafel Maré Mangohout",
-                "Price": {
-                    "Low": "€699,00",
-                    "Middle": "€799,00",
-                    "High": "€999,00"
-                },
-                "Measurement": {
-                    "Small": "200cm",
-                    "Medium": "240cm",
-                    "Large": "300cm"
-                }
-            },
-            {
-                "product_name": "Heaven-Eet-tafel",
-                "image_url": "images/HEAVEN-EETTAFEL.jpg",
-                "name": "Eettafel Heaven",
-                "Price": {
-                    "Low": "€499,00",
-                    "High": "€599,00"
-                },
-                "Measurement": {
-                    "Length-Small": "160cm",
-                    "Length-Medium": "200cm",
-                    "Width-Small": "90cm",
-                    "Width-Medium": "100cm"
-                },
-                "Color": {
-                    "Color1": "Grijs",
-                    "Color2": "Wit"
-                }
-            },
-            {
-                "product_name": "Jesper-Danish-Oval",
-                "image_url": "images/55-22.jpg",
-                "name": "Jesper Danish Oval",
-                "Price": {
-                    "Low": "€649,00",
-                    "High": "€799,00"
-                },
-                "Measurement": {
-                    "Small": "180cm",
-                    "Large": "210cm"
-                }
-            },
-            {
-                "product_name": "Eettafel-Daytona",
-                "image_url": "images/eettafel-240-daytona-1.jpg",
-                "name": "Eetkamertafel Daytona",
-                "Price": {
-                    "Low": "€949,00",
-                    "Medium": "€1.129,00",
-                    "High": "€1.210,00"
-                },
-                "Measurement": {
-                    "Small": "200cm",
-                    "Medium": "240cm",
-                    "Large": "270cm"
-                }
-            },
-            {
-                "product_name": "Eettafel-Reaphael",
-                "image_url": "images/Raphael_sfeer_Bib_TF2101_ST2105.jpg",
-                "name": "Eetkamertafel Reaphael",
-                "Price": {
-                    "Low": "€774,00"
-                },
-                "Measurement": {
-                    "Length-Small": "230cm",
-                    "Width-Small": "119cm"
-                }
-            }
-        ]
+        "id": "1",
+        "images": {
+            "image1": "images/Eet-tafel.jpg",
+            "image2": "images/Maré.jpg"
+        },
+        "name": "Eetkamertafel Maré Mangohout",
+        "Price": {
+            "Low": "€699,00",
+            "Middle": "€799,00",
+            "High": "€999,00"
+        },
+        "Measurement": {
+            "Small": "200cm",
+            "Medium": "240cm",
+            "Large": "300cm"            
+        },
+        "Description": "De eetkamertafel Maré is volledig uitgevoerd in massief mango hout in een walnoot-kleur en heeft twee half ronde poten.",
+        "Stock": true,
+        "Category": "Dining Tables"
     },
     {
-     "Bedroom":[
-        {
-            "product_name": "Bed-Rousseau",
-            "image_url": "images/Rousseau2089519-420Bed20Parma201.jpg",
-            "name": "Bed Parma",
-            "Price": {
-              "Low": "€315,00"
-            },
-            "Measurement": {
-                "Length-Small": "200cm",
-                "Width-Small": "90cm"
-            },
-            "Color": {
-                "Color1": "Grijs",
-                "Color2": "Beige"
-            }
-          },
-          {
-            "product_name": "Bed-Roma",
-            "image_url": "images/Rousseau2089519-420Bed20Roma201.jpg",
-            "name": "Bed Roma",
-            "Price": {
-              "Low": "€215,00"
-            },
-            "Measurement": {
-                "Length-Small": "200cm",
-                "Width-Small": "140cm"
-            },
-            "Color": {
-                "Color1": "Grijs",
-                "Color2": "Beige",
-                "Color3": "Pu zwart"
-            }
-          }
-     ]
+        "id": "2",
+        "images": {
+            "image1": "images/HEAVEN-EETTAFEL.jpg",
+            "image2": "images/dining-tableheaven.jpg"
+        },
+        "name": "Eettafel Heaven",
+        "Price": {
+            "Low": "€499,00",
+            "High": "€599,00"
+        },
+        "Measurement": {
+            "Length-Small": "160cm",
+            "Length-Medium": "200cm",
+            "Width-Small": "90cm",
+            "Width-Medium": "100cm"
+        },
+        "Color": {
+            "Color1": "Grijs",
+            "Color2": "Wit"
+        },
+        "Description": "Deze eetkamertafel hoort binnen de moderne, industriële stijl. Zijn metalen sterpoot en keramisch tafelblad ogen stoer en robuust. Met zijn unieke zwarte sterpoot vormt hij meteen een blikvanger in je interieur.",
+        "Stock": true,
+        "Category": "Dining Tables"
+    },
+    {
+        "id": "3",
+        "images": {
+            "image1": "images/55-22.jpg",
+            "image2": "images/13862_2.jpg"
+        },
+        "name": "Jesper Danish Oval",
+        "Price": {
+            "Low": "€649,00",
+            "High": "€799,00"
+        },
+        "Measurement": {
+            "Small": "180cm",
+            "Large": "210cm"
+        },
+        "Description": "",
+        "Stock": true,
+        "Category": "Dining Tables"
+    },
+    {
+        "id": "4",
+        "images": {
+            "image1": "images/eettafel-240-daytona-1.jpg",
+            "image2": "images/2044_21_6.jpg"
+        },
+        "name": "Eetkamertafel Daytona",
+        "Price": {
+            "Low": "€949,00",
+            "Medium": "€1.129,00",
+            "High": "€1.210,00"
+        },
+        "Measurement": {
+            "Small": "200cm",
+            "Medium": "240cm",
+            "Large": "270cm"
+        },
+        "Description": "Op zoek naar een stoere maar tegelijkertijd elegante eetkamertafel? Dan hebben wij de prachtige Daytona voor jou! Deze trendy eetkamertafel is uitgevoerd in Saja natural notenhout met een X-frame. Het frame is uitgevoerd in metaal met een donkergrijze coating. Een echte eye-catcher! De tafel is verkrijgbaar in diverse afmetingen. Zo is er ook een tafel die in jouw interieur past.",
+        "Stock": true,
+        "Category": "Dining Tables"
+    },
+    {
+        "id": "5",
+        "images": {
+            "image1": "images/Raphael_sfeer_Bib_TF2101_ST2105.jpg",
+            "image2": "images/raphael-1.jpg"
+        },
+        "name": "Eetkamertafel Raphael",
+        "Price": {
+            "Low": "€774,00"
+        },
+        "Measurement": {
+            "Length-Small": "230cm",
+            "Width-Small": "119cm"
+        },
+        "Description": "Ovale eettafel met sterpoot",
+        "Stock": true,
+        "Category": "Dining Tables"
+    },
+    {
+        "id": "6",
+        "images": {
+            "image1": "images/Rousseau2089519-420Bed20Parma201.jpg",
+            "image2": "images/Rousseau2089519-420Bed20Parma204.jpg"
+        },
+        "name": "Bed Parma",
+        "Price": {
+            "Low": "€315,00"
+        },
+        "Measurement": {
+            "Length-Small": "200cm",
+            "Width-Small": "90cm"
+        },
+        "Color": {
+            "Color1": "Grijs",
+            "Color2": "Beige"
+        },
+        "Description": "Structuur MDF, spaanderplaat en bekleding stof",
+        "Stock": true,
+        "Category": "Bed"
+    },
+    {
+        "id": "7",
+        "images": {
+            "image1": "images/Chambre-enfant-Ellen-decor-bois-acacia-armoire2portes-Oosterlynck.jpg"
+        },
+        "name": "Kinderkamer Ellen",
+        "Price": {
+            "Low": "€499,00"
+        },
+        "Measurement": {
+            "Length-Small": "200cm",
+            "Width-Small": "90cm"
+        },
+        "Description": "De kinderkamer ELLEN is gerealiseerd in acacia houtdecor waardoor het een warme, zachte uitstraling krijgt. Achter de 2-deurs kleerkast schuilen 6 legplanken en 1 kledingroede.",
+        "Stock": true,
+        "Category": "Bed"
+    },
+    {
+        "id": "8",
+        "images": {
+            "image1": "images/Rousseau2089519-420Bed20Roma201.jpg",
+            "image2": "images/Rousseau2089514-220Bed20Lit20Roma206.jpg"
+        },
+        "name": "Bed Roma",
+        "Price": {
+            "Low": "€215,00"
+        },
+        "Measurement": {
+            "Length-Small": "218cm",
+            "Width-Small": "150cm",
+            "Height-Front": "29cm",
+            "Height-back": "92cm"
+        },
+        "Color": {
+            "Color1": "Grijs",
+            "Color2": "Beige",
+            "Color3": "Pu zwart"
+        },
+        "Description": "Structuur MDF, spaanderplaat en bekleding PU",
+        "Stock": true,
+        "Category": "Bed"
+    },
+    {
+        "id": "9",
+        "images": {
+            "image1": "images/Vogue.jpg",
+            "image2": "images/urun-vogue-fonksiyonel-yatak-02.jpg"
+        },
+        "name": "Vogue",
+        "Price": {
+            "High": "€3.599,00"
+        },
+        "Color": {
+            "Color1": "Grijs",
+            "Color2": "Beige",
+            "Color3": "Pu zwart"
+        },
+        "Description": "The Vogue Bed heeft een massagestoel, muziekinstallatie, werkplek en veel meer.Het bed waar we het over hebben is in alle opzichten indrukwekkend. Je heb zo de beschikking over een bed met indrukwekkende afmetingen, een massagestoel, een geheel eigen muziekinstallatie en een bureaublad voor je laptop. Ook aan het leeslampje en een ingebouwde kast voor je lectuur is gedacht. Koop je het bed, dan kun je zelf bepalen hoe het er uiteindelijk uit komt te zien: het geheel is namelijk modulair opgebouwd. Op die manier voldoet het aan al je wensen en bouw je in een mum van tijd je slaapkamer om tot een luxe verblijf.",
+        "Stock": true,
+        "Category": "Bed"
+    },
+    {
+        "id": "10",
+        "images":{
+            "image1": "images/Group16.jpg"
+        },
+        "name": "Hoekzetel Lima",
+        "Price": {
+            "High": "€1.769,00"
+        },
+        "Color": {
+            "Color1": "Grijs",
+            "Color2": "Beige",
+            "Color3": "Pu zwart"
+        },
+        "Description": "Ontdek deze LIMA hoekzetel die veel zitplaatsen biedt. Bovendien biedt LIMA een ongekend zitcomfort en zachtheid dankzij zijn zachte stoffen bekleding. Verkrijgbaar in verschillende samenstellingen.",
+        "Stock": true,
+        "Category": "Sofa"
+    },
+    {
+        "id": "11",
+        "images": {
+            "image1": "images/STF-3306-1-1.jpg",
+            "image2": "images/STF-3306-5.jpg"
+        },    
+        "name": "Vakkenkast Brussel Sand XL",
+        "Measurement": {
+            "Height": "200cm",
+            "Width": "160cm",
+            "Depth": "45cm"
+        },
+        "Price": {
+            "High": "€1.199,00"
+        },
+        "Color": {
+            "Color1": "Grijs"
+        },
+        "Description": "Ontdek de ruime en stijlvolle Vakkenkast Brussel XL, gemaakt mangohout en afgewerkt met een verfijnde sand finish. Dankzij het strakke en eigentijdse ontwerp biedt deze kast een perfecte combinatie van functionaliteit en stijl. Voorzien van meerdere open vakken en drie greeploze deuren met een handig push-to-open systeem, biedt deze kast voldoende opbergruimte.",
+        "Stock": true,
+        "Category": "Closet"
+    },
+    {
+        "id": "12",
+        "images": {
+            "image1": "images/9872-6.jpg",
+            "image2": "images/9872-1.jpg"
+        },    
+        "name": "Boekenkast Kensington",
+        "Price": {
+            "High": "€1.989,00"
+        },
+        "Color": {
+            "Color1": "Silver"
+        },
+        "Description": "Boekenkast Kensington is een ware aanwinst voor je mooiste accessoires! De Shiny Kensington collectie combineert een robuuste uitstraling met een vleugje elegantie. De onderstellen van zilverkleurig, glimmend staal geven deze meubels samen met het grove gerecycled hout een chique, maar toch ook stoer aanzien.",
+        "Stock": true,
+        "Category": "Closet"
+    },
+    {
+        "id": "13",
+        "images": {
+            "image1": "images/7521-6.jpg",
+            "image2": "images/7521-5.jpg"
+        },    
+        "name": "Dressoir Bloomville 4-deuren",
+        "Measurement": {
+            "Height": "86cm",
+            "Width": "193cm",
+            "Depth": "45cm"
+        },
+        "Price": {
+            "High": "€2.375,00"
+        },
+        "Color": {
+            "Color1": "Gold"
+        },
+        "Description": "Dressoir Bloomingville heeft vier deuren en biedt genoeg opbergruimte voor al je spullen! De Bloomingville collectie is een verfijnde, luxe collectie gemaakt van segrijn / faux roggehuid van PU leer, zwart eiken en mat gouden details van metaal. Segrijn was populair in de Art Deco periode rond 1920 en geeft je moderne interieur een unieke touch!",
+        "Stock": true,
+        "Category": "Closet"
+    },
+    {
+        "id": "14",
+        "images": {
+            "image1": "images/Rousseau206925-220Kledingkast20armoire20Marc201.jpg",
+            "image2": "images/Rousseau206925-220Kledingkast20armoire20Marc20209.jpg"
+        },    
+        "name": "Kledingkast Marc 4 deuren met 2 spiegels Sonoma",
+        "Measurement": {
+            "Height": "185.1cm",
+            "Width": "159.7cm"
+        },
+        "Price": {
+            "Low": "€315,00"
+        },
+        "Description": "Spaanderplaat, MDF en decor + spiegel",
+        "Stock": true,
+        "Category": "Closet"
+    },
+    {
+        "id": "15",
+        "images": {
+            "image1": "images/Hoeksalongrey.jpg"
+        },    
+        "name": "Hoeksalon Grey",
+        "Measurement": {
+            "Length": "310cm",
+            "Width": "220cm"
+        },
+        "Price": {
+            "High": "€1.199,00"
+        },
+        "Description": "Hoeksalon in grijze stof Links of rechts opstelbaar",
+        "Stock": true,
+        "Category": "Sofa"
     }
 ]
