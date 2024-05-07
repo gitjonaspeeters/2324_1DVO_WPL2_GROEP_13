@@ -11,6 +11,7 @@ import RuimtesView from "../views/RuimtesView.vue";
 import LoginView from "@/views/LoginView.vue";
 import RegisterView from "@/views/RegisterView.vue";
 import AccountView from "../views/AccountView.vue";
+import DetailView from "@/views/DetailView.vue";
 
 
 const router = createRouter({
@@ -36,7 +37,7 @@ const router = createRouter({
       name: "about",
       component: AboutView,
     },
-    
+
     {
       path: "/login",
       name: "login",
@@ -52,6 +53,11 @@ const router = createRouter({
       name: "account",
       component: AccountView,
     },
+    {
+      path: "/product",
+      name: "product",
+      component: DetailView,
+    }
   ],
 });
 
