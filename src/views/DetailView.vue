@@ -3,33 +3,21 @@
     <div id="container-upper">
       <div id="container-left-upper">
         <p>Home/Categorieen/zetels/</p>
-          <vue-horizontal responsive :buttons="true" class="horizontal">
-            <template v-slot:btn-next>
-              <div class="replaced-btn-next">
-                <div>
-                  <i class="fa-solid fa-circle-chevron-right"></i>
-                </div>
-              </div>
-            </template>
-            <template v-slot:btn-prev>
-              <div class="replaced-btn-prev">
-                <div>
-                  <i class="fa-solid fa-circle-chevron-left"></i>
-                </div>
-              </div>
-            </template>
-            <section v-for="item in items" :key="item.title">
-              <img :src="item.content" alt="Image description" />
-            </section>
-          </vue-horizontal>
+        <vue-horizontal :buttons="true" class="horizontal">
+          <div v-for="item in items" :key="item">
+            <img :src="item" alt="een foto">
+          </div>
+        </vue-horizontal>
       </div>
       <div id="container-right-upper">
         <h1>Hoekzetel Lima</h1>
         <p>kleuren:</p>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
+        <div id="kleuren">
+          <div id="kleur1"></div>
+          <div id="kleur2"></div>
+          <div id="kleur3"></div>
+          <div id="kleur4"></div>
+        </div>
         <p id="price">€1.769,00</p>
         <input type="number" min="0" max="10">
         <div>Bestellen</div>
@@ -37,23 +25,17 @@
         <i></i>
         <p class="describtion">Beschrijving:</p>
         <p class="meusures">Afmetingen: <span>1OOTL110+3BB+H+OTTR Stof 670 KS671</span></p>
-        <p>Ontdek deze LIMA hoekzetel die veel zitplaatsen biedt. Bovendien biedt LIMA een ongekend zitcomfort en zachtheid dankzij zijn zachte stoffen bekleding. Verkrijgbaar in verschillende samenstellingen.</p>
+        <p>Ontdek deze LIMA hoekzetel die veel zitplaatsen biedt. Bovendien biedt LIMA een
+          ongekend zitcomfort en zachtheid dankzij zijn zachte stoffen bekleding. Verkrijgbaar in verschillende
+          samenstellingen.</p>
       </div>
     </div>
     <div id="mid-container">
-      <div v-for="(slide, index) in slides" :key="index" v-show="index === currentSlideIndex">
-        <img :src="slide.imageUrl" style="width:100%">
-
-        <div style="text-align:center">
-          <div class="head-content">
-            <h1>{{ slide.headTitle }}</h1>
-            <h2>{{ slide.headText }}</h2>
-            <button>{{ slide.headButton }}</button>
-          </div>
-          <span class="dot" v-for="(slide, index) in slides" :key="index" @click="currentSlide(index)"
-                :class="{ 'active': index === currentSlideIndex }"></span>
+      <vue-horizontal :buttons="true" class="container-mid-hor">
+        <div v-for="item in items" :key="item">
+          <img :src="item" alt="een foto">
         </div>
-      </div>
+      </vue-horizontal>
     </div>
     <div id="container-bottem">
       <div id="container-bottem-left">onder left</div>
@@ -63,26 +45,28 @@
 </template>
 <script>
 import VueHorizontal from 'vue-horizontal';
-import { FontAwesomeIcon } from 'fontawesome';
+import {FontAwesomeIcon} from 'fontawesome';
+
 export default {
   components:
       {VueHorizontal, FontAwesomeIcon},
   data() {
     return {
       items: [
-        { content: 'src/assets/55-22.png' },
-        { content: 'src/assets/55-22.png' },
-        { content: 'src/assets/55-22.png' },
-        { content: 'src/assets/55-22.png' },
-        { content: 'src/assets/55-22.png' },
-        { content: 'src/assets/55-22.png' },
-        { content: 'src/assets/55-22.png' },
-      ]}
+        "src/assets/Banner1.png",
+        "src/assets/Banner1.png",
+        "src/assets/Banner1.png",
+        "src/assets/Banner1.png",
+        "src/assets/Banner1.png",
+        "src/assets/Banner1.png",
+      ]
+    }
   },
 }
 </script>
 
 <style scoped>
+
 * {
   background-color: #D9CAC5;
   margin: 0;
@@ -95,23 +79,75 @@ export default {
   display: flex;
   flex-direction: column;
 }
+
 #container-upper {
   display: flex;
   flex-direction: row;
 }
+
+
+#container-right-upper {
+  width: 50vw;
+  margin: 10rem 0rem 0rem 0rem;
+}
+
+#container-left-upper {
+  width: 50vw;
+  margin: 10rem 10rem 15rem 4rem;
+}
+
 #container-bottem {
   display: flex;
   flex-direction: row;
 }
 
-section {
-  width: 80%;
-  height: 100%;
-}
-.horizontal {
-  height: calc(100% + 10px);
-  overflow-y: auto;
-  scrollbar-width: none;
+
+.horizontal img {
+  object-fit: contain;
+  border-radius: 15px;
 }
 
+#kleuren {
+  display: flex;
+}
+
+#kleur1 {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50px;
+  background-color: red;
+  margin: 0 0.5rem;
+}
+
+#kleur2 {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50px;
+  background-color: blue;
+  margin: 0 0.5rem 0 0.5rem;
+}
+
+#kleur3 {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50px;
+  background-color: yellow;
+  margin: 0 0.5rem 0 0.5rem;
+}
+
+#kleur4 {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50px;
+  background-color: purple;
+  margin: 0 0.5rem;
+}
+
+.container-mid-hor img{
+  width: 100%;
+}
+.container-mid-hor {
+  margin: 0 1rem 10rem 1rem;
+  width: calc(100% / 3);
+}
 </style>
