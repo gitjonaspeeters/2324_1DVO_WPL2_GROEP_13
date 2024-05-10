@@ -79,7 +79,7 @@
         </div>
       </div>
       <div class="slogan-content-right">
-        <img src="@/assets/AdobeStock_478155843 1.png" alt="afbeelding home pagina">
+        <img src="@/assets/Betaalbaar.png" alt="afbeelding home pagina">
       </div>
     </div>
   </div>
@@ -91,14 +91,14 @@ export default {
     return {
       currentSlideIndex: 0,
       slides: [
-        { imageUrl: "/src/assets/Banner1.png", headTitle: "Nieuwe collectie", headText: "Probeer nu onze nieuwe winter collectie!", headButton: "Bekijk" },
-        { imageUrl: "/src/assets/Banner2.png", headTitle: "Nieuwe collectie", headText: "Probeer nu onze nieuwe winter collectie!", headButton: "Bekijk" },
-        { imageUrl: "/src/assets/Banner3.png", headTitle: "Nieuwe collectie", headText: "Probeer nu onze nieuwe winter collectie!", headButton: "Bekijk" },
+        { imageUrl: "/assets/Banner1.png", headTitle: "Nieuwe collectie", headText: "Probeer nu onze nieuwe winter collectie!", headButton: "Bekijk" },
+        { imageUrl: "/assets/Banner2.png", headTitle: "Nieuwe collectie", headText: "Probeer nu onze nieuwe winter collectie!", headButton: "Bekijk" },
+        { imageUrl: "/assets/Banner3.png", headTitle: "Nieuwe collectie", headText: "Probeer nu onze nieuwe winter collectie!", headButton: "Bekijk" },
       ],
       products: [
-        { imageUrl: "/src/assets/TiffanySlaapkamer.png", productTitle: "Tiffany", productCategorie: "Slaapkamer", productPrice: "€879,00" },
-        { imageUrl: "/src/assets/AndiceKaiWoonkamer.png", productTitle: "Andice Kai", productCategorie: "Woonkamer", productPrice: "€1.189,00" },
-        { imageUrl: "/src/assets/LuncieBoucleStoel.png", productTitle: "Lucie Bouclé", productCategorie: "Stoelen", productPrice: "€99,00" }
+        { imageUrl: "/assets/TiffanySlaapkamer.png", productTitle: "Tiffany", productCategorie: "Slaapkamer", productPrice: "€879,00" },
+        { imageUrl: "/assets/AndiceKaiWoonkamer.png", productTitle: "Andice Kai", productCategorie: "Woonkamer", productPrice: "€1.189,00" },
+        { imageUrl: "/assets/LuncieBoucleStoel.png", productTitle: "Lucie Bouclé", productCategorie: "Stoelen", productPrice: "€99,00" }
       ]
     };
   },
@@ -171,7 +171,7 @@ img {
   height: 15px;
   width: 15px;
   margin: 0 2px;
-  background-color: #bbb;
+  background-color: #fff;
   border-radius: 50%;
   display: inline-block;
   transition: background-color 0.6s ease;
@@ -261,14 +261,14 @@ img {
   padding-top: calc(100% / 1.1);
   background-repeat: no-repeat;
   background-size: cover;
-  border-radius: 2rem;
+  /* border-radius: 2rem; */
   position: relative;
 }
 
 .product-like {
   position: absolute;
   top: 1rem;
-  right: 4px;
+  right: 0;
   background-color: #485059;
   padding: 0.3rem 0.5rem;
   border-radius: 5px;
@@ -556,6 +556,18 @@ font-size: 1.2rem;
 }
 
 @media screen and (max-width: 1000px) {
+  .image-container{
+   
+  }
+  .overlay {
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center
+  }
  
 
   .slogan-container{
