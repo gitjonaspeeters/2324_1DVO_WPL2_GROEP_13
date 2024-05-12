@@ -1,6 +1,4 @@
-<script setup>
 
-</script>
 
 <template>
   <div id="account-container">
@@ -25,7 +23,10 @@
             <input type="text" id="password" name="password" placeholder="Wachtwoord">
             <i class="fa-solid fa-pencil icon"></i>
           </div>
+                    <button class='btn btn-danger' @click="logOut">Logout</button>
+ 
         </form>
+        
       </div>
       <div id="account-right">
         <div id="image">
@@ -35,21 +36,37 @@
   </div>
 </template>
 
+<script >
+
+import { useLoginStore } from '@/stores/LoginStore.js';
+
+export default {
+  name: "AccountView",
+  methods: {
+    logOut() {
+      useLoginStore().logout();
+      this.$router.push("/");
+    },
+  },
+};
+
+</script>
+
 <style scoped>
-* {
-  background-color: #D9CAC5;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Century Gothic", sans-serif;
-}
+
 
 #account-container {
+  padding-top: 9rem !important;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-top: 10rem;
   height: 100%;
+  background-color: #D9CAC5;
+  margin: 0;
+
+  box-sizing: border-box;
+  font-family: "Century Gothic", sans-serif;
 }
 
 #account-right {

@@ -33,6 +33,11 @@
                         <input type="text" placeholder="Kortingscode" v-model="discountCode" class="discount-code">
                         <button @click="applyDiscount" class="apply-discount">Toepassen</button>
                         <button @click="checkout" class="checkout">Afrekenen</button>
+                        <div class="betaal-mogelijkheden">
+                            <i class="fa-brands fa-cc-visa"></i>
+                            <i class="fa-brands fa-cc-paypal"></i>
+                            <i class="fa-brands fa-cc-mastercard"></i>
+                        </div>
                     </div>
                 </div>
 
@@ -141,6 +146,18 @@ export default {
     box-sizing: border-box;
 
 
+}
+
+.betaal-mogelijkheden {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+    
+}
+
+.betaal-mogelijkheden i {
+    font-size: 3rem;
+    color: #485059;
 }
 
 /* cart */
@@ -266,6 +283,7 @@ export default {
     justify-content: space-between;
 }
 
+
 .total, .shipping, .vat {
     display: flex;
     justify-content: space-between;
@@ -288,6 +306,7 @@ export default {
     font-size: 1rem;
     cursor: pointer;
     margin-top: 1rem;
+    margin-right: 1rem;
 }
 
 .apply-discount:hover, .checkout:hover {
