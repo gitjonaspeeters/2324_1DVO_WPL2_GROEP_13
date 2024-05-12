@@ -84,7 +84,7 @@ export default {
 
 /* Als er geen items in het verlanglijstje zijn */
 .wishlist > div:not(.container) {
-    text-align: center;
+  
     margin-top: 2rem;
 }
 

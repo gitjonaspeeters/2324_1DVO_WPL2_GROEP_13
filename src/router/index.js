@@ -66,8 +66,8 @@ const router = createRouter({
       name: "product",
       component: DetailView,
     },{
-    path: "/wichlist",
-    name: "wichlist",
+    path: "/wishlist",
+    name: "wishlist",
     component: WichlistView,
   },
   ],

@@ -55,7 +55,7 @@
                         <i class="fa-solid fa-user"></i>
                     </router-link></div>
                 <div class="navigation-right-sextion">
-                    <router-link to="/wichlist">
+                    <router-link to="/wishlist">
                         <i class="fa-solid fa-heart"></i>
                     </router-link>
                 </div>
