@@ -19,7 +19,7 @@
                         <p>Ruimtes</p>
 
 
-                    </router-link >
+                    </router-link>
 
                 </div>
                 <div class="navigation-main-section">
@@ -38,16 +38,22 @@
                 </div>
                 <div class="navigation-main-search">
                     <a @click="toggleSearch">
-                      <i class="fa-solid fa-magnifying-glass"></i>
+                        <i class="fa-solid fa-magnifying-glass"></i>
                     </a>
                 </div>
             </div>
             <div id="navigation-right">
                 <div class="navigation-right-sextion">
-                    <router-link :to="loginStore.isLoggedIn? '/account' : '/login'">
-                        <i class="fa-solid fa-user"></i>
+                    <router-link v-if="!isLoggedIn" to="/login">
+                        <button>Login</button>
                     </router-link>
                 </div>
+                
+
+                <div v-if="isLoggedIn"  class="navigation-right-sextion">
+                    <router-link to="/account">
+                        <i class="fa-solid fa-user"></i>
+                    </router-link></div>
                 <div class="navigation-right-sextion">
                     <router-link to="/">
                         <i class="fa-solid fa-heart"></i>
@@ -165,7 +171,7 @@
                     <p>Alle items</p>
                 </a>
             </div>
-            <div class="media-navigation-main-section">
+            <div v-if="isLoggedIn" class="media-navigation-main-section">
                 <a href="#">
                     <i class="fa-solid fa-users"></i>
                     <p>Over Ons</p>
@@ -178,15 +184,15 @@
 <script>
 import { useLoginStore } from '@/stores/LoginStore.js';
 export default {
-  name: "NavigationBar",
-  data() {
-    const loginStore = useLoginStore();
-    return {
-      loginStore,
-      searchVisible: false,
-      prevScrollpos: 0,
-      navbarTop: '2.5rem',
-      searchVisible: false,
+    name: "NavigationBar",
+    data() {
+        const loginStore = useLoginStore();
+        return {
+            isLoggedIn: false,
+            searchVisible: false,
+            prevScrollpos: 0,
+            navbarTop: '2.5rem',
+            searchVisible: false,
             quantity1: 0,
             quantity2: 0,
             quantity3: 0,
@@ -228,6 +234,14 @@ export default {
             }
         },
 
+        checkLoggedIn() {
+            console.log(localStorage.getItem('id') !== null);
+            return localStorage.getItem('id') !== null;
+
+        },
+
+        
+
 
 
 
@@ -255,10 +269,17 @@ export default {
         }
     },
     mounted() {
-        window.addEventListener('scroll', this.handleScroll)
+        window.addEventListener('scroll', this.handleScroll);
+        this.isLoggedIn = this.checkLoggedIn();
     },
+
     beforeDestroy() {
         window.removeEventListener('scroll', this.handleScroll)
+    },
+    computed: {
+        loginStore() {
+            return useLoginStore();
+        }
     },
 }
 </script>

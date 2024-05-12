@@ -274,8 +274,7 @@ export default {
 }
 
 .afrekenen-content {
-    width: 100%;
-    
+    width: 100%;   
     justify-content: space-between;
 }
 
