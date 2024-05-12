@@ -1896,27 +1896,511 @@
   {
     "id": "81",
     "images": {
-      "image1": ".jpg",
-      "image2": ".jpg"
+      "image1": "9927-1-768x768.jpg",
+      "image2": "9927-6-768x768.jpg"
+    },
+    "Measurement": {
+      "Length": "76,5cm",
+      "Width": "76,5cm",
+      "Height": "75cm"
+    },
+    "name": "Eettafel Jagger",
+    "Price": {
+      "Middle": "€635,00"
+    },
+    "Description": "Tafel",
+    "Stock": 3,
+    "Category": "Dining Tables",
+    "Ruimtes": {
+      "Ruimtes1": "Eetkamer"
+    }
+  },
+  {
+    "id": "82",
+    "images": {
+      "image1": "Nairobi-140×80-cm.jpg",
+      "image2": "12412_5-768x534.jpg"
+    },
+    "Measurement": {
+      "Length": "140cm",
+      "Width": "80cm",
+      "Height": "90cm"
+    },
+    "name": "Nairobi bartafel",
+    "Price": {
+      "Middle": "€479,00"
+    },
+    "Description": "Material : Mangohout / Gecoat Staal Brandserie : Nairobi",
+    "Stock": 3,
+    "Category": "Dining Tables",
+    "Ruimtes": {
+      "Ruimtes1": "Eetkamer"
+    }
+  },
+  {
+    "id": "83",
+    "images": {
+      "image1": "S5152_FR_CREAM_FUSION-1-768x768.jpg",
+      "image2": "S5152_FR_CREAM_FUSION-6.jpg"
+    },
+    "Measurement": {
+      "Length": "120cm",
+      "Width": "95cm",
+      "Height": "70cm"
+    },
+    "name": "Fauteuil Merrol cream fusion fire retardant",
+    "Price": {
+      "High": "€849,00"
+    },
+    "Color": {
+      "Color1": "FR-Fusion 02 Cream"
+    },
+    "Description": "",
+    "Stock": 3,
+    "Category": "Sofa",
+    "Ruimtes": {
+      "Ruimtes1": "Woonkamer"
+    }
+  },
+  {
+    "id": "84",
+    "images": {
+      "image1": "S4736_LOVELY_CREAM-1.jpg",
+      "image2": "S4736_LOVELY_CREAM-6-768x768.jpg"
+    },
+    "Measurement": {
+      "Length": "78cm",
+      "Width": "86cm",
+      "Height": "76cm"
+    },
+    "name": "Draaifauteuil Jace lovely cream",
+    "Price": {
+      "Middle": "€585,00"
+    },
+    "Color": {
+      "Color1": "Be Lovely 11 Cream"
+    },
+    "Description": "",
+    "Stock": 3,
+    "Category": "Sofa",
+    "Ruimtes": {
+      "Ruimtes1": "Woonkamer"
+    }
+  },
+  {
+    "id": "85",
+    "images": {
+      "image1": "S4719_SHEEP_NATURE-1.jpg",
+      "image2": "S4719_SHEEP_NATURE-2.jpg"
+    },
+    "Measurement": {
+      "Length": "91cm",
+      "Width": "77cm",
+      "Height": "72cm"
+    },
+    "name": "Fauteuil Ophelia sheep nature",
+    "Price": {
+      "Middle": "€549,00"
+    },
+    "Color": {
+      "Color1": "Sheep 01 nature"
+    },
+    "Description": "",
+    "Stock": 3,
+    "Category": "Sofa",
+    "Ruimtes": {
+      "Ruimtes1": "Woonkamer"
+    }
+  },
+  {
+    "id": "86",
+    "images": {
+      "image1": "center-2.jpg",
+      "image2": "center-768x842.jpg"
     },
     "Measurement": {
       "Length": "",
       "Width": "",
       "Height": ""
     },
-    "name": "",
+    "name": "Center",
     "Price": {
-      "Low": ""
+      "Low": "€159,00"
+    },
+    "Color": {
+      "Color1": "Beige"
+    },
+    "Description": "Lounge chair in beige",
+    "Stock": 3,
+    "Category": "Sofa",
+    "Ruimtes": {
+      "Ruimtes1": "Woonkamer"
+    }
+  },
+  {
+    "id": "87",
+    "images": {
+      "image1": "RIA-SFEERFOTO-2ZIT-GRIJS-GECAPITONEERD-scaled.jpg",
+      "image2": "RIA-3ZIT-ZIJAANZICHT-GECAPITONNEERD-GRIJS-VELVET-FLUWEEL-scaled.jpg"
+    },
+    "Measurement": {
+      "Length": "191cm",
+      "Width": "84cm",
+      "Height": "78cm"
+    },
+    "name": "Ria 3 Zit",
+    "Price": {
+      "Middle": "€585,00"
     },
     "Color": {
       "Color1": ""
     },
+    "Description": "Deze fijne 3-zitter vormt een prachtig geheel waarin het comfort echt op de eerste plaats is gezet. De Ria bank is bekleedt met een velvet stof in de kleur grijs, een zachte structuur die het aangenaam maakt om een hele avond op je sofa door te brengen. Het onderstel bestaat uit vier zwartgelakte poten van rubberwood, deze zijn licht kegelvormig en zorgen voor de stevigheid van de bank. Dit maakt de retro look niet alleen compleet, het geeft de zetel ook een stoere uitstraling die perfect past bij de woonkamer van nu. Voor kleine ruimten of grote salons, ontdek hier al onze zitbanken.",
+    "Stock": 3,
+    "Category": "Sofa",
+    "Ruimtes": {
+      "Ruimtes1": "Woonkamer"
+    }
+  },
+  {
+    "id": "88",
+    "images": {
+      "image1": "blain-zetelbed-2.jpg",
+      "image2": "Giveaway-Time-Instagram-Post-3.jpg"
+    },
+    "Measurement": {
+      "Length": "200cm",
+      "Width": "105cm",
+      "Height": "83cm"
+    },
+    "name": "Zetelbed Blain",
+    "Price": {
+      "Middle": "€585,00"
+    },
+    "Color": {
+      "Color1": ""
+    },
+    "Description": "Geschikt voor een multifunctionele ruimte of kleine appartement/kot. Deze slaapbank is niet alleen chic, maar biedt ook een veelzijdige oplossing. Het is gemakkelijk om te bouwen tot bed en de pocketveren zorgen ervoor dat uw overnachtende gasten comfortabel slapen.",
+    "Stock": 3,
+    "Category": "Sofa",
+    "Ruimtes": {
+      "Ruimtes1": "Woonkamer"
+    }
+  },
+  {
+    "id": "89",
+    "images": {
+      "image1": "951b056a-9a7e-4158-a102-466a9fc9fc94.jpg",
+      "image2": "3c9500ab-9b4f-488c-9226-ab5e960c5a7d.jpg"
+    },
+    "Measurement": {
+      "Length": "196cm",
+      "Width": "98cm",
+      "Height": "91cm"
+    },
+    "name": "Zetelbed Faith",
+    "Price": {
+      "Middle": "€429,00"
+    },
+    "Color": {
+      "Color1": "licht grijs",
+      "Color2": "Zwart",
+      "Color3": "Grijs"
+    },
+    "Description": "Faith slaapbank lederlook zwart PU200, metalen poten chroom, matras.",
+    "Stock": 3,
+    "Category": "Sofa",
+    "Ruimtes": {
+      "Ruimtes1": "Woonkamer"
+    }
+  },
+  {
+    "id": "90",
+    "images": {
+      "image1": "Rousseau201040-120slaapbank20lit-canapC3A920Adana201-14.jpg",
+      "image2": "Rousseau201040-120slaapbank20lit-canapC3A920Adana209-7.jpg"
+    },
+    "Measurement": {
+      "Length": "214cm",
+      "Width": "84cm",
+      "Height": "84cm"
+    },
+    "name": "Slaapbank Adana",
+    "Price": {
+      "Medium": "€355,00"
+    },
+    "Color": {
+      "Color1": "Beige",
+      "Color2": "Grijs"
+    },
+    "Description": "Eucalyptushouten frame, koudschuim matras",
+    "Stock": 3,
+    "Category": "Sofa",
+    "Ruimtes": {
+      "Ruimtes1": "Woonkamer"
+    }
+  },
+  {
+    "id": "91",
+    "images": {
+      "image1": "Rousseau2088109-120Bed20Lit20Sablo201.jpg",
+      "image2": "Rousseau2088109-220Bed20Lit20Sablo206.jpg"
+    },
+    "Measurement": {
+      "Length": "208cm",
+      "Width": "95cm",
+      "Height": "92cm"
+    },
+    "name": "Bed Sablo",
+    "Price": {
+      "Low": "€135,00"
+    },
+    "Color": {
+      "Color1": "Zwart",
+      "Color2": "Wit"
+    },
+    "Description": "Structuur metaal, met lattenbodem",
+    "Stock": 3,
+    "Category": "Bed",
+    "Ruimtes": {
+      "Ruimtes1": "Slaapkamer"
+    }
+  },
+  {
+    "id": "92",
+    "images": {
+      "image1": "kiddygrijs_resultaat-1.jpg",
+      "image2": "KIBE9014-INF_resultaat.jpg"
+    },
+    "Measurement": {
+      "Length": "205,5cm",
+      "Width": "95cm",
+      "Height": ""
+    },
+    "name": "Kiddy Bed",
+    "Price": {
+      "Medium": "€229,00"
+    },
+    "Color": {
+      "Color1": "Grijs",
+      "Color2": "Wit",
+      "Color3": "Mint",
+      "Color4": "Roze"
+    },
+    "Description": "Dit leuke Kiddy bed van Vipack is een echte aanwinst voor iedere kinderkamer! Door de zachte kleuren en speelse vormen, heeft het daarnaast een rustgevende uitstraling. Het Kiddy bed heeft een afmeting van 90×200 cm en past hierdoor moeiteloos in elke kinderkamer. De lattenbodem is inbegrepen in het bed en optioneel kan u hierbij een matras bestellen. Om de kinderslaapkamer compleet te maken is het bed aan te vullen met de nachttafel van de Kiddy collectie. Daarnaast is Kiddy ook verkrijgbaar in het grijs, roze en mint groen. Welke is jouw favoriet?",
+    "Stock": 3,
+    "Category": "Bed",
+    "Ruimtes": {
+      "Ruimtes1": "Slaapkamer"
+    }
+  },
+  {
+    "id": "93",
+    "images": {
+      "image1": "Rousseau20891220plooibed20lit20pliable20Bruxelles201.jpg",
+      "image2": "Rousseau20891220plooibed20lit20pliable20Bruxelles207-768x512.jpg"
+    },
+    "Measurement": {
+      "Length": "200cm",
+      "Width": "90cm",
+      "Height": "27cm"
+    },
+    "name": "Plooibed Bruxelles",
+    "Price": {
+      "Low": "€175,00"
+    },
+    "Color": {
+      "Color1": ""
+    },
+    "Description": "Mousse 21 kg., dikte 11 cm, 15 latten",
+    "Stock": 3,
+    "Category": "Bed",
+    "Ruimtes": {
+      "Ruimtes1": "Slaapkamer"
+    }
+  },
+  {
+    "id": "94",
+    "images": {
+      "image1": "wimex-verticaal-opklapbed-juist-verticaal-inklapbaar-bruin-5.webp",
+      "image2": "wimex-verticaal-opklapbed-juist-verticaal-inklapbaar-bruin-6.webp"
+    },
+    "Measurement": {
+      "Length": "200cm",
+      "Width-Small": "90cm",
+      "Width-Medium": "120cm",
+      "Width": "140cm",
+      "Height": ""
+    },
+    "name": "Verticaal opklapbed Juist",
+    "Price": {
+      "Low": "€755,00",
+      "Middle":"€836,00",
+      "High": "€934,00"
+    },
+    "Color": {
+      "Color1": "Wit",
+      "Color2": "Sanremo"
+    },
+    "Description": "Inclusief lattenbodem Ruimtebesparend Optimaal voor kleine vertrekken of als logeerbed",
+    "Stock": 3,
+    "Category": "Bed",
+    "Ruimtes": {
+      "Ruimtes1": "Slaapkamer"
+    }
+  },
+  {
+    "id": "95",
+    "images": {
+      "image1": "AMBE9014_INF_2326-scaled.jpg",
+      "image2": "AMBE9014_dcce.jpg"
+    },
+    "Measurement": {
+      "Length": "200cm",
+      "Width": "90cm",
+      "Height": ""
+    },
+    "name": "Amori Bed",
+    "Price": {
+      "Middle": "€332,00"
+    },
+    "Color": {
+      "Color1": "Wit"
+    },
+    "Description": "Het AMORI bed is een wit bed van 90x200cm. Dit bed heeft een romantische uitstraling, mede dankzij het hart in het hoofdbord en voeteinde en de sierlijke afwerking. Bij dit bed is de lattenbodem niet inbegrepen.",
+    "Stock": 3,
+    "Category": "Bed",
+    "Ruimtes": {
+      "Ruimtes1": "Slaapkamer"
+    }
+  },
+  {
+    "id": "96",
+    "images": {
+      "image1": "BARNIE.jpg",
+      "image2": "barnie__-scaled.jpg"
+    },
+    "Measurement": {
+      "Length": "200cm",
+      "Width": "90cm",
+      "Height": ""
+    },
+    "name": "Barnie",
+    "Price": {
+      "Middle": " €699,00"
+    },
+    "Color": {
+      "Color1": "Wit"
+    },
+    "Description": "Het Barnie boomhutbed is geïnspireerd op een schuur en is een geweldige plek om te slapen of te spelen! Je bereikt het bed met de ladder in het midden, de 2 deurtjes zijn vastgemaakt voor de veiligheid. Onder het bed kun je bovendien heel wat speelgoed en andere zaken opbergen. Het stevige, wit gelakte bed is gemaakt van MDF en is geschikt voor een vaste lattenbodem en een matras van 90 x 200 cm. Dit bed is eenvoudig te monteren aan de hand van de meegeleverde montagefiche. Opgelet: het dak mag niet beklommen worden.",
+    "Stock": 3,
+    "Category": "Bed",
+    "Ruimtes": {
+      "Ruimtes1": "Slaapkamer"
+    }
+  },
+  {
+    "id": "97",
+    "images": {
+      "image1": "S4554_WHITE_CHENILLE-1.jpg",
+      "image2": "S4554_WHITE_CHENILLE-6-768x768.jpg"
+    },
+    "Measurement": {
+      "Length": "57cm",
+      "Width": "56cm",
+      "Height": "86cm"
+    },
+    "name": "Barstoel Zabi draaibaar white chenille",
+    "Price": {
+      "Middle": "€575,00"
+    },
+    "Color": {
+      "Color1": "Bergen 900 white chenille"
+    },
     "Description": "",
     "Stock": 3,
-    "Category": "",
+    "Category": "Chair",
     "Ruimtes": {
-      "Ruimtes1": "",
-      "Ruimtes2" :""
+      "Ruimtes1": "Eetkamer"
+    }
+  },
+  {
+    "id": "98",
+    "images": {
+      "image1": "S4584_WOOD_RENEGADE-1.jpg",
+      "image2": "S4584_WOOD_RENEGADE-6.jpg"
+    },
+    "Measurement": {
+      "Length": "49cm",
+      "Width": "51cm",
+      "Height": "93cm"
+    },
+    "name": "Counterstoel Alyssa wood renegade ",
+    "Price": {
+      "Middle": "€289,00"
+    },
+    "Color": {
+      "Color1": "Renegade wood 108)"
+    },
+    "Description": "",
+    "Stock": 3,
+    "Category": "Chair",
+    "Ruimtes": {
+      "Ruimtes1": "Eetkamer"
+    }
+  },
+  {
+    "id": "99",
+    "images": {
+      "image1": "S4716_MUSTARD_FUSION-1.jpg",
+      "image2": "S4716_MUSTARD_FUSION-6-800x800.jpg"
+    },
+    "Measurement": {
+      "Length": "52cm",
+      "Width": "53cm",
+      "Height": "103cm"
+    },
+    "name": "Barstoel Taylor mustard fusion",
+    "Price": {
+      "Middle": "€255,00"
+    },
+    "Color": {
+      "Color1": "Fusion mustard 06"
+    },
+    "Description": "",
+    "Stock": 3,
+    "Category": "Chair",
+    "Ruimtes": {
+      "Ruimtes1": "Eetkamer"
+    }
+  },
+  {
+    "id": "100",
+    "images": {
+      "image1": "MNBE9014_1_8bc7.jpg",
+      "image2": "MNBE9093_INF_M_9d43.jpg"
+    },
+    "Measurement": {
+      "Length": "200cm",
+      "Width-Small": "90cm",
+      "Width-Medium": "140cm",
+      "Height": ""
+    },
+    "name": "Moon Bed",
+    "Price": {
+      "Middle": "€299,00"
+    },
+    "Color": {
+      "Color1": "Wit",
+      "Color2": "Grijs",
+      "Color3": "Groen",
+      "Color4": "Rose"
+    },
+    "Description": "MOON is een nieuwe collectie van gestoffeerde bedden en nachttafels in een unieke bouclé stof. De bedden zijn beschikbaar in zowel 90 x 200 cm als 140 x 200 cm en dit in de kleuren wit, roze, groen en grijs. De combinatie van deze stofbekleding en het afgeronde hoofdbord geven het bed een warme uitstraling en gezellig karakter. Deze collectie past in elk interieur en kan makkelijk gecombineerd worden. De lattenbodem is standaard inbegrepen. Een matras van 90×200 kun je direct meebestellen.",
+    "Stock": 3,
+    "Category": "Bed",
+    "Ruimtes": {
+      "Ruimtes1": "Slaapkamer"
     }
   }
 ]
