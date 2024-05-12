@@ -49,7 +49,7 @@
                     </router-link>
                 </div>
                 <div class="navigation-right-sextion">
-                    <router-link to="/">
+                    <router-link to="/wichlist">
                         <i class="fa-solid fa-heart"></i>
                     </router-link>
                 </div>
