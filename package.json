@@ -16,9 +16,11 @@
     "fontawesome": "^5.6.3",
     "nodemon": "^3.1.0",
     "pinia": "^2.1.7",
+    "sass": "^1.77.1",
     "vue": "^3.4.15",
     "vue-horizontal": "^1.0.2",
-    "vue-router": "^4.2.5"
+    "vue-router": "^4.2.5",
+    "vue3-carousel": "^0.3.3"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.0.3",

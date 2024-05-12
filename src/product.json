@@ -2,8 +2,8 @@
   {
     "id": "1",
     "images": {
-      "image1": "images/Eet-tafel.jpg",
-      "image2": "images/Maré.jpg"
+      "image1": "./src/assets/Eet-tafel.jpg",
+      "image2": "./src/assets/Maré.jpg"
     },
     "name": "Eetkamertafel Maré Mangohout",
     "Price": {
@@ -24,8 +24,8 @@
   {
     "id": "2",
     "images": {
-      "image1": "images/HEAVEN-EETTAFEL.jpg",
-      "image2": "images/dining-tableheaven.jpg"
+      "image1": "./src/assets/HEAVEN-EETTAFEL.jpg",
+      "image2": "./src/assets/dining-tableheaven.jpg"
     },
     "name": "Eettafel Heaven",
     "Price": {
@@ -50,8 +50,8 @@
   {
     "id": "3",
     "images": {
-      "image1": "images/55-22.jpg",
-      "image2": "images/13862_2.jpg"
+      "image1": "./src/assets/55-22.jpg",
+      "image2": "./src/assets/13862_2.jpg"
     },
     "name": "Jesper Danish Oval",
     "Price": {
@@ -70,8 +70,8 @@
   {
     "id": "4",
     "images": {
-      "image1": "images/eettafel-240-daytona-1.jpg",
-      "image2": "images/2044_21_6.jpg"
+      "image1": "./src/assets/eettafel-240-daytona-1.jpg",
+      "image2": "./src/assets/2044_21_6.jpg"
     },
     "name": "Eetkamertafel Daytona",
     "Price": {
@@ -92,8 +92,8 @@
   {
     "id": "5",
     "images": {
-      "image1": "images/Raphael_sfeer_Bib_TF2101_ST2105.jpg",
-      "image2": "images/raphael-1.jpg"
+      "image1": "./src/assets/Raphael_sfeer_Bib_TF2101_ST2105.jpg",
+      "image2": "./src/assets/raphael-1.jpg"
     },
     "name": "Eetkamertafel Raphael",
     "Price": {
@@ -111,8 +111,8 @@
   {
     "id": "6",
     "images": {
-      "image1": "images/Rousseau2089519-420Bed20Parma201.jpg",
-      "image2": "images/Rousseau2089519-420Bed20Parma204.jpg"
+      "image1": "./src/assets/Rousseau2089519-420Bed20Parma201.jpg",
+      "image2": "./src/assets/Rousseau2089519-420Bed20Parma204.jpg"
     },
     "name": "Bed Parma",
     "Price": {
@@ -134,7 +134,7 @@
   {
     "id": "7",
     "images": {
-      "image1": "images/Chambre-enfant-Ellen-decor-bois-acacia-armoire2portes-Oosterlynck.jpg"
+      "image1": "./src/assets/Chambre-enfant-Ellen-decor-bois-acacia-armoire2portes-Oosterlynck.jpg"
     },
     "name": "Kinderkamer Ellen",
     "Price": {
@@ -152,8 +152,8 @@
   {
     "id": "8",
     "images": {
-      "image1": "images/Rousseau2089519-420Bed20Roma201.jpg",
-      "image2": "images/Rousseau2089514-220Bed20Lit20Roma206.jpg"
+      "image1": "./src/assets/Rousseau2089519-420Bed20Roma201.jpg",
+      "image2": "./src/assets/Rousseau2089514-220Bed20Lit20Roma206.jpg"
     },
     "name": "Bed Roma",
     "Price": {
@@ -178,8 +178,8 @@
   {
     "id": "9",
     "images": {
-      "image1": "images/Vogue.jpg",
-      "image2": "images/urun-vogue-fonksiyonel-yatak-02.jpg"
+      "image1": "./src/assets/Vogue.jpg",
+      "image2": "./src/assets/urun-vogue-fonksiyonel-yatak-02.jpg"
     },
     "name": "Vogue",
     "Price": {
@@ -198,7 +198,7 @@
   {
     "id": "10",
     "images": {
-      "image1": "images/Group16.jpg"
+      "image1": "./src/assets/Group16.jpg"
     },
     "name": "Hoekzetel Lima",
     "Price": {
@@ -217,8 +217,8 @@
   {
     "id": "11",
     "images": {
-      "image1": "images/STF-3306-1-1.jpg",
-      "image2": "images/STF-3306-5.jpg"
+      "image1": "./src/assets/STF-3306-1-1.jpg",
+      "image2": "./src/assets/STF-3306-5.jpg"
     },
     "name": "Vakkenkast Brussel Sand XL",
     "Measurement": {
@@ -243,8 +243,8 @@
   {
     "id": "12",
     "images": {
-      "image1": "images/9872-6.jpg",
-      "image2": "images/9872-1.jpg"
+      "image1": "./src/assets/9872-6.jpg",
+      "image2": "./src/assets/9872-1.jpg"
     },
     "name": "Boekenkast Kensington",
     "Price": {
@@ -264,8 +264,8 @@
   {
     "id": "13",
     "images": {
-      "image1": "images/7521-6.jpg",
-      "image2": "images/7521-5.jpg"
+      "image1": "./src/assets/7521-6.jpg",
+      "image2": "./src/assets/7521-5.jpg"
     },
     "name": "Dressoir Bloomville 4-deuren",
     "Measurement": {
@@ -290,8 +290,8 @@
   {
     "id": "14",
     "images": {
-      "image1": "images/Rousseau206925-220Kledingkast20armoire20Marc201.jpg",
-      "image2": "images/Rousseau206925-220Kledingkast20armoire20Marc20209.jpg"
+      "image1": "./src/assets/Rousseau206925-220Kledingkast20armoire20Marc201.jpg",
+      "image2": "./src/assets/Rousseau206925-220Kledingkast20armoire20Marc20209.jpg"
     },
     "name": "Kledingkast Marc 4 deuren met 2 spiegels Sonoma",
     "Measurement": {
@@ -312,7 +312,7 @@
   {
     "id": "15",
     "images": {
-      "image1": "images/Hoeksalongrey.jpg"
+      "image1": "./src/assets/Hoeksalongrey.jpg"
     },
     "name": "Hoeksalon Grey",
     "Measurement": {
@@ -330,8 +330,8 @@
   {
     "id": "16",
     "images": {
-      "image1": "images/S5133_CREAM_UNICORN-1-scaled.jpg",
-      "image2": "images/S5133_CREAM_UNICORN-6.jpg"
+      "image1": "./src/assets/S5133_CREAM_UNICORN-1-scaled.jpg",
+      "image2": "./src/assets/S5133_CREAM_UNICORN-6.jpg"
     },
     "name": "Fauteuil Beauchamp cream unicorn",
     "Measurement": {
@@ -353,8 +353,8 @@
   {
     "id": "17",
     "images": {
-      "image1": "images/S4552_WHITE_FURRY-1.jpg",
-      "image2": "images/S4552_WHITE_FURRY-6.jpg"
+      "image1": "./src/assets/S4552_WHITE_FURRY-1.jpg",
+      "image2": "./src/assets/S4552_WHITE_FURRY-6.jpg"
     },
     "name": "Fauteuil Charmaine white furry",
     "Measurement": {
@@ -376,8 +376,8 @@
   {
     "id": "18",
     "images": {
-      "image1": "images/S4491_KHAKI_VELVET-1.jpg",
-      "image2": "images/S4491_KHAKI_VELVET-6.jpg"
+      "image1": "./src/assets/S4491_KHAKI_VELVET-1.jpg",
+      "image2": "./src/assets/S4491_KHAKI_VELVET-6.jpg"
     },
     "Measurement": {
       "Length": "90cm",
@@ -399,8 +399,8 @@
   {
     "id": "19",
     "images": {
-      "image1": "images/S4702_TAUPE_CHENILLE-1.jpg",
-      "image2": "images/S4702_TAUPE_CHENILLE-6.jpg"
+      "image1": "./src/assets/S4702_TAUPE_CHENILLE-1.jpg",
+      "image2": "./src/assets/S4702_TAUPE_CHENILLE-6.jpg"
     },
     "Measurement": {
       "Length": "73cm",
@@ -422,8 +422,8 @@
   {
     "id": "20",
     "images": {
-      "image1": "images/S4583_CREAM_FUSION-1.jpg",
-      "image2": "images/S4583_CREAM_FUSION-6.jpg"
+      "image1": "./src/assets/S4583_CREAM_FUSION-1.jpg",
+      "image2": "./src/assets/S4583_CREAM_FUSION-6.jpg"
     },
     "Measurement": {
       "Length": "56cm",
@@ -448,8 +448,8 @@
   {
     "id": "21",
     "images": {
-      "image1": "images/10bf1d48-6173-47d8-adf8-c30bc16fba4c.jpg",
-      "image2": "images/55-6.jpg"
+      "image1": "./src/assets/10bf1d48-6173-47d8-adf8-c30bc16fba4c.jpg",
+      "image2": "./src/assets/55-6.jpg"
     },
     "Measurement": {},
     "name": "I_York",
@@ -467,8 +467,8 @@
   {
     "id": "22",
     "images": {
-      "image1": "images/888.jpg",
-      "image2": "images/Sunny-Stoel.jpg"
+      "image1": "./src/assets/888.jpg",
+      "image2": "./src/assets/Sunny-Stoel.jpg"
     },
     "Measurement": {},
     "name": "Sunny Stoel",
@@ -486,8 +486,8 @@
   {
     "id": "23",
     "images": {
-      "image1": "images/1-2.jpg",
-      "image2": "images/2-2.jpg"
+      "image1": "./src/assets/1-2.jpg",
+      "image2": "./src/assets/2-2.jpg"
     },
     "Measurement": {
       "Length": "56cm",
@@ -513,8 +513,8 @@
   {
     "id": "24",
     "images": {
-      "image1": "images/1-2.jpg",
-      "image2": "images/2-2.jpg"
+      "image1": "./src/assets/1-2.jpg",
+      "image2": "./src/assets/2-2.jpg"
     },
     "Measurement": {
       "Length": "158cm",
@@ -539,7 +539,7 @@
   {
     "id": "25",
     "images": {
-      "image1": "images/AD-0045-1.jpg"
+      "image1": "./src/assets/AD-0045-1.jpg"
     },
     "Measurement": {
       "Length": "46cm",
@@ -564,8 +564,8 @@
   {
     "id": "26",
     "images": {
-      "image1": "images/AD-0032-1.jpg",
-      "image2": "images/AD-0032-6.jpg"
+      "image1": "./src/assets/AD-0032-1.jpg",
+      "image2": "./src/assets/AD-0032-6.jpg"
     },
     "Measurement": {
       "Length": "21cm",
@@ -590,8 +590,8 @@
   {
     "id": "27",
     "images": {
-      "image1": "images/AD-0046-1.jpg",
-      "image2": "images/AD-0046-4.jpg"
+      "image1": "./src/assets/AD-0046-1.jpg",
+      "image2": "./src/assets/AD-0046-4.jpg"
     },
     "Measurement": {
       "Length": "130cm",
@@ -613,8 +613,8 @@
   {
     "id": "28",
     "images": {
-      "image1": "images/7491-1.jpg",
-      "image2": "images/7491-6.jpg"
+      "image1": "./src/assets/7491-1.jpg",
+      "image2": "./src/assets/7491-6.jpg"
     },
     "Measurement": {
       "Length": "150cm",
@@ -636,7 +636,7 @@
   {
     "id": "29",
     "images": {
-      "image1": "images/Cindy2-B18-304-scaled.jpg"
+      "image1": "./src/assets/Cindy2-B18-304-scaled.jpg"
     },
     "Measurement": {
       "Length": "140cm",
@@ -654,7 +654,7 @@
   {
     "id": "30",
     "images": {
-      "image1": "images/MTL39.jpg"
+      "image1": "./src/assets/MTL39.jpg"
     },
     "Measurement": {
       "Length": "121cm",
@@ -673,7 +673,7 @@
   {
     "id": "31",
     "images": {
-      "image1": "images/55-10.jpg"
+      "image1": "./src/assets/55-10.jpg"
     },
     "Measurement": {
       "Length": "121cm",

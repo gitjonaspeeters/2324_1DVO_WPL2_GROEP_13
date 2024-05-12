@@ -31,7 +31,7 @@
 
                 </div>
                 <div class="navigation-main-section">
-                    <router-link to="#">
+                    <router-link to="/about">
                         <i class="fa-solid fa-users"></i>
                         <p>Over Ons</p>
                     </router-link>
