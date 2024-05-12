@@ -13,7 +13,10 @@ import LoginView from "@/views/LoginView.vue";
 import RegisterView from "@/views/RegisterView.vue";
 import AccountView from "../views/AccountView.vue";
 import DetailView from "@/views/DetailView.vue";
-import FormulierView from "@/views/FormulierView.vue";
+
+
+import WichlistView from "@/views/WishlistView.vue";
+
 
 
 const router = createRouter({
@@ -65,12 +68,13 @@ const router = createRouter({
       path: "/product",
       name: "product",
       component: DetailView,
-    },
-    {
-      path: "/form",
-      name: "form",
-      component: FormulierView,
-    }
+
+    },{
+    path: "/wishlist",
+    name: "wishlist",
+    component: WichlistView,
+  },
+
   ],
 });
 
