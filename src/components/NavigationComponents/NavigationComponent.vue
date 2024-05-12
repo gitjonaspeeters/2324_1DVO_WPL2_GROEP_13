@@ -45,7 +45,7 @@
             <div id="navigation-right">
                 <div class="navigation-right-sextion">
                     <router-link v-if="!isLoggedIn" to="/login">
-                        <button>Login</button>
+                        <button class="login">Login</button>
                     </router-link>
                 </div>
                 
@@ -288,6 +288,20 @@ export default {
     margin: 0;
     padding: 0;
     /* border: 1px solid red; */
+}
+
+.login {
+    
+    color: #485059;
+    border: none;
+    background-color: transparent !important;
+    font-weight: bolder;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.login:hover {
+    color: #F2B66D;
 }
 
 .cart-content {

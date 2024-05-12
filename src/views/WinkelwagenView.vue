@@ -1,63 +1,25 @@
 <template>
     <div class="cart">
         <h1>Winkelwagen</h1>
-        <div class="container">
+        <div class="container" v-if="cartItems.length !== 0">
             <div class="row">
                 <div class="col-7 ">
 
-                    <div class="item row">
+                    <div class="item row" v-for="(item, index) in cartItems" :key="index">
                         <div class="col-4 ">
-                            <img src="@/assets/image 2.png" alt="product">
+                            <img :src="item.imageUrl" :alt="item.productTitle">
                         </div>
                         <div class="product-text col-7">
-                            <p class="product-title">Slaapkamer Ivette</p>
-                            <p class="price"><strong>€2.534,00</strong> </p>
+                            <p class="product-title">{{ item.productTitle }}</p>
+                            <p class="price"><strong>{{ item.productPrice }}</strong> </p>
                             <div class="quantity">
                                 <div class="quantitydelete-container">
                                     <div class="quantity">
-                                        <button @click="decrement3">-</button>
-                                        <p class="quantity-number">{{ quantity1 }}</p>
-                                        <button @click="increment3">+</button>
+                                        <button @click="decrementQuantity(index)">-</button>
+                                        <p class="quantity-number">{{ item.quantity }}</p>
+                                        <button @click="incrementQuantity(index)">+</button>
                                     </div>
-                                    <i class="trash fa-solid fa-trash"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item row">
-                        <div class="col-4 ">
-                            <img src="@/assets/image 2.png" alt="product">
-                        </div>
-                        <div class="product-text col-7">
-                            <p class="product-title">Slaapkamer Ivette</p>
-                            <p class="price"><strong>€2.534,00</strong> </p>
-                            <div class="quantity">
-                                <div class="quantitydelete-container">
-                                    <div class="quantity">
-                                        <button @click="decrement3">-</button>
-                                        <p class="quantity-number">{{ quantity2 }}</p>
-                                        <button @click="increment3">+</button>
-                                    </div>
-                                    <i class="trash fa-solid fa-trash"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item row">
-                        <div class="col-4 ">
-                            <img src="@/assets/image 2.png" alt="product">
-                        </div>
-                        <div class="product-text col-7">
-                            <p class="product-title">Slaapkamer Ivette</p>
-                            <p class="price"><strong>€2.534,00</strong> </p>
-                            <div class="quantity">
-                                <div class="quantitydelete-container">
-                                    <div class="quantity">
-                                        <button @click="decrement3">-</button>
-                                        <p class="quantity-number">{{ quantity3 }}</p>
-                                        <button @click="increment3">+</button>
-                                    </div>
-                                    <i class="trash fa-solid fa-trash"></i>
+                                    <i class="trash fa-solid fa-trash" @click="removeFromCart(index)"></i>
                                 </div>
                             </div>
                         </div>
@@ -66,17 +28,25 @@
                 </div>
                 <div class="afrekenen col-3">
                     <div class="afrekenen-content">
-                        <p class="total">Totaalprijs: <strong>€2534</strong></p>
-                        <p class="shipping">Verzendkosten: <strong>€10</strong></p>
-                        <p class="vat">BTW: <strong>€534</strong></p>
+                        <p class="total">Totaalprijs: <strong>{{ totalPrice }}</strong></p>
+                        <!-- Voeg hier de verzendkosten en BTW toe als dat nodig is -->
                         <input type="text" placeholder="Kortingscode" v-model="discountCode" class="discount-code">
                         <button @click="applyDiscount" class="apply-discount">Toepassen</button>
                         <button @click="checkout" class="checkout">Afrekenen</button>
+                        <div class="betaal-mogelijkheden">
+                            <i class="fa-brands fa-cc-visa"></i>
+                            <i class="fa-brands fa-cc-paypal"></i>
+                            <i class="fa-brands fa-cc-mastercard"></i>
+                        </div>
                     </div>
                 </div>
 
             </div>
         </div>
+        <div v-else>
+            <h3>Je winkelwagen is leeg</h3>
+        </div>
+
     </div>
 
     <div id="best-container">
@@ -121,20 +91,42 @@ export default {
     },
     data() {
         return {
-
-
+            discountCode: '',
+            cartItems: JSON.parse(localStorage.getItem('cartItems')) || [],
             quantity1: 1,
             quantity2: 1,
             quantity3: 1,
             products: [
                 { imageUrl: "/assets/TiffanySlaapkamer.png", productTitle: "Tiffany", productCategorie: "Slaapkamer", productPrice: "€879,00" },
                 { imageUrl: "/assets/AndiceKaiWoonkamer.png", productTitle: "Andice Kai", productCategorie: "Woonkamer", productPrice: "€1.189,00" },
-                { imageUrl: "/assets/LuncieBoucleStoel.png", productTitle: "Lucie Bouclé", productCategorie: "Stoelen", productPrice: "€99,00" }
+                { imageUrl: "/assets/LuncieBoucleStoel.png", productTitle: "Lucie Bouclé", productCategorie: "Stoelen", productPrice: "€99,00" },
+                
             ]
         };
 
     }
-    ,
+    ,computed: {
+        totalPrice() {
+            return this.cartItems.reduce((total, item) => total + (parseFloat(item.productPrice) * item.quantity), 0).toFixed(2);
+        },
+        decrementQuantity(index) {
+            if (this.cartItems[index].quantity > 1) {
+                this.cartItems[index].quantity--;
+                this.saveToLocalStorage();
+            }
+        },
+        incrementQuantity(index) {
+            this.cartItems[index].quantity++;
+            this.saveToLocalStorage();
+        },
+        removeFromCart(index) {
+            this.cartItems.splice(index, 1);
+            this.saveToLocalStorage();
+        },
+        saveToLocalStorage() {
+            localStorage.setItem('cartItems', JSON.stringify(this.cartItems));
+        },
+    },
     methods: {
         toggleLike(index) {
             event.preventDefault();
@@ -154,6 +146,18 @@ export default {
     box-sizing: border-box;
 
 
+}
+
+.betaal-mogelijkheden {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+    
+}
+
+.betaal-mogelijkheden i {
+    font-size: 3rem;
+    color: #485059;
 }
 
 /* cart */
@@ -274,9 +278,11 @@ export default {
 }
 
 .afrekenen-content {
-    width: 100%;   
+    width: 100%;
+    
     justify-content: space-between;
 }
+
 
 .total, .shipping, .vat {
     display: flex;
@@ -300,6 +306,7 @@ export default {
     font-size: 1rem;
     cursor: pointer;
     margin-top: 1rem;
+    margin-right: 1rem;
 }
 
 .apply-discount:hover, .checkout:hover {
