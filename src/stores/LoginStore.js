@@ -18,9 +18,10 @@ export const useLoginStore = defineStore({
                 const user = userData.find((user) => user.email === this.email && user.password === this.password);
                 if (user) {
                     this.isLoggedIn = true;
-                    localStorage.setItem('id', true);
+                    localStorage.setItem('id', user);
                     this.router.push({ name: 'home' });
                 } else if (localStorage.getItem('id') === true) {
+
                     this.isLoggedIn = true;
                 } else {
                     alert('Invalid email or password');

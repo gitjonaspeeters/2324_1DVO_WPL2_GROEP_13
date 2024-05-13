@@ -1,0 +1,262 @@
+[
+  {
+    "id": 1,
+    "stars": 5,
+    "title": "Geweldige ervaring!",
+    "review_text": "Deze winkel heeft uitstekende klantenservice en een geweldig assortiment producten. Ik ben zeer tevreden met mijn aankoop en zal zeker terugkomen.",
+    "ratings_per_aspect": {
+      "zitgemak": 5,
+      "liggemak": 4,
+      "kwaliteit": 5,
+      "montage": 5,
+      "trendy": 5
+    }
+  },
+  {
+    "id": 1,
+    "stars": 4,
+    "title": "Fantastische zitgemak!",
+    "review_text": "Deze zetel is verbazingwekkend comfortabel! Ik geniet echt van mijn tijd erin doorbrengen.",
+    "ratings_per_aspect": {
+      "zitgemak": 5,
+      "liggemak": 4,
+      "kwaliteit": 4,
+      "montage": 5,
+      "trendy": 4
+    }
+  },
+  {
+    "id": 1,
+    "stars": 4,
+    "title": "Mooi design",
+    "review_text": "Het design van deze zetel is prachtig. Het past perfect bij mijn interieur!",
+    "ratings_per_aspect": {
+      "zitgemak": 4,
+      "liggemak": 4,
+      "kwaliteit": 4,
+      "montage": 5,
+      "trendy": 5
+    }
+  },
+  {
+    "id": 1,
+    "stars": 5,
+    "title": "Geweldige kwaliteit!",
+    "review_text": "Deze zetel voelt heel stevig aan en de materialen zijn van hoge kwaliteit. Ik ben erg onder de indruk.",
+    "ratings_per_aspect": {
+      "zitgemak": 5,
+      "liggemak": 5,
+      "kwaliteit": 5,
+      "montage": 5,
+      "trendy": 4
+    }
+  },
+  {
+    "id": 1,
+    "stars": 4,
+    "title": "Goede service",
+    "review_text": "De klantenservice van deze winkel is top-notch. Ze hebben me geholpen bij elke stap van het proces.",
+    "ratings_per_aspect": {
+      "zitgemak": 4,
+      "liggemak": 4,
+      "kwaliteit": 4,
+      "montage": 4,
+      "trendy": 4
+    }
+  },
+  {
+    "id": 2,
+    "stars": 5,
+    "title": "Uitstekende aankoop!",
+    "review_text": "Ik ben dolblij met mijn nieuwe zetel. Het is precies wat ik zocht!",
+    "ratings_per_aspect": {
+      "zitgemak": 5,
+      "liggemak": 5,
+      "kwaliteit": 5,
+      "montage": 5,
+      "trendy": 5
+    }
+  },
+  {
+    "id": 2,
+    "stars": 4,
+    "title": "Zeer tevreden",
+    "review_text": "De zetel is van goede kwaliteit en ziet er geweldig uit in mijn woonkamer. Enige minpuntje is de levertijd.",
+    "ratings_per_aspect": {
+      "zitgemak": 4,
+      "liggemak": 4,
+      "kwaliteit": 5,
+      "montage": 5,
+      "trendy": 4
+    }
+  },
+  {
+    "id": 2,
+    "stars": 4,
+    "title": "Goede keuze",
+    "review_text": "Ik heb lang gezocht naar de perfecte zetel en deze komt heel dicht in de buurt. Ik ben blij met mijn aankoop.",
+    "ratings_per_aspect": {
+      "zitgemak": 4,
+      "liggemak": 4,
+      "kwaliteit": 4,
+      "montage": 5,
+      "trendy": 4
+    }
+  },
+  {
+    "id": 2,
+    "stars": 5,
+    "title": "Geweldige zetel!",
+    "review_text": "Deze zetel is echt fantastisch! Hij is comfortabel en ziet er geweldig uit. Ik kan hem zeker aanbevelen.",
+    "ratings_per_aspect": {
+      "zitgemak": 5,
+      "liggemak": 5,
+      "kwaliteit": 5,
+      "montage": 5,
+      "trendy": 5
+    }
+  },
+  {
+    "id": 2,
+    "stars": 4,
+    "title": "Goede ervaring",
+    "review_text": "Over het algemeen ben ik erg tevreden met mijn aankoop. De zetel is van goede kwaliteit en de klantenservice was behulpzaam.",
+    "ratings_per_aspect": {
+      "zitgemak": 4,
+      "liggemak": 4,
+      "kwaliteit": 4,
+      "montage": 4,
+      "trendy": 4
+    }
+  },
+  {
+    "id": 3,
+    "stars": 3,
+    "title": "Oké, maar niet geweldig",
+    "review_text": "De zetel is prima, maar er zijn een paar kleine problemen. Hopelijk worden deze in de toekomst opgelost.",
+    "ratings_per_aspect": {
+      "zitgemak": 3,
+      "liggemak": 3,
+      "kwaliteit": 3,
+      "montage": 3,
+      "trendy": 3
+    }
+  },
+  {
+    "id": 3,
+    "stars": 4,
+    "title": "Aardige zetel",
+    "review_text": "De zetel is comfortabel en van goede kwaliteit voor de prijs. De levertijd was echter iets langer dan verwacht.",
+    "ratings_per_aspect": {
+      "zitgemak": 4,
+      "liggemak": 4,
+      "kwaliteit": 4,
+      "montage": 4,
+      "trendy": 3
+    }
+  },
+  {
+    "id": 3,
+    "stars": 3,
+    "title": "Gemiddeld",
+    "review_text": "De zetel is niet slecht, maar ook niet geweldig. Het is een gemiddelde ervaring.",
+    "ratings_per_aspect": {
+      "zitgemak": 3,
+      "liggemak": 3,
+      "kwaliteit": 3,
+      "montage": 3,
+      "trendy": 3
+    }
+  },
+  {
+    "id": 3,
+    "stars": 4,
+    "title": "Goede prijs-kwaliteitverhouding",
+    "review_text": "Deze zetel biedt goede waarde voor je geld. Hij is comfortabel en ziet er goed uit.",
+    "ratings_per_aspect": {
+      "zitgemak": 4,
+      "liggemak": 4,
+      "kwaliteit": 4,
+      "montage": 4,
+      "trendy": 3
+    }
+  },
+  {
+    "id": 3,
+    "stars": 3,
+    "title": "Niet helemaal tevreden",
+    "review_text": "De zetel is redelijk, maar er waren een paar kleine problemen. Ik had een betere kwaliteit verwacht voor deze prijs.",
+    "ratings_per_aspect": {
+      "zitgemak": 3,
+      "liggemak": 3,
+      "kwaliteit": 3,
+      "montage": 3,
+      "trendy": 3
+    }
+  },
+  {
+    "id": 4,
+    "stars": 4,
+    "title": "Goede keuze",
+    "review_text": "Ik ben blij met mijn aankoop. De zetel is van goede kwaliteit en was eenvoudig te monteren.",
+    "ratings_per_aspect": {
+      "zitgemak": 4,
+      "liggemak": 4,
+      "kwaliteit": 4,
+      "montage": 5,
+      "trendy": 3
+    }
+  },
+  {
+    "id": 4,
+    "stars": 5,
+    "title": "Fantastisch product!",
+    "review_text": "Deze zetel heeft mijn verwachtingen overtroffen! Het is comfortabel en ziet er geweldig uit in mijn woonkamer.",
+    "ratings_per_aspect": {
+      "zitgemak": 1,
+      "liggemak": 5,
+      "kwaliteit": 5,
+      "montage": 5,
+      "trendy": 5
+    }
+  },
+  {
+    "id": 4,
+    "stars": 2,
+    "title": "Zeer tevreden",
+    "review_text": "Ik ben zeer tevreden met mijn aankoop. De zetel is comfortabel en de kwaliteit is uitstekend.",
+    "ratings_per_aspect": {
+      "zitgemak": 1,
+      "liggemak": 4,
+      "kwaliteit": 5,
+      "montage": 4,
+      "trendy": 4
+    }
+  },
+  {
+    "id": 4,
+    "stars": 1,
+    "title": "Uitstekende kwaliteit",
+    "review_text": "Deze zetel is van topkwaliteit! Het is duurzaam en ziet er ook nog eens geweldig uit.",
+    "ratings_per_aspect": {
+      "zitgemak": 1,
+      "liggemak": 5,
+      "kwaliteit": 5,
+      "montage": 5,
+      "trendy": 5
+    }
+  },
+  {
+    "id": 4,
+    "stars": 3,
+    "title": "Goede waarde voor je geld",
+    "review_text": "Deze zetel biedt goede waarde voor je geld. Het is comfortabel en van goede kwaliteit.",
+    "ratings_per_aspect": {
+      "zitgemak": 3,
+      "liggemak": 4,
+      "kwaliteit": 2,
+      "montage": 4,
+      "trendy": 4
+    }
+  }
+]
