@@ -214,6 +214,10 @@ img {
   border: none;
 }
 
+.head-content button:hover {
+  background-color: #485059;
+}
+
 .banner-img img{
   width: 100%;
 
@@ -663,10 +667,6 @@ font-size: 1.5rem;
     left: 1rem;
   }
 
-  .banner-img{
-    margin-bottom: 1rem;
-  }
-
   .dot {
     display: none;
 }
@@ -681,6 +681,7 @@ font-size: 1.5rem;
   
   .gallery{
     display: block;
+    margin-top: 1rem;
   }
   .gallery div,
   .gallery1 div {
