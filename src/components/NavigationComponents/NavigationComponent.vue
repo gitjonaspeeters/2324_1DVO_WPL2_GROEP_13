@@ -8,9 +8,7 @@
                 <div class="navigation-main-section">
                     <router-link to="/categorie">
                         <i class="fa-solid fa-book"></i>
-
                         <p>Categorieën</p>
-
                     </router-link>
                 </div>
                 <div class="navigation-main-section">
@@ -18,17 +16,14 @@
                         <i class="fa-solid fa-house"></i>
                         <p>Ruimtes</p>
 
-
                     </router-link>
 
                 </div>
                 <div class="navigation-main-section">
-                    <router-link to="#">
+                    <router-link to="/ruimtes">
                         <i class="fa-solid fa-layer-group"></i>
                         <p>Alle items</p>
-
                     </router-link>
-
                 </div>
                 <div class="navigation-main-section">
                     <router-link to="/about">
@@ -154,16 +149,16 @@
     <div id="media-navigation-container">
         <div id="media-navigation-main">
             <div class="media-navigation-main-section">
-                <a href="/categorie">
+                <router-link to="/categorie">
                     <i class="fa-solid fa-book"></i>
                     <p>Categorieen</p>
-                </a>
+                </router-link>
             </div>
             <div class="media-navigation-main-section">
-                <a href="/ruimtes">
+                <router-link to="/ruimtes">
                     <i class="fa-solid fa-house"></i>
                     <p>Ruimtes</p>
-                </a>
+                </router-link>
             </div>
             <div class="media-navigation-main-section">
                 <a href="#">
@@ -171,11 +166,11 @@
                     <p>Alle items</p>
                 </a>
             </div>
-            <div v-if="isLoggedIn" class="media-navigation-main-section">
-                <a href="#">
+            <div class="media-navigation-main-section">
+                <router-link to="/about">
                     <i class="fa-solid fa-users"></i>
                     <p>Over Ons</p>
-                </a>
+                </router-link>
             </div>
         </div>
     </div>
@@ -188,6 +183,7 @@ export default {
     data() {
         const loginStore = useLoginStore();
         return {
+            currentPage: window.location.pathname,
             isLoggedIn: false,
             searchVisible: false,
             prevScrollpos: 0,
@@ -279,7 +275,12 @@ export default {
     computed: {
         loginStore() {
             return useLoginStore();
-        }
+        },
+        isNavItemActive() {
+        return (navItemURL) => {
+            return navItemURL === this.currentPage;
+        };
+    }
     },
 }
 </script>
@@ -291,7 +292,6 @@ export default {
 }
 
 .login {
-    
     color: #485059;
     border: none;
     background-color: transparent !important;
@@ -301,6 +301,10 @@ export default {
 }
 
 .login:hover {
+    color: #F2B66D;
+}
+
+.login a.router-link-active {
     color: #F2B66D;
 }
 
@@ -344,9 +348,6 @@ export default {
 .product-text {
     padding: 0.5rem;
 }
-
-
-
 
 .row {
     padding-bottom: 6px;
@@ -494,16 +495,23 @@ nav {
     gap: 1rem;
 }
 
+.navigation-main-section a:hover{
+    color: #F2B66D;
+}
+
+.navigation-main-section a.router-link-active {
+    color: #F2B66D;
+}
+
 .navigation-main-search {
     display: flex;
     align-items: center;
+    color: #4C4C4C;
+    cursor: pointer;
 }
 
-.navigation-main-search a {
-    color: #4C4C4C;
-    display: flex;
-    align-items: center;
-    text-decoration: none;
+.navigation-main-search:hover{
+    color: #F2B66D;
 }
 
 nav i {
@@ -536,9 +544,19 @@ nav p {
 .navigation-right-sextion a,
 #navigation-right-sextion a {
     display: flex;
-    color: #4C4C4C;
     align-items: center;
     text-decoration: none;
+    color: #4C4C4C;
+    cursor: pointer;
+}
+
+.navigation-right-sextion a:hover,
+#navigation-right-sextion a:hover{
+    color: #F2B66D;
+}
+
+.navigation-right-sextion a.router-link-active {
+    color: #F2B66D;
 }
 
 /* searchbar */
@@ -612,6 +630,10 @@ nav p {
     .media-navigation-main-section {
         text-align: center;
     }
+
+    .media-navigation-main-section a.router-link-active {
+    color: #F2B66D;
+}
 
     .media-navigation-main-section a {
         text-decoration: none;
