@@ -3,25 +3,9 @@
     <div id="container-upper">
       <div id="container-left-upper">
         <p>Home/Categorieen/zetels/</p>
-        <Carousel class="horizontal-carousel">
-          <Slide v-for="item in product.images" :key="item">
-            <img :src="item" alt="een foto">
-          </Slide>
-          <template #addons>
-            <Navigation button-type="button" class="custom-nav-button">
-              <template #prev>
-                <div class="prev-btn">
-                  <img src="/src/assets/leftbtn.png" alt="arrow-left" id="backbtn">
-                </div>
-              </template>
-              <template #next>
-                <div class="next-btn">
-                  <img src="/src/assets/rightbtn.png" alt="arrow-right" id="nextbtn">
-                </div>
-              </template>
-            </Navigation>
-          </template>
-        </Carousel>
+        <div class="fotorama">
+            <img :src="items[1]" alt="een foto">
+        </div>
       </div>
       <div id="container-right-upper">
         <h1>{{ product.name }}</h1>
@@ -38,33 +22,11 @@
         <i class="fa-regular fa-heart" style="color: #ffffff;"></i>
         <p class="describtion">Beschrijving: </p>
         <p class="meusurements">Afmetingen: <span>{{ product.Measurement }}</span></p>
-        <p>{{ product.Description }}</p>
+        <p id="describtion">{{ product.Description }}</p>
       </div>
     </div>
     <div id="mid-container">
-      <Carousel :wrap-around="true" :items-to-show="3" :autoplay="3000" :transition="500">
-        <template v-for="(item, index) in items" :key="index">
-          <Slide>
-            <div class="slide">
-              <img :src="item" alt="Slide image">
-            </div>
-          </Slide>
-        </template>
-        <template #addons>
-          <Navigation>
-            <template #prev>
-              <div class="prev-btn">
-                <img src="/src/assets/leftbtn.png" alt="arrow-left" id="prevbtn">
-              </div>
-            </template>
-            <template #next>
-              <div class="next-btn">
-                <img src="/src/assets/rightbtn.png" alt="arrow-right" id="nextbtn">
-              </div>
-            </template>
-          </Navigation>
-        </template>
-      </Carousel>
+      <CarouselComponent :items-to-show="3"/>
     </div>
     <div id="container-bottem">
       <div id="container-bottem-left">
@@ -188,53 +150,77 @@
 <script>
 import reviewsData from '@/data/reviews.json';
 import productsData from '@/product.json';
-import {Carousel, Slide, Navigation} from 'vue3-carousel'
+import 'vue3-carousel/dist/carousel.css';
+import {Carousel, Slide, Navigation} from 'vue3-carousel';
+import CarouselComponent from "@/components/CarouselComponent.vue";
+import {ref, onMounted} from "vue";
+import 'fotorama';
 
-export default {
+export default{
   name: 'DetailView',
   components:
       {
         Carousel,
         Slide,
         Navigation,
+        CarouselComponent,
       },
-  data() {
+  setup() {
+    const fotoramaRef = ref(null);
+    onMounted(() => {
+      ('.fotoramaRef').fotorama();
+    });
+    const items = ref([
+      "src/assets/Banner1.png",
+      "src/assets/Banner1.png",
+      "src/assets/Banner1.png",
+      "src/assets/Banner1.png",
+      "src/assets/Banner1.png",
+      "src/assets/Banner1.png",
+      // Add more image URLs as needed
+    ]);
+
     return {
-      productsData: productsData,
-      currentProductIndex: 2,
-      quantity: 1,
-      items: [
-        "src/assets/Banner1.png",
-        "src/assets/Banner1.png",
-        "src/assets/Banner1.png",
-        "src/assets/Banner1.png",
-        "src/assets/Banner1.png",
-        "src/assets/Banner1.png",
-      ],
+      fotoramaRef,
+      items,
       reviewsData: reviewsData,
+      productsData: productsData,
+      currentProductIndex: 1,
+      quantity: 1,
       averageStars: 0, // Gemiddeld aantal sterren
       totalReviews: 0, // Totaal aantal beoordelingen
       averageRatings: {}, // Gemiddelde beoordelingen per aspect
-    }
-  },
+    };
+  }
+  ,
   mounted() {
-    this.slideWidth = this.$refs.carouselItems[0].offsetWidth;
-  },
+    if (window.innerWidth <= 1000) {
+      const prevBtn = document.querySelector('#prev-btn');
+      const nextBtn = document.querySelector('#next-btn');
+      prevBtn.disabled = true;
+      nextBtn.disabled = true;
+    }
+  }
+  ,
   computed: {
     product() {
       return this.productsData[this.currentProductIndex];
-    },
+    }
+    ,
     filteredReviews() {
       return this.reviewsData.filter(review => review.id === this.currentProductIndex);
-    },
+    }
+    ,
     calculateAverageStars() {
       const totalStars = this.filteredReviews.reduce((acc, review) => acc + review.stars, 0);
       return totalStars / this.filteredReviews.length;
-    },
+    }
+    ,
     // Totaal aantal beoordelingen
     calculateTotalReviews() {
       return this.filteredReviews.length;
-    },
+    }
+    ,
     // Bereken gemiddelde beoordelingen per aspect
     calculateAverageRatings() {
       const aspects = ['zitgemak', 'liggemak', 'kwaliteit', 'montage', 'trendy'];
@@ -244,54 +230,70 @@ export default {
         averageRatings[aspect] = aspectTotal / this.totalReviews;
       });
       return averageRatings;
-    },
+    }
+    ,
     fiveStarReviews() {
       return this.filteredReviews.filter(review => review.stars === 5);
-    },
+    }
+    ,
     fourStarReviews() {
       return this.filteredReviews.filter(review => review.stars === 4);
-    },
+    }
+    ,
     threeStarReviews() {
       return this.filteredReviews.filter(review => review.stars === 3);
-    },
+    }
+    ,
     twoStarReviews() {
       return this.filteredReviews.filter(review => review.stars === 2);
-    },
+    }
+    ,
     oneStarReviews() {
       return this.filteredReviews.filter(review => review.stars === 1);
-    },
+    }
+    ,
     averageStars() {
       const totalStars = this.filteredReviews.reduce((acc, review) => acc + review.stars, 0);
       return totalStars / this.filteredReviews.length;
-    },
+    }
+    ,
     averageStars4() {
       const totalStars4 = this.fourStarReviews.reduce((acc, review) => acc + review.stars, 0);
       return totalStars4 / this.fourStarReviews.length;
-    },
+    }
+    ,
     averageStars3() {
       const totalStars3 = this.threeStarReviews.reduce((acc, review) => acc + review.stars, 0);
       return totalStars3 / this.threeStarReviews.length;
-    },
+    }
+    ,
     averageStars2() {
       const totalStars2 = this.twoStarReviews.reduce((acc, review) => acc + review.stars, 0);
       return totalStars2 / this.twoStarReviews.length;
-    },
+    }
+    ,
     averageStars1() {
       const totalStars1 = this.oneStarReviews.reduce((acc, review) => acc + review.stars, 0);
       return totalStars1 / this.oneStarReviews.length;
-    },
-  },
+    }
+    ,
+  }
+  ,
   methods: {
     addToCart() {
       // Implement add to cart functionality
-    },
-  },
+    }
+    ,
+  }
+  ,
   created() {
     this.averageStars = this.calculateAverageStars;
     this.totalReviews = this.calculateTotalReviews;
     this.averageRatings = this.calculateAverageRatings;
-  },
-};
+  }
+  ,
+}
+;
 </script>
 
 <style lang="scss" scoped>
@@ -410,50 +412,21 @@ $with-buttons: calc(100% / 4);
     width: 60vw;
     margin: 10rem 10rem 15rem 4rem;
 
-    .custom-nav-button {
-      .next-btn {
-        @include carousel-button();
-      }
-
-      .prev-btn {
-        @include carousel-button();
-      }
-    }
-  }
+  //  .custom-nav-button {
+  //    .next-btn {
+  //      @include carousel-button();
+  //    }
+  //
+  //    .prev-btn {
+  //      @include carousel-button();
+  //    }
+  //  }
+  //}
 }
 
 #mid-container {
-  width: 80%;
-  margin: 10rem auto;
-
-  .carousel-container {
-    width: 80%;
-    margin: 0 auto;
-  }
-
-  .slide {
-    width: 100%;
-    height: 200px;
-    border: 1px solid #ccc;
-  }
-
-  .prev-btn,
-  .next-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 2rem;
-    color: #333;
-    cursor: pointer;
-  }
-
-  .prev-btn {
-    left: -5rem;
-  }
-
-  .next-btn {
-    right: -5rem;
-  }
+  width: 95%;
+  margin: 0 auto 5rem;
 }
 
 #container-bottem {
@@ -585,5 +558,34 @@ $with-buttons: calc(100% / 4);
   }
 }
 
+@media screen and (max-width: 1000px) {
+  #container-upper {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+    #container-right-upper {
+      flex-direction: column;
+      margin-top: 0;
+    }
+
+    #container-left-upper {
+      flex-direction: column;
+    }
+
+    #describtion {
+      display: none; /* Beschrijving verbergen op klein scherm */
+    }
+  }
+
+  #mid-container {
+    width: 100%;
+    height: 200px;
+  }
+
+  #container-bottem {
+    display: none; /* Onderste container verbergen op klein scherm */
+  }
+}
 
 </style>
