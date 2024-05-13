@@ -17,6 +17,7 @@ import DetailView from "@/views/DetailView.vue";
 import WichlistView from "@/views/WishlistView.vue";
 import formulierView from "@/views/FormulierView.vue"
 import Privacypolicy from "@/views/PrivacyView.vue";
+import Cookies from "@/views/CookiesView.vue";
 
 const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
@@ -83,6 +84,11 @@ const router = createRouter({
             path: "/privacy",
             name: "privacy",
             component: Privacypolicy,
+        },
+        {
+            path: "/cookies",
+            name: "cookies",
+            component: Cookies,
         }
     ],
 });
