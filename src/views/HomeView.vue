@@ -637,12 +637,12 @@ font-size: 1.5rem;
 .slogan-left-text {
   box-shadow: none;
   border-radius: 0;
-  font-size: 2.8rem;
+  font-size: 2.5rem;
   height: calc(50% - 1rem);
   width: 100%;
   display: flex;
   justify-content: left;
-  padding-left: 10%;
+  padding: 3% 5%;
   align-items: center;
   margin-top: 3rem;
   max-height: calc(50% - 1rem); 
@@ -659,6 +659,17 @@ font-size: 1.5rem;
 }
 
 @media screen and (max-width: 600px){
+  .head-content{
+    left: 1rem;
+  }
+
+  .banner-img{
+    margin-bottom: 1rem;
+  }
+
+  .dot {
+    display: none;
+}
   
   .banner-img{
     height: 300px !important;
