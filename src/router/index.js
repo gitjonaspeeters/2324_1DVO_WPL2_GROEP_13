@@ -15,7 +15,8 @@ import DetailView from "@/views/DetailView.vue";
 
 
 import WichlistView from "@/views/WishlistView.vue";
-import formulierView from "@/views/FormulierView.vue"
+import formulierView from "@/views/FormulierView.vue";
+import ProductView from "@/views/ProductView.vue";
 
 
 const router = createRouter({
@@ -78,6 +79,11 @@ const router = createRouter({
             path: "/form",
             name: "form",
             component: formulierView,
+        },
+        {
+            path: "/products",
+            name: "products",
+            component: ProductView,
         }
     ],
 });
