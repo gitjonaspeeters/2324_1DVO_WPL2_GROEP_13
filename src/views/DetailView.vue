@@ -3,21 +3,30 @@
     <div id="container-upper">
       <div id="container-left-upper">
         <p>Home/Categorieen/zetels/</p>
-        <div class="fotorama">
-            <img :src="items[1]" alt="een foto">
-        </div>
+        <Carousel class="horizontal-carousel">
+          <template #slides>
+            <Slide v-for="item in product.images" :key="item">
+              <div>
+                <img :src="item" alt="een foto">
+              </div>
+            </Slide>
+          </template>
+          <template #addons>
+            <Navigation class="buttons"/>
+          </template>
+        </Carousel>
       </div>
       <div id="container-right-upper">
         <h1>{{ product.name }}</h1>
         <p id="text-kleur">kleuren:</p>
         <div id="kleuren">
-          <div v-for="(color, index) in product.Color" :key="index" :style="{ 'background-color': color }"></div>
+          <div class="kleur" v-for="(color, index) in product.Color" :key="index" :style="{ 'background-color': color }"></div>
         </div>
         <div id="flex">
-          <p id="price">{{ product.Price.low }}</p>
+          <p id="price">{{ product.Price.Low }}</p>
           <input type="number" min="0" max="10" v-model="quantity">
           <button id="order" @click="addToCart">Bestellen</button>
-          <button id="AR">AR</button>
+          <button id="AR" @click="showQr">AR</button>
         </div>
         <i class="fa-regular fa-heart" style="color: #ffffff;"></i>
         <p class="describtion">Beschrijving: </p>
@@ -145,6 +154,18 @@
         </div>
       </div>
     </div>
+    <div id="qr-popup" v-if="qrCodePopup">
+      <div id="popup-container">
+        <img src="@/assets/qrcode.png" alt="foto van qr code">
+        <div id="icons">
+          <i class="fa-brands fa-google-play"></i>
+          <i class="fa-brands fa-app-store"></i>
+        </div>
+      </div>
+      <div id="close">
+        <i class="fa-solid fa-circle-xmark"></i>
+      </div>
+    </div>
   </div>
 </template>
 <script>
@@ -153,10 +174,9 @@ import productsData from '@/product.json';
 import 'vue3-carousel/dist/carousel.css';
 import {Carousel, Slide, Navigation} from 'vue3-carousel';
 import CarouselComponent from "@/components/CarouselComponent.vue";
-import {ref, onMounted} from "vue";
-import 'fotorama';
+import {ref} from "vue";
 
-export default{
+export default {
   name: 'DetailView',
   components:
       {
@@ -165,11 +185,7 @@ export default{
         Navigation,
         CarouselComponent,
       },
-  setup() {
-    const fotoramaRef = ref(null);
-    onMounted(() => {
-      ('.fotoramaRef').fotorama();
-    });
+  data() {
     const items = ref([
       "src/assets/Banner1.png",
       "src/assets/Banner1.png",
@@ -181,15 +197,15 @@ export default{
     ]);
 
     return {
-      fotoramaRef,
       items,
       reviewsData: reviewsData,
       productsData: productsData,
-      currentProductIndex: 1,
+      currentProductIndex: 2,
       quantity: 1,
       averageStars: 0, // Gemiddeld aantal sterren
       totalReviews: 0, // Totaal aantal beoordelingen
       averageRatings: {}, // Gemiddelde beoordelingen per aspect
+      qrCodePopup: false,
     };
   }
   ,
@@ -200,8 +216,8 @@ export default{
       prevBtn.disabled = true;
       nextBtn.disabled = true;
     }
-  }
-  ,
+  },
+
   computed: {
     product() {
       return this.productsData[this.currentProductIndex];
@@ -282,8 +298,10 @@ export default{
   methods: {
     addToCart() {
       // Implement add to cart functionality
-    }
-    ,
+    },
+    showQr() {
+      this.qrCodePopup = !this.qrCodePopup;
+    },
   }
   ,
   created() {
@@ -341,7 +359,7 @@ $with-buttons: calc(100% / 4);
       margin-bottom: 1rem;
     }
 
-    #kleuren {
+    #kleur {
       display: flex;
       width: 2rem;
       height: 2rem;
@@ -369,26 +387,23 @@ $with-buttons: calc(100% / 4);
         margin-right: 1rem;
         border-radius: 15px;
         background-color: #FFFFFF;
-        outline: none;
+        border: none;
       }
 
       button {
         width: $with-buttons;
         margin-right: 1rem;
+        color: white;
+        border-radius: 15px;
+        border: none;
       }
 
       #order {
         background-color: #F2B66D;
-        color: white;
-        border-radius: 15px;
-        outline: none;
       }
 
       #AR {
         background-color: #485059;
-        color: white;
-        border-radius: 15px;
-        outline: none;
       }
     }
 
@@ -412,16 +427,13 @@ $with-buttons: calc(100% / 4);
     width: 60vw;
     margin: 10rem 10rem 15rem 4rem;
 
-  //  .custom-nav-button {
-  //    .next-btn {
-  //      @include carousel-button();
-  //    }
-  //
-  //    .prev-btn {
-  //      @include carousel-button();
-  //    }
-  //  }
-  //}
+    .horizontal-carousel {
+      img {
+        width: 30rem;
+        height: 30rem;
+      }
+    }
+  }
 }
 
 #mid-container {
@@ -554,6 +566,44 @@ $with-buttons: calc(100% / 4);
 
     i {
       font-size: 1.5rem;
+    }
+  }
+}
+
+#qr-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 25rem;
+  width: 25rem;
+  background-color: #F2B66D;
+  border: {
+    radius: 25px;
+  };
+
+  #popup-container {
+    background-color: #F2B66D;
+    img {
+      background-color: #F2B66D;
+      height: 15rem;
+      width: 15rem;
+    }
+    i {
+      background-color: #F2B66D;
+      font-size: 2rem;
+      margin-right: 1rem;
+    }
+    #icons {
+      background-color: #F2B66D;
+      margin: {
+        top: 1rem;
+        left: calc(100% - 6rem);
+      }
     }
   }
 }

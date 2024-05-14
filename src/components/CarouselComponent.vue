@@ -67,7 +67,7 @@ export default defineComponent({
 })
 </script>
 
-<style>
+<style scoped>
 carousel {
   width: 95%;
 }
