@@ -760,7 +760,7 @@ h2 {
 }
 
 .privacy {
-    margin-top: -125px;
+    margin-top: -75px;
 }
 
 #head-container {
