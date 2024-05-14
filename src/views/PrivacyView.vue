@@ -68,7 +68,7 @@ div {
     flex-direction: column;
 }
 .privacy{
-    margin-top: -125px;
+    margin-top: -75px;
 }
 #head-container{
   width: 100%;
