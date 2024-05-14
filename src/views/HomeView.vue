@@ -83,9 +83,20 @@
       </div>
     </div>
   </div>
+  <!-- nieuwsbrief -->
+  <div id="news-container">
+    <div id="news-content"   data-aos="fade-up" data-aos-duration="1000">
+      <h1><i>Nieuwsbrief</i></h1>
+    <div class="news-input">
+      <input type="email" id="email" name="email" placeholder="Email">
+      <button>inschrijven</button>
+    </div>
+    </div>
+  </div>
 </template>
-
 <script>
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 export default {
   data() {
     return {
@@ -104,8 +115,22 @@ export default {
   },
   mounted() {
     this.showSlides();
+    this.initAOS();
   },
   methods: {
+    initAOS() {
+    if (window.innerWidth <= 1000) {
+      AOS.init({
+        once: true,
+        offset: 500 
+      });
+    } else {
+      AOS.init({
+        once: true,
+        offset: 1000 
+      });
+    }
+  },
     showSlides() {
       setInterval(() => {
         this.currentSlideIndex = (this.currentSlideIndex + 1) % this.slides.length;
@@ -212,6 +237,10 @@ img {
   color: #ffffff;
   background-color: #F2B66D;
   border: none;
+}
+
+.head-content button:hover {
+  background-color: #485059;
 }
 
 .banner-img img{
@@ -482,6 +511,57 @@ margin-left: 0.5rem;
 .slogan-content-right img{
   width: 100%;
 }
+
+/* news letter */
+#news-container{
+  background-color: #E8DFDC;
+  padding-bottom: 5rem;
+}
+
+#news-content{
+  margin: 0 auto;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+#news-content h1{
+  color: #485059;
+  margin-bottom: 1.5rem;
+  text-decoration: underline;
+  font-family: "Century Gothic", sans-serif;
+  font-size: 2rem;
+}
+
+.news-input{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-family: "Century Gothic", sans-serif;
+  color: #485059;
+  font-size: 1.2rem;
+}
+
+#email{
+  border: none;
+  border-radius: 20px  0 0 20px;
+  padding: 0.8rem  1.5rem;
+}
+
+.news-input button{
+  background-color: #F2B66D;
+  border-radius: 0 20px 20px 0;
+  padding: 0.8rem  1.5rem;
+  border: none;
+}
+
+.news-input button:hover{
+  background-color: #485059;
+  color: #ffffff;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
 @media screen and (max-width: 1584px) {
   #best-text h1 {
   font-size:  2.5rem;
@@ -556,9 +636,26 @@ font-size: 1.2rem;
 }
 
 @media screen and (max-width: 1000px) {
-  .image-container{
-   
-  }
+  /* news letter */
+
+#news-content{
+  align-items: center;
+}
+
+#email{
+  width: 60%;
+}
+
+.news-input button{
+  padding: 0.8rem  1rem;
+  width: 40%;
+}
+
+.news-input button:hover{
+  background-color: #485059;
+  color: #ffffff;
+}
+
   .overlay {
     opacity: 1;
     background-color: rgba(0, 0, 0, 0.5);
@@ -637,12 +734,12 @@ font-size: 1.5rem;
 .slogan-left-text {
   box-shadow: none;
   border-radius: 0;
-  font-size: 2.8rem;
+  font-size: 2.5rem;
   height: calc(50% - 1rem);
   width: 100%;
   display: flex;
   justify-content: left;
-  padding-left: 10%;
+  padding: 3% 5%;
   align-items: center;
   margin-top: 3rem;
   max-height: calc(50% - 1rem); 
@@ -659,6 +756,13 @@ font-size: 1.5rem;
 }
 
 @media screen and (max-width: 600px){
+  .head-content{
+    left: 1rem;
+  }
+
+  .dot {
+    display: none;
+}
   
   .banner-img{
     height: 300px !important;
@@ -670,6 +774,7 @@ font-size: 1.5rem;
   
   .gallery{
     display: block;
+    margin-top: 1rem;
   }
   .gallery div,
   .gallery1 div {

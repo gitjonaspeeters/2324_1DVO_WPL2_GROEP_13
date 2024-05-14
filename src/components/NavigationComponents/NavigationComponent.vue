@@ -1,4 +1,5 @@
 <template>
+
   <div id="navigation-container">
     <nav>
       <div id="navigation-left">
@@ -98,6 +99,7 @@
                   <button @click="decrement1">-</button>
                   <p class="quantity-number">{{ quantity1 }}</p>
                   <button @click="increment1">+</button>
+
                 </div>
                 <i class="trash fa-solid fa-trash"></i>
               </div>
@@ -152,34 +154,36 @@
       </router-link>
 
     </div>
-  </div>
-  <!-- navigation media screen -->
-  <div id="media-navigation-container">
-    <div id="media-navigation-main">
-      <div class="media-navigation-main-section">
-        <a href="/categorie">
-          <i class="fa-solid fa-book"></i>
-          <p>Categorieen</p>
-        </a>
-      </div>
-      <div class="media-navigation-main-section">
-        <a href="/ruimtes">
-          <i class="fa-solid fa-house"></i>
-          <p>Ruimtes</p>
-        </a>
-      </div>
-      <div class="media-navigation-main-section">
-        <a href="#">
-          <i class="fa-solid fa-layer-group"></i>
-          <p>Alle items</p>
-        </a>
-      </div>
-      <div v-if="isLoggedIn" class="media-navigation-main-section">
-        <a href="#">
-          <i class="fa-solid fa-users"></i>
-          <p>Over Ons</p>
-        </a>
-      </div>
+
+    <!-- navigation media screen -->
+    <div id="media-navigation-container">
+        <div id="media-navigation-main">
+            <div class="media-navigation-main-section">
+                <router-link to="/categorie">
+                    <i class="fa-solid fa-book"></i>
+                    <p>Categorieen</p>
+                </router-link>
+            </div>
+            <div class="media-navigation-main-section">
+                <router-link to="/ruimtes">
+                    <i class="fa-solid fa-house"></i>
+                    <p>Ruimtes</p>
+                </router-link>
+            </div>
+            <div class="media-navigation-main-section">
+                <a href="#">
+                    <i class="fa-solid fa-layer-group"></i>
+                    <p>Alle items</p>
+                </a>
+            </div>
+            <div class="media-navigation-main-section">
+                <router-link to="/about">
+                    <i class="fa-solid fa-users"></i>
+                    <p>Over Ons</p>
+                </router-link>
+            </div>
+        </div>
+
     </div>
   </div>
 </template>
@@ -188,21 +192,23 @@
 import {useLoginStore} from '@/stores/LoginStore.js';
 
 export default {
-  name: "NavigationBar",
-  data() {
-    const loginStore = useLoginStore();
-    return {
-      isLoggedIn: false,
-      searchVisible: false,
-      prevScrollpos: 0,
-      navbarTop: '2.5rem',
-      searchVisible: false,
-      quantity1: 0,
-      quantity2: 0,
-      quantity3: 0,
-      navbarOpacity: 1,
-      navbarMarginTop: '0',
-      cartPopupVisible: false,
+
+    name: "NavigationBar",
+    data() {
+        const loginStore = useLoginStore();
+        return {
+            currentPage: window.location.pathname,
+            isLoggedIn: false,
+            searchVisible: false,
+            prevScrollpos: 0,
+            navbarTop: '2.5rem',
+            searchVisible: false,
+            quantity1: 0,
+            quantity2: 0,
+            quantity3: 0,
+            navbarOpacity: 1,
+            navbarMarginTop: '0',
+            cartPopupVisible: false,
 
 
     }
@@ -232,10 +238,21 @@ export default {
       this.quantity3++;
       console.log(this.quantity3);
     },
+    computed: {
+        loginStore() {
+            return useLoginStore();
+        },
+        isNavItemActive() {
+        return (navItemURL) => {
+            return navItemURL === this.currentPage;
+        };
+    }
+
     decrement3() {
       if (this.quantity3 > 0) {
         this.quantity3--;
       }
+
     },
 
     checkLoggedIn() {
@@ -290,16 +307,21 @@ export default {
 
 .login {
 
-  color: #485059;
-  border: none;
-  background-color: transparent !important;
-  font-weight: bolder;
-  border-radius: 10px;
-  cursor: pointer;
+    color: #485059;
+    border: none;
+    background-color: transparent !important;
+    font-weight: bolder;
+    border-radius: 10px;
+    cursor: pointer;
+
 }
 
 .login:hover {
   color: #F2B66D;
+}
+
+.login a.router-link-active {
+    color: #F2B66D;
 }
 
 .cart-content {
@@ -342,7 +364,6 @@ export default {
 .product-text {
   padding: 0.5rem;
 }
-
 
 .row {
   padding-bottom: 6px;
@@ -438,13 +459,15 @@ export default {
 }
 
 #navigation-container {
-  position: fixed;
-  top: 2.5rem;
-  z-index: 2;
-  width: 95%;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
+
+    position: fixed;
+    top: 2.5rem;
+    z-index: 3;
+    width: 95%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+
 }
 
 nav {
@@ -490,7 +513,25 @@ nav {
   gap: 1rem;
 }
 
+.navigation-main-section a:hover{
+    color: #F2B66D;
+}
+
+.navigation-main-section a.router-link-active {
+    color: #F2B66D;
+}
+
 .navigation-main-search {
+
+    display: flex;
+    align-items: center;
+    color: #4C4C4C;
+    cursor: pointer;
+}
+
+.navigation-main-search:hover{
+    color: #F2B66D;
+
   display: flex;
   align-items: center;
 }
@@ -500,6 +541,7 @@ nav {
   display: flex;
   align-items: center;
   text-decoration: none;
+
 }
 
 nav i {
@@ -531,6 +573,22 @@ nav p {
 
 .navigation-right-sextion a,
 #navigation-right-sextion a {
+
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #4C4C4C;
+    cursor: pointer;
+}
+
+.navigation-right-sextion a:hover,
+#navigation-right-sextion a:hover{
+    color: #F2B66D;
+}
+
+.navigation-right-sextion a.router-link-active {
+    color: #F2B66D;
+
   display: flex;
   color: #4C4C4C;
   align-items: center;
@@ -608,6 +666,15 @@ nav p {
   .media-navigation-main-section {
     text-align: center;
   }
+
+
+    .media-navigation-main-section a.router-link-active {
+    color: #F2B66D;
+}
+
+    .media-navigation-main-section a {
+        text-decoration: none;
+        color: #4C4C4C;
 
   .media-navigation-main-section a {
     text-decoration: none;
