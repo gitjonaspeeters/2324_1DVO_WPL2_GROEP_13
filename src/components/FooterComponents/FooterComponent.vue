@@ -50,7 +50,7 @@ footer{
     font-size: 2.5rem;
 }
 #footer-left a:hover{
-    color: #000000;
+    color: #F2B66D;
 }
 #footer-main{
     text-align: center;
