@@ -85,7 +85,7 @@
   </div>
   <!-- nieuwsbrief -->
   <div id="news-container">
-    <div id="news-content"   data-aos="fade-up" data-aos-duration="1000"  data-aos-once="1000">
+    <div id="news-content"   data-aos="fade-up" data-aos-duration="1000">
       <h1><i>Nieuwsbrief</i></h1>
     <div class="news-input">
       <input type="email" id="email" name="email" placeholder="Email">
@@ -115,10 +115,7 @@ export default {
   },
   mounted() {
     this.showSlides();
-    AOS.init({
-      once: true, // Animatie wordt slechts één keer afgespeeld
-      offset: 500, // Offset (in pixels) vanaf de bodem van het scherm
-    });
+    this.initAOS();
   },
   methods: {
     initAOS() {
