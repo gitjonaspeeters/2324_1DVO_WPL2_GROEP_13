@@ -3,11 +3,11 @@
   <div id="navigation-container">
     <nav>
       <div id="navigation-left">
-        <router-link to="/"><img src="@/assets/Comfortmeubel wit.svg"></router-link>
+        <router-link @click.native="scrollToTop" to="/"><img src="@/assets/Comfortmeubel wit.svg"></router-link>
       </div>
       <div id="navigation-main" :style="{ 'margin-top': navbarMarginTop }">
         <div class="navigation-main-section">
-          <router-link to="/categorie">
+          <router-link @click.native="scrollToTop" to="/categorie">
             <i class="fa-solid fa-book"></i>
 
             <p>Categorieën</p>
@@ -15,7 +15,7 @@
           </router-link>
         </div>
         <div class="navigation-main-section">
-          <router-link to="/ruimtes">
+          <router-link @click.native="scrollToTop" to="/ruimtes">
             <i class="fa-solid fa-house"></i>
             <p>Ruimtes</p>
 
@@ -24,14 +24,14 @@
 
         </div>
         <div class="navigation-main-section">
-          <router-link to="#">
+          <router-link @click.native="scrollToTop" to="#">
             <i class="fa-solid fa-layer-group"></i>
             <p>Alle items</p>
           </router-link>
 
         </div>
         <div class="navigation-main-section">
-          <router-link to="/about">
+          <router-link @click.native="scrollToTop" to="/about">
             <i class="fa-solid fa-users"></i>
             <p>Over Ons</p>
           </router-link>
@@ -44,19 +44,19 @@
       </div>
       <div id="navigation-right">
         <div class="navigation-right-sextion">
-          <router-link v-if="!isLoggedIn" to="/login">
+          <router-link @click.native="scrollToTop" v-if="!isLoggedIn" to="/login">
             <button class="login">Login</button>
           </router-link>
         </div>
 
 
         <div v-if="isLoggedIn" class="navigation-right-sextion">
-          <router-link to="/account">
+          <router-link @click.native="scrollToTop" to="/account">
             <i class="fa-solid fa-user"></i>
           </router-link>
         </div>
         <div class="navigation-right-sextion">
-          <router-link to="/wishlist">
+          <router-link @click.native="scrollToTop" to="/wishlist">
             <i class="fa-solid fa-heart"></i>
           </router-link>
         </div>
@@ -157,32 +157,32 @@
 
     <!-- navigation media screen -->
     <div id="media-navigation-container">
-        <div id="media-navigation-main">
-            <div class="media-navigation-main-section">
-                <router-link to="/categorie">
-                    <i class="fa-solid fa-book"></i>
-                    <p>Categorieen</p>
-                </router-link>
-            </div>
-            <div class="media-navigation-main-section">
-                <router-link to="/ruimtes">
-                    <i class="fa-solid fa-house"></i>
-                    <p>Ruimtes</p>
-                </router-link>
-            </div>
-            <div class="media-navigation-main-section">
-                <a href="#">
-                    <i class="fa-solid fa-layer-group"></i>
-                    <p>Alle items</p>
-                </a>
-            </div>
-            <div class="media-navigation-main-section">
-                <router-link to="/about">
-                    <i class="fa-solid fa-users"></i>
-                    <p>Over Ons</p>
-                </router-link>
-            </div>
+      <div id="media-navigation-main">
+        <div class="media-navigation-main-section">
+          <router-link @click.native="scrollToTop" to="/categorie">
+            <i class="fa-solid fa-book"></i>
+            <p>Categorieen</p>
+          </router-link>
         </div>
+        <div class="media-navigation-main-section">
+          <router-link @click.native="scrollToTop" to="/ruimtes">
+            <i class="fa-solid fa-house"></i>
+            <p>Ruimtes</p>
+          </router-link>
+        </div>
+        <div class="media-navigation-main-section">
+          <router-link @click.native="scrollToTop" to="#">
+            <i class="fa-solid fa-layer-group"></i>
+            <p>Alle items</p>
+          </router-link>
+        </div>
+        <div class="media-navigation-main-section">
+          <router-link @click.native="scrollToTop" to="/about">
+            <i class="fa-solid fa-users"></i>
+            <p>Over Ons</p>
+          </router-link>
+        </div>
+      </div>
 
     </div>
   </div>
@@ -193,96 +193,101 @@ import {useLoginStore} from '@/stores/LoginStore.js';
 
 export default {
 
-    name: "NavigationBar",
-    data() {
-        const loginStore = useLoginStore();
-        return {
-            currentPage: window.location.pathname,
-            isLoggedIn: false,
-            searchVisible: false,
-            prevScrollpos: 0,
-            navbarTop: '2.5rem',
-            searchVisible: false,
-            quantity1: 0,
-            quantity2: 0,
-            quantity3: 0,
-            navbarOpacity: 1,
-            navbarMarginTop: '0',
-            cartPopupVisible: false,
+  name: "NavigationBar",
+  data() {
+    const loginStore = useLoginStore();
+    return {
+      currentPage: window.location.pathname,
+      isLoggedIn: false,
+      searchVisible: false,
+      prevScrollpos: 0,
+      navbarTop: '2.5rem',
+      quantity1: 0,
+      quantity2: 0,
+      quantity3: 0,
+      navbarOpacity: 1,
+      navbarMarginTop: '0',
+      cartPopupVisible: false,
 
 
     }
   },
-  methods: {
-    increment1() {
-      this.quantity1++;
-      console.log(this.quantity1);
-    },
-    decrement1() {
-      if (this.quantity1 > 0) {
-        this.quantity1--;
-      }
-    },
-
-    increment2() {
-      this.quantity2++;
-      console.log(this.quantity2);
-    },
-    decrement2() {
-      if (this.quantity2 > 0) {
-        this.quantity2--;
-      }
-    },
-
-    increment3() {
-      this.quantity3++;
-      console.log(this.quantity3);
-    },
-    computed: {
-        loginStore() {
-            return useLoginStore();
+  methods:
+      {
+        scrollToTop() {
+          window.scrollTo({top: 0, behavior: 'smooth'});
         },
-        isNavItemActive() {
-        return (navItemURL) => {
-            return navItemURL === this.currentPage;
-        };
-    }
 
-    decrement3() {
-      if (this.quantity3 > 0) {
-        this.quantity3--;
-      }
+        increment1() {
+          this.quantity1++;
+          console.log(this.quantity1);
+        },
+        decrement1() {
+          if (this.quantity1 > 0) {
+            this.quantity1--;
+          }
+        },
 
-    },
+        increment2() {
+          this.quantity2++;
+          console.log(this.quantity2);
+        },
+        decrement2() {
+          if (this.quantity2 > 0) {
+            this.quantity2--;
+          }
+        },
 
-    checkLoggedIn() {
-      console.log(localStorage.getItem('id') !== null);
-      return localStorage.getItem('id') !== null;
+        increment3() {
+          this.quantity3++;
+          console.log(this.quantity3);
+        },
+        computed: {
+          loginStore() {
+            return useLoginStore();
+          },
+          isNavItemActive() {
+            return (navItemURL) => {
+              return navItemURL === this.currentPage;
+            };
+          }
+        },
 
-    },
-    toggleSearch() {
-      this.searchVisible = !this.searchVisible;
-      event.preventDefault();
-    },
-    toggleCartPopup() {
-      this.cartPopupVisible = !this.cartPopupVisible;
-    },
-    hideCartPopup() {
-      this.cartPopupVisible = false;
-    },
-    handleScroll() {
-      const currentScrollPos = window.pageYOffset
-      if (currentScrollPos > this.prevScrollpos) {
-        this.navbarMarginTop = '-12rem'
-        if (this.searchVisible === true) {
-          this.toggleSearch();
+        decrement3() {
+          if (this.quantity3 > 0) {
+            this.quantity3--;
+          }
+
+        },
+
+        checkLoggedIn() {
+          console.log(localStorage.getItem('id') !== null);
+          return localStorage.getItem('id') !== null;
+
+        },
+        toggleSearch() {
+          this.searchVisible = !this.searchVisible;
+          event.preventDefault();
+        },
+        toggleCartPopup() {
+          this.cartPopupVisible = !this.cartPopupVisible;
+        },
+        hideCartPopup() {
+          this.cartPopupVisible = false;
+        },
+        handleScroll() {
+          const currentScrollPos = window.pageYOffset
+          if (currentScrollPos > this.prevScrollpos) {
+            this.navbarMarginTop = '-12rem'
+            if (this.searchVisible === true) {
+              this.toggleSearch();
+            }
+          } else {
+            this.navbarMarginTop = '0'
+          }
+          this.prevScrollpos = currentScrollPos
         }
-      } else {
-        this.navbarMarginTop = '0'
-      }
-      this.prevScrollpos = currentScrollPos
-    }
-  },
+      },
   mounted() {
     window.addEventListener('scroll', this.handleScroll);
     this.isLoggedIn = this.checkLoggedIn();
@@ -307,12 +312,12 @@ export default {
 
 .login {
 
-    color: #485059;
-    border: none;
-    background-color: transparent !important;
-    font-weight: bolder;
-    border-radius: 10px;
-    cursor: pointer;
+  color: #485059;
+  border: none;
+  background-color: transparent !important;
+  font-weight: bolder;
+  border-radius: 10px;
+  cursor: pointer;
 
 }
 
@@ -321,7 +326,7 @@ export default {
 }
 
 .login a.router-link-active {
-    color: #F2B66D;
+  color: #F2B66D;
 }
 
 .cart-content {
@@ -460,13 +465,13 @@ export default {
 
 #navigation-container {
 
-    position: fixed;
-    top: 2.5rem;
-    z-index: 3;
-    width: 95%;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
+  position: fixed;
+  top: 2.5rem;
+  z-index: 3;
+  width: 95%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
 
 }
 
@@ -513,24 +518,24 @@ nav {
   gap: 1rem;
 }
 
-.navigation-main-section a:hover{
-    color: #F2B66D;
+.navigation-main-section a:hover {
+  color: #F2B66D;
 }
 
 .navigation-main-section a.router-link-active {
-    color: #F2B66D;
+  color: #F2B66D;
 }
 
 .navigation-main-search {
 
-    display: flex;
-    align-items: center;
-    color: #4C4C4C;
-    cursor: pointer;
+  display: flex;
+  align-items: center;
+  color: #4C4C4C;
+  cursor: pointer;
 }
 
-.navigation-main-search:hover{
-    color: #F2B66D;
+.navigation-main-search:hover {
+  color: #F2B66D;
 
   display: flex;
   align-items: center;
@@ -574,20 +579,20 @@ nav p {
 .navigation-right-sextion a,
 #navigation-right-sextion a {
 
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    color: #4C4C4C;
-    cursor: pointer;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #4C4C4C;
+  cursor: pointer;
 }
 
 .navigation-right-sextion a:hover,
-#navigation-right-sextion a:hover{
-    color: #F2B66D;
+#navigation-right-sextion a:hover {
+  color: #F2B66D;
 }
 
 .navigation-right-sextion a.router-link-active {
-    color: #F2B66D;
+  color: #F2B66D;
 
   display: flex;
   color: #4C4C4C;
@@ -668,13 +673,14 @@ nav p {
   }
 
 
-    .media-navigation-main-section a.router-link-active {
+  .media-navigation-main-section a.router-link-active {
     color: #F2B66D;
-}
+  }
 
-    .media-navigation-main-section a {
-        text-decoration: none;
-        color: #4C4C4C;
+  .media-navigation-main-section a {
+    text-decoration: none;
+    color: #4C4C4C;
+  }
 
   .media-navigation-main-section a {
     text-decoration: none;

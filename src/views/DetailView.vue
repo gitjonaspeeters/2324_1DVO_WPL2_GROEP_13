@@ -5,7 +5,7 @@
         <p>Home/Categorieen/zetels/</p>
         <Carousel class="horizontal-carousel">
           <template #slides>
-            <Slide v-for="item in product.images" :key="item">
+            <Slide v-for="item in product.Images" :key="item">
               <div>
                 <img :src="item" alt="een foto">
               </div>
@@ -17,7 +17,7 @@
         </Carousel>
       </div>
       <div id="container-right-upper">
-        <h1>{{ product.name }}</h1>
+        <h1>{{ product.Name }}</h1>
         <p id="text-kleur">kleuren:</p>
         <div id="kleuren">
           <div class="kleur" v-for="(color, index) in product.Color" :key="index" :style="{ 'background-color': color }"></div>
@@ -200,7 +200,7 @@ export default {
       items,
       reviewsData: reviewsData,
       productsData: productsData,
-      currentProductIndex: 2,
+      currentProductIndex: 1,
       quantity: 1,
       averageStars: 0, // Gemiddeld aantal sterren
       totalReviews: 0, // Totaal aantal beoordelingen
