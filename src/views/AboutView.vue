@@ -199,11 +199,12 @@ ondubbelzinnig meegedeeld.</h2>
       </div>
       <div class="popup-vragen-content" v-else-if=" popup[selectedItemIndex].productTitle === 'Vragen'">
         <h1>{{ popup[selectedItemIndex].productTitle }}</h1>
-        
+        <input type="text" id="search" name="search" placeholder="Zoeken">
       </div>
       <div class="popup-formulieren-content" v-else-if=" popup[selectedItemIndex].productTitle === 'Formulieren'">
         <h1>{{ popup[selectedItemIndex].productTitle }}</h1>
-        <input type="text" id="search" name="search" placeholder="Zoeken">
+        <p>Algemene formulier:</p>
+        <p><router-link to="/form">hier.</router-link></p>
         
       </div>
     </div>
@@ -453,10 +454,8 @@ export default {
 }
 
 .popup-box:hover {
-    transform: translateY(-8px);
-}
-.popup-box:hover {
   background-color: #F2B66D;
+  transform: translateY(-8px);
   transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
@@ -619,10 +618,9 @@ export default {
   transform: translateY(-5px);
   color: #ffffff;
 }
-/* 
-formulieren */
+/* vragen */
 
-.popup-formulieren-content{
+.popup-vragen-content{
   color: #485059;
   font-family: "Century Gothic", sans-serif;
 }
@@ -633,6 +631,18 @@ formulieren */
   height: 2rem;
   border: none;
   padding-left: 1rem;
+}
+
+/* formulieren */
+.popup-formulieren-content{
+  color: #485059;
+  font-family: "Century Gothic", sans-serif;
+}
+
+.popup-formulieren-content p a{
+  font-weight: bold;
+  color: #485059;
+  font-size: 1.2rem;
 }
 
 /* media querys */

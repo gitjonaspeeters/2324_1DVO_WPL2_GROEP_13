@@ -445,7 +445,7 @@ export default {
 #navigation-container {
     position: fixed;
     top: 2.5rem;
-    z-index: 2;
+    z-index: 3;
     width: 95%;
     left: 0;
     right: 0;
