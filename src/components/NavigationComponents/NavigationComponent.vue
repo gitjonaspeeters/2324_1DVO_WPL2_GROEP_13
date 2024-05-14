@@ -1,150 +1,160 @@
 <template>
-    <div id="navigation-container">
-        <nav>
-            <div id="navigation-left">
-                <router-link to="/"><img src="@/assets/Comfortmeubel wit.svg"></router-link>
-            </div>
-            <div id="navigation-main" :style="{ 'margin-top': navbarMarginTop }">
-                <div class="navigation-main-section">
-                    <router-link to="/categorie">
-                        <i class="fa-solid fa-book"></i>
-                        <p>Categorieën</p>
-                    </router-link>
-                </div>
-                <div class="navigation-main-section">
-                    <router-link to="/ruimtes">
-                        <i class="fa-solid fa-house"></i>
-                        <p>Ruimtes</p>
 
-                    </router-link>
+  <div id="navigation-container">
+    <nav>
+      <div id="navigation-left">
+        <router-link to="/"><img src="@/assets/Comfortmeubel wit.svg"></router-link>
+      </div>
+      <div id="navigation-main" :style="{ 'margin-top': navbarMarginTop }">
+        <div class="navigation-main-section">
+          <router-link to="/categorie">
+            <i class="fa-solid fa-book"></i>
 
-                </div>
-                <div class="navigation-main-section">
-                    <router-link to="/ruimtes">
-                        <i class="fa-solid fa-layer-group"></i>
-                        <p>Alle items</p>
-                    </router-link>
-                </div>
-                <div class="navigation-main-section">
-                    <router-link to="/about">
-                        <i class="fa-solid fa-users"></i>
-                        <p>Over Ons</p>
-                    </router-link>
-                </div>
-                <div class="navigation-main-search">
-                    <a @click="toggleSearch">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                    </a>
-                </div>
-            </div>
-            <div id="navigation-right">
-                <div class="navigation-right-sextion">
-                    <router-link v-if="!isLoggedIn" to="/login">
-                        <button class="login">Login</button>
-                    </router-link>
-                </div>
-                
+            <p>Categorieën</p>
 
-                <div v-if="isLoggedIn"  class="navigation-right-sextion">
-                    <router-link to="/account">
-                        <i class="fa-solid fa-user"></i>
-                    </router-link></div>
-                <div class="navigation-right-sextion">
-                    <router-link to="/wishlist">
-                        <i class="fa-solid fa-heart"></i>
-                    </router-link>
-                </div>
-                <div id="navigation-right-sextion">
-                    <a @click="toggleCartPopup">
-                        <i class="fa-solid fa-cart-shopping"></i>
-                    </a>
-                </div>
-            </div>
-        </nav>
-    </div>
-    <!-- searchbar -->
-    <div id="search-container" v-if="searchVisible">
-        <div id="search">
-            <div id="search-inhoud">
-                <i class="fa-solid fa-magnifying-glass"></i>
-                <input type="text" placeholder="Search...">
-                <i class="fa-solid fa-chevron-up" @click="toggleSearch"></i>
-            </div>
+          </router-link>
         </div>
-    </div>
-    <!-- Cart Popup -->
-    <div id="cart-popup" v-if="cartPopupVisible">
-        <div class="cart-content">
+        <div class="navigation-main-section">
+          <router-link to="/ruimtes">
+            <i class="fa-solid fa-house"></i>
+            <p>Ruimtes</p>
 
-            <h4>Winkelwagen</h4>
 
-            <div class="container">
-
-                <div class="row">
-                    <div class="col-4">
-                        <img src="@/assets/image 2.png" alt="product">
-                    </div>
-                    <div class="product-text col-7">
-                        <p>Slaapkamer Ivette</p>
-                        <p class="price"><strong>€2.534,00</strong> </p>
-                        <div class="quantity">
-                            <div class="quantitydelete-container">
-                                <div class="quantity">
-                                    <button @click="decrement1">-</button>
-                                    <p class="quantity-number">{{ quantity1 }}</p>
-                                    <button @click="increment1">+</button>
-                                </div>
-                                <i class="trash fa-solid fa-trash"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-4">
-                        <img src="@/assets/image 2.png" alt="product">
-                    </div>
-                    <div class="product-text col-7">
-                        <p>Slaapkamer Ivette</p>
-                        <p class="price"><strong>€2.534,00</strong> </p>
-                        <div class="quantity">
-                            <div class="quantitydelete-container">
-                                <div class="quantity">
-                                    <button @click="decrement2">-</button>
-                                    <p class="quantity-number">{{ quantity2 }}</p>
-                                    <button @click="increment2">+</button>
-                                </div>
-                                <i class="trash fa-solid fa-trash"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-4">
-                        <img src="@/assets/image 2.png" alt="product">
-                    </div>
-                    <div class="product-text col-7">
-                        <p>Slaapkamer Ivette</p>
-                        <p class="price"><strong>€2.534,00</strong> </p>
-                        <div class="quantity">
-                            <div class="quantitydelete-container">
-                                <div class="quantity">
-                                    <button @click="decrement3">-</button>
-                                    <p class="quantity-number">{{ quantity3 }}</p>
-                                    <button @click="increment3">+</button>
-                                </div>
-                                <i class="trash fa-solid fa-trash"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            <p><strong>Totaal: €3800</strong></p>
-            <router-link to="/cart"><button @click="hideCartPopup" type="button" class="cart-button btn btn-warning">Bekijk
-                    winkelwagen</button></router-link>
+          </router-link>
 
         </div>
+        <div class="navigation-main-section">
+          <router-link to="#">
+            <i class="fa-solid fa-layer-group"></i>
+            <p>Alle items</p>
+          </router-link>
+
+        </div>
+        <div class="navigation-main-section">
+          <router-link to="/about">
+            <i class="fa-solid fa-users"></i>
+            <p>Over Ons</p>
+          </router-link>
+        </div>
+        <div class="navigation-main-search">
+          <a @click="toggleSearch">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </a>
+        </div>
+      </div>
+      <div id="navigation-right">
+        <div class="navigation-right-sextion">
+          <router-link v-if="!isLoggedIn" to="/login">
+            <button class="login">Login</button>
+          </router-link>
+        </div>
+
+
+        <div v-if="isLoggedIn" class="navigation-right-sextion">
+          <router-link to="/account">
+            <i class="fa-solid fa-user"></i>
+          </router-link>
+        </div>
+        <div class="navigation-right-sextion">
+          <router-link to="/wishlist">
+            <i class="fa-solid fa-heart"></i>
+          </router-link>
+        </div>
+        <div id="navigation-right-sextion">
+          <a @click="toggleCartPopup">
+            <i class="fa-solid fa-cart-shopping"></i>
+          </a>
+        </div>
+      </div>
+    </nav>
+  </div>
+  <!-- searchbar -->
+  <div id="search-container" v-if="searchVisible">
+    <div id="search">
+      <div id="search-inhoud">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" placeholder="Search...">
+        <i class="fa-solid fa-chevron-up" @click="toggleSearch"></i>
+      </div>
     </div>
+  </div>
+  <!-- Cart Popup -->
+  <div id="cart-popup" v-if="cartPopupVisible">
+    <div class="cart-content">
+
+      <h4>Winkelwagen</h4>
+
+      <div class="container">
+
+        <div class="row">
+          <div class="col-4">
+            <img src="@/assets/image 2.png" alt="product">
+          </div>
+          <div class="product-text col-7">
+            <p>Slaapkamer Ivette</p>
+            <p class="price"><strong>€2.534,00</strong></p>
+            <div class="quantity">
+              <div class="quantitydelete-container">
+                <div class="quantity">
+                  <button @click="decrement1">-</button>
+                  <p class="quantity-number">{{ quantity1 }}</p>
+                  <button @click="increment1">+</button>
+
+                </div>
+                <i class="trash fa-solid fa-trash"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-4">
+            <img src="@/assets/image 2.png" alt="product">
+          </div>
+          <div class="product-text col-7">
+            <p>Slaapkamer Ivette</p>
+            <p class="price"><strong>€2.534,00</strong></p>
+            <div class="quantity">
+              <div class="quantitydelete-container">
+                <div class="quantity">
+                  <button @click="decrement2">-</button>
+                  <p class="quantity-number">{{ quantity2 }}</p>
+                  <button @click="increment2">+</button>
+                </div>
+                <i class="trash fa-solid fa-trash"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-4">
+            <img src="@/assets/image 2.png" alt="product">
+          </div>
+          <div class="product-text col-7">
+            <p>Slaapkamer Ivette</p>
+            <p class="price"><strong>€2.534,00</strong></p>
+            <div class="quantity">
+              <div class="quantitydelete-container">
+                <div class="quantity">
+                  <button @click="decrement3">-</button>
+                  <p class="quantity-number">{{ quantity3 }}</p>
+                  <button @click="increment3">+</button>
+                </div>
+                <i class="trash fa-solid fa-trash"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <p><strong>Totaal: €3800</strong></p>
+      <router-link to="/cart">
+        <button @click="hideCartPopup" type="button" class="cart-button btn btn-warning">Bekijk
+          winkelwagen
+        </button>
+      </router-link>
+
+    </div>
+
     <!-- navigation media screen -->
     <div id="media-navigation-container">
         <div id="media-navigation-main">
@@ -173,12 +183,16 @@
                 </router-link>
             </div>
         </div>
+
     </div>
+  </div>
 </template>
 
 <script>
-import { useLoginStore } from '@/stores/LoginStore.js';
+import {useLoginStore} from '@/stores/LoginStore.js';
+
 export default {
+
     name: "NavigationBar",
     data() {
         const loginStore = useLoginStore();
@@ -197,80 +211,32 @@ export default {
             cartPopupVisible: false,
 
 
-        }
+    }
+  },
+  methods: {
+    increment1() {
+      this.quantity1++;
+      console.log(this.quantity1);
     },
-    methods: {
-        increment1() {
-            this.quantity1++;
-            console.log(this.quantity1);
-        },
-        decrement1() {
-            if (this.quantity1 > 0) {
-                this.quantity1--;
-            }
-        },
-
-        increment2() {
-            this.quantity2++;
-            console.log(this.quantity2);
-        },
-        decrement2() {
-            if (this.quantity2 > 0) {
-                this.quantity2--;
-            }
-        },
-
-        increment3() {
-            this.quantity3++;
-            console.log(this.quantity3);
-        },
-        decrement3() {
-            if (this.quantity3 > 0) {
-                this.quantity3--;
-            }
-        },
-
-        checkLoggedIn() {
-            console.log(localStorage.getItem('id') !== null);
-            return localStorage.getItem('id') !== null;
-
-        },
-
-        
-
-
-
-
-        toggleSearch() {
-            this.searchVisible = !this.searchVisible;
-            event.preventDefault();
-        },
-        toggleCartPopup() {
-            this.cartPopupVisible = !this.cartPopupVisible;
-        },
-        hideCartPopup() {
-            this.cartPopupVisible = false;
-        },
-        handleScroll() {
-            const currentScrollPos = window.pageYOffset
-            if (currentScrollPos > this.prevScrollpos) {
-                this.navbarMarginTop = '-12rem'
-                if (this.searchVisible === true) {
-                    this.toggleSearch();
-                }
-            } else {
-                this.navbarMarginTop = '0'
-            }
-            this.prevScrollpos = currentScrollPos
-        }
-    },
-    mounted() {
-        window.addEventListener('scroll', this.handleScroll);
-        this.isLoggedIn = this.checkLoggedIn();
+    decrement1() {
+      if (this.quantity1 > 0) {
+        this.quantity1--;
+      }
     },
 
-    beforeDestroy() {
-        window.removeEventListener('scroll', this.handleScroll)
+    increment2() {
+      this.quantity2++;
+      console.log(this.quantity2);
+    },
+    decrement2() {
+      if (this.quantity2 > 0) {
+        this.quantity2--;
+      }
+    },
+
+    increment3() {
+      this.quantity3++;
+      console.log(this.quantity3);
     },
     computed: {
         loginStore() {
@@ -281,27 +247,77 @@ export default {
             return navItemURL === this.currentPage;
         };
     }
+
+    decrement3() {
+      if (this.quantity3 > 0) {
+        this.quantity3--;
+      }
+
     },
+
+    checkLoggedIn() {
+      console.log(localStorage.getItem('id') !== null);
+      return localStorage.getItem('id') !== null;
+
+    },
+    toggleSearch() {
+      this.searchVisible = !this.searchVisible;
+      event.preventDefault();
+    },
+    toggleCartPopup() {
+      this.cartPopupVisible = !this.cartPopupVisible;
+    },
+    hideCartPopup() {
+      this.cartPopupVisible = false;
+    },
+    handleScroll() {
+      const currentScrollPos = window.pageYOffset
+      if (currentScrollPos > this.prevScrollpos) {
+        this.navbarMarginTop = '-12rem'
+        if (this.searchVisible === true) {
+          this.toggleSearch();
+        }
+      } else {
+        this.navbarMarginTop = '0'
+      }
+      this.prevScrollpos = currentScrollPos
+    }
+  },
+  mounted() {
+    window.addEventListener('scroll', this.handleScroll);
+    this.isLoggedIn = this.checkLoggedIn();
+  },
+
+  beforeDestroy() {
+    window.removeEventListener('scroll', this.handleScroll)
+  },
+  computed: {
+    loginStore() {
+      return useLoginStore();
+    }
+  },
 }
 </script>
 <style scoped>
 * {
-    margin: 0;
-    padding: 0;
-    /* border: 1px solid red; */
+  margin: 0;
+  padding: 0;
+  /* border: 1px solid red; */
 }
 
 .login {
+
     color: #485059;
     border: none;
     background-color: transparent !important;
     font-weight: bolder;
     border-radius: 10px;
     cursor: pointer;
+
 }
 
 .login:hover {
-    color: #F2B66D;
+  color: #F2B66D;
 }
 
 .login a.router-link-active {
@@ -310,139 +326,140 @@ export default {
 
 .cart-content {
 
-    position: relative;
+  position: relative;
 }
 
 #cart-popup {
-    position: fixed;
-    top: 15%;
-    /* Plaats het onder de winkelwagenknop */
-    left: 86%;
-    width: 350px;
-    margin-right: 5px;
-    transform: translateX(-50%);
-    z-index: 999;
-    /* Zorg ervoor dat het bovenop andere elementen staat */
-    background-color: #ffffff;
-    padding: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: margin-top 1s ease-in-out;
-    padding-bottom: -6rem;
+  position: fixed;
+  top: 15%;
+  /* Plaats het onder de winkelwagenknop */
+  left: 86%;
+  width: 350px;
+  margin-right: 5px;
+  transform: translateX(-50%);
+  z-index: 999;
+  /* Zorg ervoor dat het bovenop andere elementen staat */
+  background-color: #ffffff;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: margin-top 1s ease-in-out;
+  padding-bottom: -6rem;
 
 }
 
 #cart-popup img {
-    width: 100%;
-    height: auto;
-    padding: 0.3rem;
+  width: 100%;
+  height: auto;
+  padding: 0.3rem;
 }
 
 #cart-popup h4 {
-    color: #485059;
-    padding: 0.5rem;
-    width: 90%;
+  color: #485059;
+  padding: 0.5rem;
+  width: 90%;
 }
 
 .product-text {
-    padding: 0.5rem;
+  padding: 0.5rem;
 }
 
 .row {
-    padding-bottom: 6px;
+  padding-bottom: 6px;
 }
 
 #cart-popup .row {
-    margin-bottom: 1rem;
-    border-bottom: 1px solid #ccc;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #ccc;
 }
 
 .cart-button {
-    align-items: right;
-    padding: 6px;
-    background-color: #F2B66D;
-    color: white;
-    margin-top: 1rem;
+  align-items: right;
+  padding: 6px;
+  background-color: #F2B66D;
+  color: white;
+  margin-top: 1rem;
 }
 
 .cart-button:hover {
-    background-color: #ef9323;
+  background-color: #ef9323;
 }
 
 .quantity {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .quantity input {
-    width: 0px;
-    text-align: center;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin: 0 2px;
+  width: 0px;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 0 2px;
 
 }
 
 .quantity button {
-    padding-left: 5px;
-    padding-right: 5px;
-    padding-top: -2px;
-    border: none;
-    background-color: #F2B66D;
-    color: #4C4C4C;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1.2rem;
-    font-weight: bold;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: -2px;
+  border: none;
+  background-color: #F2B66D;
+  color: #4C4C4C;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
 .quantity button:hover {
-    background-color: #ef9323;
+  background-color: #ef9323;
 }
 
 .quantity-number {
-    margin: 0 7px;
+  margin: 0 7px;
 }
 
 .quantitydelete-container {
-    display: flex;
-    gap: 1rem;
-    align-items: center;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
 }
 
 .trash {
-    color: #F2B66D;
-    cursor: pointer;
-    background-color: #485059;
-    padding: 7px;
-    border-radius: 5px;
+  color: #F2B66D;
+  cursor: pointer;
+  background-color: #485059;
+  padding: 7px;
+  border-radius: 5px;
 }
 
 .trash:hover {
-    background-color: #ef9323;
+  background-color: #ef9323;
 }
 
 .price {
-    margin-top: 3px;
-    margin-bottom: 3px;
+  margin-top: 3px;
+  margin-bottom: 3px;
 }
 
 .col-4 {
-    width: 40% !important;
+  width: 40% !important;
 }
 
 .btn-close {
-    background-color: #485059;
-    color: white;
-    margin-top: 1rem;
-    position: relative;
-    left: 93%;
-    top: -1.2rem;
-    z-index: 999;
+  background-color: #485059;
+  color: white;
+  margin-top: 1rem;
+  position: relative;
+  left: 93%;
+  top: -1.2rem;
+  z-index: 999;
 }
 
 #navigation-container {
+
     position: fixed;
     top: 2.5rem;
     z-index: 3;
@@ -450,49 +467,50 @@ export default {
     left: 0;
     right: 0;
     margin: 0 auto;
+
 }
 
 nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 #navigation-left {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 #navigation-left img {
-    width: 10rem;
-    color: #ffffff;
+  width: 10rem;
+  color: #ffffff;
 }
 
 #navigation-main {
-    height: 0.1rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1.5rem;
-    background-color: #ffffff;
-    border-radius: 10rem;
-    gap: 1rem;
-    transition: margin-top 1s ease-in-out;
+  height: 0.1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  background-color: #ffffff;
+  border-radius: 10rem;
+  gap: 1rem;
+  transition: margin-top 1s ease-in-out;
 }
 
 .navigation-main-section {
-    padding-right: 1rem;
-    display: flex;
-    justify-content: center;
-    border-right: 1px solid #B8B8B8;
+  padding-right: 1rem;
+  display: flex;
+  justify-content: center;
+  border-right: 1px solid #B8B8B8;
 }
 
 .navigation-main-section a {
-    display: flex;
-    color: #4C4C4C;
-    align-items: center;
-    text-decoration: none;
-    gap: 1rem;
+  display: flex;
+  color: #4C4C4C;
+  align-items: center;
+  text-decoration: none;
+  gap: 1rem;
 }
 
 .navigation-main-section a:hover{
@@ -504,6 +522,7 @@ nav {
 }
 
 .navigation-main-search {
+
     display: flex;
     align-items: center;
     color: #4C4C4C;
@@ -512,37 +531,49 @@ nav {
 
 .navigation-main-search:hover{
     color: #F2B66D;
+
+  display: flex;
+  align-items: center;
+}
+
+.navigation-main-search a {
+  color: #4C4C4C;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+
 }
 
 nav i {
-    font-size: 1.3rem;
+  font-size: 1.3rem;
 }
 
 nav p {
-    font-size: 1.2rem;
+  font-size: 1.2rem;
 }
 
 /* recherkant navigatie */
 #navigation-right {
-    height: 0.1rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1.5rem;
-    background-color: #ffffff;
-    border-radius: 10rem;
-    gap: 1rem;
+  height: 0.1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  background-color: #ffffff;
+  border-radius: 10rem;
+  gap: 1rem;
 }
 
 .navigation-right-sextion {
-    padding-right: 1rem;
-    display: flex;
-    justify-content: center;
-    border-right: 1px solid #B8B8B8;
+  padding-right: 1rem;
+  display: flex;
+  justify-content: center;
+  border-right: 1px solid #B8B8B8;
 }
 
 .navigation-right-sextion a,
 #navigation-right-sextion a {
+
     display: flex;
     align-items: center;
     text-decoration: none;
@@ -557,79 +588,85 @@ nav p {
 
 .navigation-right-sextion a.router-link-active {
     color: #F2B66D;
+
+  display: flex;
+  color: #4C4C4C;
+  align-items: center;
+  text-decoration: none;
 }
 
 /* searchbar */
 #search-container {
-    position: fixed;
-    top: 7rem;
-    left: 0;
-    z-index: 3;
-    width: 100%;
+  position: fixed;
+  top: 7rem;
+  left: 0;
+  z-index: 3;
+  width: 100%;
 }
 
 #search {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 #search-inhoud {
-    background-color: #ffffff;
-    color: #4C4C4C;
-    height: 0.1rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1.5rem;
-    border-radius: 10rem;
-    gap: 1rem;
+  background-color: #ffffff;
+  color: #4C4C4C;
+  height: 0.1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  border-radius: 10rem;
+  gap: 1rem;
 }
 
 #search-inhoud i {
-    font-size: 1.3rem;
+  font-size: 1.3rem;
 }
 
 #search-inhoud i:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 #search-inhoud input {
-    background-color: #ffffff;
-    border: none;
-    font-size: 1.2rem;
+  background-color: #ffffff;
+  border: none;
+  font-size: 1.2rem;
 }
 
 #media-navigation-container {
-    display: none;
+  display: none;
 }
 
 /* media querys */
 @media screen and (max-width: 1382px) {
-    #navigation-main {
-        display: none;
-    }
+  #navigation-main {
+    display: none;
+  }
 
-    #media-navigation-container {
-        display: block;
-        position: fixed;
-        bottom: 0;
-        width: 100%;
-        z-index: 3;
-    }
+  #media-navigation-container {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 3;
+  }
 
-    #media-navigation-main {
-        height: 4rem;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 2.5rem 1.5rem;
-        background-color: #ffffff;
-        gap: 1rem;
-    }
+  #media-navigation-main {
+    height: 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2.5rem 1.5rem;
+    background-color: #ffffff;
+    gap: 1rem;
+  }
 
-    .media-navigation-main-section {
-        text-align: center;
-    }
+  .media-navigation-main-section {
+    text-align: center;
+  }
+
 
     .media-navigation-main-section a.router-link-active {
     color: #F2B66D;
@@ -639,10 +676,14 @@ nav p {
         text-decoration: none;
         color: #4C4C4C;
 
-    }
+  .media-navigation-main-section a {
+    text-decoration: none;
+    color: #4C4C4C;
 
-    .media-navigation-main-section i {
-        font-size: 1.5rem;
-    }
+  }
+
+  .media-navigation-main-section i {
+    font-size: 1.5rem;
+  }
 }
 </style>
