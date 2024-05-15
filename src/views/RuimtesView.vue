@@ -7,32 +7,31 @@
       <div class="container-first">
         <div class="container-hallway-desk">
           <div class="hallway">
-            <a class="hover-effect">Hal</a>
+           <router-link to=""><a class="hover-effect">Hal</a></router-link> 
           </div>
           <div class="desk">
-            <a class="hover-effect">Bureaus</a>
+            <router-link to=""><a class="hover-effect">Bureaus</a></router-link>
           </div>
         </div>
         <div class="container-livingroom">
           <div class="livingroom">
-            <a class="hover-effect">Woonkamer</a>
+            <router-link to=""><a class="hover-effect">Woonkamer</a></router-link>
           </div>
         </div>
       </div>
       <div class="container-second">
         <div class="container-bedroom">
           <div class="bedroom">
-            <a class="hover-effect">Slaapkamer</a>
+            <router-link to=""><a class="hover-effect">Slaapkamer</a></router-link>
           </div>
         </div>
         <div class="container-diningroom">
           <div class="diningroom">
-            <a class="hover-effect">Eetkamer</a>
+            <router-link to=""><a class="hover-effect">Eetkamer</a></router-link>
           </div>
         </div>
       </div>
     </div>
-  
   </div>
   </template>
   <script>

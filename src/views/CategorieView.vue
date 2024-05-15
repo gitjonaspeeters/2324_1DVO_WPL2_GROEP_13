@@ -7,34 +7,34 @@
     <div class="container-first">
       <div class="container-closet">
         <div class="closet">
-          <a class="hover-effect">Kasten</a>
+          <router-link to=""><p class="hover-effect">Kasten</p></router-link>
         </div>
       </div>
       <div class="container-Chair-desk">
         <div class="Chair">
-          <a class="hover-effect">Stoelen</a>
+          <router-link to=""><p class="hover-effect">Stoelen</p></router-link>
         </div>
         <div class="desk">
-          <a class="hover-effect">Bureaus</a>
+          <router-link to=""><p class="hover-effect">Bureaus</p></router-link>
         </div>
       </div>
     </div>
     <div class="container-second">
       <div class="container-bed">
         <div class="bed">
-          <a class="hover-effect">Bedden</a>
+          <router-link to=""><p class="hover-effect">Bedden</p></router-link>
         </div>
       </div>
       <div class="container-sofa">
         <div class="sofa">
-          <a class="hover-effect">Zetels</a>
+          <router-link to=""><p class="hover-effect">Zetels</p></router-link>
         </div>
       </div>
     </div>
     <div class="container-last">
       <div class="container-home-accessories">
         <div class="home-accessories">
-          <a class="hover-effect">Woonaccessoires</a>
+          <router-link to=""><p class="hover-effect">Woonaccessoires</p></router-link>
         </div>
       </div>
     </div>
@@ -103,6 +103,7 @@ a {
   transition: width 1s ease-in-out 1s, height 1s ease-in-out, ease-in-out 1.5s;
   width: 1500px;
   padding: 15px;
+  margin: 0px 0px 0px 4px;
 }
 
 .container-second {
@@ -158,6 +159,7 @@ a {
   transition: width 1s ease-in-out 1s, height 1s ease-in-out, ease-in-out 1.5s;
   width: 511px;
   padding: 15px;
+  margin: 0px 3px 7px 4px;
 }
 
 .Chair {
@@ -178,13 +180,13 @@ a {
   transition: width 1s ease-in-out 1s, height 1s ease-in-out, ease-in-out 1.5s;
   width: 650px;
   padding: 15px;
+  margin: 0px 3px 1px 3px;
 }
 
 .desk {
   background-size: cover;
   background-repeat: no-repeat;
   background-image: url("src/assets/BureaImageRuimtes.png");
-   
   width: 584px;
   height: 316px;
   margin: 15px 5px 5px 5px;
@@ -199,6 +201,7 @@ a {
   transition: width 1s ease-in-out 1s, height 1s ease-in-out, ease-in-out 1.5s;
   width: 650px;
   padding: 15px;
+  margin: 0px 4px 0px 3px;
 }
 
 image {
@@ -232,6 +235,7 @@ image {
   transition: width 1s ease-in-out 1s, height 1s ease-in-out, ease-in-out 1.5s;
   width: 679px;
   padding: 15px;
+  margin: 0px 0px 7px 3px;
 }
 
 .container-first {
