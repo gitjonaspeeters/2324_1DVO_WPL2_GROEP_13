@@ -146,4 +146,12 @@ export default {
 input::placeholder, textarea::placeholder {
   color: #FFFFFF;
 }
+@media screen and (max-width: 1700px){
+  .form-row button[type="submit"] {
+    height: 1.5rem;
+    font-size: 1rem;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+}
 </style>

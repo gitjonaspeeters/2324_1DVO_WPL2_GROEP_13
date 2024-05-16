@@ -20,7 +20,7 @@
         <h1>{{ product.Name }}</h1>
         <p id="text-kleur">kleuren:</p>
         <div id="kleuren">
-          <div class="kleur" v-for="(color, index) in product.Color" :key="index" :style="{ 'background-color': color }"></div>
+          <div class="kleur" v-for="color in colors" :key="color" :style="{ backgroundColor: color }"></div>
         </div>
         <div id="flex">
           <p id="price">{{ product.Price.Low }}</p>
@@ -186,6 +186,12 @@ export default {
         CarouselComponent,
       },
   data() {
+    const colors = [
+        '#FFFFFF',
+        '#121212',
+        '#000000',
+        '#343434',
+    ]
     const items = ref([
       "src/assets/Banner1.png",
       "src/assets/Banner1.png",
@@ -198,6 +204,7 @@ export default {
 
     return {
       items,
+      colors,
       reviewsData: reviewsData,
       productsData: productsData,
       currentProductIndex: 1,
@@ -359,12 +366,15 @@ $with-buttons: calc(100% / 4);
       margin-bottom: 1rem;
     }
 
-    #kleur {
+    #kleuren {
       display: flex;
-      width: 2rem;
-      height: 2rem;
-      border-radius: 50px;
-      margin: 1rem 0.5rem;
+      .kleur {
+        display: flex;
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50px;
+        margin: 1rem 0.5rem;
+      }
     }
 
     #flex {
