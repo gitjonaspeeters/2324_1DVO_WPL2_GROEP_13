@@ -12,7 +12,7 @@ export default {
             </div>
             <div id="footer-main">
                 <a href="#"><p>Copyright 2024 ©</p></a>
-                <p><a href="#">Algemene voorwaarden</a> / <a href="#">Cookies</a> / <a href="#">Privacybeleid</a></p>
+                <p><router-link to="/privacy">Algemene voorwaarden</router-link> / <router-link to="/privacy">Cookies</router-link>  / <router-link to="/privacy">Privacybeleid</router-link> </p>
             </div>
             <div id="footer-right">
                 <div class="footer-icons">
