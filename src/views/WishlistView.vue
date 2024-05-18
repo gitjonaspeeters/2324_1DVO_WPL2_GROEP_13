@@ -37,8 +37,14 @@ export default {
     },
     methods: {
         removeItem(index) {
-            this.wishlistItems.splice(index, 1);
+            const removedItem = this.wishlistItems.splice(index, 1)[0];
             localStorage.setItem('wishlistItems', JSON.stringify(this.wishlistItems));
+            
+            // Update the liked status of the removed item in localStorage
+            localStorage.setItem(`product_${removedItem.id}_liked`, false);
+
+            // Emit an event to notify the ProductView component
+            this.$emit('item-removed', removedItem.id);
         },
     },
 };
@@ -47,7 +53,7 @@ export default {
 <style scoped>
 /* Wishlist Styles */
 .wishlist {
-    height: 100vh; /* Volledige hoogte van het scherm */
+    min-height: 100vh; /* Volledige hoogte van het scherm */
     padding: 10rem 6rem 4rem 6rem;
     color: #485059;
     font-family: Georgia, sans-serif;
@@ -112,79 +118,6 @@ export default {
     margin-top: 2rem;
 }
 
-/* likely products */
-#best-container {
-    background-color: #E8DFDC;
-    padding: 5rem 0;
-}
-
-#best-products {
-    width: 80%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-}
-
-#best-text {
-    width: 80%;
-    margin: 0 auto 2rem auto;
-}
-
-#best-text h1 {
-    color: #485059;
-    font-family: Georgia, sans-serif;
-    margin-bottom: -1px;
-    font-size: 2.8rem;
-}
-
-#best-text p {
-    color: #485059;
-    font-family: Georgia, sans-serif;
-    font-size: 1.8rem;
-}
-
-.best-product {
-    width: calc(30% - 1rem);
-    margin-right: 1rem;
-}
-
-.product-image {
-    width: 100%;
-    height: 0;
-    padding-top: calc(100% / 1.1);
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-radius: 2rem;
-    position: relative;
-}
-
-.product-content {
-    display: flex;
-    justify-content: space-between;
-    font-family: "Century Gothic", sans-serif;
-}
-
-.product-content-left p {
-    color: #888787;
-    font-size: 1.2rem;
-    margin-left: 0.5rem;
-    margin-top: 0.5rem;
-}
-
-.product-content-left h1 {
-    font-size: 1.5rem;
-    margin-left: 0.5rem;
-    font-weight: 500;
-}
-
-.product-content-left h2 {
-    color: #000000;
-    font-weight: bold;
-    font-size: 1.2rem;
-    margin-left: 0.5rem;
-}
-
-/* Additional CSS */
 .container-left {
     margin-left: 0;
     padding-left: 0;
@@ -199,41 +132,18 @@ export default {
         width: 100% !important;
     }
 
-    .afrekenen {
-        margin: 2rem 0 0 0;
-    }
-
     .product-image1 {
         max-width: 100%;
     }
 }
 
 @media screen and (max-width: 480px) {
-    .afrekenen {
-        margin: 2rem 0 0 0;
-        padding: 1rem;
-        max-height: none;
-        width: 100% !important;
-    }
-
     .product-title {
         font-size: 1.5rem;
     }
 
     .price {
         font-size: 1.2rem;
-    }
-
-    .total,
-    .shipping,
-    .vat {
-        font-size: 1.2rem;
-    }
-
-    .apply-discount,
-    .checkout {
-        font-size: 1rem;
-        padding: 0.4rem 0.8rem;
     }
 
     #best-products {

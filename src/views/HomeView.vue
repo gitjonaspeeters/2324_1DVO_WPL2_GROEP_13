@@ -85,7 +85,7 @@
   </div>
   <!-- nieuwsbrief -->
   <div id="news-container">
-    <div id="news-content"   data-aos="fade-up" data-aos-duration="1000">
+    <div id="news-content">
       <h1><i>Nieuwsbrief</i></h1>
     <div class="news-input">
       <input type="email" id="email" name="email" placeholder="Email">
@@ -95,8 +95,6 @@
   </div>
 </template>
 <script>
-import AOS from 'aos';
-import 'aos/dist/aos.css';
 export default {
   data() {
     return {
@@ -115,22 +113,8 @@ export default {
   },
   mounted() {
     this.showSlides();
-    this.initAOS();
   },
   methods: {
-    initAOS() {
-    if (window.innerWidth <= 1000) {
-      AOS.init({
-        once: true,
-        offset: 500 
-      });
-    } else {
-      AOS.init({
-        once: true,
-        offset: 1000 
-      });
-    }
-  },
     showSlides() {
       setInterval(() => {
         this.currentSlideIndex = (this.currentSlideIndex + 1) % this.slides.length;
