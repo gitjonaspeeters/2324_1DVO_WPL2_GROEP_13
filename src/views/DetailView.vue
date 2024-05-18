@@ -167,6 +167,7 @@
 <script>
 import reviewsData from '@/data/reviews.json';
 import productsData from '@/product.json';
+import { ref } from 'vue';
 
 import { Carousel, Slide, Navigation } from 'vue3-carousel'
 import 'fotorama/fotorama.css';
@@ -214,11 +215,10 @@ export default {
     };
   }
   ,
+  
   mounted() {
 
-
-
-
+    
   },
 
   computed: {
@@ -531,6 +531,7 @@ $with-buttons: calc(100% / 4);
         }
       }
     }
+  }
 
     #review-per-part {
       display: flex;
@@ -668,6 +669,7 @@ $with-buttons: calc(100% / 4);
     display: none; /* Onderste container verbergen op klein scherm */
   }
 }
-
 </style>
+
+
 
