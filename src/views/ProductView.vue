@@ -241,16 +241,21 @@ export default {
         cleanPriceString(priceStr) {
             return priceStr.replace(/€/g, '').replace(/\./g, '').replace(/,/, '.').replace(/\.00$/, '');
         },
-        initializeWishlist() {
-        let wishlistItems = JSON.parse(localStorage.getItem('wishlistItems')) || [];
-        this.products.forEach(product => {
-            // Check localStorage for liked status of each product
-            const likedItem = localStorage.getItem(`product_${product.Id}_liked`);
-            if (likedItem !== null) {
-                product.liked = JSON.parse(likedItem);
+     initializeWishlist() {
+    let wishlistItems = JSON.parse(localStorage.getItem('wishlistItems')) || [];
+    this.products.forEach(product => {
+        // Check localStorage for liked status of each product
+        const likedItem = localStorage.getItem(`product_${product.Id}_liked`);
+        if (likedItem !== null) {
+            product.liked = JSON.parse(likedItem);
+            // If the product is in the wishlist, keep the liked status
+            if (wishlistItems.includes(product.Id)) {
+                product.liked = true;
             }
-        });
-    },
+        }
+    });
+},
+
     },
     computed: {
         uniqueColors() {
