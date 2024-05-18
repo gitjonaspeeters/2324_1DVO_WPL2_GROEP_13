@@ -15,8 +15,15 @@ import DetailView from "@/views/DetailView.vue";
 
 
 import WichlistView from "@/views/WishlistView.vue";
+
 import formulierView from "@/views/FormulierView.vue";
 import ProductView from "@/views/ProductView.vue";
+
+
+import formulierView from "@/views/FormulierView.vue"
+import Privacypolicy from "@/views/PrivacyView.vue";
+import Cookies from "@/views/CookiesView.vue";
+import Voorwaarden from "@/views/AlgemenevoorwaardenView.vue";
 
 
 const router = createRouter({
@@ -81,6 +88,7 @@ const router = createRouter({
             component: formulierView,
         },
         {
+
             path: "/products",
             name: "products",
             component: ProductView,
@@ -91,6 +99,21 @@ const router = createRouter({
             name: "detailview",
             component: DetailView,
             props: true,
+
+            path: "/privacy",
+            name: "privacy",
+            component: Privacypolicy,
+        },
+        {
+            path: "/cookies",
+            name: "cookies",
+            component: Cookies,
+        },
+        {
+         path: "/voorwaarden",
+         name: "voorwaarden",
+         component: Voorwaarden,
+
         }
     ],
 });

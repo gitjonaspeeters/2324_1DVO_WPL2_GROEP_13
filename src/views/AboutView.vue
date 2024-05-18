@@ -187,6 +187,26 @@ ondubbelzinnig meegedeeld.</h2>
         </ul>
         <p>Geniet van uw aankopen!</p>
       </div>
+      <div class="popup-prijzen-content" v-else-if=" popup[selectedItemIndex].productTitle === 'Prijzen'">
+        <h1>{{ popup[selectedItemIndex].productTitle }}</h1>
+        <div class="social-icons">
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+          <a href="#" ><i class="fa-brands fa-pinterest"></i></a>
+        </div>
+        
+      </div>
+      <div class="popup-vragen-content" v-else-if=" popup[selectedItemIndex].productTitle === 'Vragen'">
+        <h1>{{ popup[selectedItemIndex].productTitle }}</h1>
+        <input type="text" id="search" name="search" placeholder="Zoeken">
+      </div>
+      <div class="popup-formulieren-content" v-else-if=" popup[selectedItemIndex].productTitle === 'Formulieren'">
+        <h1>{{ popup[selectedItemIndex].productTitle }}</h1>
+        <p>Algemene formulier:</p>
+        <p><router-link to="/form">hier.</router-link></p>
+        
+      </div>
     </div>
 
   </div>
@@ -426,6 +446,17 @@ export default {
   padding: 0  0 1rem 0;
   border-radius: 1rem;
   cursor: pointer;
+  
+}
+
+.popup-box {
+    transition: transform 0.3s ease;
+}
+
+.popup-box:hover {
+  background-color: #F2B66D;
+  transform: translateY(-8px);
+  transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .popup-image {
@@ -536,6 +567,8 @@ export default {
 .popup-verhuur-content{
   color: #485059;
   font-family: "Century Gothic", sans-serif;
+  overflow-y: scroll;
+  height: 25rem;
 }
 
 .popup-verhuur-content p{
@@ -560,6 +593,56 @@ export default {
   margin-top: 1rem;
   margin-bottom: 1rem;
   margin-left: 1rem;
+}
+
+/* prijzen content */
+.popup-prijzen-content{
+  text-align: center;
+  color: #485059;
+  font-family: "Century Gothic", sans-serif;
+}
+
+.social-icons{
+  display: flex;
+  justify-content: center;
+  gap: 0.8rem;
+}
+
+.social-icons a{
+  color: #485059;
+  font-size: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.social-icons a:hover{
+  transform: translateY(-5px);
+  color: #ffffff;
+}
+/* vragen */
+
+.popup-vragen-content{
+  color: #485059;
+  font-family: "Century Gothic", sans-serif;
+}
+
+#search{
+  background-color: #D9CAC5;
+  border-radius: 20px;
+  height: 2rem;
+  border: none;
+  padding-left: 1rem;
+}
+
+/* formulieren */
+.popup-formulieren-content{
+  color: #485059;
+  font-family: "Century Gothic", sans-serif;
+}
+
+.popup-formulieren-content p a{
+  font-weight: bold;
+  color: #485059;
+  font-size: 1.2rem;
 }
 
 /* media querys */
@@ -700,8 +783,12 @@ export default {
 @media screen and (max-width: 1000px) {
   .service-box{
   width: 60%;
-}
+  }
 
+  .popup-container{
+    width: 20rem;
+    padding: 1.5rem 1rem;
+  }
 }
 
 @media screen and (max-width: 600px){
