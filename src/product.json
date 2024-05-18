@@ -50,7 +50,7 @@
   {
     "Id": "3",
     "Images": {
-      "Image1": "./src/assets/55-22.jpg",
+      "Image1": "./src/assets/55-22.png",
       "Image2": "./src/assets/13862_2.jpg"
     },
     "Name": "Jesper Danish Oval",
@@ -745,7 +745,9 @@
     "Id": "34",
     "Images": {
       "Image1": "./src/assets/urun-velar-fonksiyonel-yatak-03.jpeg",
+
       "Image2": "./src/assets/urun-velar-fonksiyonel-yatak-02.jpeg"
+
     },
     "Measurement": {
       "Length": "255cm",

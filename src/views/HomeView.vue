@@ -636,6 +636,7 @@ font-size: 1.2rem;
 }
 
 @media screen and (max-width: 1000px) {
+
   /* news letter */
 
 #news-content{
@@ -655,6 +656,7 @@ font-size: 1.2rem;
   background-color: #485059;
   color: #ffffff;
 }
+
 
   .overlay {
     opacity: 1;

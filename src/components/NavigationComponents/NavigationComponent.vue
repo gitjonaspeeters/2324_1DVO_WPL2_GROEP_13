@@ -20,7 +20,9 @@
 
                 </div>
                 <div class="navigation-main-section">
-                    <router-link to="/ruimtes">
+
+                    <router-link to="/products">
+
                         <i class="fa-solid fa-layer-group"></i>
                         <p>Alle items</p>
                     </router-link>
@@ -43,12 +45,13 @@
                         <button class="login">Login</button>
                     </router-link>
                 </div>
-                
 
-                <div v-if="isLoggedIn"  class="navigation-right-sextion">
+
+                <div v-if="isLoggedIn" class="navigation-right-sextion">
                     <router-link to="/account">
                         <i class="fa-solid fa-user"></i>
-                    </router-link></div>
+                    </router-link>
+                </div>
                 <div class="navigation-right-sextion">
                     <router-link to="/wishlist">
                         <i class="fa-solid fa-heart"></i>
@@ -75,74 +78,32 @@
     <!-- Cart Popup -->
     <div id="cart-popup" v-if="cartPopupVisible">
         <div class="cart-content">
-
             <h4>Winkelwagen</h4>
-
             <div class="container">
-
-                <div class="row">
+                <div class="row" v-for="(item, index) in cartItems" :key="index">
                     <div class="col-4">
-                        <img src="@/assets/image 2.png" alt="product">
+                        <img :src="item.Images.Image1" alt="product">
                     </div>
                     <div class="product-text col-7">
-                        <p>Slaapkamer Ivette</p>
-                        <p class="price"><strong>€2.534,00</strong> </p>
+                        <p>{{ item.Name }}</p>
+                        <p class="price"><strong>{{ item.Price.Low }}</strong></p>
                         <div class="quantity">
                             <div class="quantitydelete-container">
                                 <div class="quantity">
-                                    <button @click="decrement1">-</button>
-                                    <p class="quantity-number">{{ quantity1 }}</p>
-                                    <button @click="increment1">+</button>
+                                    <button @click="decrement(index)">-</button>
+                                    <p class="quantity-number">{{ item.quantity }}</p>
+                                    <button @click="increment(index)">+</button>
                                 </div>
-                                <i class="trash fa-solid fa-trash"></i>
+                                <i class="trash fa-solid fa-trash" @click="removeItem(item.Id)"></i>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-4">
-                        <img src="@/assets/image 2.png" alt="product">
-                    </div>
-                    <div class="product-text col-7">
-                        <p>Slaapkamer Ivette</p>
-                        <p class="price"><strong>€2.534,00</strong> </p>
-                        <div class="quantity">
-                            <div class="quantitydelete-container">
-                                <div class="quantity">
-                                    <button @click="decrement2">-</button>
-                                    <p class="quantity-number">{{ quantity2 }}</p>
-                                    <button @click="increment2">+</button>
-                                </div>
-                                <i class="trash fa-solid fa-trash"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-4">
-                        <img src="@/assets/image 2.png" alt="product">
-                    </div>
-                    <div class="product-text col-7">
-                        <p>Slaapkamer Ivette</p>
-                        <p class="price"><strong>€2.534,00</strong> </p>
-                        <div class="quantity">
-                            <div class="quantitydelete-container">
-                                <div class="quantity">
-                                    <button @click="decrement3">-</button>
-                                    <p class="quantity-number">{{ quantity3 }}</p>
-                                    <button @click="increment3">+</button>
-                                </div>
-                                <i class="trash fa-solid fa-trash"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
             </div>
-            <p><strong>Totaal: €3800</strong></p>
-            <router-link to="/cart"><button @click="hideCartPopup" type="button" class="cart-button btn btn-warning">Bekijk
-                    winkelwagen</button></router-link>
-
+            <p><strong>Totaal: € {{ totalPrice }}</strong></p>
+            <router-link to="/cart">
+                <button @click="hideCartPopup" type="button" class="cart-button btn btn-warning">Bekijk winkelwagen</button>
+            </router-link>
         </div>
     </div>
     <!-- navigation media screen -->
@@ -161,10 +122,10 @@
                 </router-link>
             </div>
             <div class="media-navigation-main-section">
-                <a href="#">
+                <router-link to="/products">
                     <i class="fa-solid fa-layer-group"></i>
                     <p>Alle items</p>
-                </a>
+                </router-link>
             </div>
             <div class="media-navigation-main-section">
                 <router-link to="/about">
@@ -177,7 +138,9 @@
 </template>
 
 <script>
+import router from '@/router';
 import { useLoginStore } from '@/stores/LoginStore.js';
+import axios from 'axios';
 export default {
     name: "NavigationBar",
     data() {
@@ -195,9 +158,9 @@ export default {
             navbarOpacity: 1,
             navbarMarginTop: '0',
             cartPopupVisible: false,
-
-
-        }
+            cartItems: [],
+            totalPrice: 0
+        };
     },
     methods: {
         increment1() {
@@ -209,7 +172,6 @@ export default {
                 this.quantity1--;
             }
         },
-
         increment2() {
             this.quantity2++;
             console.log(this.quantity2);
@@ -219,7 +181,6 @@ export default {
                 this.quantity2--;
             }
         },
-
         increment3() {
             this.quantity3++;
             console.log(this.quantity3);
@@ -229,18 +190,48 @@ export default {
                 this.quantity3--;
             }
         },
-
         checkLoggedIn() {
             console.log(localStorage.getItem('id') !== null);
             return localStorage.getItem('id') !== null;
-
         },
-
-        
-
-
-
-
+        fetchProducts() {
+            axios.get('/src/product.json')
+                .then(response => {
+                //if the id of the cartItem is in allProducts then add it to cartItems
+                const cartItemsLocal = localStorage.getItem('cartItems') ? JSON.parse(localStorage.getItem('cartItems')) : [];
+                const allProducts = response.data;
+                for (let i = 0; i < cartItemsLocal.length; i++) {
+                    console.log("cartItemsLocal", cartItemsLocal[i]);
+                    for (let j = 0; j < allProducts.length; j++) {
+                        if (cartItemsLocal[i] === allProducts[j].Id) {
+                            console.log('Juist: ', cartItemsLocal[i], " = ", allProducts[i]);
+                            this.cartItems.push(allProducts[j]);
+                        }
+                    }
+                }
+                console.log("cartItems", this.cartItems);
+            })
+                .catch(error => {
+                console.error('Error fetching products:', error);
+            });
+        },
+        removeItem(id) {
+            // Haal items uit localStorage
+            const cartItemsLocal = localStorage.getItem('cartItems') ? JSON.parse(localStorage.getItem('cartItems')) : [];
+            console.log("cartItemsLocal", cartItemsLocal);
+            // Zoek en verwijder het item met de gegeven id
+            for (let i = 0; i < cartItemsLocal.length; i++) {
+                if (cartItemsLocal[i] === id) {
+                    cartItemsLocal.splice(i, 1);
+                    break;
+                }
+            }
+            // Update localStorage met de nieuwe lijst
+            localStorage.setItem('cartItems', JSON.stringify(cartItemsLocal));
+            // Werk de cartItems in de state bij
+            this.cartItems = this.cartItems.filter(item => item.Id !== id);
+            // Bereken opnieuw de totale prijs
+        },
         toggleSearch() {
             this.searchVisible = !this.searchVisible;
             event.preventDefault();
@@ -252,25 +243,26 @@ export default {
             this.cartPopupVisible = false;
         },
         handleScroll() {
-            const currentScrollPos = window.pageYOffset
+            const currentScrollPos = window.pageYOffset;
             if (currentScrollPos > this.prevScrollpos) {
-                this.navbarMarginTop = '-12rem'
+                this.navbarMarginTop = '-12rem';
                 if (this.searchVisible === true) {
                     this.toggleSearch();
                 }
-            } else {
-                this.navbarMarginTop = '0'
             }
-            this.prevScrollpos = currentScrollPos
+            else {
+                this.navbarMarginTop = '0';
+            }
+            this.prevScrollpos = currentScrollPos;
         }
     },
     mounted() {
         window.addEventListener('scroll', this.handleScroll);
         this.isLoggedIn = this.checkLoggedIn();
+        this.fetchProducts();
     },
-
     beforeDestroy() {
-        window.removeEventListener('scroll', this.handleScroll)
+        window.removeEventListener('scroll', this.handleScroll);
     },
     computed: {
         loginStore() {
@@ -282,6 +274,7 @@ export default {
         };
     }
     },
+    components: { router }
 }
 </script>
 <style scoped>
@@ -292,6 +285,7 @@ export default {
 }
 
 .login {
+
     color: #485059;
     border: none;
     background-color: transparent !important;
