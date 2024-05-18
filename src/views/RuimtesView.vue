@@ -7,27 +7,27 @@
       <div class="container-first">
         <div class="container-hallway-desk">
           <div class="hallway">
-           <router-link to=""><a class="hover-effect">Hal</a></router-link> 
+           <router-link to=""><p class="hover-effect">Hal</p></router-link> 
           </div>
           <div class="desk">
-            <router-link to=""><a class="hover-effect">Bureaus</a></router-link>
+            <router-link to=""><p class="hover-effect">Bureaus</p></router-link>
           </div>
         </div>
         <div class="container-livingroom">
           <div class="livingroom">
-            <router-link to=""><a class="hover-effect">Woonkamer</a></router-link>
+            <router-link to=""><p class="hover-effect">Woonkamer</p></router-link>
           </div>
         </div>
       </div>
       <div class="container-second">
         <div class="container-bedroom">
           <div class="bedroom">
-            <router-link to=""><a class="hover-effect">Slaapkamer</a></router-link>
+            <router-link to=""><p class="hover-effect">Slaapkamer</p></router-link>
           </div>
         </div>
         <div class="container-diningroom">
           <div class="diningroom">
-            <router-link to=""><a class="hover-effect">Eetkamer</a></router-link>
+            <router-link to=""><p class="hover-effect">Eetkamer</p></router-link>
           </div>
         </div>
       </div>
@@ -89,7 +89,7 @@
   .hallway {
     background-size: cover;
     background-repeat: no-repeat;
-    background-image: url("src/assets/RuimtesImage2.png");
+    background-image: url("./assets/RuimtesImage2.png");
     
     width: 510px;;
     height: 316px;
@@ -109,7 +109,7 @@
   .diningroom {
     background-size: cover;
     background-repeat: no-repeat;
-    background-image: url("src/assets/EetkamerImageRuimtes.png");
+    background-image: url("./assets/EetkamerImageRuimtes.png");
     
     width: 487px;
     height: 680px;
@@ -128,7 +128,7 @@
   .livingroom {
     background-size: cover;
     background-repeat: no-repeat;
-    background-image: url("src/assets/WoonkamerImageRuimtes.png");
+    background-image: url("./assets/WoonkamerImageRuimtes.png");
     
     width: 737px;
     height: 656px;
@@ -148,7 +148,7 @@
   .desk {
     background-size: cover;
     background-repeat: no-repeat;
-    background-image: url("src/assets/BureaImageRuimtes.png");
+    background-image: url("./assets/BureaImageRuimtes.png");
     
     width: 518px;
     height: 316px;
@@ -176,7 +176,7 @@
   .bedroom{
     background-size: cover;
     background-repeat: no-repeat;
-    background-image: url("src/assets/vanaf-1699-euro.jpeg");
+    background-image: url("./assets/vanaf-1699-euro.jpeg");
     
     width: 777px;
     height: 673px;
@@ -407,7 +407,7 @@
       padding: 15px;
     }
     .bedroom {
-      background-image: url("src/assets/Bedden VD.png");
+      background-image: url("./assets/Bedden VD.png");
       
       width: 360px;
       height: 360px;
