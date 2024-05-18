@@ -124,6 +124,7 @@
     transition: width 1s ease-in-out 1s, height 1s ease-in-out, ease-in-out 1.5s;
     width: 650px;
     padding: 15px;
+    margin: 0px 1px 8px 4px;
   }
   .livingroom {
     background-size: cover;
@@ -143,6 +144,7 @@
     transition: width 1s ease-in-out 1s, height 1s ease-in-out, ease-in-out 1.5s;
     width: 734px;
     padding: 15px;
+    margin: 0px 4px 5px 4px;
   }
   
   .desk {
@@ -163,6 +165,7 @@
     transition: width 1s ease-in-out 1s, height 1s ease-in-out, ease-in-out 1.5s;
     width: 515px;
     padding: 15px;
+    margin: 0px 4px 2px 3px;
   }
   image {
     background-repeat: no-repeat;
