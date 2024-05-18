@@ -1,78 +1,74 @@
 <template>
     <div id="best-container">
-        <div class="container">
-            <div class="filter-toggle" @click="toggleFilterContent">
-                <div class="filter-icon">☰</div>
-            </div>
-            <div class="row">
-                <div class="filter col-md-2">
-                    <div class="filter-content">
-                        <h1>Filter</h1>
-                        <div class="filter-content-left">
-                            <h2>Category</h2>
-                            <select v-model="filter.selectedCategory" @change="applyCategoryFilter">
-                                <option value="all">All Categories</option>
-                                <option v-for="category in filter.categories" :key="category" :value="category">{{ category
-                                }}</option>
-                            </select>
-                            <h2>Price Range</h2>
-                            <div id="priceSlider"></div>
-                            <div class="d-flex">
-                                <div class="m-1">
-                                    <label for="minPrice">Min:</label>
-                                    <input type="number" id="minPrice" v-model="filter.priceRange.min"
-                                        @change="applyPriceFilter">
-                                </div>
-                                <div class="m-1">
-                                    <label for="maxPrice">Max:</label>
-                                    <input type="number" id="maxPrice" v-model="filter.priceRange.max"
-                                        @change="applyPriceFilter">
-                                </div>
-                            </div>
-                            <h2>Color</h2>
-                            <div>
-                                <select v-model="filter.selectedColor" @change="applyColorFilter">
-                                    <option value="all">All Colors</option>
-                                    <option v-for="color in uniqueColors" :key="color" :value="color">{{ color }}</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div id="best-content" class="container col">
-                    <div id="best-products" class="row">
-                        <div class="best-product col-lg-4 col-md-6 mb-4" v-for="(product, index) in filteredProducts"
-                            :key="index">
-                            <div class="product-image" :style="{ backgroundImage: 'url(' + product.Images.Image1 + ')' }">
-                                <div class="product-like">
-                                    <a href="#" @click="toggleLike(index)"><i
-                                            :class="['fa', handleIconClass(product)]"></i></a>
-                                </div>
-                            </div>
-                            <div class="product-content">
-                                <div class="product-content-left">
-                                    <p>{{ product.Category }}</p>
-                                    <router-link :to="{ name: 'product', params: { currentProductIndex: product.Id } }">
-                                        <h1>{{ product.Name }}</h1>
-                                    </router-link>
-                                    <h2>{{ product.Price.Low || product.Price.Medium || product.Price.High }}</h2>
-                                </div>
-                                <div class="product-content-right">
-                                    <a @click="toggleCart(index), addToCart(product.Id)">
-                                        <i class="fa-solid fa-cart-shopping"></i>
-                                        <i class="fa-solid"
-                                            :class="{ 'fa-solid fa-plus': !product.addedToCart, 'fa-check': product.addedToCart }"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <div class="container">
+        <div class="filter-toggle" @click="toggleFilterContent">
+          <div class="filter-icon">☰</div>
         </div>
+        <div class="row">
+          <div class="filter col-md-2">
+            <div class="filter-content">
+              <h1>Filter</h1>
+              <div class="filter-content-left">
+                <h2>Category</h2>
+                <select v-model="filter.selectedCategory" @change="applyCategoryFilter">
+                  <option value="all">All Categories</option>
+                  <option v-for="category in filter.categories" :key="category" :value="category">{{ category }}</option>
+                </select>
+                <h2>Price Range</h2>
+                <div id="priceSlider"></div>
+                <div class="d-flex">
+                  <div class="m-1">
+                    <label for="minPrice">Min:</label>
+                    <input type="number" id="minPrice" v-model="filter.priceRange.min" @change="applyPriceFilter">
+                  </div>
+                  <div class="m-1">
+                    <label for="maxPrice">Max:</label>
+                    <input type="number" id="maxPrice" v-model="filter.priceRange.max" @change="applyPriceFilter">
+                  </div>
+                </div>
+                <h2>Color</h2>
+                <div>
+                  <select v-model="filter.selectedColor" @change="applyColorFilter">
+                    <option value="all">All Colors</option>
+                    <option v-for="color in uniqueColors" :key="color" :value="color">{{ color }}</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="best-content" class="container col">
+            <div id="best-products" class="row">
+              <div class="best-product col-lg-4 col-md-6 mb-4" v-for="(product, index) in filteredProducts" :key="index">
+                <div class="product-image" :style="{ backgroundImage: 'url(' + product.Images.Image1 + ')' }">
+                  <div class="product-like">
+                    <a href="#" @click.prevent="toggleLike(product, index)">
+                      <i :class="['fa', handleIconClass(product)]"></i>
+                    </a>
+                  </div>
+                </div>
+                <div class="product-content">
+                  <div class="product-content-left">
+                    <p>{{ product.Category }}</p>
+                    <router-link :to="{ name: 'product', params: { currentProductIndex: product.Id } }">
+                      <h1>{{ product.Name }}</h1>
+                    </router-link>
+                    <h2>{{ product.Price.Low || product.Price.Medium || product.Price.High }}</h2>
+                  </div>
+                  <div class="product-content-right">
+                    <a @click="toggleCart(index), addToCart(product.Id)">
+                      <i class="fa-solid fa-cart-shopping"></i>
+                      <i class="fa-solid" :class="{ 'fa-solid fa-plus': !product.addedToCart, 'fa-check': product.addedToCart }"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-</template>
-
+  </template>
+  
 
 <script>
 import axios from 'axios';
@@ -95,29 +91,24 @@ export default {
                 colors: [],
                 selectedColor: 'all',
             },
-
         };
     },
     mounted() {
         this.fetchProducts();
         this.initializePriceSlider();
+        this.initializeWishlist();
     },
     methods: {
         initializePriceSlider() {
-            // Selecteer het element waarin de slider wordt weergegeven
             const priceSlider = document.getElementById('priceSlider');
-
-            // Initialisatie van noUiSlider
             noUiSlider.create(priceSlider, {
                 start: [this.filter.priceRange.min, this.filter.priceRange.max],
                 connect: true,
                 range: {
                     'min': 0,
-                    'max': 7000 // Pas dit aan op basis van je maximale prijsbereik
+                    'max': 7000
                 }
             });
-
-            // Voeg een luisteraar toe om de prijsfilter toe te passen wanneer de slider wordt verplaatst
             priceSlider.noUiSlider.on('update', (values, handle) => {
                 const [minPrice, maxPrice] = values.map(parseFloat);
                 this.filter.priceRange.min = minPrice;
@@ -125,29 +116,18 @@ export default {
                 this.applyPriceFilter();
             });
         },
-
         toggleFilterContent() {
             const filter = document.querySelector('.filter');
             filter.classList.toggle('expanded');
         },
         addToCart(id) {
-            if (localStorage.getItem('cartItems') === null) {
-                localStorage.setItem('cartItems', JSON.stringify([id]));
-            } else {
-                const cartItems = JSON.parse(localStorage.getItem('cartItems'));
+            const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+            if (!cartItems.includes(id)) {
                 cartItems.push(id);
                 localStorage.setItem('cartItems', JSON.stringify(cartItems));
             }
-            //reload page
             location.reload();
-
         },
-
-
-
-
-
-
         fetchProducts() {
             axios.get('/src/product.json')
                 .then(response => {
@@ -167,8 +147,28 @@ export default {
             });
             this.filter.categories = Array.from(categoriesSet);
         },
-        toggleLike(index) {
-            this.products[index].liked = !this.products[index].liked;
+        toggleLike(product, index) {
+        product.liked = !product.liked;
+        this.updateWishlist(product);
+        // Store liked status in localStorage
+        localStorage.setItem(`product_${product.Id}_liked`, product.liked);
+    },
+        updateWishlist(product) {
+            let wishlistItems = JSON.parse(localStorage.getItem('wishlistItems')) || [];
+            if (product.liked) {
+                const existingItem = wishlistItems.find(item => item.id === product.Id);
+                if (!existingItem) {
+                    wishlistItems.push({
+                        id: product.Id,
+                        productTitle: product.Name,
+                        productPrice: this.getProductPrice(product),
+                        imageUrl: product.Images.Image1,
+                    });
+                }
+            } else {
+                wishlistItems = wishlistItems.filter(item => item.id !== product.Id);
+            }
+            localStorage.setItem('wishlistItems', JSON.stringify(wishlistItems));
         },
         handleIconClass(product) {
             return product.liked ? 'fa-solid fa-heart' : 'fa-regular fa-heart';
@@ -177,7 +177,11 @@ export default {
             this.products[index].addedToCart = !this.products[index].addedToCart;
         },
         getProductPrice(product) {
-            return product.Price.Low || product.Price.Middle || product.Price.High || 'Price not available';
+            let priceStr = product.Price.Low || product.Price.Middle || product.Price.High || 'Price not available';
+            if (priceStr !== 'Price not available') {
+                priceStr = this.cleanPriceString(priceStr);
+            }
+            return priceStr;
         },
         applyCategoryFilter() {
             if (this.filter.selectedCategory === 'all') {
@@ -186,7 +190,6 @@ export default {
                 this.filteredProducts = this.products.filter(product => product.Category === this.filter.selectedCategory);
             }
         },
-        //color use stored in json ass Color: Color1, Color2 and color4 is de max. Maar niet elke kleur heeft 4 kleuren sommige 1 2 etc
         updateColors() {
             const allColors = new Set();
             this.products.forEach(product => {
@@ -202,88 +205,52 @@ export default {
             });
             this.filter.colors = Array.from(allColors);
         },
-
         applyColorFilter() {
             this.filteredProducts = this.products.filter(product => {
                 if (this.filter.selectedColor === 'all') {
-                    return true; // Toon alle producten als 'All Colors' is geselecteerd
+                    return true;
                 } else {
                     if (product.Color) {
-                        // Controleer of de kleur een object is met meerdere kleuren
                         if (typeof product.Color === 'object') {
-                            // Controleer of de geselecteerde kleur voorkomt in een van de kleuren van het product
                             for (const key in product.Color) {
                                 if (product.Color[key] === this.filter.selectedColor) {
                                     return true;
                                 }
                             }
-                            return false; // Geselecteerde kleur niet gevonden in productkleuren
+                            return false;
                         } else {
-                            return product.Color === this.filter.selectedColor; // Eén kleur, vergelijk met de geselecteerde kleur
+                            return product.Color === this.filter.selectedColor;
                         }
                     } else {
-                        return false; // Geen kleurinformatie voor het product
+                        return false;
                     }
                 }
             });
         },
-
-
         applyPriceFilter() {
-            console.log("Initial products array:", this.products);
-
             this.filteredProducts = this.products.filter(product => {
-                // Check if product exists
-                if (!product) {
-                    console.warn("Undefined product found:", product);
-                    return false;
-                }
-
-                // Determine the price to use: Low, Medium, or High
+                if (!product) return false;
                 let priceStr = product.Price.Low || product.Price.Medium || product.Price.High;
-
-                // Check if a valid price was found
-                if (!priceStr) {
-                    console.warn("Product without any valid price found:", product);
-                    return false;
-                }
-
-                // Clean the price string
+                if (!priceStr) return false;
                 priceStr = this.cleanPriceString(priceStr);
                 const parsedPrice = parseFloat(priceStr);
-
-                // Check if the parsed price is a valid number
-                if (isNaN(parsedPrice)) {
-                    console.warn("Parsed price is not a number:", priceStr);
-                    return false;
-                }
-
-                console.log(`Product ${product.Name} has price: ${parsedPrice}`);
-
-
+                if (isNaN(parsedPrice)) return false;
                 return parsedPrice >= this.filter.priceRange.min && parsedPrice <= this.filter.priceRange.max;
             });
-
-            console.log("Filtered products array:", this.filteredProducts);
         },
         cleanPriceString(priceStr) {
-            return priceStr.replace(/€/g, '')
-                .replace(/\./g, '')
-                .replace(/,/, '.')
-                .replace(/\.00$/, '');
+            return priceStr.replace(/€/g, '').replace(/\./g, '').replace(/,/, '.').replace(/\.00$/, '');
         },
-        getProductPrice(product) {
-
-            let priceStr = product.Price.Low || product.Price.Medium || product.Price.High || 'Price not available';
-
-            if (priceStr !== 'Price not available') {
-
-                priceStr = this.cleanPriceString(priceStr);
+        initializeWishlist() {
+        let wishlistItems = JSON.parse(localStorage.getItem('wishlistItems')) || [];
+        this.products.forEach(product => {
+            // Check localStorage for liked status of each product
+            const likedItem = localStorage.getItem(`product_${product.Id}_liked`);
+            if (likedItem !== null) {
+                product.liked = JSON.parse(likedItem);
             }
-
-            return priceStr;
-        },
-
+        });
+    },
     },
     computed: {
         uniqueColors() {
@@ -300,11 +267,9 @@ export default {
                 }
             });
             return Array.from(allColors);
-        }
-
+        },
     }
 };
-
 </script>
 
 

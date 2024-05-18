@@ -3,14 +3,19 @@
         <h1>Verlanglijstje</h1>
         <div class="container" v-if="wishlistItems.length !== 0">
             <div class="row">
-                <div class="col-7 ">
+                <div class="col-7">
                     <div class="item row" v-for="(item, index) in wishlistItems" :key="index">
-                        <div class="col-4 ">
-                            <img :src="item.imageUrl" :alt="item.productTitle">
+                        <div class="col-4">
+                            <img class="product-image1" :src="item.imageUrl" :alt="item.productTitle">
                         </div>
                         <div class="product-text col-7">
                             <p class="product-title">{{ item.productTitle }}</p>
-                            <p class="price"><strong>{{ item.productPrice }}</strong> </p>
+                            <p class="price"><strong>{{ item.productPrice }}</strong></p>
+                            <div class="quantity">
+                                <div class="quantitydelete-container">
+                                    <i class="trash fa-solid fa-trash" @click="removeItem(index)"></i>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -30,11 +35,15 @@ export default {
             wishlistItems: JSON.parse(localStorage.getItem('wishlistItems')) || [],
         };
     },
+    methods: {
+        removeItem(index) {
+            this.wishlistItems.splice(index, 1);
+            localStorage.setItem('wishlistItems', JSON.stringify(this.wishlistItems));
+        },
+    },
 };
 </script>
-
 <style scoped>
-
 * {
     margin: 0;
     padding: 0;
@@ -43,9 +52,7 @@ export default {
 
 /* verlanglijstje */
 .wishlist {
-    padding-top: 10rem;
-    padding-left: 6rem;
-    padding-bottom: 4rem;
+    padding: 10rem 6rem 4rem 6rem;
     color: #485059;
     font-family: Georgia, sans-serif;
     background-color: #D9CAC5;
@@ -57,11 +64,14 @@ export default {
 }
 
 .item {
-    padding-bottom: 6px;
-    background-color: #E8DFDC !important;
     padding: 1rem;
+    background-color: #E8DFDC !important;
     margin-bottom: 1rem;
     border-radius: 1rem;
+}
+
+.product-image1 {
+    max-width: 90%;
 }
 
 .wishlist .product-title {
@@ -74,17 +84,35 @@ export default {
     font-size: 1.5rem;
 }
 
+.quantity {
+    display: flex;
+    align-items: center;
+}
+
+.quantitydelete-container {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.trash {
+    color: #F2B66D;
+    cursor: pointer;
+    background-color: #485059;
+    padding: 7px;
+    border-radius: 5px;
+}
+
+.trash:hover {
+    background-color: #ef9323;
+}
+
 .col-4 {
     width: 40% !important;
 }
 
-.afrekenen {
-    display: none; /* Verwijder de afrekensectie */
-}
-
 /* Als er geen items in het verlanglijstje zijn */
 .wishlist > div:not(.container) {
-  
     margin-top: 2rem;
 }
 
@@ -159,6 +187,4 @@ export default {
     font-size: 1.2rem;
     margin-left: 0.5rem;
 }
-
-
 </style>
