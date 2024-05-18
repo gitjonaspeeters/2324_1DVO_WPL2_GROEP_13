@@ -190,10 +190,10 @@ ondubbelzinnig meegedeeld.</h2>
       <div class="popup-prijzen-content" v-else-if=" popup[selectedItemIndex].productTitle === 'Prijzen'">
         <h1>{{ popup[selectedItemIndex].productTitle }}</h1>
         <div class="social-icons">
-          <a href="#"><i class="fa-brands fa-instagram"></i></a>
-          <a href="#"><i class="fa-brands fa-facebook"></i></a>
-          <a href="#"><i class="fa-brands fa-tiktok"></i></a>
-          <a href="#" ><i class="fa-brands fa-pinterest"></i></a>
+          <a href="https://www.instagram.com/comfortmeubel/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.facebook.com/comfortmeubel/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+          <a href="https://www.tiktok.com/@comfortmeubel" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+          <a href="https://nl.pinterest.com/comfortmeubel/" target="_blank" ><i class="fa-brands fa-pinterest"></i></a>
         </div>
         
       </div>
