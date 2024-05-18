@@ -146,6 +146,7 @@
             </div>
             <p>{{ averageRatings.montage.toFixed(1) }}</p>
           </div>
+          
           <div class="part">
             <p>Trendy</p>
             <div>
