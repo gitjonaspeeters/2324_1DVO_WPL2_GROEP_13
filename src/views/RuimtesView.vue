@@ -89,7 +89,7 @@
   .hallway {
     background-size: cover;
     background-repeat: no-repeat;
-    background-image: url("./assets/RuimtesImage2.png");
+    background-image: url("@/assets/RuimtesImage2.png");
     
     width: 510px;;
     height: 316px;
@@ -109,7 +109,7 @@
   .diningroom {
     background-size: cover;
     background-repeat: no-repeat;
-    background-image: url("./assets/EetkamerImageRuimtes.png");
+    background-image: url("@/assets/EetkamerImageRuimtes.png");
     
     width: 487px;
     height: 680px;
@@ -128,7 +128,7 @@
   .livingroom {
     background-size: cover;
     background-repeat: no-repeat;
-    background-image: url("./assets/WoonkamerImageRuimtes.png");
+    background-image: url("@/assets/WoonkamerImageRuimtes.png");
     
     width: 737px;
     height: 656px;
@@ -148,7 +148,7 @@
   .desk {
     background-size: cover;
     background-repeat: no-repeat;
-    background-image: url("./assets/BureaImageRuimtes.png");
+    background-image: url("@/assets/BureaImageRuimtes.png");
     
     width: 518px;
     height: 316px;
@@ -407,7 +407,7 @@
       padding: 15px;
     }
     .bedroom {
-      background-image: url("./assets/Bedden VD.png");
+      background-image: url("@/assets/Bedden VD.png");
       
       width: 360px;
       height: 360px;
