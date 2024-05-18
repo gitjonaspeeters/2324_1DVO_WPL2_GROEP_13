@@ -39,8 +39,8 @@
       "Width-Medium": "100cm"
     },
     "Color": {
-      "Color1": "Grijs",
-      "Color2": "Wit"
+      "Color1": "#808080",
+      "Color2": "#FFFFFF"
     },
     "Description": "Deze eetkamertafel hoort binnen de moderne, industriële stijl. Zijn metalen sterpoot en keramisch tafelblad ogen stoer en robuust. Met zijn unieke zwarte sterpoot vormt hij meteen een blikvanger in je interieur.",
     "Stock": 3,
@@ -50,7 +50,7 @@
   {
     "Id": "3",
     "Images": {
-      "Image1": "./src/assets/55-22.jpg",
+      "Image1": "./src/assets/55-22.png",
       "Image2": "./src/assets/13862_2.jpg"
     },
     "Name": "Jesper Danish Oval",
@@ -745,7 +745,9 @@
     "Id": "34",
     "Images": {
       "Image1": "./src/assets/urun-velar-fonksiyonel-yatak-03.jpeg",
+
       "Image2": "./src/assets/urun-velar-fonksiyonel-yatak-02.jpeg"
+
     },
     "Measurement": {
       "Length": "255cm",

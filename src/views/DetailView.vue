@@ -3,68 +3,35 @@
     <div id="container-upper">
       <div id="container-left-upper">
         <p>Home/Categorieen/zetels/</p>
-        <Carousel class="horizontal-carousel">
-          <Slide v-for="item in product.images" :key="item">
-            <img :src="item" alt="een foto">
-          </Slide>
-          <template #addons>
-            <Navigation button-type="button" class="custom-nav-button">
-              <template #prev>
-                <div class="prev-btn">
-                  <img src="/src/assets/leftbtn.png" alt="arrow-left" id="backbtn">
-                </div>
-              </template>
-              <template #next>
-                <div class="next-btn">
-                  <img src="/src/assets/rightbtn.png" alt="arrow-right" id="nextbtn">
-                </div>
-              </template>
-            </Navigation>
-          </template>
-        </Carousel>
+
+        <div class="fotorama">
+          <div v-for="(image, index) in product.Images" :key="index">
+            <img :src="image" alt="Product image">
+          </div>
+        </div>
+
       </div>
       <div id="container-right-upper">
         <h1>{{ product.name }}</h1>
+        <p>ID: {{ currentProductIndex }}</p>
         <p id="text-kleur">kleuren:</p>
         <div id="kleuren">
-          <div v-for="(color, index) in product.Color" :key="index" :style="{ 'background-color': color }"></div>
+          <div class="kleur" v-for="(color, index) in product.Color" :key="index" :style="{ 'background-color': color }"></div>
         </div>
         <div id="flex">
-          <p id="price">{{ product.Price.low }}</p>
+          <p id="price">{{ product.Price.Low }}</p>
           <input type="number" min="0" max="10" v-model="quantity">
           <button id="order" @click="addToCart">Bestellen</button>
-          <button id="AR">AR</button>
+          <button id="AR" @click="showQr">AR</button>
         </div>
         <i class="fa-regular fa-heart" style="color: #ffffff;"></i>
         <p class="describtion">Beschrijving: </p>
         <p class="meusurements">Afmetingen: <span>{{ product.Measurement }}</span></p>
-        <p>{{ product.Description }}</p>
+        <p id="describtion">{{ product.Description }}</p>
       </div>
     </div>
     <div id="mid-container">
-      <Carousel :wrap-around="true" :items-to-show="3" :autoplay="3000" :transition="500">
-        <template v-for="(item, index) in items" :key="index">
-          <Slide>
-            <div class="slide">
-              <img :src="item" alt="Slide image">
-            </div>
-          </Slide>
-        </template>
-        <template #addons>
-          <Navigation>
-            <template #prev>
-              <div class="prev-btn">
-                <img src="/src/assets/leftbtn.png" alt="arrow-left" id="prevbtn">
-              </div>
-            </template>
-            <template #next>
-              <div class="next-btn">
-                <img src="/src/assets/rightbtn.png" alt="arrow-right" id="nextbtn">
-              </div>
-            </template>
-          </Navigation>
-        </template>
-      </Carousel>
+      <CarouselComponent :items-to-show="3"/>
     </div>
     <div id="container-bottem">
       <div id="container-bottem-left">
@@ -120,7 +87,7 @@
             <div>
               <template v-for="star in 5">
                 <i v-if="star <= averageRatings.zitgemak" class="fa-regular fa-star fa-rotate-180"
-                   style="color: #F2B66D;"></i>
+                  style="color: #F2B66D;"></i>
                 <i v-else class="fa-regular fa-star fa-rotate-180" style="color: #FFFFFF;"></i>
               </template>
             </div>
@@ -131,7 +98,7 @@
             <div>
               <template v-for="star in 5">
                 <i v-if="star <= averageRatings.liggemak" class="fa-regular fa-star fa-rotate-180"
-                   style="color: #F2B66D;"></i>
+                  style="color: #F2B66D;"></i>
                 <i v-else class="fa-regular fa-star fa-rotate-180" style="color: #FFFFFF;"></i>
               </template>
             </div>
@@ -142,7 +109,7 @@
             <div>
               <template v-for="star in 5">
                 <i v-if="star <= averageRatings.kwaliteit" class="fa-regular fa-star fa-rotate-180"
-                   style="color: #F2B66D;"></i>
+                  style="color: #F2B66D;"></i>
                 <i v-else class="fa-regular fa-star fa-rotate-180" style="color: #FFFFFF;"></i>
               </template>
             </div>
@@ -153,18 +120,19 @@
             <div>
               <template v-for="star in 5">
                 <i v-if="star <= averageRatings.montage" class="fa-regular fa-star fa-rotate-180"
-                   style="color: #F2B66D;"></i>
+                  style="color: #F2B66D;"></i>
                 <i v-else class="fa-regular fa-star fa-rotate-180" style="color: #FFFFFF;"></i>
               </template>
             </div>
             <p>{{ averageRatings.montage.toFixed(1) }}</p>
           </div>
+          
           <div class="part">
             <p>Trendy</p>
             <div>
               <template v-for="star in 5">
                 <i v-if="star <= averageRatings.trendy" class="fa-regular fa-star fa-rotate-180"
-                   style="color: #F2B66D;"></i>
+                  style="color: #F2B66D;"></i>
                 <i v-else class="fa-regular fa-star fa-rotate-180" style="color: #FFFFFF;"></i>
               </template>
             </div>
@@ -176,11 +144,23 @@
         <div v-for="(review, index) in filteredReviews" :key="index" class="review">
           <div class="icons">
             <i v-for="star in review.stars" :key="star" class="fa-solid fa-star fa-rotate-180"
-               style="color: #F2B66D;"></i>
+              style="color: #F2B66D;"></i>
           </div>
           <h2>{{ review.title }}</h2>
           <p>{{ review.review_text }}</p>
         </div>
+      </div>
+    </div>
+    <div id="qr-popup" v-if="qrCodePopup">
+      <div id="popup-container">
+        <img src="@/assets/qrcode.png" alt="foto van qr code">
+        <div id="icons">
+          <i class="fa-brands fa-google-play"></i>
+          <i class="fa-brands fa-app-store"></i>
+        </div>
+      </div>
+      <div id="close">
+        <i class="fa-solid fa-circle-xmark"></i>
       </div>
     </div>
   </div>
@@ -188,53 +168,80 @@
 <script>
 import reviewsData from '@/data/reviews.json';
 import productsData from '@/product.json';
-import {Carousel, Slide, Navigation} from 'vue3-carousel'
+import { ref } from 'vue';
+
+import { Carousel, Slide, Navigation } from 'vue3-carousel'
+import 'fotorama/fotorama.css';
+import 'jquery'
+
+
 
 export default {
   name: 'DetailView',
   components:
-      {
-        Carousel,
-        Slide,
-        Navigation,
-      },
+
+  {
+    Carousel,
+    Slide,
+    Navigation,
+  },
+  props: {
+    currentProductIndex: {
+      type: [Number,String],
+      required: true,
+    },
+  },
+
   data() {
+    const items = ref([
+      "src/assets/Banner1.png",
+      "src/assets/Banner1.png",
+      "src/assets/Banner1.png",
+      "src/assets/Banner1.png",
+      "src/assets/Banner1.png",
+      "src/assets/Banner1.png",
+      // Add more image URLs as needed
+    ]);
+
     return {
-      productsData: productsData,
-      currentProductIndex: 2,
-      quantity: 1,
-      items: [
-        "src/assets/Banner1.png",
-        "src/assets/Banner1.png",
-        "src/assets/Banner1.png",
-        "src/assets/Banner1.png",
-        "src/assets/Banner1.png",
-        "src/assets/Banner1.png",
-      ],
+      items,
       reviewsData: reviewsData,
+      productsData: productsData,
+      currentProductIndex: this.$route.params.currentProductIndex,
+      quantity: 1,
       averageStars: 0, // Gemiddeld aantal sterren
       totalReviews: 0, // Totaal aantal beoordelingen
       averageRatings: {}, // Gemiddelde beoordelingen per aspect
-    }
-  },
+      qrCodePopup: false,
+    };
+  }
+  ,
+  
   mounted() {
-    this.slideWidth = this.$refs.carouselItems[0].offsetWidth;
+
+    
   },
+
   computed: {
     product() {
+      console.log("id", this.currentProductIndex)
       return this.productsData[this.currentProductIndex];
-    },
+    }
+    ,
     filteredReviews() {
       return this.reviewsData.filter(review => review.id === this.currentProductIndex);
-    },
+    }
+    ,
     calculateAverageStars() {
       const totalStars = this.filteredReviews.reduce((acc, review) => acc + review.stars, 0);
       return totalStars / this.filteredReviews.length;
-    },
+    }
+    ,
     // Totaal aantal beoordelingen
     calculateTotalReviews() {
       return this.filteredReviews.length;
-    },
+    }
+    ,
     // Bereken gemiddelde beoordelingen per aspect
     calculateAverageRatings() {
       const aspects = ['zitgemak', 'liggemak', 'kwaliteit', 'montage', 'trendy'];
@@ -244,54 +251,84 @@ export default {
         averageRatings[aspect] = aspectTotal / this.totalReviews;
       });
       return averageRatings;
-    },
+    }
+    ,
     fiveStarReviews() {
       return this.filteredReviews.filter(review => review.stars === 5);
-    },
+    }
+    ,
     fourStarReviews() {
       return this.filteredReviews.filter(review => review.stars === 4);
-    },
+    }
+    ,
     threeStarReviews() {
       return this.filteredReviews.filter(review => review.stars === 3);
-    },
+    }
+    ,
     twoStarReviews() {
       return this.filteredReviews.filter(review => review.stars === 2);
-    },
+    }
+    ,
     oneStarReviews() {
       return this.filteredReviews.filter(review => review.stars === 1);
-    },
+    }
+    ,
     averageStars() {
       const totalStars = this.filteredReviews.reduce((acc, review) => acc + review.stars, 0);
       return totalStars / this.filteredReviews.length;
-    },
+    }
+    ,
     averageStars4() {
       const totalStars4 = this.fourStarReviews.reduce((acc, review) => acc + review.stars, 0);
       return totalStars4 / this.fourStarReviews.length;
-    },
+    }
+    ,
     averageStars3() {
       const totalStars3 = this.threeStarReviews.reduce((acc, review) => acc + review.stars, 0);
       return totalStars3 / this.threeStarReviews.length;
-    },
+    }
+    ,
     averageStars2() {
       const totalStars2 = this.twoStarReviews.reduce((acc, review) => acc + review.stars, 0);
       return totalStars2 / this.twoStarReviews.length;
-    },
+    }
+    ,
     averageStars1() {
       const totalStars1 = this.oneStarReviews.reduce((acc, review) => acc + review.stars, 0);
       return totalStars1 / this.oneStarReviews.length;
-    },
-  },
+    }
+    ,
+  }
+  ,
   methods: {
     addToCart() {
       // Implement add to cart functionality
     },
-  },
+    showQr() {
+      this.qrCodePopup = !this.qrCodePopup;
+    },
+  }
+  ,
   created() {
+    console.log("currentProductIndex:", this.currentProductIndex);
+    // Haal de currentProductIndex op uit de route parameters
+    this.averageStars = this.calculateAverageStars;
+    this.totalReviews = this.calculateTotalReviews;
+    this.averageRatings = this.calculateAverageRatings;
+
+  },
+  watch: {
+  '$route.params.currentProductIndex'(newIndex) {
+    console.log("Route param changed:", newIndex);
+    this.currentProductIndex = newIndex;
     this.averageStars = this.calculateAverageStars;
     this.totalReviews = this.calculateTotalReviews;
     this.averageRatings = this.calculateAverageRatings;
   },
+},
+  
 };
+
 </script>
 
 <style lang="scss" scoped>
@@ -300,6 +337,7 @@ export default {
 @mixin carousel-button() {
   position: absolute;
   font-size: 5rem;
+
   div {
     width: 4rem;
     height: 4rem;
@@ -339,7 +377,7 @@ $with-buttons: calc(100% / 4);
       margin-bottom: 1rem;
     }
 
-    #kleuren {
+    #kleur {
       display: flex;
       width: 2rem;
       height: 2rem;
@@ -350,12 +388,14 @@ $with-buttons: calc(100% / 4);
     #flex {
       display: flex;
       width: 100%;
+
       margin: {
         bottom: 1rem;
       }
 
       #price {
         margin-right: 1rem;
+
         font: {
           weight: 600;
           size: 1.5rem;
@@ -367,26 +407,23 @@ $with-buttons: calc(100% / 4);
         margin-right: 1rem;
         border-radius: 15px;
         background-color: #FFFFFF;
-        outline: none;
+        border: none;
       }
 
       button {
         width: $with-buttons;
         margin-right: 1rem;
+        color: white;
+        border-radius: 15px;
+        border: none;
       }
 
       #order {
         background-color: #F2B66D;
-        color: white;
-        border-radius: 15px;
-        outline: none;
       }
 
       #AR {
         background-color: #485059;
-        color: white;
-        border-radius: 15px;
-        outline: none;
       }
     }
 
@@ -410,55 +447,24 @@ $with-buttons: calc(100% / 4);
     width: 60vw;
     margin: 10rem 10rem 15rem 4rem;
 
-    .custom-nav-button {
-      .next-btn {
-        @include carousel-button();
-      }
-
-      .prev-btn {
-        @include carousel-button();
+    .horizontal-carousel {
+      img {
+        width: 30rem;
+        height: 30rem;
       }
     }
   }
 }
 
 #mid-container {
-  width: 80%;
-  margin: 10rem auto;
-
-  .carousel-container {
-    width: 80%;
-    margin: 0 auto;
-  }
-
-  .slide {
-    width: 100%;
-    height: 200px;
-    border: 1px solid #ccc;
-  }
-
-  .prev-btn,
-  .next-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 2rem;
-    color: #333;
-    cursor: pointer;
-  }
-
-  .prev-btn {
-    left: -5rem;
-  }
-
-  .next-btn {
-    right: -5rem;
-  }
+  width: 95%;
+  margin: 0 auto 5rem;
 }
 
 #container-bottem {
   display: flex;
   flex-direction: row;
+
   margin: {
     bottom: 1rem;
     right: 2rem;
@@ -469,6 +475,7 @@ $with-buttons: calc(100% / 4);
     display: flex;
     flex-direction: column;
     width: 50vw;
+
     margin: {
       left: 2rem;
     }
@@ -480,6 +487,7 @@ $with-buttons: calc(100% / 4);
     #review {
       display: flex;
       flex-direction: column;
+
       margin: {
         top: 2rem;
         bottom: 1rem;
@@ -490,6 +498,7 @@ $with-buttons: calc(100% / 4);
         flex-direction: row;
         height: 2rem;
         align-items: center;
+
         margin: {
           bottom: 1rem;
         }
@@ -500,6 +509,7 @@ $with-buttons: calc(100% / 4);
           background: #FFD43B;
           z-index: 1;
           border-radius: 15px;
+
           margin: {
             left: 1rem;
             right: 0.25rem;
@@ -522,6 +532,7 @@ $with-buttons: calc(100% / 4);
         }
       }
     }
+  }
 
     #review-per-part {
       display: flex;
@@ -529,6 +540,7 @@ $with-buttons: calc(100% / 4);
 
       .part {
         display: flex;
+
         margin: {
           left: 15%;
           top: 1rem;
@@ -542,6 +554,7 @@ $with-buttons: calc(100% / 4);
           font: {
             size: 26px;
           }
+
           margin: {
             right: 3rem;
           }
@@ -563,6 +576,7 @@ $with-buttons: calc(100% / 4);
     display: flex;
     flex-direction: column;
     width: 50vw;
+
     margin: {
       right: 2rem;
       bottom: 5rem;
@@ -572,7 +586,9 @@ $with-buttons: calc(100% / 4);
       font: {
         weight: bold;
         size: 1.5rem;
-      };
+      }
+
+      ;
     }
 
     .review {
@@ -583,7 +599,78 @@ $with-buttons: calc(100% / 4);
       font-size: 1.5rem;
     }
   }
+
+
+
+
+#qr-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 25rem;
+  width: 25rem;
+  background-color: #F2B66D;
+  border: {
+    radius: 25px;
+  };
+
+  #popup-container {
+    background-color: #F2B66D;
+    img {
+      background-color: #F2B66D;
+      height: 15rem;
+      width: 15rem;
+    }
+    i {
+      background-color: #F2B66D;
+      font-size: 2rem;
+      margin-right: 1rem;
+    }
+    #icons {
+      background-color: #F2B66D;
+      margin: {
+        top: 1rem;
+        left: calc(100% - 6rem);
+      }
+    }
+  }
 }
 
+@media screen and (max-width: 1000px) {
+  #container-upper {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
 
+    #container-right-upper {
+      flex-direction: column;
+      margin-top: 0;
+    }
+
+    #container-left-upper {
+      flex-direction: column;
+    }
+
+    #describtion {
+      display: none; /* Beschrijving verbergen op klein scherm */
+    }
+  }
+
+  #mid-container {
+    width: 100%;
+    height: 200px;
+  }
+
+  #container-bottem {
+    display: none; /* Onderste container verbergen op klein scherm */
+  }
+}
 </style>
+
+
+
