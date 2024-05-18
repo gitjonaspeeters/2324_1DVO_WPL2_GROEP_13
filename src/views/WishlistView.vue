@@ -1,7 +1,7 @@
 <template>
     <div class="wishlist">
         <h1>Verlanglijstje</h1>
-        <div class="container" v-if="wishlistItems.length !== 0">
+        <div class="container-left" v-if="wishlistItems.length !== 0">
             <div class="row">
                 <div class="col-7">
                     <div class="item row" v-for="(item, index) in wishlistItems" :key="index">
@@ -10,7 +10,7 @@
                         </div>
                         <div class="product-text col-7">
                             <p class="product-title">{{ item.productTitle }}</p>
-                            <p class="price"><strong>{{ item.productPrice }}</strong></p>
+                            <p class="price"><strong>€ {{ item.productPrice }},00</strong></p>
                             <div class="quantity">
                                 <div class="quantitydelete-container">
                                     <i class="trash fa-solid fa-trash" @click="removeItem(index)"></i>
@@ -43,15 +43,11 @@ export default {
     },
 };
 </script>
-<style scoped>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
-/* verlanglijstje */
+<style scoped>
+/* Wishlist Styles */
 .wishlist {
+    height: 100vh; /* Volledige hoogte van het scherm */
     padding: 10rem 6rem 4rem 6rem;
     color: #485059;
     font-family: Georgia, sans-serif;
@@ -186,5 +182,74 @@ export default {
     font-weight: bold;
     font-size: 1.2rem;
     margin-left: 0.5rem;
+}
+
+/* Additional CSS */
+.container-left {
+    margin-left: 0;
+    padding-left: 0;
+}
+
+@media screen and (max-width: 768px) {
+    .wishlist {
+        padding: 8rem 2rem 2rem 2rem;
+    }
+
+    .col-4, .col-7 {
+        width: 100% !important;
+    }
+
+    .afrekenen {
+        margin: 2rem 0 0 0;
+    }
+
+    .product-image1 {
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .afrekenen {
+        margin: 2rem 0 0 0;
+        padding: 1rem;
+        max-height: none;
+        width: 100% !important;
+    }
+
+    .product-title {
+        font-size: 1.5rem;
+    }
+
+    .price {
+        font-size: 1.2rem;
+    }
+
+    .total,
+    .shipping,
+    .vat {
+        font-size: 1.2rem;
+    }
+
+    .apply-discount,
+    .checkout {
+        font-size: 1rem;
+        padding: 0.4rem 0.8rem;
+    }
+
+    #best-products {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .best-product {
+        width: 90%;
+        margin-bottom: 1rem;
+    }
+
+    .product-content-left p,
+    .product-content-left h1,
+    .product-content-left h2 {
+        margin-left: 0;
+    }
 }
 </style>

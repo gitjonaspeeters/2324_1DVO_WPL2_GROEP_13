@@ -450,7 +450,7 @@ export default {
 
 @media screen and (max-width: 480px) {
     .cart {
-        padding: 3rem 1rem 1rem 1rem;
+        padding: 8rem 1rem 1rem 1rem;
     }
 
     .afrekenen {
