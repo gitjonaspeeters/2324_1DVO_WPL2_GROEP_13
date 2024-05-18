@@ -556,9 +556,7 @@ font-size: 1.2rem;
 }
 
 @media screen and (max-width: 1000px) {
-  .image-container{
-   
-  }
+  
   .overlay {
     opacity: 1;
     background-color: rgba(0, 0, 0, 0.5);

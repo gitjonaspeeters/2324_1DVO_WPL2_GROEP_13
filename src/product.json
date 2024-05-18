@@ -50,7 +50,7 @@
   {
     "Id": "3",
     "Images": {
-      "Image1": "./src/assets/55-22.jpg",
+      "Image1": "./src/assets/55-22.png",
       "Image2": "./src/assets/13862_2.jpg"
     },
     "Name": "Jesper Danish Oval",
@@ -718,8 +718,8 @@
   {
     "Id": "33",
     "Images": {
-      "Image1": "Rousseau208960920Bed20lit20Davy201.jpg",
-      "Image2": "Rousseau208960920Bed20lit20Davy206.jpg"
+      "Image1": "./src/assets/Rousseau208960920Bed20lit20Davy201.jpg",
+      "Image2": "./src/assets/Rousseau208960920Bed20lit20Davy206.jpg"
     },
     "Measurement": {
       "Length": "215cm",
@@ -744,7 +744,7 @@
   {
     "Id": "34",
     "Images": {
-      "Image1": "urun-velar-fonksiyonel-yatak-03.jpeg",
+      "Image1": "./src/assets/urun-velar-fonksiyonel-yatak-03.jpeg",
       "Image2": "urun-velar-fonksiyonel-yatak-02.jpeg"
     },
     "Measurement": {
@@ -766,8 +766,8 @@
   {
     "Id": "35",
     "Images": {
-      "Image1": "Rousseau208952020stapelbed20lit20superposC3A920Sammy201.jpg",
-      "Image2": "Rousseau208952020stapelbed20lit20superposC3A920Sammy207.jpg"
+      "Image1": "./src/assets/Rousseau208952020stapelbed20lit20superposC3A920Sammy201.jpg",
+      "Image2": "./src/assets/Rousseau208952020stapelbed20lit20superposC3A920Sammy207.jpg"
     },
     "Measurement": {
       "Length": "210cm",
@@ -791,8 +791,8 @@
   {
     "Id": "36",
     "Images": {
-      "Image1": "SCTDFT_INF_3663.jpg",
-      "Image2": "SCTDFT_KIDS_01_74e0.jpg"
+      "Image1": "./src/assets/SCTDFT_INF_3663.jpg",
+      "Image2": "./src/assets/SCTDFT_KIDS_01_74e0.jpg"
     },
     "Measurement": {
       "Length": "210cm",
@@ -816,8 +816,8 @@
   {
     "Id": "37",
     "Images": {
-      "Image1": "Rousseau209805-120gamingstoel20chaise20de20jeu20Taylor201.jpg",
-      "Image2": "Rousseau209805-120gamingstoel20chaise20de20jeu20Taylor202.jpg"
+      "Image1": "./src/assets/Rousseau209805-120gamingstoel20chaise20de20jeu20Taylor201.jpg",
+      "Image2": "./src/assets/Rousseau209805-120gamingstoel20chaise20de20jeu20Taylor202.jpg"
     },
     "Measurement": {
     },
@@ -838,8 +838,8 @@
   {
     "Id": "38",
     "Images": {
-      "Image1": "Rousseau209708-220bureaustoel20chaise20de20bureau20Claude201.jpg",
-      "Image2": "Rousseau209708-220bureaustoel20chaise20de20bureau20Claude202.jpg"
+      "Image1": "./src/assets/Rousseau209708-220bureaustoel20chaise20de20bureau20Claude201.jpg",
+      "Image2": "./src/assets/Rousseau209708-220bureaustoel20chaise20de20bureau20Claude202.jpg"
     },
     "Measurement": {
     },
@@ -861,8 +861,8 @@
   {
     "Id": "39",
     "Images": {
-      "Image1": "87d5e457-15b6-4985-9d99-f6ad7fb2c355.jpg",
-      "Image2": "d7056fce-3dc1-41c6-a9d3-4dda884394dd.jpg"
+      "Image1": "./src/assets/87d5e457-15b6-4985-9d99-f6ad7fb2c355.jpg",
+      "Image2": "./src/assets/d7056fce-3dc1-41c6-a9d3-4dda884394dd.jpg"
     },
     "Measurement": {
     },
@@ -885,8 +885,8 @@
   {
     "Id": "40",
     "Images": {
-      "Image1": "Rousseau202155-120TV20meubel20meuble20TV20Madeira203.jpg",
-      "Image2": "Rousseau202155-220Madeira206.jpg"
+      "Image1": "./src/assets/Rousseau202155-120TV20meubel20meuble20TV20Madeira203.jpg",
+      "Image2": "./src/assets/Rousseau202155-220Madeira206.jpg"
     },
     "Measurement": {
       "Length": "140cm",
@@ -912,8 +912,8 @@
   {
     "Id": "41",
     "Images": {
-      "Image1": "Rousseau201180-220schoenenrek20C3A9tagC3A8re20C3A020chaussures20Sam201.jpg",
-      "Image2": "Rousseau201180-220schoenenrek20C3A9tagC3A8re20C3A020chaussures20Sam203 (1).jpg"
+      "Image1": "./src/assets/Rousseau201180-220schoenenrek20C3A9tagC3A8re20C3A020chaussures20Sam201.jpg",
+      "Image2": "./src/assets/Rousseau201180-220schoenenrek20C3A9tagC3A8re20C3A020chaussures20Sam203 (1).jpg"
     },
     "Measurement": {
       "Length": "80cm",
@@ -938,8 +938,8 @@
   {
     "Id": "42",
     "Images": {
-      "Image1": "Rousseau206625-220boekenkast20bibliothC3A8que20Space201.jpg",
-      "Image2": "Rousseau206625-220boekenkast20bibliothC3A8que20Space207.jpg"
+      "Image1": "./src/assets/Rousseau206625-220boekenkast20bibliothC3A8que20Space201.jpg",
+      "Image2": "./src/assets/Rousseau206625-220boekenkast20bibliothC3A8que20Space207.jpg"
     },
     "Measurement": {
       "Length": "55cm",
@@ -961,7 +961,7 @@
   {
     "Id": "43",
     "Images": {
-      "Image1": "MTL12.jpg"
+      "Image1": "./src/assets/MTL12.jpg"
     },
     "Measurement": {
       "Length": "120cm",
@@ -984,7 +984,7 @@
   {
     "Id": "44",
     "Images": {
-      "Image1": "Screenshot_4.png"
+      "Image1": "./src/assets/Screenshot_4.png"
     },
     "Measurement": {
       "Length": "94cm",
@@ -1005,8 +1005,8 @@
   {
     "Id": "45",
     "Images": {
-      "Image1": "Rousseau20126520Bureau20Malino201-768x512.jpg",
-      "Image2": "Rousseau20126520Bureau20Malino202.jpg"
+      "Image1": "./src/assets/Rousseau20126520Bureau20Malino201-768x512.jpg",
+      "Image2": "./src/assets/Rousseau20126520Bureau20Malino202.jpg"
     },
     "Measurement": {
       "Length": "120cm",
@@ -1027,8 +1027,8 @@
   {
     "Id": "46",
     "Images": {
-      "Image1": "Rousseau201280-120Bureau20Mateo201.jpg",
-      "Image2": "Rousseau201280-120Bureau20Mateo208.jpg"
+      "Image1": "./src/assets/Rousseau201280-120Bureau20Mateo201.jpg",
+      "Image2": "./src/assets/Rousseau201280-120Bureau20Mateo208.jpg"
     },
     "Measurement": {
       "Length": "120,7cm",
@@ -1054,7 +1054,7 @@
   {
     "Id": "47",
     "Images": {
-      "Image1": "Cindy2-B18-487-scaled.jpg"
+      "Image1": "./src/assets/Cindy2-B18-487-scaled.jpg"
     },
     "Measurement": {
       "Length": "48cm",
@@ -1076,8 +1076,8 @@
   {
     "Id": "48",
     "Images": {
-      "Image1": "STF-6753-scaled-1.jpg",
-      "Image2": "madsion.png"
+      "Image1": "./src/assets/STF-6753-scaled-1.jpg",
+      "Image2": "./src/assets/madsion.png"
     },
     "Measurement": {
       "Length": "80cm",
@@ -1098,8 +1098,8 @@
   {
     "Id": "49",
     "Images": {
-      "Image1": "12460_1-scaled.jpg",
-      "Image2": "Anthony-blackbrass.png"
+      "Image1": "./src/assets/12460_1-scaled.jpg",
+      "Image2": "./src/assets/Anthony-blackbrass.png"
     },
     "Measurement": {
       "Length": "110cm",
@@ -1123,8 +1123,8 @@
   {
     "Id": "50",
     "Images": {
-      "Image1": "Rousseau203925-120console20Ace201.jpg",
-      "Image2": "Rousseau203925-120console20Ace207.jpg"
+      "Image1": "./src/assets/Rousseau203925-120console20Ace201.jpg",
+      "Image2": "./src/assets/Rousseau203925-120console20Ace207.jpg"
     },
     "Measurement": {
       "Length": "100cm",
@@ -1147,8 +1147,8 @@
   {
     "Id": "51",
     "Images": {
-      "Image1": "S4541_WHITE_CHENILLE-4-800x800.jpg",
-      "Image2": "S4541_WHITE_CHENILLE-5-800x800.jpg"
+      "Image1": "./src/assets/S4541_WHITE_CHENILLE-4-800x800.jpg",
+      "Image2": "./src/assets/S4541_WHITE_CHENILLE-5-800x800.jpg"
     },
     "Measurement": {
       "Length": "64cm",
@@ -1170,8 +1170,8 @@
   {
     "Id": "52",
     "Images": {
-      "Image1": "S4508_WHITE_BOUCLE-1.jpg",
-      "Image2": "S4508_WHITE_BOUCLE-6.jpg"
+      "Image1": "./src/assets/S4508_WHITE_BOUCLE-1.jpg",
+      "Image2": "./src/assets/S4508_WHITE_BOUCLE-6.jpg"
     },
     "Measurement": {
       "Length": "49cm",
@@ -1192,8 +1192,8 @@
   {
     "Id": "53",
     "Images": {
-      "Image1": "323-scaled.jpg",
-      "Image2": "BONO-bruin-voor-510x671__.jpeg"
+      "Image1": "./src/assets/323-scaled.jpg",
+      "Image2": "./src/assets/BONO-bruin-voor-510x671__.jpeg"
     },
     "Measurement": {
       "Length": "",
@@ -1220,8 +1220,8 @@
   {
     "Id": "54",
     "Images": {
-      "Image1": "Screenshot_9-3.png",
-      "Image2": "Office-Desk-Joe-–-3-kleuren.jpg"
+      "Image1": "./src/assets/Screenshot_9-3.png",
+      "Image2": "./src/assets/Office-Desk-Joe-–-3-kleuren.jpg"
     },
     "Measurement": {
       "Length": "100cm",
@@ -1247,8 +1247,8 @@
   {
     "Id": "55",
     "Images": {
-      "Image1": "Screenshot_1-8.png",
-      "Image2": "Screenshot_6-3.png"
+      "Image1": "./src/assets/Screenshot_1-8.png",
+      "Image2": "./src/assets/Screenshot_6-3.png"
     },
     "Measurement": {
       "Length": "130cm",
@@ -1269,8 +1269,8 @@
   {
     "Id": "56",
     "Images": {
-      "Image1": "5fd8da8e-2781-4df6-af30-882830df489c.jpg",
-      "Image2": "627d7467-d97e-4713-ada0-82a38831d6d6.jpg"
+      "Image1": "./src/assets/5fd8da8e-2781-4df6-af30-882830df489c.jpg",
+      "Image2": "./src/assets/627d7467-d97e-4713-ada0-82a38831d6d6.jpg"
     },
     "Measurement": {
       "Length": "120cm",
@@ -1295,8 +1295,8 @@
   {
     "Id": "57",
     "Images": {
-      "Image1": "WA-0023-2.jpg",
-      "Image2": "WA-0023-6-800x800.jpg"
+      "Image1": "./src/assets/WA-0023-2.jpg",
+      "Image2": "./src/assets/WA-0023-6-800x800.jpg"
     },
     "Measurement": {
       "Length": "96,5cm",

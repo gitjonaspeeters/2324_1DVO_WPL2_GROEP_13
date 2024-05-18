@@ -3,28 +3,15 @@
     <div id="container-upper">
       <div id="container-left-upper">
         <p>Home/Categorieen/zetels/</p>
-        <Carousel class="horizontal-carousel">
-          <Slide v-for="item in product.images" :key="item">
-            <img :src="item" alt="een foto">
-          </Slide>
-          <template #addons>
-            <Navigation button-type="button" class="custom-nav-button">
-              <template #prev>
-                <div class="prev-btn">
-                  <img src="/src/assets/leftbtn.png" alt="arrow-left" id="backbtn">
-                </div>
-              </template>
-              <template #next>
-                <div class="next-btn">
-                  <img src="/src/assets/rightbtn.png" alt="arrow-right" id="nextbtn">
-                </div>
-              </template>
-            </Navigation>
-          </template>
-        </Carousel>
+        <div class="fotorama">
+          <div v-for="(image, index) in product.Images" :key="index">
+            <img :src="image" alt="Product image">
+          </div>
+        </div>
       </div>
       <div id="container-right-upper">
         <h1>{{ product.name }}</h1>
+        <p>ID: {{ currentProductIndex }}</p>
         <p id="text-kleur">kleuren:</p>
         <div id="kleuren">
           <div v-for="(color, index) in product.Color" :key="index" :style="{ 'background-color': color }"></div>
@@ -120,7 +107,7 @@
             <div>
               <template v-for="star in 5">
                 <i v-if="star <= averageRatings.zitgemak" class="fa-regular fa-star fa-rotate-180"
-                   style="color: #F2B66D;"></i>
+                  style="color: #F2B66D;"></i>
                 <i v-else class="fa-regular fa-star fa-rotate-180" style="color: #FFFFFF;"></i>
               </template>
             </div>
@@ -131,7 +118,7 @@
             <div>
               <template v-for="star in 5">
                 <i v-if="star <= averageRatings.liggemak" class="fa-regular fa-star fa-rotate-180"
-                   style="color: #F2B66D;"></i>
+                  style="color: #F2B66D;"></i>
                 <i v-else class="fa-regular fa-star fa-rotate-180" style="color: #FFFFFF;"></i>
               </template>
             </div>
@@ -142,7 +129,7 @@
             <div>
               <template v-for="star in 5">
                 <i v-if="star <= averageRatings.kwaliteit" class="fa-regular fa-star fa-rotate-180"
-                   style="color: #F2B66D;"></i>
+                  style="color: #F2B66D;"></i>
                 <i v-else class="fa-regular fa-star fa-rotate-180" style="color: #FFFFFF;"></i>
               </template>
             </div>
@@ -153,7 +140,7 @@
             <div>
               <template v-for="star in 5">
                 <i v-if="star <= averageRatings.montage" class="fa-regular fa-star fa-rotate-180"
-                   style="color: #F2B66D;"></i>
+                  style="color: #F2B66D;"></i>
                 <i v-else class="fa-regular fa-star fa-rotate-180" style="color: #FFFFFF;"></i>
               </template>
             </div>
@@ -164,7 +151,7 @@
             <div>
               <template v-for="star in 5">
                 <i v-if="star <= averageRatings.trendy" class="fa-regular fa-star fa-rotate-180"
-                   style="color: #F2B66D;"></i>
+                  style="color: #F2B66D;"></i>
                 <i v-else class="fa-regular fa-star fa-rotate-180" style="color: #FFFFFF;"></i>
               </template>
             </div>
@@ -176,7 +163,7 @@
         <div v-for="(review, index) in filteredReviews" :key="index" class="review">
           <div class="icons">
             <i v-for="star in review.stars" :key="star" class="fa-solid fa-star fa-rotate-180"
-               style="color: #F2B66D;"></i>
+              style="color: #F2B66D;"></i>
           </div>
           <h2>{{ review.title }}</h2>
           <p>{{ review.review_text }}</p>
@@ -188,20 +175,28 @@
 <script>
 import reviewsData from '@/data/reviews.json';
 import productsData from '@/product.json';
-import {Carousel, Slide, Navigation} from 'vue3-carousel'
+import { Carousel, Slide, Navigation } from 'vue3-carousel'
+import 'fotorama/fotorama.css';
+import 'jquery'
 
 export default {
   name: 'DetailView',
   components:
-      {
-        Carousel,
-        Slide,
-        Navigation,
-      },
+  {
+    Carousel,
+    Slide,
+    Navigation,
+  },
+  props: {
+    currentProductIndex: {
+      type: [Number,String],
+      required: true,
+    },
+  },
   data() {
     return {
       productsData: productsData,
-      currentProductIndex: 2,
+      currentProductIndex: this.$route.params.currentProductIndex,
       quantity: 1,
       items: [
         "src/assets/Banner1.png",
@@ -218,10 +213,12 @@ export default {
     }
   },
   mounted() {
-    this.slideWidth = this.$refs.carouselItems[0].offsetWidth;
+
+
   },
   computed: {
     product() {
+      console.log("id", this.currentProductIndex)
       return this.productsData[this.currentProductIndex];
     },
     filteredReviews() {
@@ -287,10 +284,22 @@ export default {
     },
   },
   created() {
+    console.log("currentProductIndex:", this.currentProductIndex);
+    // Haal de currentProductIndex op uit de route parameters
     this.averageStars = this.calculateAverageStars;
     this.totalReviews = this.calculateTotalReviews;
     this.averageRatings = this.calculateAverageRatings;
   },
+  watch: {
+  '$route.params.currentProductIndex'(newIndex) {
+    console.log("Route param changed:", newIndex);
+    this.currentProductIndex = newIndex;
+    this.averageStars = this.calculateAverageStars;
+    this.totalReviews = this.calculateTotalReviews;
+    this.averageRatings = this.calculateAverageRatings;
+  },
+},
+  
 };
 </script>
 
@@ -300,6 +309,7 @@ export default {
 @mixin carousel-button() {
   position: absolute;
   font-size: 5rem;
+
   div {
     width: 4rem;
     height: 4rem;
@@ -350,12 +360,14 @@ $with-buttons: calc(100% / 4);
     #flex {
       display: flex;
       width: 100%;
+
       margin: {
         bottom: 1rem;
       }
 
       #price {
         margin-right: 1rem;
+
         font: {
           weight: 600;
           size: 1.5rem;
@@ -459,6 +471,7 @@ $with-buttons: calc(100% / 4);
 #container-bottem {
   display: flex;
   flex-direction: row;
+
   margin: {
     bottom: 1rem;
     right: 2rem;
@@ -469,6 +482,7 @@ $with-buttons: calc(100% / 4);
     display: flex;
     flex-direction: column;
     width: 50vw;
+
     margin: {
       left: 2rem;
     }
@@ -480,6 +494,7 @@ $with-buttons: calc(100% / 4);
     #review {
       display: flex;
       flex-direction: column;
+
       margin: {
         top: 2rem;
         bottom: 1rem;
@@ -490,6 +505,7 @@ $with-buttons: calc(100% / 4);
         flex-direction: row;
         height: 2rem;
         align-items: center;
+
         margin: {
           bottom: 1rem;
         }
@@ -500,6 +516,7 @@ $with-buttons: calc(100% / 4);
           background: #FFD43B;
           z-index: 1;
           border-radius: 15px;
+
           margin: {
             left: 1rem;
             right: 0.25rem;
@@ -529,6 +546,7 @@ $with-buttons: calc(100% / 4);
 
       .part {
         display: flex;
+
         margin: {
           left: 15%;
           top: 1rem;
@@ -542,6 +560,7 @@ $with-buttons: calc(100% / 4);
           font: {
             size: 26px;
           }
+
           margin: {
             right: 3rem;
           }
@@ -563,6 +582,7 @@ $with-buttons: calc(100% / 4);
     display: flex;
     flex-direction: column;
     width: 50vw;
+
     margin: {
       right: 2rem;
       bottom: 5rem;
@@ -572,7 +592,9 @@ $with-buttons: calc(100% / 4);
       font: {
         weight: bold;
         size: 1.5rem;
-      };
+      }
+
+      ;
     }
 
     .review {
@@ -583,7 +605,4 @@ $with-buttons: calc(100% / 4);
       font-size: 1.5rem;
     }
   }
-}
-
-
-</style>
+}</style>

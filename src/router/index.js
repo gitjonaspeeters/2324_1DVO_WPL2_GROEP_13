@@ -65,7 +65,7 @@ const router = createRouter({
             component: CartView,
         },
         {
-            path: "/product",
+            path: "/product/:currentProductIndex",
             name: "product",
             component: DetailView,
 
@@ -84,6 +84,13 @@ const router = createRouter({
             path: "/products",
             name: "products",
             component: ProductView,
+            props: true,
+        },
+        {
+            path: "/detailview",
+            name: "detailview",
+            component: DetailView,
+            props: true,
         }
     ],
 });
