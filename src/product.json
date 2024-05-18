@@ -152,7 +152,7 @@
   {
     "Id": "8",
     "Images": {
-      "Image1": "./src/assets/Rousseau2089519-420Bed20Roma201.jpg",
+      "Image1": "./src/assets/Rousseau2089514-220Bed20lit20Roma200.jpg",
       "Image2": "./src/assets/Rousseau2089514-220Bed20Lit20Roma206.jpg"
     },
     "Name": "Bed Roma",
@@ -198,7 +198,7 @@
   {
     "Id": "10",
     "Images": {
-      "Image1": "./src/assets/Group16.jpg"
+      "Image1": "./src/assets/Group16.png"
     },
     "Name": "Hoekzetel Lima",
     "Price": {
@@ -217,8 +217,8 @@
   {
     "Id": "11",
     "Images": {
-      "Image1": "./src/assets/STF-3306-1-1.jpg",
-      "Image2": "./src/assets/STF-3306-5.jpg"
+      "Image1": "./src/assets/STF-3306-1-1.png",
+      "Image2": "./src/assets/STF-3306-5.png"
     },
     "Name": "Vakkenkast Brussel Sand XL",
     "Measurement": {
@@ -312,7 +312,7 @@
   {
     "Id": "15",
     "Images": {
-      "Image1": "./src/assets/Hoeksalongrey.jpg"
+      "Image1": "./src/assets/Hoeksalongrey.png"
     },
     "Name": "Hoeksalon Grey",
     "Measurement": {
@@ -486,8 +486,8 @@
   {
     "Id": "23",
     "Images": {
-      "Image1": "./src/assets/1-2.jpg",
-      "Image2": "./src/assets/2-2.jpg"
+      "Image1": "./src/assets/1-2.png",
+      "Image2": "./src/assets/2-2.png"
     },
     "Measurement": {
       "Length": "56cm",
@@ -513,8 +513,8 @@
   {
     "Id": "24",
     "Images": {
-      "Image1": "./src/assets/1-2.jpg",
-      "Image2": "./src/assets/2-2.jpg"
+      "Image1": "./src/assets/WA-0011-1.jpg",
+      "Image2": "./src/assets/WA-0011-6.jpg"
     },
     "Measurement": {
       "Length": "158cm",
@@ -673,7 +673,7 @@
   {
     "Id": "31",
     "Images": {
-      "Image1": "./src/assets/55-10.jpg"
+      "Image1": "./src/assets/55-10.png"
     },
     "Measurement": {
       "Length": "121cm",
