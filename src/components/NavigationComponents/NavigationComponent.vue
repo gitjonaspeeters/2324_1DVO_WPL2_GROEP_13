@@ -59,7 +59,7 @@
                 </div>
                 <div id="navigation-right-sextion">
                     <a @click="toggleCartPopup">
-                        <i class="fa-solid fa-cart-shopping"></i>
+                        <i class="fa-solid fa-cart-shopping">({{ cartItems.length }})</i>
                     </a>
                 </div>
             </div>
@@ -159,7 +159,7 @@ export default {
             navbarMarginTop: '0',
             cartPopupVisible: false,
             cartItems: [],
-            totalPrice: 0
+            
         };
     },
     methods: {
@@ -272,7 +272,13 @@ export default {
         return (navItemURL) => {
             return navItemURL === this.currentPage;
         };
-    }
+    },
+    totalPrice() {
+            //item price low looks like this "€ 1.000,00" so we need to remove the € and the , and . and remove 00 from the back convert it to a number
+            return this.cartItems.reduce((acc, item) => acc + Number(item.Price.Low.replace(/€|\.|,|00/g, '')), 0);
+            
+
+        },
     },
     components: { router }
 }

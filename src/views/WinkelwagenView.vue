@@ -7,19 +7,14 @@
 
                     <div class="item row" v-for="(item, index) in cartItems" :key="index">
                         <div class="col-4 ">
-                            <img :src="item.imageUrl" :alt="item.productTitle">
+                            <img class="product-image1" :src="item.Images.Image1" :alt="item.productTitle">
                         </div>
                         <div class="product-text col-7">
-                            <p class="product-title">{{ item.productTitle }}</p>
-                            <p class="price"><strong>{{ item.productPrice }}</strong> </p>
+                            <p class="product-title">{{ item.Name }}</p>
+                            <p class="price"><strong>{{ item.Price.Low }}</strong> </p>
                             <div class="quantity">
                                 <div class="quantitydelete-container">
-                                    <div class="quantity">
-                                        <button @click="decrementQuantity(index)">-</button>
-                                        <p class="quantity-number">{{ item.quantity }}</p>
-                                        <button @click="incrementQuantity(index)">+</button>
-                                    </div>
-                                    <i class="trash fa-solid fa-trash" @click="removeFromCart(index)"></i>
+                                    <i class="trash fa-solid fa-trash" @click="removeItem(item.Id)"></i>
                                 </div>
                             </div>
                         </div>
@@ -28,7 +23,7 @@
                 </div>
                 <div class="afrekenen col-3">
                     <div class="afrekenen-content">
-                        <p class="total">Totaalprijs: <strong>{{ totalPrice }}</strong></p>
+                        <p class="total">Totaalprijs: <strong>€ {{ totalPrice }}</strong></p>
                         <!-- Voeg hier de verzendkosten en BTW toe als dat nodig is -->
                         <input type="text" placeholder="Kortingscode" v-model="discountCode" class="discount-code">
                         <button @click="applyDiscount" class="apply-discount">Toepassen</button>
@@ -57,9 +52,7 @@
             <div id="best-products">
                 <div class="best-product" v-for="(product, index) in products" :key="index">
                     <div class="product-image" :style="{ backgroundImage: 'url(' + product.imageUrl + ')' }">
-                        <div class="product-like">
-                            <a href="#" @click="toggleLike(index)"><i :class="['fa', handleIconClass(product)]"></i></a>
-                        </div>
+
                     </div>
                     <div class="product-content">
                         <div class="product-content-left">
@@ -82,6 +75,7 @@
 </template>
 
 <script>
+import axios from 'axios';
 
 
 export default {
@@ -92,42 +86,68 @@ export default {
     data() {
         return {
             discountCode: '',
-            cartItems: JSON.parse(localStorage.getItem('cartItems')) || [],
-            quantity1: 1,
-            quantity2: 1,
-            quantity3: 1,
+            cartItems: [],
             products: [
                 { imageUrl: "/assets/TiffanySlaapkamer.png", productTitle: "Tiffany", productCategorie: "Slaapkamer", productPrice: "€879,00" },
                 { imageUrl: "/assets/AndiceKaiWoonkamer.png", productTitle: "Andice Kai", productCategorie: "Woonkamer", productPrice: "€1.189,00" },
                 { imageUrl: "/assets/LuncieBoucleStoel.png", productTitle: "Lucie Bouclé", productCategorie: "Stoelen", productPrice: "€99,00" },
-                
+
             ]
         };
 
     }
-    ,computed: {
+    , computed: {
         totalPrice() {
-            return this.cartItems.reduce((total, item) => total + (parseFloat(item.productPrice) * item.quantity), 0).toFixed(2);
-        },
-        decrementQuantity(index) {
-            if (this.cartItems[index].quantity > 1) {
-                this.cartItems[index].quantity--;
-                this.saveToLocalStorage();
-            }
-        },
-        incrementQuantity(index) {
-            this.cartItems[index].quantity++;
-            this.saveToLocalStorage();
+            //item price low looks like this "€ 1.000,00" so we need to remove the € and the , and . and remove 00 from the back convert it to a number
+            return this.cartItems.reduce((acc, item) => acc + Number(item.Price.Low.replace(/€|\.|,|00/g, '')), 0);
+            
+
         },
         removeFromCart(index) {
             this.cartItems.splice(index, 1);
             this.saveToLocalStorage();
-        },
-        saveToLocalStorage() {
-            localStorage.setItem('cartItems', JSON.stringify(this.cartItems));
-        },
-    },
-    methods: {
+        }},
+
+
+        methods: {
+            fetchProducts() {
+                axios.get('/src/product.json')
+                    .then(response => {
+                        //if the id of the cartItem is in allProducts then add it to cartItems
+                        const cartItemsLocal = localStorage.getItem('cartItems') ? JSON.parse(localStorage.getItem('cartItems')) : [];
+                        const allProducts = response.data;
+                        for (let i = 0; i < cartItemsLocal.length; i++) {
+                            for (let j = 0; j < allProducts.length; j++) {
+                                if (cartItemsLocal[i] === allProducts[j].Id) {
+                                    console.log('Juist: ', cartItemsLocal[i], " = ", allProducts[i]);
+                                    this.cartItems.push(allProducts[j]);
+                                }
+                            }
+                        }
+
+                    })
+                    .catch(error => {
+                        console.error('Error fetching products:', error);
+                    });
+            },
+            removeItem(id) {
+                // Haal items uit localStorage
+                const cartItemsLocal = localStorage.getItem('cartItems') ? JSON.parse(localStorage.getItem('cartItems')) : [];
+                // Zoek en verwijder het item met de gegeven id
+                for (let i = 0; i < cartItemsLocal.length; i++) {
+                    if (cartItemsLocal[i] === id) {
+                        cartItemsLocal.splice(i, 1);
+                        break;
+                    }
+                }
+                // Update localStorage met de nieuwe lijst
+                localStorage.setItem('cartItems', JSON.stringify(cartItemsLocal));
+                // Werk de cartItems in de state bij
+                this.cartItems = this.cartItems.filter(item => item.Id !== id);
+                // Bereken opnieuw de totale prijs
+            },
+            
+        
         toggleLike(index) {
             event.preventDefault();
             this.products[index].liked = !this.products[index].liked;
@@ -135,24 +155,26 @@ export default {
         handleIconClass(product) {
             return product.liked ? 'fa-solid fa-heart' : 'fa-regular fa-heart';
         },
+    },
+    mounted() {
+        this.fetchProducts();
+        console.log("this.cartItems", this.cartItems)
     }
 }
 </script>
 
 <style scoped>
+/* Base Styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
-
 }
 
 .betaal-mogelijkheden {
     display: flex;
     gap: 1rem;
     margin-top: 1rem;
-    
 }
 
 .betaal-mogelijkheden i {
@@ -160,45 +182,37 @@ export default {
     color: #485059;
 }
 
-/* cart */
+/* Cart */
 .cart {
-    padding-top: 10rem;
-    padding-left: 6rem;
-    padding-bottom: 4rem;
+    padding: 10rem 6rem 4rem 6rem;
     color: #485059;
     font-family: Georgia, sans-serif;
     background-color: #D9CAC5;
-
-
 }
 
 .cart h1 {
     font-size: 3rem;
     margin-bottom: 2rem;
-
 }
 
 .cart-content {
-
     position: relative;
 }
 
 .item {
-    padding-bottom: 6px;
-    background-color: #E8DFDC !important;
     padding: 1rem;
+    background-color: #E8DFDC;
     margin-bottom: 1rem;
     border-radius: 1rem;
 }
 
-.cart .product-title {
-    font-size: 2rem;
-
-
+.product-image1 {
+    max-width: 90%;
 }
 
-
-
+.cart .product-title {
+    font-size: 2rem;
+}
 
 .quantity {
     display: flex;
@@ -206,18 +220,15 @@ export default {
 }
 
 .quantity input {
-    width: 0px;
+    width: 40px;
     text-align: center;
     border: 1px solid #ccc;
     border-radius: 5px;
     margin: 0 2px;
-
 }
 
 .quantity button {
-    padding-left: 5px;
-    padding-right: 5px;
-    padding-top: -2px;
+    padding: 5px;
     border: none;
     background-color: #F2B66D;
     color: #4C4C4C;
@@ -255,8 +266,7 @@ export default {
 }
 
 .price {
-    margin-top: 3px;
-    margin-bottom: 3px;
+    margin: 3px 0;
     font-size: 1.5rem;
 }
 
@@ -279,12 +289,12 @@ export default {
 
 .afrekenen-content {
     width: 100%;
-    
     justify-content: space-between;
 }
 
-
-.total, .shipping, .vat {
+.total,
+.shipping,
+.vat {
     display: flex;
     justify-content: space-between;
 }
@@ -297,7 +307,8 @@ export default {
     font-size: 1rem;
 }
 
-.apply-discount, .checkout {
+.apply-discount,
+.checkout {
     background-color: #485059;
     color: white;
     padding: 0.5rem 1rem;
@@ -309,12 +320,12 @@ export default {
     margin-right: 1rem;
 }
 
-.apply-discount:hover, .checkout:hover {
+.apply-discount:hover,
+.checkout:hover {
     background-color: #333;
 }
 
-
-/* likely products */
+/* Likely products */
 #best-container {
     background-color: #E8DFDC;
     padding: 5rem 0;
@@ -350,8 +361,6 @@ export default {
     margin-right: 1rem;
 }
 
-
-
 .product-image {
     width: 100%;
     height: 0;
@@ -369,7 +378,6 @@ export default {
     background-color: #485059;
     padding: 0.3rem 0.5rem;
     border-radius: 5px;
-
 }
 
 .product-like a {
@@ -404,7 +412,6 @@ export default {
     margin-left: 0.5rem;
 }
 
-/* product right */
 .product-content-right {
     display: flex;
     align-items: center;
@@ -421,4 +428,74 @@ export default {
     font-size: 1.5rem;
     padding: 0 0.30rem 0 0.5rem;
 }
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    .cart {
+        padding: 5rem 2rem 2rem 2rem;
+    }
+
+    .col-4, .col-7 {
+        width: 100% !important;
+    }
+
+    .afrekenen {
+        margin: 2rem 0 0 0;
+    }
+
+    .product-image1 {
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .cart {
+        padding: 3rem 1rem 1rem 1rem;
+    }
+
+    .afrekenen {
+        margin: 2rem 0 0 0;
+        padding: 1rem;
+        max-height: none;
+        width: 100% !important;
+    }
+
+    .product-title {
+        font-size: 1.5rem;
+    }
+
+    .price {
+        font-size: 1.2rem;
+    }
+
+    .total,
+    .shipping,
+    .vat {
+        font-size: 1.2rem;
+    }
+
+    .apply-discount,
+    .checkout {
+        font-size: 1rem;
+        padding: 0.4rem 0.8rem;
+    }
+
+    #best-products {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .best-product {
+        width: 90%;
+        margin-bottom: 1rem;
+    }
+
+    .product-content-left p,
+    .product-content-left h1,
+    .product-content-left h2 {
+        margin-left: 0;
+    }
+}
+
+
 </style>
