@@ -273,7 +273,7 @@
     }
   
     .bedroom {
-      
+      background-image: url("@/assets/Bedden VD.png");
       width: 750px;
       height: 750px;
       margin: 15px;

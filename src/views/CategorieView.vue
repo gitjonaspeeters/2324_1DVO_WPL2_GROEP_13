@@ -87,7 +87,7 @@ a {
 }
 
 .home-accessories {
-  background-image: url("src/assets/homeaccessoriesCategorie.png");
+  background-image: url("@/assets/homeaccessoriesCategorie.png");
    
   width: 1300px;
   height: 316px;
@@ -123,7 +123,7 @@ a {
 .sofa {
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url("src/assets/salon-kilimanjaro.jpg");
+  background-image: url("@/assets/salon-kilimanjaro.jpg");
    
   width: 755px;
   height: 656px;
@@ -144,7 +144,7 @@ a {
 .bed {
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url("src/assets/Rectangle 295.png");
+  background-image: url("@/assets/Rectangle 295.png");
   width: 513px;
   height: 656px;
   margin: 15px;
@@ -165,7 +165,7 @@ a {
 .Chair {
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url("src/assets/stoelen.png");
+  background-image: url("@/assets/stoelen.png");
   width: 584px;
   height: 316px;
   margin: 15px 5px 5px 5px;
@@ -186,7 +186,7 @@ a {
 .desk {
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url("src/assets/BureaImageRuimtes.png");
+  background-image: url("@/assets/BureaImageRuimtes.png");
   width: 584px;
   height: 316px;
   margin: 15px 5px 5px 5px;
@@ -220,7 +220,7 @@ image {
 .closet {
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url("src/assets/Kasten.png");
+  background-image: url("@/assets/Kasten.png");
   width: 682px;
   height: 656px;
   margin: 15px;
@@ -499,7 +499,7 @@ image {
   }
 
   .bed {
-    background-image: url("src/assets/bedden VD.png");
+    background-image: url("@/assets/bedden VD.png");
     width: 360px;
     height: 360px;
     margin: 25px 15px 25px 15px;
