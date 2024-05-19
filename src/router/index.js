@@ -75,7 +75,6 @@ const router = createRouter({
             path: "/product/:currentProductIndex",
             name: "product",
             component: DetailView,
-
         },
         {
             path: "/wishlist",

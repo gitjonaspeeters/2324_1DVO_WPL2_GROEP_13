@@ -1,59 +1,34 @@
 <template>
-    <div id="navigation-container">
-        <nav>
-            <div id="navigation-left">
-                <router-link to="/"><img src="@/assets/Comfortmeubel wit.svg"></router-link>
-            </div>
-            <div id="navigation-main" :style="{ 'margin-top': navbarMarginTop }">
-                <div class="navigation-main-section">
-                    <router-link to="/categorie">
-                        <i class="fa-solid fa-book"></i>
-                        <p>Categorieën</p>
-                    </router-link>
-                </div>
-                <div class="navigation-main-section">
-                    <router-link to="/ruimtes">
-                        <i class="fa-solid fa-house"></i>
-                        <p>Ruimtes</p>
-
-
   <div id="navigation-container">
     <nav>
       <div id="navigation-left">
-        <router-link @click.native="scrollToTop" to="/"><img src="@/assets/Comfortmeubel wit.svg"></router-link>
+        <router-link to="/"><img src="@/assets/Comfortmeubel wit.svg"></router-link>
       </div>
       <div id="navigation-main" :style="{ 'margin-top': navbarMarginTop }">
         <div class="navigation-main-section">
-          <router-link @click.native="scrollToTop" to="/categorie">
+          <router-link to="/categorie">
             <i class="fa-solid fa-book"></i>
-
             <p>Categorieën</p>
-
           </router-link>
         </div>
         <div class="navigation-main-section">
-          <router-link @click.native="scrollToTop" to="/ruimtes">
+          <router-link to="/ruimtes">
             <i class="fa-solid fa-house"></i>
             <p>Ruimtes</p>
 
-
-                    </router-link>
-
-
-                </div>
-                <div class="navigation-main-section">
-
-
-        </div>
-        <div class="navigation-main-section">
-          <router-link @click.native="scrollToTop" to="#">
-            <i class="fa-solid fa-layer-group"></i>
-            <p>Alle items</p>
           </router-link>
 
         </div>
         <div class="navigation-main-section">
-          <router-link @click.native="scrollToTop" to="/about">
+
+          <router-link to="/products">
+
+            <i class="fa-solid fa-layer-group"></i>
+            <p>Alle items</p>
+          </router-link>
+        </div>
+        <div class="navigation-main-section">
+          <router-link to="/about">
             <i class="fa-solid fa-users"></i>
             <p>Over Ons</p>
           </router-link>
@@ -66,51 +41,25 @@
       </div>
       <div id="navigation-right">
         <div class="navigation-right-sextion">
-          <router-link @click.native="scrollToTop" v-if="!isLoggedIn" to="/login">
+          <router-link v-if="!isLoggedIn" to="/login">
             <button class="login">Login</button>
           </router-link>
         </div>
 
-                    <router-link to="/products">
-
-
-                        <i class="fa-solid fa-layer-group"></i>
-                        <p>Alle items</p>
-                    </router-link>
-                </div>
-                <div class="navigation-main-section">
-                    <router-link to="/about">
-                        <i class="fa-solid fa-users"></i>
-                        <p>Over Ons</p>
-                    </router-link>
-                </div>
-                <div class="navigation-main-search">
-                    <a @click="toggleSearch">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                    </a>
-                </div>
-            </div>
-            <div id="navigation-right">
-                <div class="navigation-right-sextion">
-                    <router-link v-if="!isLoggedIn" to="/login">
-                        <button class="login">Login</button>
-                    </router-link>
-                </div>
-
 
         <div v-if="isLoggedIn" class="navigation-right-sextion">
-          <router-link @click.native="scrollToTop" to="/account">
+          <router-link to="/account">
             <i class="fa-solid fa-user"></i>
           </router-link>
         </div>
         <div class="navigation-right-sextion">
-          <router-link @click.native="scrollToTop" to="/wishlist">
+          <router-link to="/wishlist">
             <i class="fa-solid fa-heart"></i>
           </router-link>
         </div>
         <div id="navigation-right-sextion">
           <a @click="toggleCartPopup">
-            <i class="fa-solid fa-cart-shopping"></i>
+            <i class="fa-solid fa-cart-shopping">({{ cartItems.length }})</i>
           </a>
         </div>
       </div>
@@ -129,144 +78,63 @@
   <!-- Cart Popup -->
   <div id="cart-popup" v-if="cartPopupVisible">
     <div class="cart-content">
-
       <h4>Winkelwagen</h4>
-
       <div class="container">
-
-        <div class="row">
+        <div class="row" v-for="(item, index) in cartItems" :key="index">
           <div class="col-4">
-            <img src="@/assets/image 2.png" alt="product">
+            <img :src="item.Images.Image1" alt="product">
           </div>
           <div class="product-text col-7">
-            <p>Slaapkamer Ivette</p>
-            <p class="price"><strong>€2.534,00</strong></p>
+            <p>{{ item.Name }}</p>
+            <p class="price"><strong>{{ item.Price.Low }}</strong></p>
             <div class="quantity">
               <div class="quantitydelete-container">
                 <div class="quantity">
-                  <button @click="decrement1">-</button>
-                  <p class="quantity-number">{{ quantity1 }}</p>
-                  <button @click="increment1">+</button>
-
-
-                <div v-if="isLoggedIn" class="navigation-right-sextion">
-                    <router-link to="/account">
-                        <i class="fa-solid fa-user"></i>
-                    </router-link>
+                  <button @click="decrement(index)">-</button>
+                  <p class="quantity-number">{{ item.quantity }}</p>
+                  <button @click="increment(index)">+</button>
                 </div>
-                <div class="navigation-right-sextion">
-                    <router-link to="/wishlist">
-                        <i class="fa-solid fa-heart"></i>
-                    </router-link>
-                </div>
-                <div id="navigation-right-sextion">
-                    <a @click="toggleCartPopup">
-                        <i class="fa-solid fa-cart-shopping">({{ cartItems.length }})</i>
-                    </a>
-                </div>
+                <i class="trash fa-solid fa-trash" @click="removeItem(item.Id)"></i>
+              </div>
             </div>
-        </nav>
-    </div>
-    <!-- searchbar -->
-    <div id="search-container" v-if="searchVisible">
-        <div id="search">
-            <div id="search-inhoud">
-                <i class="fa-solid fa-magnifying-glass"></i>
-                <input type="text" placeholder="Search...">
-                <i class="fa-solid fa-chevron-up" @click="toggleSearch"></i>
-            </div>
-        </div>
-    </div>
-    <!-- Cart Popup -->
-    <div id="cart-popup" v-if="cartPopupVisible">
-        <div class="cart-content">
-            <h4>Winkelwagen</h4>
-            <div class="container">
-                <div class="row" v-for="(item, index) in cartItems" :key="index">
-                    <div class="col-4">
-                        <img :src="item.Images.Image1" alt="product">
-                    </div>
-                    <div class="product-text col-7">
-                        <p>{{ item.Name }}</p>
-                        <p class="price"><strong>{{ item.Price.Low }}</strong></p>
-                        <div class="quantity">
-                            <div class="quantitydelete-container">
-                                <div class="quantity">
-                                    <button @click="decrement(index)">-</button>
-                                    <p class="quantity-number">{{ item.quantity }}</p>
-                                    <button @click="increment(index)">+</button>
-                                </div>
-                                <i class="trash fa-solid fa-trash" @click="removeItem(item.Id)"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <p><strong>Totaal: € {{ totalPrice }}</strong></p>
-            <router-link to="/cart">
-                <button @click="hideCartPopup" type="button" class="cart-button btn btn-warning">Bekijk winkelwagen</button>
-            </router-link>
-        </div>
-    </div>
-    <!-- navigation media screen -->
-    <div id="media-navigation-container">
-
-      <div id="media-navigation-main">
-        <div class="media-navigation-main-section">
-          <router-link @click.native="scrollToTop" to="/categorie">
-            <i class="fa-solid fa-book"></i>
-            <p>Categorieen</p>
-          </router-link>
-        </div>
-        <div class="media-navigation-main-section">
-          <router-link @click.native="scrollToTop" to="/ruimtes">
-            <i class="fa-solid fa-house"></i>
-            <p>Ruimtes</p>
-          </router-link>
-        </div>
-        <div class="media-navigation-main-section">
-          <router-link @click.native="scrollToTop" to="#">
-            <i class="fa-solid fa-layer-group"></i>
-            <p>Alle items</p>
-          </router-link>
-        </div>
-        <div class="media-navigation-main-section">
-          <router-link @click.native="scrollToTop" to="/about">
-            <i class="fa-solid fa-users"></i>
-            <p>Over Ons</p>
-          </router-link>
+          </div>
         </div>
       </div>
-
-
-        <div id="media-navigation-main">
-            <div class="media-navigation-main-section">
-                <router-link to="/categorie">
-                    <i class="fa-solid fa-book"></i>
-                    <p>Categorieen</p>
-                </router-link>
-            </div>
-            <div class="media-navigation-main-section">
-                <router-link to="/ruimtes">
-                    <i class="fa-solid fa-house"></i>
-                    <p>Ruimtes</p>
-                </router-link>
-            </div>
-            <div class="media-navigation-main-section">
-                <router-link to="/products">
-                    <i class="fa-solid fa-layer-group"></i>
-                    <p>Alle items</p>
-                </router-link>
-            </div>
-            <div class="media-navigation-main-section">
-                <router-link to="/about">
-                    <i class="fa-solid fa-users"></i>
-                    <p>Over Ons</p>
-                </router-link>
-            </div>
-        </div>
-
+      <p><strong>Totaal: € {{ totalPrice }}</strong></p>
+      <router-link to="/cart">
+        <button @click="hideCartPopup" type="button" class="cart-button btn btn-warning">Bekijk winkelwagen</button>
+      </router-link>
     </div>
+  </div>
+  <!-- navigation media screen -->
+  <div id="media-navigation-container">
+    <div id="media-navigation-main">
+      <div class="media-navigation-main-section">
+        <router-link to="/categorie">
+          <i class="fa-solid fa-book"></i>
+          <p>Categorieen</p>
+        </router-link>
+      </div>
+      <div class="media-navigation-main-section">
+        <router-link to="/ruimtes">
+          <i class="fa-solid fa-house"></i>
+          <p>Ruimtes</p>
+        </router-link>
+      </div>
+      <div class="media-navigation-main-section">
+        <router-link to="/products">
+          <i class="fa-solid fa-layer-group"></i>
+          <p>Alle items</p>
+        </router-link>
+      </div>
+      <div class="media-navigation-main-section">
+        <router-link to="/about">
+          <i class="fa-solid fa-users"></i>
+          <p>Over Ons</p>
+        </router-link>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -417,7 +285,6 @@ export default {
             
 
         },
-    },
     components: { router }
 }
 </script>
@@ -764,31 +631,31 @@ nav p {
 
 /* media querys */
 @media screen and (max-width: 1382px) {
-    #navigation-main {
-        display: none;
-    }
+  #navigation-main {
+    display: none;
+  }
 
-    #media-navigation-container {
-        display: block;
-        position: fixed;
-        bottom: 0;
-        width: 100%;
-        z-index: 3;
-    }
+  #media-navigation-container {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 3;
+  }
 
-    #media-navigation-main {
-        height: 4rem;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 2.5rem 1.5rem;
-        background-color: #ffffff;
-        gap: 1rem;
-    }
+  #media-navigation-main {
+    height: 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2.5rem 1.5rem;
+    background-color: #ffffff;
+    gap: 1rem;
+  }
 
-    .media-navigation-main-section {
-        text-align: center;
-    }
+  .media-navigation-main-section {
+    text-align: center;
+  }
 
   .media-navigation-main-section a.router-link-active {
     color: #F2B66D;
@@ -799,10 +666,9 @@ nav p {
     color: #4C4C4C;
   }
 
-    }
 
-    .media-navigation-main-section i {
-        font-size: 1.5rem;
-    }
+  .media-navigation-main-section i {
+    font-size: 1.5rem;
+  }
 }
 </style>
