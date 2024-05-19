@@ -5,15 +5,22 @@
 
         <p>Home/Categorieen/zetels/</p>
 
-        <div class="fotorama">
-          <div v-for="(image, index) in product.Images" :key="index">
-            <img :src="image" alt="Product image">
-          </div>
-        </div>
+        <Carousel class="horizontal-carousel">
+          <template #slides>
+            <Slide v-for="(item, index) in product.Images" :key="index">
+              <div>
+                <img :src="item" alt="een foto">
+              </div>
+            </Slide>
+          </template>
+          <template #addons>
+            <Navigation class="buttons"/>
+          </template>
+        </Carousel>
 
       </div>
       <div id="container-right-upper">
-        <h1>{{ product.name }}</h1>
+        <h1>{{ product.Name }}</h1>
         <p>ID: {{ currentProductIndex }}</p>
 
         <p id="text-kleur">kleuren:</p>
@@ -34,7 +41,7 @@
     </div>
     <div id="mid-container">
       <h3>Misschien ben je ook geintresseerd in dit?</h3>
-      <CarouselComponent :items-to-show="3"/>
+      <carouselComponent :items-to-show="3"/>
     </div>
     <div id="container-bottem">
       <div id="container-bottem-left">
@@ -169,6 +176,7 @@
   </div>
 </template>
 <script>
+import carouselComponent from "@/components/CarouselComponent.vue";
 import reviewsData from '@/data/reviews.json';
 import productsData from '@/product.json';
 import { ref } from 'vue';
@@ -181,12 +189,11 @@ import 'jquery'
 
 export default {
   name: 'DetailView',
-  components:
-
-  {
+  components: {
     Carousel,
     Slide,
     Navigation,
+    carouselComponent,
   },
   props: {
     currentProductIndex: {
@@ -202,23 +209,12 @@ export default {
         '#000000',
         '#343434',
     ]
-    const items = ref([
-      "src/assets/Banner1.png",
-      "src/assets/Banner1.png",
-      "src/assets/Banner1.png",
-      "src/assets/Banner1.png",
-      "src/assets/Banner1.png",
-      "src/assets/Banner1.png",
-      // Add more image URLs as needed
-    ]);
-
     return {
-      items,
       colors,
       reviewsData: reviewsData,
       productsData: productsData,
 
-      currentProductIndex: this.$route.params.currentProductIndex,
+      currentProductIndex: this.$route.params.currentProductIndex - 1,
       quantity: 1,
       averageStars: 0, // Gemiddeld aantal sterren
       totalReviews: 0, // Totaal aantal beoordelingen
@@ -226,8 +222,7 @@ export default {
       qrCodePopup: false,
     };
 
-  }
-  ,
+  },
   
   mounted() {
 

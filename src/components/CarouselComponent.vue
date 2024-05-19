@@ -1,6 +1,6 @@
 <template>
   <Carousel class="horizontal-carousel">
-    <template #slides>
+    <template>
       <Slide v-for="item in items" :key="item">
         <div>
           <img class="carousel__item" :src="item" alt="een foto">
@@ -28,6 +28,10 @@
 import { defineComponent, ref } from 'vue'
 import { Carousel, Navigation, Slide } from 'vue3-carousel'
 import productsData from '@/product.json';
+import GioZetel from '@/assets/888.jpg';
+import GioZetel1 from '@/assets/Gio-zetel 1.png';
+import Banner1 from '@/assets/5fd8da8e-2781-4df6-af30-882830df489c.jpg';
+
 
 import 'vue3-carousel/dist/carousel.css'
 import reviewsData from "@/data/reviews.json";
@@ -40,16 +44,7 @@ export default defineComponent({
     Navigation,
   },
   setup() {
-    const items = ref([
-      "src/assets/Banner1.png",
-      "src/assets/Banner1.png",
-      "src/assets/Banner1.png",
-      "src/assets/Banner1.png",
-      "src/assets/Banner1.png",
-      "src/assets/Banner1.png",
-      // Add more image URLs as needed
-    ]);
-
+    const items = ref([GioZetel, GioZetel1, Banner1, Banner1, Banner1, Banner1]);
     return {
       items,
       productsData: productsData,
@@ -60,7 +55,7 @@ export default defineComponent({
 </script>
 
 <style scoped>
-carousel {
+.horizontal-carousel {
   width: 95%;
 }
 .carousel__item {
