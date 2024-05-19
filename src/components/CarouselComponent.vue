@@ -56,14 +56,6 @@ export default defineComponent({
       reviewsData: reviewsData,
     };
   },
-  mounted() {
-    if (window.innerWidth <= 1000) {
-      const prevBtn = document.querySelector('.prev-btn');
-      const nextBtn = document.querySelector('.next-btn');
-      prevBtn.disabled = true;
-      nextBtn.disabled = true;
-    }
-  },
 })
 </script>
 
@@ -79,6 +71,36 @@ carousel {
 
 .carousel__slide {
   padding: 50px;
+}
+
+@media screen and (max-width: 1000px) {
+  carousel {
+    width: 100%;
+  }
+  .carousel__item {
+    min-height: 15rem;
+    width: 15rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  carousel {
+    width: 100%;
+  }
+  .prev-btn {
+    display: none;
+  }
+  .next-btn {
+    display: none;
+  }
+  .carousel__slide {
+    background-color: #485059;
+    height: 9rem;
+  }
+  .carousel__item {
+    min-height: 8rem;
+    width: 8rem;
+  }
 }
 
 </style>
