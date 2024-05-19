@@ -124,7 +124,6 @@ a {
   background-size: cover;
   background-repeat: no-repeat;
   background-image: url("@/assets/salon-kilimanjaro.jpg");
-   
   width: 755px;
   height: 656px;
   margin: 15px 5px 5px 5px;

@@ -110,7 +110,6 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-image: url("@/assets/EetkamerImageRuimtes.png");
-    
     width: 487px;
     height: 680px;
     margin: 15px 0px 0px -12px;
