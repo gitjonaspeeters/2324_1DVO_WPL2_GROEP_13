@@ -59,7 +59,8 @@
         </div>
         <div id="navigation-right-sextion">
           <a @click="toggleCartPopup">
-            <i class="fa-solid fa-cart-shopping">({{ cartItems.length }})</i>
+            <i class="fa-solid fa-cart-shopping"></i>
+            <p class="shopping-counter">({{ cartItems.length }})</p>
           </a>
         </div>
       </div>
@@ -76,7 +77,8 @@
     </div>
   </div>
   <!-- Cart Popup -->
-  <div id="cart-popup" v-if="cartPopupVisible">
+  <div id="cart-popup-container">
+    <div id="cart-popup" v-if="cartPopupVisible">
     <div class="cart-content">
       <h4>Winkelwagen</h4>
       <div class="container">
@@ -105,6 +107,7 @@
         <button @click="hideCartPopup" type="button" class="cart-button btn btn-warning">Bekijk winkelwagen</button>
       </router-link>
     </div>
+  </div>
   </div>
   <!-- navigation media screen -->
   <div id="media-navigation-container">
@@ -318,6 +321,12 @@ export default {
 .cart-content {
 
   position: relative;
+}
+
+#cart-popup-container {
+  width: 80%;
+  margin: 0 auto;
+  position: relative; 
 }
 
 #cart-popup {
@@ -632,6 +641,10 @@ nav p {
   display: none;
 }
 
+.shopping-counter{
+  margin-left: 0.2rem;
+}
+
 /* media querys */
 @media screen and (max-width: 1382px) {
   #navigation-main {
@@ -674,4 +687,17 @@ nav p {
     font-size: 1.5rem;
   }
 }
+
+@media screen and (max-width: 1300px){
+  #cart-popup{
+    /* left: 50%; */
+  }
+}
+
+@media screen and (max-width: 1063px){
+  #cart-popup{
+    /* left: 75%; */
+  }
+}
+
 </style>

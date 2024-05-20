@@ -7,27 +7,27 @@
       <div class="container-first">
         <div class="container-hallway-desk">
           <div class="hallway">
-           <router-link to=""><p class="hover-effect">Hal</p></router-link> 
+           <router-link to="/products"><p class="hover-effect">Hal</p></router-link> 
           </div>
           <div class="desk">
-            <router-link to=""><p class="hover-effect">Bureaus</p></router-link>
+            <router-link to="/products"><p class="hover-effect">Bureaus</p></router-link>
           </div>
         </div>
         <div class="container-livingroom">
           <div class="livingroom">
-            <router-link to=""><p class="hover-effect">Woonkamer</p></router-link>
+            <router-link to="/products"><p class="hover-effect">Woonkamer</p></router-link>
           </div>
         </div>
       </div>
       <div class="container-second">
         <div class="container-bedroom">
           <div class="bedroom">
-            <router-link to=""><p class="hover-effect">Slaapkamer</p></router-link>
+            <router-link to="/products"><p class="hover-effect">Slaapkamer</p></router-link>
           </div>
         </div>
         <div class="container-diningroom">
           <div class="diningroom">
-            <router-link to=""><p class="hover-effect">Eetkamer</p></router-link>
+            <router-link to="/products"><p class="hover-effect">Eetkamer</p></router-link>
           </div>
         </div>
       </div>
@@ -101,7 +101,7 @@
     background: white;
     opacity: 60%;
     color: black;
-    transition: width 1s ease-in-out 1s, height 1s ease-in-out, ease-in-out 1.5s;
+    transition: width 0,10s ease-in-out 0,10s, height 0,10s ease-in-out, ease-in-out 0,10s;
     width: 650px;
     padding: 15px;
   }
@@ -110,7 +110,6 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-image: url("@/assets/EetkamerImageRuimtes.png");
-    
     width: 487px;
     height: 680px;
     margin: 15px 0px 0px -12px;
@@ -121,7 +120,7 @@
     background: white;
     opacity: 60%;
     color: black;
-    transition: width 1s ease-in-out 1s, height 1s ease-in-out, ease-in-out 1.5s;
+    transition: width 0,10s ease-in-out 0,10s, height 0,10s ease-in-out, ease-in-out 0,10s;
     width: 650px;
     padding: 15px;
     margin: 0px 1px 8px 4px;
@@ -141,7 +140,7 @@
     background: white;
     opacity: 60%;
     color: black;
-    transition: width 1s ease-in-out 1s, height 1s ease-in-out, ease-in-out 1.5s;
+    transition: width 0,10s ease-in-out 0,10s, height 0,10s ease-in-out, ease-in-out 0,10s;
     width: 734px;
     padding: 15px;
     margin: 0px 4px 5px 4px;
@@ -162,7 +161,7 @@
     background: white;
     opacity: 60%;
     color: black;
-    transition: width 1s ease-in-out 1s, height 1s ease-in-out, ease-in-out 1.5s;
+    transition: width 0,10s ease-in-out 0,10s, height 0,10s ease-in-out, ease-in-out 0,10s;
     width: 515px;
     padding: 15px;
     margin: 0px 4px 2px 3px;
@@ -191,9 +190,10 @@
     background: white;
     opacity: 60%;
     color: black;
-    transition: width 1s ease-in-out 1s, height 1s ease-in-out, ease-in-out 1.5s;
-    width: 773px;
+    transition: width 0,10s ease-in-out 0,10s, height 0,10s ease-in-out, ease-in-out 0,10s;
+    width: 787px;
     padding: 15px;
+    margin: 0px 0px 0px 0px;
   }
   
   .container-first {
@@ -240,7 +240,7 @@
       background: white;
       opacity: 60%;
       color: black;
-      transition: width 1s ease-in-out 1s, height 1s ease-in-out, ease-in-out 1.5s;
+      transition: width 0,10s ease-in-out 0,10s, height 0,10s ease-in-out, ease-in-out 0,10s;
       width: 773px;
       padding: 15px;
     }
@@ -270,7 +270,7 @@
       background: white;
       opacity: 60%;
       color: black;
-      transition: width 1s ease-in-out 1s, height 1s ease-in-out, ease-in-out 1.5s;
+      transition: width 0,10s ease-in-out 0,10s, height 0,10s ease-in-out, ease-in-out 0,10s;
       width: 773px;
       padding: 15px;
     }
@@ -287,7 +287,7 @@
       background: white;
       opacity: 60%;
       color: black;
-      transition: width 1s ease-in-out 1s, height 1s ease-in-out, ease-in-out 1.5s;
+      transition: width 0,10s ease-in-out 0,10s, height 0,10s ease-in-out, ease-in-out 0,10s;
       width: 773px;
       padding: 15px;
     }
@@ -305,7 +305,7 @@
       background: white;
       opacity: 60%;
       color: black;
-      transition: width 1s ease-in-out 1s, height 1s ease-in-out, ease-in-out 1.5s;
+      transition: width 0,10s ease-in-out 0,10s, height 0,10s ease-in-out, ease-in-out 0,10s;
       width: 773px;
       padding: 15px;
     }
@@ -322,7 +322,7 @@
       background: white;
       opacity: 60%;
       color: black;
-      transition: width 1s ease-in-out 1s, height 1s ease-in-out, ease-in-out 1.5s;
+      transition: width 0,10s ease-in-out 0,10s, height 0,10s ease-in-out, ease-in-out 0,10s;
       width: 773px;
       padding: 15px;
     }
@@ -375,7 +375,7 @@
       background: white;
       opacity: 60%;
       color: black;
-      transition: width 1s ease-in-out 1s, height 1s ease-in-out, ease-in-out 1.5s;
+      transition: width 0,10s ease-in-out 0,10s, height 0,10s ease-in-out, ease-in-out 0,10s;
       width: 773px;
       padding: 15px;
     }
@@ -405,7 +405,7 @@
       background: white;
       opacity: 60%;
       color: black;
-      transition: width 1s ease-in-out 1s, height 1s ease-in-out, ease-in-out 1.5s;
+      transition: width 0,10s ease-in-out 0,10s, height 0,10s ease-in-out, ease-in-out 0,10s;
       width: 773px;
       padding: 15px;
     }
@@ -422,7 +422,7 @@
       background: white;
       opacity: 60%;
       color: black;
-      transition: width 1s ease-in-out 1s, height 1s ease-in-out, ease-in-out 1.5s;
+      transition: width 0,10s ease-in-out 0,10s, height 0,10s ease-in-out, ease-in-out 0,10s;
       width: 773px;
       padding: 15px;
     }
@@ -438,7 +438,7 @@
       background: white;
       opacity: 60%;
       color: black;
-      transition: width 1s ease-in-out 1s, height 1s ease-in-out, ease-in-out 1.5s;
+      transition: width 0,10s ease-in-out 0,10s, height 0,10s ease-in-out, ease-in-out 0,10s;
       width: 773px;
       padding: 15px;
     }
@@ -454,7 +454,7 @@
       background: white;
       opacity: 60%;
       color: black;
-      transition: width 1s ease-in-out 1s, height 1s ease-in-out, ease-in-out 1.5s;
+      transition: width 0,10s ease-in-out 0,10s, height 0,10s ease-in-out, ease-in-out 0,10s;
       width: 773px;
       padding: 15px;
     }
