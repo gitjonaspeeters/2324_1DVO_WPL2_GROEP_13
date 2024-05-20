@@ -688,8 +688,13 @@ export default {
   width: 100%;
 }
 
+.trust-text-left{
+  padding: 2rem 1rem 2rem 1rem !important;
+}
+
 .info-text-right{
   border-radius: 0%;
+  padding: 2rem 1rem 2rem 1rem;
 }
 
 .info-text-right h1, .trust-text-left h1{

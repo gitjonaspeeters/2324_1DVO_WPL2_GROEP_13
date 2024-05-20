@@ -315,6 +315,10 @@ export default {
 </script>
 
 <style scoped>
+
+p{
+    margin-bottom: 0;
+}
  
  a  {
     text-decoration: none !important;
@@ -571,8 +575,12 @@ export default {
     }
  
     .product-content-right i {
-        font-size: 2.4rem;
+        font-size: 1.2rem;
         padding: 0 0.30rem 0 0.50rem;
+    }
+
+    .product-content-left h1{
+        font-size: 1.2rem;
     }
 }
 
@@ -600,5 +608,19 @@ export default {
 .pagination-container button:disabled {
     background-color: #ccc;
     cursor: not-allowed;
+}
+
+@media screen and (max-width: 600px) {
+    .product-content-left p{
+        font-size: 1rem;
+    }
+
+    .product-content-left h2{
+        font-size: 1rem;
+    }
+
+    .product-content-left h1{
+        margin-bottom: 0;
+    }
 }
 </style>
