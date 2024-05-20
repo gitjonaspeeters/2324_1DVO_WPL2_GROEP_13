@@ -191,8 +191,9 @@
     opacity: 60%;
     color: black;
     transition: width 1s ease-in-out 1s, height 1s ease-in-out, ease-in-out 1.5s;
-    width: 773px;
+    width: 787px;
     padding: 15px;
+    margin: 0px 0px 0px 0px;
   }
   
   .container-first {
