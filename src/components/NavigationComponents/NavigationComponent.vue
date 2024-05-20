@@ -59,7 +59,8 @@
         </div>
         <div id="navigation-right-sextion">
           <a @click="toggleCartPopup">
-            <i class="fa-solid fa-cart-shopping">({{ cartItems.length }})</i>
+            <i class="fa-solid fa-cart-shopping"></i>
+            <p class="shopping-counter">({{ cartItems.length }})</p>
           </a>
         </div>
       </div>
@@ -76,7 +77,8 @@
     </div>
   </div>
   <!-- Cart Popup -->
-  <div id="cart-popup" v-if="cartPopupVisible">
+  <div id="cart-popup-container">
+    <div id="cart-popup" v-if="cartPopupVisible">
     <div class="cart-content">
       <h4>Winkelwagen</h4>
       <div class="container">
@@ -105,6 +107,7 @@
         <button @click="hideCartPopup" type="button" class="cart-button btn btn-warning">Bekijk winkelwagen</button>
       </router-link>
     </div>
+  </div>
   </div>
   <!-- navigation media screen -->
   <div id="media-navigation-container">
@@ -317,24 +320,24 @@ export default {
     position: relative;
 }
 
+#cart-popup-container {
+  width: 80%;
+  margin: 0 auto;
+  position: relative; 
+}
+
 #cart-popup {
     position: fixed;
-    top: 15%;
-    /* Plaats het onder de winkelwagenknop */
-    left: 86%;
+    top: 15%; 
+    right: 3%;
     width: 350px;
-    margin-right: 5px;
-    transform: translateX(-50%);
     z-index: 999;
-    /* Zorg ervoor dat het bovenop andere elementen staat */
     background-color: #ffffff;
     padding: 1rem;
     border: 1px solid #ccc;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: margin-top 1s ease-in-out;
-    padding-bottom: -6rem;
-
 }
 
 #cart-popup img {
@@ -629,6 +632,10 @@ nav p {
     display: none;
 }
 
+.shopping-counter{
+  margin-left: 0.2rem;
+}
+
 /* media querys */
 @media screen and (max-width: 1382px) {
   #navigation-main {
@@ -671,4 +678,17 @@ nav p {
     font-size: 1.5rem;
   }
 }
+
+@media screen and (max-width: 1300px){
+  #cart-popup{
+    /* left: 50%; */
+  }
+}
+
+@media screen and (max-width: 1063px){
+  #cart-popup{
+    /* left: 75%; */
+  }
+}
+
 </style>

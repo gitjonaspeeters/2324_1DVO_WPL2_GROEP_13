@@ -329,7 +329,7 @@ export default {
     padding: 20px;
     min-width: 280px;
     color: #485059;
-    background-color: #BF9A84;
+    background-color: #ffffff !important;
     border-radius: 0 10px 10px 0;
     font-family: Arial, sans-serif;
     max-height: 500px;
@@ -356,9 +356,9 @@ export default {
     margin-bottom: 10px;
     border: 1px solid transparent;
     border-radius: 5px;
-    background-color: #f9d3bd;
+    background-color: #cacaca;;
     font-size: 16px;
-    color: #444;
+    color: #555;
 }
  
 .fil .filter select {
