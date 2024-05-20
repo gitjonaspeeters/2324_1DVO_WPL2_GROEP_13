@@ -1,0 +1,2408 @@
+[
+  {
+    "Id": "1",
+    "Images": {
+      "Image1": "./src/assets/Eet-tafel.jpg",
+      "Image2": "./src/assets/Maré.jpg"
+    },
+    "Name": "Eetkamertafel Maré Mangohout",
+    "Price": {
+      "Low": "€699,00",
+      "Middle": "€799,00",
+      "High": "€999,00"
+    },
+    "Measurement": {
+      "Small": "200cm",
+      "Medium": "240cm",
+      "Large": "300cm"
+    },
+    "Description": "De eetkamertafel Maré is volledig uitgevoerd in massief mango hout in een walnoot-kleur en heeft twee half ronde poten.",
+    "Stock": 3,
+    "Category": "Dining Tables",
+    "Room": "Eetkamer"
+  },
+  {
+    "Id": "2",
+    "Images": {
+      "Image1": "./src/assets/HEAVEN-EETTAFEL.jpg",
+      "Image2": "./src/assets/dining-tableheaven.jpg"
+    },
+    "Name": "Eettafel Heaven",
+    "Price": {
+      "Low": "€499,00",
+      "High": "€599,00"
+    },
+    "Measurement": {
+      "Length-Small": "160cm",
+      "Length-Medium": "200cm",
+      "Width-Small": "90cm",
+      "Width-Medium": "100cm"
+    },
+    "Color": {
+      "Color1": "#808080",
+      "Color2": "#FFFFFF"
+    },
+    "Description": "Deze eetkamertafel hoort binnen de moderne, industriële stijl. Zijn metalen sterpoot en keramisch tafelblad ogen stoer en robuust. Met zijn unieke zwarte sterpoot vormt hij meteen een blikvanger in je interieur.",
+    "Stock": 3,
+    "Category": "Dining Tables",
+    "Room": "Eetkamer"
+  },
+  {
+    "Id": "3",
+    "Images": {
+      "Image1": "./src/assets/55-22.png",
+      "Image2": "./src/assets/13862_2.jpg"
+    },
+    "Name": "Jesper Danish Oval",
+    "Price": {
+      "Low": "€649,00",
+      "High": "€799,00"
+    },
+    "Measurement": {
+      "Small": "180cm",
+      "Large": "210cm"
+    },
+    "Description": "",
+    "Stock": 3,
+    "Category": "Dining Tables",
+    "Room": "Eetkamer"
+  },
+  {
+    "Id": "4",
+    "Images": {
+      "Image1": "./src/assets/eettafel-240-daytona-1.jpg",
+      "Image2": "./src/assets/2044_21_6.jpg"
+    },
+    "Name": "Eetkamertafel Daytona",
+    "Price": {
+      "Low": "€949,00",
+      "Medium": "€1.129,00",
+      "High": "€1.210,00"
+    },
+    "Measurement": {
+      "Small": "200cm",
+      "Medium": "240cm",
+      "Large": "270cm"
+    },
+    "Description": "Op zoek naar een stoere maar tegelijkertijd elegante eetkamertafel? Dan hebben wij de prachtige Daytona voor jou! Deze trendy eetkamertafel is uitgevoerd in Saja natural notenhout met een X-frame. Het frame is uitgevoerd in metaal met een donkergrijze coating. Een echte eye-catcher! De tafel is verkrijgbaar in diverse afmetingen. Zo is er ook een tafel die in jouw interieur past.",
+    "Stock": 3,
+    "Category": "Dining Tables",
+    "Room": "Eetkamer"
+  },
+  {
+    "Id": "5",
+    "Images": {
+      "Image1": "./src/assets/Raphael_sfeer_Bib_TF2101_ST2105.jpg",
+      "Image2": "./src/assets/raphael-1.jpg"
+    },
+    "Name": "Eetkamertafel Raphael",
+    "Price": {
+      "Low": "€774,00"
+    },
+    "Measurement": {
+      "Length-Small": "230cm",
+      "Width-Small": "119cm"
+    },
+    "Description": "Ovale eettafel met sterpoot",
+    "Stock": 3,
+    "Category": "Dining Tables",
+    "Room": "Eetkamer"
+  },
+  {
+    "Id": "6",
+    "Images": {
+      "Image1": "./src/assets/Rousseau2089519-420Bed20Parma201.jpg",
+      "Image2": "./src/assets/Rousseau2089519-420Bed20Parma204.jpg"
+    },
+    "Name": "Bed Parma",
+    "Price": {
+      "Low": "€315,00"
+    },
+    "Measurement": {
+      "Length-Small": "200cm",
+      "Width-Small": "90cm"
+    },
+    "Color": {
+      "Color1": "Grijs",
+      "Color2": "Beige"
+    },
+    "Description": "Structuur MDF, spaanderplaat en bekleding stof",
+    "Stock": 3,
+    "Category": "Bed",
+    "Room": "Slaapkamer"
+  },
+  {
+    "Id": "7",
+    "Images": {
+      "Image1": "./src/assets/Chambre-enfant-Ellen-decor-bois-acacia-armoire2portes-Oosterlynck.jpg"
+    },
+    "Name": "Kinderkamer Ellen",
+    "Price": {
+      "Low": "€499,00"
+    },
+    "Measurement": {
+      "Length-Small": "200cm",
+      "Width-Small": "90cm"
+    },
+    "Description": "De kinderkamer ELLEN is gerealiseerd in acacia houtdecor waardoor het een warme, zachte uitstraling krijgt. Achter de 2-deurs kleerkast schuilen 6 legplanken en 1 kledingroede.",
+    "Stock": 3,
+    "Category": "Bed",
+    "Room": "Slaapkamer"
+  },
+  {
+    "Id": "8",
+    "Images": {
+      "Image1": "./src/assets/Rousseau2089514-220Bed20lit20Roma200.jpg",
+      "Image2": "./src/assets/Rousseau2089514-220Bed20Lit20Roma206.jpg"
+    },
+    "Name": "Bed Roma",
+    "Price": {
+      "Low": "€215,00"
+    },
+    "Measurement": {
+      "Length-Small": "218cm",
+      "Width-Small": "150cm",
+      "Height-Front": "29cm",
+      "Height-back": "92cm"
+    },
+    "Color": {
+      "Color1": "Grijs",
+      "Color2": "Beige",
+      "Color3": "Pu zwart"
+    },
+    "Description": "Structuur MDF, spaanderplaat en bekleding PU",
+    "Stock": 3,
+    "Category": "Bed",
+    "Room": "Slaapkamer"
+  },
+  {
+    "Id": "9",
+    "Images": {
+      "Image1": "./src/assets/Vogue.jpg",
+      "Image2": "./src/assets/urun-vogue-fonksiyonel-yatak-02.jpg"
+    },
+    "Name": "Vogue",
+    "Price": {
+      "High": "€3.599,00"
+    },
+    "Color": {
+      "Color1": "Grijs",
+      "Color2": "Beige",
+      "Color3": "Pu zwart"
+    },
+    "Description": "The Vogue Bed heeft een massagestoel, muziekinstallatie, werkplek en veel meer.Het bed waar we het over hebben is in alle opzichten indrukwekkend. Je heb zo de beschikking over een bed met indrukwekkende afmetingen, een massagestoel, een geheel eigen muziekinstallatie en een bureaublad voor je laptop. Ook aan het leeslampje en een ingebouwde kast voor je lectuur is gedacht. Koop je het bed, dan kun je zelf bepalen hoe het er uiteindelijk uit komt te zien: het geheel is Namelijk modulair opgebouwd. Op die manier voldoet het aan al je wensen en bouw je in een mum van tijd je slaapkamer om tot een luxe verblijf.",
+    "Stock": 3,
+    "Category": "Bed",
+    "Room": "Slaapkamer"
+  },
+  {
+    "Id": "10",
+    "Images": {
+      "Image1": "./src/assets/Group16.png"
+    },
+    "Name": "Hoekzetel Lima",
+    "Price": {
+      "High": "€1.769,00"
+    },
+    "Color": {
+      "Color1": "Grijs",
+      "Color2": "Beige",
+      "Color3": "Pu zwart"
+    },
+    "Description": "Ontdek deze LIMA hoekzetel die veel zitplaatsen biedt. Bovendien biedt LIMA een ongekend zitcomfort en zachtheid dankzij zijn zachte stoffen bekleding. Verkrijgbaar in verschillende samenstellingen.",
+    "Stock": 3,
+    "Category": "Sofa",
+    "Room": "Woonkamer"
+  },
+  {
+    "Id": "11",
+    "Images": {
+      "Image1": "./src/assets/STF-3306-1-1.png",
+      "Image2": "./src/assets/STF-3306-5.png"
+    },
+    "Name": "Vakkenkast Brussel Sand XL",
+    "Measurement": {
+      "Height": "200cm",
+      "Width": "160cm",
+      "Depth": "45cm"
+    },
+    "Price": {
+      "High": "€1.199,00"
+    },
+    "Color": {
+      "Color1": "Grijs"
+    },
+    "Description": "Ontdek de ruime en stijlvolle Vakkenkast Brussel XL, gemaakt mangohout en afgewerkt met een verfijnde sand finish. Dankzij het strakke en eigentijdse ontwerp biedt deze kast een perfecte combinatie van functionaliteit en stijl. Voorzien van meerdere open vakken en drie greeploze deuren met een handig push-to-open systeem, biedt deze kast voldoende opbergruimte.",
+    "Stock": 3,
+    "Category": "Closet",
+    "Room": {
+      "Room1": "Slaapkamer",
+      "Room2": "Hal"
+    }
+  },
+  {
+    "Id": "12",
+    "Images": {
+      "Image1": "./src/assets/9872-6.jpg",
+      "Image2": "./src/assets/9872-1.jpg"
+    },
+    "Name": "Boekenkast Kensington",
+    "Price": {
+      "High": "€1.989,00"
+    },
+    "Color": {
+      "Color1": "Silver"
+    },
+    "Description": "Boekenkast Kensington is een ware aanwinst voor je mooiste accessoires! De Shiny Kensington collectie combineert een robuuste uitstraling met een vleugje elegantie. De onderstellen van zilverkleurig, glimmend staal geven deze meubels samen met het grove gerecycled hout een chique, maar toch ook stoer aanzien.",
+    "Stock": 3,
+    "Category": "Closet",
+    "Room": {
+      "Room1": "Slaapkamer",
+      "Room2": "Hal"
+    }
+  },
+  {
+    "Id": "13",
+    "Images": {
+      "Image1": "./src/assets/7521-6.jpg",
+      "Image2": "./src/assets/7521-5.jpg"
+    },
+    "Name": "Dressoir Bloomville 4-deuren",
+    "Measurement": {
+      "Height": "86cm",
+      "Width": "193cm",
+      "Depth": "45cm"
+    },
+    "Price": {
+      "High": "€2.375,00"
+    },
+    "Color": {
+      "Color1": "Gold"
+    },
+    "Description": "Dressoir Bloomingville heeft vier deuren en biedt genoeg opbergruimte voor al je spullen! De Bloomingville collectie is een verfijnde, luxe collectie gemaakt van segrijn / faux roggehuid van PU leer, zwart eiken en mat gouden details van metaal. Segrijn was populair in de Art Deco periode rond 1920 en geeft je moderne interieur een unieke touch!",
+    "Stock": 3,
+    "Category": "Closet",
+    "Room": {
+      "Room1": "Slaapkamer",
+      "Room2": "Hal"
+    }
+  },
+  {
+    "Id": "14",
+    "Images": {
+      "Image1": "./src/assets/Rousseau206925-220Kledingkast20armoire20Marc201.jpg",
+      "Image2": "./src/assets/Rousseau206925-220Kledingkast20armoire20Marc20209.jpg"
+    },
+    "Name": "Kledingkast Marc 4 deuren met 2 spiegels Sonoma",
+    "Measurement": {
+      "Height": "185.1cm",
+      "Width": "159.7cm"
+    },
+    "Price": {
+      "Low": "€315,00"
+    },
+    "Description": "Spaanderplaat, MDF en decor + spiegel",
+    "Stock": 3,
+    "Category": "Closet",
+    "Room": {
+      "Room1": "Slaapkamer",
+      "Room2": "Hal"
+    }
+  },
+  {
+    "Id": "15",
+    "Images": {
+      "Image1": "./src/assets/Hoeksalongrey.png"
+    },
+    "Name": "Hoeksalon Grey",
+    "Measurement": {
+      "Length": "310cm",
+      "Width": "220cm"
+    },
+    "Price": {
+      "High": "€1.199,00"
+    },
+    "Description": "Hoeksalon in grijze stof Links of rechts opstelbaar",
+    "Stock": 3,
+    "Category": "Sofa",
+    "Room": "Woonkamer"
+  },
+  {
+    "Id": "16",
+    "Images": {
+      "Image1": "./src/assets/S5133_CREAM_UNICORN-1-scaled.jpg",
+      "Image2": "./src/assets/S5133_CREAM_UNICORN-6.jpg"
+    },
+    "Name": "Fauteuil Beauchamp cream unicorn",
+    "Measurement": {
+      "Length": "104cm",
+      "Width": "91cm",
+      "Height": "77cm"
+    },
+    "Price": {
+      "High": "€1.149,00"
+    },
+    "Color": {
+      "Color1": "Unicorn 11 cream"
+    },
+    "Description": "",
+    "Stock": 3,
+    "Category": "Sofa",
+    "Room": "Woonkamer"
+  },
+  {
+    "Id": "17",
+    "Images": {
+      "Image1": "./src/assets/S4552_WHITE_FURRY-1.jpg",
+      "Image2": "./src/assets/S4552_WHITE_FURRY-6.jpg"
+    },
+    "Name": "Fauteuil Charmaine white furry",
+    "Measurement": {
+      "Length": "83cm",
+      "Width": "82cm",
+      "Height": "76cm"
+    },
+    "Price": {
+      "High": "€705,00"
+    },
+    "Color": {
+      "Color1": "white furry"
+    },
+    "Description": "Himalaya 900",
+    "Stock": 3,
+    "Category": "Sofa",
+    "Room": "Woonkamer"
+  },
+  {
+    "Id": "18",
+    "Images": {
+      "Image1": "./src/assets/S4491_KHAKI_VELVET-1.jpg",
+      "Image2": "./src/assets/S4491_KHAKI_VELVET-6.jpg"
+    },
+    "Measurement": {
+      "Length": "90cm",
+      "Height-back": "86cm",
+      "Height-Front": "45cm"
+    },
+    "Name": "Fauteuil Kylie khaki velvet / gold",
+    "Price": {
+      "High": "€829,00"
+    },
+    "Color": {
+      "Color1": "Quartz Khaki 903"
+    },
+    "Description": "Fauteuil Kylie Khaki velvet / Brushed gold geeft een origineel accent aan je leefruimte! Een chique, ronde troon van polyester en geborsteld goud staal.",
+    "Stock": 3,
+    "Category": "Sofa",
+    "Room": "Woonkamer"
+  },
+  {
+    "Id": "19",
+    "Images": {
+      "Image1": "./src/assets/S4702_TAUPE_CHENILLE-1.jpg",
+      "Image2": "./src/assets/S4702_TAUPE_CHENILLE-6.jpg"
+    },
+    "Measurement": {
+      "Length": "73cm",
+      "Width": "85cm",
+      "Height": "85cm"
+    },
+    "Name": "Draaifauteuil Sydney taupe chenille",
+    "Price": {
+      "High": "€789,00"
+    },
+    "Color": {
+      "Color1": "Bergen 104 taupe chenille"
+    },
+    "Description": "Fauteuil Kylie Khaki velvet / Brushed gold geeft een origineel accent aan je leefruimte! Een chique, ronde troon van polyester en geborsteld goud staal.",
+    "Stock": 3,
+    "Category": "Sofa",
+    "Room": "Woonkamer"
+  },
+  {
+    "Id": "20",
+    "Images": {
+      "Image1": "./src/assets/S4583_CREAM_FUSION-1.jpg",
+      "Image2": "./src/assets/S4583_CREAM_FUSION-6.jpg"
+    },
+    "Measurement": {
+      "Length": "56cm",
+      "Width": "56cm",
+      "Height": "82.5cm"
+    },
+    "Name": "Stoel Alyssa cream fusion",
+    "Price": {
+      "Low": "€225,00"
+    },
+    "Color": {
+      "Color1": "Fusion cream 02"
+    },
+    "Description": "",
+    "Stock": 3,
+    "Category": "Chair",
+    "Room": {
+        "Room1": "Eetkamer",
+        "Room2": "Bureau"
+      }
+  },
+  {
+    "Id": "21",
+    "Images": {
+      "Image1": "./src/assets/10bf1d48-6173-47d8-adf8-c30bc16fba4c.jpg",
+      "Image2": "./src/assets/55-6.jpg"
+    },
+    "Measurement": {},
+    "Name": "I_York",
+    "Price": {
+      "Low": "€214,00"
+    },
+    "Description": "Bij deze eetkamerstoel draait alles om klassiek Scandinavisch design. Het traditionele wordt bereikt door de combinatie van strakke lijnen en natuurlijke materialen. De gevlochten zitting is gemaakt van papiertouw, terwijl het frame is gemaakt van met witte olie behandeld eikenhout.",
+    "Stock": 3,
+    "Category": "Chair",
+    "Room": {
+        "Room1": "Eetkamer",
+        "Room2": "Bureau"
+      }
+  },
+  {
+    "Id": "22",
+    "Images": {
+      "Image1": "./src/assets/888.jpg",
+      "Image2": "./src/assets/Sunny-Stoel.jpg"
+    },
+    "Measurement": {},
+    "Name": "Sunny Stoel",
+    "Price": {
+      "Low": "€112,00"
+    },
+    "Description": "Eigentijdse, stevige stoel Sunny die kan dienen als keukenstoel of voor aan de tafel in de eetkamer. Zeer gebruiksvriendelijk door het handvat bovenaan in de rugleuning.",
+    "Stock": 3,
+    "Category": "Chair",
+    "Room": {
+        "Room1": "Eetkamer",
+        "Room2": "Bureau"
+      }
+  },
+  {
+    "Id": "23",
+    "Images": {
+      "Image1": "./src/assets/1-2.png",
+      "Image2": "./src/assets/2-2.png"
+    },
+    "Measurement": {
+      "Length": "56cm",
+      "Width": "56cm",
+      "Height": "82.5cm"
+    },
+    "Name": "Prince Stoel",
+    "Price": {
+      "Low": "€99,00"
+    },
+    "Color": {
+      "Color1": "Bruin",
+      "Color2": "Grijs"
+    },
+    "Description": "Eigentijdse, stevige stoel Sunny die kan dienen als keukenstoel of voor aan de tafel in de eetkamer. Zeer gebruiksvriendelijk door het handvat bovenaan in de rugleuning.",
+    "Stock": 3,
+    "Category": "Chair",
+    "Room": {
+        "Room1": "Eetkamer",
+        "Room2": "Bureau"
+      }
+  },
+  {
+    "Id": "24",
+    "Images": {
+      "Image1": "./src/assets/WA-0011-1.jpg",
+      "Image2": "./src/assets/WA-0011-6.jpg"
+    },
+    "Measurement": {
+      "Length": "158cm",
+      "Width": "6cm",
+      "Height": "188cm"
+    },
+    "Name": "Wall art Piano Wibi",
+    "Price": {
+      "High": "€3.589,00"
+    },
+    "Color": {
+      "Color1": "Black/gold"
+    },
+    "Description": "",
+    "Stock": 3,
+    "Category": "Home accessories",
+    "Room": {
+      "Room1": "Hal",
+      "Room2": "Bureau"
+    }
+  },
+  {
+    "Id": "25",
+    "Images": {
+      "Image1": "./src/assets/AD-0045-1.jpg"
+    },
+    "Measurement": {
+      "Length": "46cm",
+      "Width": "36,5cm",
+      "Height": "104cm"
+    },
+    "Name": "Decoratieobject Beer groot",
+    "Price": {
+      "High": "€559,00"
+    },
+    "Color": {
+      "Color1": "Black/gold"
+    },
+    "Description": "",
+    "Stock": 3,
+    "Category": "Home accessories",
+    "Room": {
+      "Room1": "Hal",
+      "Room2": "Bureau"
+    }
+  },
+  {
+    "Id": "26",
+    "Images": {
+      "Image1": "./src/assets/AD-0032-1.jpg",
+      "Image2": "./src/assets/AD-0032-6.jpg"
+    },
+    "Measurement": {
+      "Length": "21cm",
+      "Width": "7,5cm",
+      "Height": "22cm"
+    },
+    "Name": "Deco object Balloonicorn gold",
+    "Price": {
+      "Low": "€35,00"
+    },
+    "Color": {
+      "Color1": "Gold"
+    },
+    "Description": "",
+    "Stock": 3,
+    "Category": "Home accessories",
+    "Room": {
+      "Room1": "Hal",
+      "Room2": "Bureau"
+    }
+  },
+  {
+    "Id": "27",
+    "Images": {
+      "Image1": "./src/assets/AD-0046-1.jpg",
+      "Image2": "./src/assets/AD-0046-4.jpg"
+    },
+    "Measurement": {
+      "Length": "130cm",
+      "Width": "73cm",
+      "Height": "124cm"
+    },
+    "Name": "Dog deco object spiegel",
+    "Price": {
+      "High": "€2.129,00"
+    },
+    "Description": "",
+    "Stock": 3,
+    "Category": "Home accessories",
+    "Room": {
+      "Room1": "Hal",
+      "Room2": "Bureau"
+    }
+  },
+  {
+    "Id": "28",
+    "Images": {
+      "Image1": "./src/assets/7491-1.jpg",
+      "Image2": "./src/assets/7491-6.jpg"
+    },
+    "Measurement": {
+      "Length": "150cm",
+      "Width": "60cm",
+      "Height": "76cm"
+    },
+    "Name": "Bureau Hunter 3-laden",
+    "Price": {
+      "High": "€1.455,00"
+    },
+    "Color": {
+      "Color1": "Black Rustic"
+    },
+    "Description": "Bureau Hunter is een chique aanvulling voor je kantoor. Een prachtig bureau met 3 laden en gemaakt van zwart eiken fineer en mat gouden details. Zo wordt (thuis)werken een feestje!",
+    "Stock": 3,
+    "Category": "Desk",
+    "Room": "Bureau"
+  },
+  {
+    "Id": "29",
+    "Images": {
+      "Image1": "./src/assets/Cindy2-B18-304-scaled.jpg"
+    },
+    "Measurement": {
+      "Length": "140cm",
+      "Width": "70cm"
+    },
+    "Name": "Cindy Bureau",
+    "Price": {
+      "Low": "€145,00"
+    },
+    "Description": "",
+    "Stock": 3,
+    "Category": "Desk",
+    "Room": "Bureau"
+  },
+  {
+    "Id": "30",
+    "Images": {
+      "Image1": "./src/assets/MTL39.jpg"
+    },
+    "Measurement": {
+      "Length": "121cm",
+      "Width": "60cm",
+      "Height": "76cm"
+    },
+    "Name": "Bureau MTL39",
+    "Price": {
+      "Low": "€75,00"
+    },
+    "Description": "",
+    "Stock": 3,
+    "Category": "Desk",
+    "Room": "Bureau"
+  },
+  {
+    "Id": "31",
+    "Images": {
+      "Image1": "./src/assets/55-10.png"
+    },
+    "Measurement": {
+      "Length": "121cm",
+      "Width": "60cm",
+      "Height": "76cm"
+    },
+    "Name": "Bureau York",
+    "Price": {
+      "Medium": "€340,00"
+    },
+    "Description": "Prachtige bureau uit de YORK collectie.",
+    "Stock": 3,
+    "Category": "Desk",
+    "Room": "Bureau"
+  },
+  {
+    "Id": "32",
+    "Images": {
+      "Image1": "./src/assets/S4523_WHITE_BOUCLE-1.jpg",
+      "Image2": "./src/assets/S4523_WHITE_BOUCLE-6.jpg"
+    },
+    "Measurement": {
+      "Length": "53cm",
+      "Width": "45,5cm",
+      "Height": "109,5cm"
+    },
+    "Name": "Barstoel Xenia white bouclé / brushed gold",
+    "Price": {
+      "Medium": "€389,00"
+    },
+    "Color": {
+      "Color1": "Copenhagen 900 Bouclé White"
+    },
+    "Description": "",
+    "Stock": 3,
+    "Category": "Chair",
+    "Room": {
+      "Room1": "Eetkamer",
+      "Room2": "Woonkamer"
+    }
+  },
+  {
+    "Id": "33",
+    "Images": {
+      "Image1": "./src/assets/Rousseau208960920Bed20lit20Davy201.jpg",
+      "Image2": "./src/assets/Rousseau208960920Bed20lit20Davy206.jpg"
+    },
+    "Measurement": {
+      "Length": "215cm",
+      "Width": "98cm",
+      "Height-Front": "60cm",
+      "Height-back": "90cm"
+    },
+    "Name": "Bed Davy Metaal Donkergrijs",
+    "Price": {
+      "Low": "€115,00"
+    },
+    "Color": {
+      "Color1": "Donkergrijs"
+    },
+    "Description": "Frame metaal grijs, lattenbodem in hout",
+    "Stock": 3,
+    "Category": "Bed",
+    "Room": {
+      "Room1": "Slaapkamer"
+    }
+  },
+  {
+    "Id": "34",
+    "Images": {
+      "Image1": "./src/assets/urun-velar-fonksiyonel-yatak-03.jpeg",
+
+      "Image2": "./src/assets/urun-velar-fonksiyonel-yatak-02.jpeg"
+
+    },
+    "Measurement": {
+      "Length": "255cm",
+      "Width": "275cm",
+      "Height": "90cm"
+    },
+    "Name": "Ronde Bed Velar",
+    "Price": {
+      "High": "€2.299,00"
+    },
+    "Description": "Ronde bed met design led-verlichting, multimedia bluetooth, USB-ingang, verborgen kluis en leeslamp.",
+    "Stock": 3,
+    "Category": "Bed",
+    "Room": {
+      "Room1": "Slaapkamer"
+    }
+  },
+  {
+    "Id": "35",
+    "Images": {
+      "Image1": "./src/assets/Rousseau208952020stapelbed20lit20superposC3A920Sammy201.jpg",
+      "Image2": "./src/assets/Rousseau208952020stapelbed20lit20superposC3A920Sammy207.jpg"
+    },
+    "Measurement": {
+      "Length": "210cm",
+      "Width": "97,5",
+      "Height": "162cm"
+    },
+    "Name": "Stapelbed Sammy Splitsbaar",
+    "Price": {
+      "Low": "€175,00"
+    },
+    "Color": {
+      "Color1": "Donkergrijs"
+    },
+    "Description": "Frame metaal",
+    "Stock": 3,
+    "Category": "Bed",
+    "Room": {
+      "Room1": "Slaapkamer"
+    }
+  },
+  {
+    "Id": "36",
+    "Images": {
+      "Image1": "./src/assets/SCTDFT_INF_3663.jpg",
+      "Image2": "./src/assets/SCTDFT_KIDS_01_74e0.jpg"
+    },
+    "Measurement": {
+      "Length": "210cm",
+      "Width": "97,5",
+      "Height": "162cm"
+    },
+    "Name": "Brandweer Bed",
+    "Price": {
+      "Middle": "€289,00"
+    },
+    "Color": {
+      "Color1": "Rood"
+    },
+    "Description": "Deze brandweer bed is vervaardigd uit rood gelakte MDF. De lattenbodem is inclusief en is geschikt voor een matras van 70x140cm. De LED lampen zijn ook inclusief.",
+    "Stock": 3,
+    "Category": "Bed",
+    "Room": {
+      "Room1": "Slaapkamer"
+    }
+  },
+  {
+    "Id": "37",
+    "Images": {
+      "Image1": "./src/assets/Rousseau209805-120gamingstoel20chaise20de20jeu20Taylor201.jpg",
+      "Image2": "./src/assets/Rousseau209805-120gamingstoel20chaise20de20jeu20Taylor202.jpg"
+    },
+    "Measurement": {
+    },
+    "Name": "Gamingstoel Taylor PU",
+    "Price": {
+      "Low": "€115,00"
+    },
+    "Color": {
+      "Color1": "LED Rood/zwart"
+    },
+    "Description": "",
+    "Stock": 3,
+    "Category": "Chair",
+    "Room": {
+      "Room1": "Bureau"
+    }
+  },
+  {
+    "Id": "38",
+    "Images": {
+      "Image1": "./src/assets/Rousseau209708-220bureaustoel20chaise20de20bureau20Claude201.jpg",
+      "Image2": "./src/assets/Rousseau209708-220bureaustoel20chaise20de20bureau20Claude202.jpg"
+    },
+    "Measurement": {
+    },
+    "Name": "./src/assets/Bureaustoel Claude Mesh",
+    "Price": {
+      "Low": "€95,00"
+    },
+    "Color": {
+      "Color1": "Zwart",
+      "Color2": "Grijs"
+    },
+    "Description": "Poten metaal en plastiek ,bekleding 100% polyester",
+    "Stock": 3,
+    "Category": "Chair",
+    "Room": {
+      "Room1": "Bureau"
+    }
+  },
+  {
+    "Id": "39",
+    "Images": {
+      "Image1": "./src/assets/87d5e457-15b6-4985-9d99-f6ad7fb2c355.jpg",
+      "Image2": "./src/assets/d7056fce-3dc1-41c6-a9d3-4dda884394dd.jpg"
+    },
+    "Measurement": {
+    },
+    "Name": "Gamestoel Canyon",
+    "Price": {
+      "Low": "€199,00",
+      "Middle":"€215,00"
+    },
+    "Color": {
+      "Color1": "Rood",
+      "Color2": "Grijs camouflage"
+    },
+    "Description": "Canyon game chair, lederlook/stof Leroy, zwart PU/ camouflage grijs F474, piping zwart, verstelbare rugleuning, onderstel nylon zwart/grijs.",
+    "Stock": 3,
+    "Category": "Chair",
+    "Room": {
+      "Room1": "Bureau"
+    }
+  },
+  {
+    "Id": "40",
+    "Images": {
+      "Image1": "./src/assets/Rousseau202155-120TV20meubel20meuble20TV20Madeira203.jpg",
+      "Image2": "./src/assets/Rousseau202155-220Madeira206.jpg"
+    },
+    "Measurement": {
+      "Length": "140cm",
+      "Width": "40cm",
+      "Height": "50cm"
+    },
+    "Name": "Tv-meubel Madeira",
+    "Price": {
+      "Middle":"€415,00"
+    },
+    "Color": {
+      "Color1": "Mangolia",
+      "Color2": "Zwart"
+    },
+    "Description": "Structuur metaal en blad exotisch hout mangolia",
+    "Stock": 3,
+    "Category": "Closet",
+    "Room": {
+      "Room1": "Hal",
+      "Room2" :"Woonkamer"
+    }
+  },
+  {
+    "Id": "41",
+    "Images": {
+      "Image1": "./src/assets/Rousseau201180-220schoenenrek20C3A9tagC3A8re20C3A020chaussures20Sam201.jpg",
+      "Image2": "./src/assets/Rousseau201180-220schoenenrek20C3A9tagC3A8re20C3A020chaussures20Sam203 (1).jpg"
+    },
+    "Measurement": {
+      "Length": "80cm",
+      "Width": "28,5cm",
+      "Height": "45cm"
+    },
+    "Name": "Schoenenrek Sam",
+    "Price": {
+      "Low":"€35,00"
+    },
+    "Color": {
+      "Color1": "Zwart"
+    },
+    "Description": "Metaal verchroomd en gespoten",
+    "Stock": 3,
+    "Category": "Closet",
+    "Room": {
+      "Room1": "Hal",
+      "Room2" :"Woonkamer"
+    }
+  },
+  {
+    "Id": "42",
+    "Images": {
+      "Image1": "./src/assets/Rousseau206625-220boekenkast20bibliothC3A8que20Space201.jpg",
+      "Image2": "./src/assets/Rousseau206625-220boekenkast20bibliothC3A8que20Space207.jpg"
+    },
+    "Measurement": {
+      "Length": "55cm",
+      "Width": "36cm",
+      "Height": "148,3cm"
+    },
+    "Name": "Boekenkast Space 4 legplanken Sonoma",
+    "Price": {
+      "Low":"€95,00"
+    },
+    "Description": "MDF, Spaanderplaat, ABS boorden en decor",
+    "Stock": 3,
+    "Category": "Closet",
+    "Room": {
+      "Room1": "Slaapkamer",
+      "Room2" :"Woonkamer"
+    }
+  },
+  {
+    "Id": "43",
+    "Images": {
+      "Image1": "./src/assets/MTL12.jpg"
+    },
+    "Measurement": {
+      "Length": "120cm",
+      "Width": "33,5cm",
+      "Height": "122cm"
+    },
+    "Name": "Schoenkast 3 deuren",
+    "Price": {
+      "Low": "€95,00"
+    },
+    "Description": "",
+    "Stock": 3,
+    "Category": "Closet",
+    "Room": {
+      "Room1": "Hal",
+      "Room2" :"Woonkamer",
+      "Room3" : "Bureau"
+    }
+  },
+  {
+    "Id": "44",
+    "Images": {
+      "Image1": "./src/assets/Screenshot_4.png"
+    },
+    "Measurement": {
+      "Length": "94cm",
+      "Width": "140cm",
+      "Height": "80cm"
+    },
+    "Name": "Countertafel",
+    "Price": {
+      "High": "€899,00"
+    },
+    "Description": "Materiaalsoort: Eiken hout & metaal",
+    "Stock": 3,
+    "Category": "Dining Tables",
+    "Room": {
+      "Room1": "Eetkamer"
+    }
+  },
+  {
+    "Id": "45",
+    "Images": {
+      "Image1": "./src/assets/Rousseau20126520Bureau20Malino201-768x512.jpg",
+      "Image2": "./src/assets/Rousseau20126520Bureau20Malino202.jpg"
+    },
+    "Measurement": {
+      "Length": "120cm",
+      "Width": "60cm",
+      "Height": "77cm"
+    },
+    "Name": "Bureau Malino",
+    "Price": {
+      "Low": "€95,00"
+    },
+    "Description": "Structuur zwart metaal, hout MDF, decor sonoma",
+    "Stock": 3,
+    "Category": "Desk",
+    "Room": {
+      "Room1": "Bureau"
+    }
+  },
+  {
+    "Id": "46",
+    "Images": {
+      "Image1": "./src/assets/Rousseau201280-120Bureau20Mateo201.jpg",
+      "Image2": "./src/assets/Rousseau201280-120Bureau20Mateo208.jpg"
+    },
+    "Measurement": {
+      "Length": "120,7cm",
+      "Width": "39,4cm",
+      "Height": "74,2cm"
+    },
+    "Name": "Bureau Mateo 3 Lades",
+    "Price": {
+      "Low": "€95,00"
+    },
+    "Color": {
+    "Color1": "Wit",
+    "Color2": "Sonoma",
+    "Color3": "Grijs"
+    }      ,
+    "Description": "Structuur MDF",
+    "Stock": 3,
+    "Category": "Desk",
+    "Room": {
+      "Room1": "Bureau"
+    }
+  },
+  {
+    "Id": "47",
+    "Images": {
+      "Image1": "./src/assets/Cindy2-B18-487-scaled.jpg"
+    },
+    "Measurement": {
+      "Length": "48cm",
+      "Width": "40cm",
+      "Height": "197cm"
+    },
+    "Name": "Cindy Boekenrek",
+    "Price": {
+      "Low": "€159,00"
+    },
+    "Description": "",
+    "Stock": 3,
+    "Category": "Closet",
+    "Room": {
+      "Room1": "Bureau",
+      "Room2" :"Slaapkamer"
+    }
+  },
+  {
+    "Id": "48",
+    "Images": {
+      "Image1": "./src/assets/STF-6753-scaled-1.jpg",
+      "Image2": "./src/assets/madsion.png"
+    },
+    "Measurement": {
+      "Length": "80cm",
+      "Width": "80cm",
+      "Height": "40cm"
+    },
+    "Name": "Salontafel Madison Walnut",
+    "Price": {
+      "Middle": "€349,00"
+    },
+    "Description": "Salontafel ‘Madison’ is gemaakt van mangohout. De metalen poten zijn afgewerkt met een zwarte lak. Dit model is voorzien van twee lades en één openvak. De lades is voorzien van een verticaal lattenpatroon en is afgewerkt met een walnoot finish.",
+    "Stock": 3,
+    "Category": "Dining Tables",
+    "Room": {
+      "Room1": "Woonkamer"
+    }
+  },
+  {
+    "Id": "49",
+    "Images": {
+      "Image1": "./src/assets/12460_1-scaled.jpg",
+      "Image2": "./src/assets/Anthony-blackbrass.png"
+    },
+    "Measurement": {
+      "Length": "110cm",
+      "Width": "40cm",
+      "Height": "40cm"
+    },
+    "Name": "Anthony black/brass",
+    "Price": {
+      "Middle": "€299,00"
+    },
+    "Color": {
+          "Color1":"Black/Brass"
+    },
+    "Description": "Ben jij op zoek naar een trendy Salontafel? Dan is deze salontafel perfect voor jou! De salontafels van het merk LivingFurn zijn geïnspireerd op de nieuwste trends en designs. Deze salontafel is gemaakt van hoogwaardig mangohout en gecoat staal.",
+    "Stock": 3,
+    "Category": "Dining Tables",
+    "Room": {
+      "Room1": "Woonkamer"
+    }
+  },
+  {
+    "Id": "50",
+    "Images": {
+      "Image1": "./src/assets/Rousseau203925-120console20Ace201.jpg",
+      "Image2": "./src/assets/Rousseau203925-120console20Ace207.jpg"
+    },
+    "Measurement": {
+      "Length": "100cm",
+      "Width": "36cm",
+      "Height": "80cm"
+    },
+    "Name": "Console Ace Mangolia",
+    "Price": {
+      "Middle": "€335,00"
+    },
+    "Description": "Structuur metaal, blad exotisch hout mangolia",
+    "Stock": 3,
+    "Category": "Closet",
+    "Room": {
+      "Room1": "Hal",
+      "Room2" :"Woonkamer",
+      "Room3" :"Slaapkamer"
+    }
+  },
+  {
+    "Id": "51",
+    "Images": {
+      "Image1": "./src/assets/S4541_WHITE_CHENILLE-4-800x800.jpg",
+      "Image2": "./src/assets/S4541_WHITE_CHENILLE-5-800x800.jpg"
+    },
+    "Measurement": {
+      "Length": "64cm",
+      "Width": "62cm",
+      "Height-back": "77cm",
+      "Height-Front": "71cm"
+    },
+    "Name": "Stoel Emerson white chenille",
+    "Price": {
+      "High": "€615,00"
+    },
+    "Description": "",
+    "Stock": 3,
+    "Category": "Chair",
+    "Room": {
+      "Room1": "Eetkamer"
+    }
+  },
+  {
+    "Id": "52",
+    "Images": {
+      "Image1": "./src/assets/S4508_WHITE_BOUCLE-1.jpg",
+      "Image2": "./src/assets/S4508_WHITE_BOUCLE-6.jpg"
+    },
+    "Measurement": {
+      "Length": "49cm",
+      "Width": "64cm",
+      "Height": "85cm"
+    },
+    "Name": "Stoel Odessa white bouclé / brushed gold",
+    "Price": {
+      "Middle": "€355,00"
+    },
+    "Description": "",
+    "Stock": 3,
+    "Category": "Chair",
+    "Room": {
+      "Room1": "Eetkamer"
+    }
+  },
+  {
+    "Id": "53",
+    "Images": {
+      "Image1": "./src/assets/323-scaled.jpg",
+      "Image2": "./src/assets/BONO-bruin-voor-510x671__.jpeg"
+    },
+    "Measurement": {
+      "Length": "",
+      "Width": "",
+      "Height": ""
+    },
+    "Name": "Bono Stoel",
+    "Price": {
+      "Low": "€109,00"
+    },
+    "Color": {
+      "Color1": "Bruin",
+      "Color2": "Grijs",
+      "Color3":"Cognac"
+    },
+    "Description": "Eetkamerstoel met handgreep in bruine of in grijze stof.",
+    "Stock": 3,
+    "Category": "Chair",
+    "Room": {
+      "Room1": "Eetkamer",
+      "Room2" :"Bureau"
+    }
+  },
+  {
+    "Id": "54",
+    "Images": {
+      "Image1": "./src/assets/Screenshot_9-3.png",
+      "Image2": "./src/assets/Office-Desk-Joe-–-3-kleuren.jpg"
+    },
+    "Measurement": {
+      "Length": "100cm",
+      "Width": "55cm",
+      "Height": "81cm"
+    },
+    "Name": "Bureau Joe",
+    "Price": {
+      "Low": "€79,00"
+    },
+    "Color": {
+      "Color1": "Zwart",
+      "Color2": "Hout",
+      "Color3": "Wit"
+    },
+    "Description": "Ruw blad van wild eiken voor een rustieke uitstraling, gepoedercoate metalen poten met inclusief viltkussens om krassen op de vloer te voorkomen.",
+    "Stock": 3,
+    "Category": "Desk",
+    "Room": {
+      "Room1": "Bureau"
+    }
+  },
+  {
+    "Id": "55",
+    "Images": {
+      "Image1": "./src/assets/Screenshot_1-8.png",
+      "Image2": "./src/assets/Screenshot_6-3.png"
+    },
+    "Measurement": {
+      "Length": "130cm",
+      "Width": "60cm",
+      "Height": "75cm"
+    },
+    "Name": "Bureau Brighton",
+    "Price": {
+      "Middle": "€329,00"
+    },
+    "Description": "Brighton bureau tafelblad visgraat eiken fineer olie, lades 2 stuks 4 poten MDF, zwart gelakt.",
+    "Stock": 3,
+    "Category": "Desk",
+    "Room": {
+      "Room1": "Bureau"
+    }
+  },
+  {
+    "Id": "56",
+    "Images": {
+      "Image1": "./src/assets/5fd8da8e-2781-4df6-af30-882830df489c.jpg",
+      "Image2": "./src/assets/627d7467-d97e-4713-ada0-82a38831d6d6.jpg"
+    },
+    "Measurement": {
+      "Length": "120cm",
+      "Width": "60cm",
+      "Height": "75cm"
+    },
+    "Name": "Office Desk Writex",
+    "Price": {
+      "Low": "€239,00"
+    },
+    "Color": {
+      "Color1": "Zwart",
+      "Color2": "Wit"
+    },
+    "Description": "Writex bureau fineer eiken, zwarte lades 1 st.",
+    "Stock": 3,
+    "Category": "Desk",
+    "Room": {
+      "Room1": "Bureau"
+    }
+  },
+  {
+    "Id": "57",
+    "Images": {
+      "Image1": "./src/assets/WA-0023-2.jpg",
+      "Image2": "./src/assets/WA-0023-6-800x800.jpg"
+    },
+    "Measurement": {
+      "Length": "96,5cm",
+      "Width": "2,5cm",
+      "Height": "96,5cm"
+    },
+    "Name": "Wall art Phoebe off white",
+    "Price": {
+      "Middle": "€359,00"
+    },
+    "Color": {
+      "Color1": "Wit"
+    },
+    "Description": "",
+    "Stock": 3,
+    "Category": "Home accessories",
+    "Room": {
+      "Room1": "Hal",
+      "Room2" :"Bureau",
+      "Room3" :"Woonkamer"
+    }
+  },
+  {
+    "Id": "58",
+    "Images": {
+      "Image1": "./src/assets/AD-0040-5.jpg",
+      "Image2": "./src/assets/AD-0040-6.jpg"
+    },
+    "Measurement": {
+      "Length": "16cm",
+      "Width": "14,5cm",
+      "Height": "40cm"
+    },
+    "Name": "Deco object icebear zwart",
+    "Price": {
+      "Low": "€45,00"
+    },
+    "Color": {
+      "Color1": "Zwart"
+    },
+    "Description": "",
+    "Stock": 3,
+    "Category": "Home accessories",
+    "Room": {
+      "Room1": "Hal",
+      "Room2" :"Bureau"
+    }
+  },
+  {
+    "Id": "59",
+    "Images": {
+      "Image1": "./src/assets/AD-0043-1.jpg",
+      "Image2": "./src/assets/AD-0043-6.jpg"
+    },
+    "Measurement": {
+      "Length": "9cm",
+      "Width": "8cm",
+      "Height": "21cm"
+    },
+    "Name": "Deco object hand digitus",
+    "Price": {
+      "Low": "€19,00"
+    },
+    "Color": {
+      "Color1": "Black/gold"
+    },
+    "Description": "",
+    "Stock": 3,
+    "Category": "Home accessories",
+    "Room": {
+      "Room1": "Hal",
+      "Room2" :"Bureau"
+    }
+  },
+  {
+    "Id": "60",
+    "Images": {
+      "Image1": "./src/assets/AD-0033-1.jpg",
+      "Image2": "./src/assets/AD-0033-6.jpg"
+    },
+    "Measurement": {
+      "Length": "11,5cm",
+      "Width": "14,5cm",
+      "Height": "22cm"
+    },
+    "Name": "Deco object Rhine",
+    "Price": {
+      "Low": "€35,00"
+    },
+    "Color": {
+      "Color1": "Zwart"
+    },
+    "Description": "",
+    "Stock": 3,
+    "Category": "Home accessories",
+    "Room": {
+      "Room1": "Hal",
+      "Room2" :"Bureau",
+      "Room3" :"Woonkamer"
+    }
+  },
+  {
+    "Id": "61",
+    "Images": {
+      "Image1": "./src/assets/JB-0066-8.jpg",
+      "Image2": "./src/assets/JB-0066-6.jpg"
+    },
+    "Measurement": {
+      "Length": "25cm",
+      "Width": "19,5cm",
+      "Height": "9,5cm"
+    },
+    "Name": "Juwelen box Vivy groot",
+    "Price": {
+      "Low": "€35,00"
+    },
+    "Color": {
+      "Color1": "Zwart"
+    },
+    "Description": "Doos",
+    "Stock": 3,
+    "Category": "Home accessories",
+    "Room": {
+      "Room1": "Slaapkamer",
+      "Room2" :"Woonkamer"
+    }
+  },
+  {
+    "Id": "62",
+    "Images": {
+      "Image1": "./src/assets/WA-0001-9.jpg",
+      "Image2": "./src/assets/WA-0001-2.jpg"
+    },
+    "Measurement": {
+      "Length": "55cm",
+      "Width": "3,5cm",
+      "Height": "55cm"
+    },
+    "Name": "Wall art Amour",
+    "Price": {
+      "Low": "€115,00"
+    },
+    "Description": "",
+    "Stock": 3,
+    "Category": "Home accessories",
+    "Room": {
+      "Room1": "Hal",
+      "Room2" :"Eetkamer",
+      "Room3" :"Woonkamer"
+    }
+  },
+  {
+    "Id": "63",
+    "Images": {
+      "Image1": "./src/assets/ZL-0006-1.jpg",
+      "Image2": "./src/assets/ZL-0006-6.jpg"
+    },
+    "Measurement": {
+      "Length": "10,5cm",
+      "Width": "10,5cm",
+      "Height": "25cm"
+    },
+    "Name": "Zandloper Gigi groot",
+    "Price": {
+      "Low": "€39,00"
+    },
+    "Description": "Zandloper",
+    "Stock": 3,
+    "Category": "Home accessories",
+    "Room": {
+      "Room1": "Bureau",
+      "Room2" :"Slaapkamer"
+    }
+  },
+  {
+    "Id": "64",
+    "Images": {
+      "Image1": "./src/assets/KK-0098-1.jpg",
+      "Image2": "./src/assets/KK-0098-6.jpg"
+    },
+    "Measurement": {
+      "Length": "74cm",
+      "Width": "2cm",
+      "Height": "74cm"
+    },
+    "Name": "Klok Zane",
+    "Price": {
+      "Middle": "€165,00"
+    },
+    "Color": {
+      "Color1": "Gold"
+    },
+    "Description": "Klok",
+    "Stock": 3,
+    "Category": "Home accessories",
+    "Room": {
+      "Room1": "Bureau",
+      "Room2" :"Eetkamer",
+      "Room3" :"Woonkamer",
+      "Room4" :"Hal"
+    }
+  },
+  {
+    "Id": "65",
+    "Images": {
+      "Image1": "./src/assets/KK-0066-1.jpg",
+      "Image2": "./src/assets/KK-0066-6.jpg"
+    },
+    "Measurement": {
+      "Length": "76cm",
+      "Width": "5cm",
+      "Height": "76cm"
+    },
+    "Name": "Klok Derial vierkant goud",
+    "Price": {
+      "High": "€329,00"
+    },
+    "Color": {
+      "Color1": "Gold"
+    },
+    "Description": "Klok",
+    "Stock": 3,
+    "Category": "Home accessories",
+    "Room": {
+      "Room1": "Bureau",
+      "Room2" :"Eetkamer",
+      "Room3" :"Woonkamer",
+      "Room4" :"Hal"
+    }
+  },
+  {
+    "Id": "66",
+    "Images": {
+      "Image1": "./src/assets/MI-0089-1.jpg",
+      "Image2": "./src/assets/MI-0089-4-768x768.jpg"
+    },
+    "Measurement": {
+      "Length": "39cm",
+      "Width": "11cm",
+      "Height": "39cm"
+    },
+    "Name": "Spiegel Mammom",
+    "Price": {
+      "Low": "€105,00"
+    },
+    "Color": {
+      "Color1": "Gold"
+    },
+    "Description": "Speigel",
+    "Stock": 3,
+    "Category": "Home accessories",
+    "Room": {
+      "Room1": "Hal",
+      "Room2" :"Slaapkamer"
+    }
+  },
+  {
+    "Id": "67",
+    "Images": {
+      "Image1": "./src/assets/ORANGE_E9.jpg",
+      "Image2": "./src/assets/ORANGE_V6.jpg"
+    },
+    "Measurement": {
+      "Length": "144cm",
+      "Width": "50cm",
+      "Height": "209cm"
+    },
+    "Name": "Orange Vitrine",
+    "Price": {
+      "High": "€1.174,00"
+    },
+    "Description": "Is jouw woonkamer ingericht met klassieke of landelijke meubels? Dan past Vitrine Orange daar perfect bij! Dit model valt op door haar mooie kleuren, warme uitstraling en leuke details. Vitrine Orange is een strak model uitgevoerd met houten en glazen draaideuren. De combinatie van naturel hout met een zwart accent past precies bij die landelijke en klassieke interieurstijl.",
+    "Stock": 3,
+    "Category": "Closet",
+    "Room": {
+      "Room1": "Woonkamer",
+      "Room2" :"Bureau",    
+      "Room3": "Eetkamer"
+    }
+  },
+  {
+    "Id": "68",
+    "Images": {
+      "Image1": "./src/assets/KENT_E1.jpg"
+    },
+    "Measurement": {
+      "Length": "125cm",
+      "Width": "50cm",
+      "Height": "212cm"
+    },
+    "Name": "Kent Vitrine",
+    "Price": {
+      "High": " €929,00"
+    },
+    "Description": "Vitrine Kent is gerealiseerd in een neutrale, lichtgrijze eiken kleur. Door deze lichte kleur past hij perfect in elk type interieur en zorgt de eiken look voor een rustgevende uitstraling. Deze landelijke vitrine biedt je veel opbergruimte en dankzij de glazen deuren ook wat uitstalruimte. Kolomkast Kent is onderdeel van een uitgebreid woonprogramma waarmee je een compleet nieuwe sfeer in huis kan creëren. Zo heb je keuze uit verschillende tafels, salontafels en kasten waaronder tv-kasten, vitrinekasten en barkasten om je woonkamer mooi in te richten in de landelijke stijl.",
+    "Stock": 3,
+    "Category": "Closet",
+    "Room": {
+      "Room1": "Woonkamer",
+      "Room2" :"Bureau",
+      "Room3" :"Eetkamer"
+    }
+  },
+  {
+    "Id": "69",
+    "Images": {
+      "Image1": "./src/assets/YORK_KV1RK467.jpg"
+    },
+    "Measurement": {
+    },
+    "Name": "York Kolomvitrine",
+    "Price": {
+      "Middle": "€499,00"
+    },
+    "Description": "Kolomvitrine York uitgevoerd in Larch en Crystal Oak Light Brown past vanwege zijn landelijke uitstraling in een landelijke, maar ook strakke living. In deze ruime vitrinekast kun je van alles kwijt, met zijn deuren, lade en open vakken heb je zowel opberg- als uitstalmogelijkheden. Achter de glazen deuren kun je jouw mooiste servies laten zien en stofvrij opbergen. Door functionaliteit te combineren met elegantie, zal dit meubel een authentieke touch in uw kamer brengen en een sensatie zijn met de andere meubels uit de York-collectie!",
+    "Stock": 3,
+    "Category": "Closet",
+    "Room": {
+      "Room1": "Woonkamer",
+      "Room2" :"Eetkamer",
+      "Room3": "Bureau"
+    }
+  },
+  {
+    "Id": "70",
+    "Images": {
+      "Image1": "./src/assets/rasant-4deurkast.png",
+      "Image2": "./src/assets/rasant-4deurkast-indeling.png"
+    },
+    "Measurement": {
+      "Length": "168cm",
+      "Width": "52cm",
+      "Height": "188cm"
+    },
+    "Name": "Rasant 4-deurskast",
+    "Price": {
+      "Low": "€349,00"
+    },
+    "Description": "Draaideurkast Rasant is een mooie kwaliteit kledingkast tegen een voordelige prijs! De kast is voorzien van draaideuren, waarbij u makkelijk overal in uw kast kunt komen. Het is uitgevoerd in een strakke vormgeving. Ook is deze voorzien van 2 spiegeldeuren, wat het opmaken vergemakkelijkt. De kastindeling bestaat uit 3 plooiruimtes en 1 hang gedeelte voorzien van een kledingroede. Ook zijn er 4 schuiven voorzien om alles netjes te organiseren. Deze kast is uitgevoerd in een kleuren combinatie van mat wit en eikenhoutkleur.",
+    "Stock": 3,
+    "Category": "Closet",
+    "Room": {
+      "Room1": "Slaapkamer"
+    }
+  },
+  {
+    "Id": "71",
+    "Images": {
+      "Image1": "./src/assets/Aiden2.jpg",
+      "Image2": "./src/assets/Aiden.jpg"
+    },
+    "Measurement": {
+      "Length": "120cm",
+      "Width": "60cm",
+      "Height": "75cm"
+    },
+    "Name": "Gaming Desk Aiden",
+    "Price": {
+      "Low": "€127,00"
+    },
+    "Color": {
+      "Color1": "Zwart"
+    },
+    "Description": "Aiden game desk carbon/melamine zwart, headset hanger, bekerhouder onedel metaal gepoedercoat zwart.",
+    "Stock": 3,
+    "Category": "Desk",
+    "Room": {
+      "Room1": "Bureau"
+    }
+  },
+  {
+    "Id": "72",
+    "Images": {
+      "Image1": "./src/assets/Screenshot_2-10.png",
+      "Image2": "./src/assets/Screenshot_3-9.png"
+    },
+    "Measurement": {
+      "Length": "110cm",
+      "Width": "50cm",
+      "Height": "77cm"
+    },
+    "Name": "Bureau Neptun",
+    "Price": {
+      "Low": "€139,00"
+    },
+    "Color": {
+      "Color1": "Wit",
+      "Color2": "Hout",
+      "Color3": "Zwart"
+    },
+    "Description": "Neptun bureau melamine wit, lades folie eiken, 3 stuks onedel metaal wit / zwart gelakt.",
+    "Stock": 3,
+    "Category": "Desk",
+    "Room": {
+      "Room1": "Bureau"
+    }
+  },
+  {
+    "Id": "73",
+    "Images": {
+      "Image1": "./src/assets/Screenshot_3-8.png",
+      "Image2": "./src/assets/Screenshot_1-11.png"
+    },
+    "Measurement": {
+      "Length": "120cm",
+      "Width": "60cm",
+      "Height": "75cm"
+    },
+    "Name": "Bureau Marte",
+    "Price": {
+      "Middle": "€289,00"
+    },
+    "Description": "Marte bureau massief hout/fineer eiken, wit gepigmenteerde lak lades 2 stuks.",
+    "Stock": 3,
+    "Category": "Desk",
+    "Room": {
+      "Room1": "Bureau"
+    }
+  },
+  {
+    "Id": "74",
+    "Images": {
+      "Image1": "./src/assets/Screenshot_4-6.png",
+      "Image2": "./src/assets/Screenshot_5-5.png"
+    },
+    "Measurement": {
+      "Length": "110cm",
+      "Width": "50cm",
+      "Height": "75cm"
+    },
+    "Name": "Bureau Angus",
+    "Price": {
+      "Low": "€127,00"
+    },
+    "Color": {
+      "Color1": "Zwart",
+      "Color2": "Hout"
+    },
+    "Description": "",
+    "Stock": 3,
+    "Category": "Desk",
+    "Room": {
+      "Room1": "Bureau"
+    }
+  },
+  {
+    "Id": "75",
+    "Images": {
+      "Image1": "./src/assets/Office-Desk-Chara.jpg",
+      "Image2": "./src/assets/Screenshot_1-9.png"
+    },
+    "Measurement": {
+      "Length": "117cm",
+      "Width": "58cm",
+      "Height": "75cm"
+    },
+    "Name": "Bureau Chara",
+    "Price": {
+      "Low": "€229,00"
+    },
+    "Description": "Chara bureautafel is gemaakt van wild eik, geoliede lades 1 stuk,  stevige viekrante poten.",
+    "Stock": 3,
+    "Category": "Desk",
+    "Room": {
+      "Room1": "Bureau"
+    }
+  },
+  {
+    "Id": "76",
+    "Images": {
+      "Image1": "./src/assets/7492-2-768x768.jpg",
+      "Image2": "./src/assets/7492-6.jpg"
+    },
+    "Measurement": {
+      "Length": "230cm",
+      "Width": "95cm",
+      "Height": "77cm"
+    },
+    "Name": "Eettafel Hunter 230",
+    "Price": {
+      "High": "€1.519,00"
+    },
+    "Color": {
+      "Color1": "Black Rustic"
+    },
+    "Description": "Eettafel Hunter 230 is een elegante aanwinst voor jouw eethoek. met het eikenhouten blad en goudkleurige mat afgewerkte stalen poten, is chique tafelen gegarandeerd.",
+    "Stock": 3,
+    "Category": "Dining Tables",
+    "Room": {
+      "Room1": "Eetkamer"
+    }
+  },
+  {
+    "Id": "77",
+    "Images": {
+      "Image1": "./src/assets/Rousseau2051525-120tafel20table20Elena201.jpg",
+      "Image2": "./src/assets/Rousseau2051525-220tafel20table20Elena208.jpg"
+    },
+    "Measurement": {
+      "Length": "200cm",
+      "Width": "100cm",
+      "Height": "76cm"
+    },
+    "Name": "Tafel Elena",
+    "Price": {
+      "Middle": "€535,00"
+    },
+    "Color": {
+      "Color1": "Zwart",
+      "Color2": "Hout"
+    },
+    "Description": "Structuur metaal, blad exotisch hout mangolia",
+    "Stock": 3,
+    "Category": "Dining Tables",
+    "Room": {
+      "Room1": "Eetkamer"
+    }
+  },
+  {
+    "Id": "78",
+    "Images": {
+      "Image1": "./src/assets/Rousseau2051735-120Tafel20table20Miguel201.jpg",
+      "Image2": "./src/assets/Rousseau2051735-220Tafel20table20Miguel205.jpg"
+    },
+    "Measurement": {
+      "Length": "130cm",
+      "Width": "65cm",
+      "Height": "76cm"
+    },
+    "Name": "Tafel Miguel",
+    "Price": {
+      "High": "€709,00"
+    },
+    "Color": {
+      "Color1": "Donkerbruin",
+      "Color2": "Lichtbruin"
+    },
+    "Description": "Structuur en blad massief hout Mangolia",
+    "Stock": 3,
+    "Category": "Dining Tables",
+    "Room": {
+      "Room1": "Eetkamer"
+    }
+  },
+  {
+    "Id": "79",
+    "Images": {
+      "Image1": "./src/assets/Rousseau2051918-120tafel20table20Zeus201.jpg",
+      "Image2": "./src/assets/Rousseau2051918-320tafel20table20Zeus208.jpg"
+    },
+    "Measurement": {
+      "Length": "180cm",
+      "Width": "90cm",
+      "Height": "75cm"
+    },
+    "Name": "Tafel Zeus",
+    "Price": {
+      "Middle": "€395,00"
+    },
+    "Color": {
+      "Color1": "Wit",
+      "Color2": "Grijs",
+      "Color3": "Zwart"
+    },
+    "Description": "Structuur metaal, blad steen",
+    "Stock": 3,
+    "Category": "Dining Tables",
+    "Room": {
+      "Room1": "Eetkamer"
+    }
+  },
+  {
+    "Id": "80",
+    "Images": {
+      "Image1": "./src/assets/dunes-2023-eetkamer.jpg"
+    },
+    "Measurement": {
+      "Length-Small" :"130cm",
+      "Length-Medium": "175cm",
+      "Width": "130cm",
+      "Height": ""
+    },
+    "Name": "Eettafel uitschuifbaar Dunes",
+    "Price": {
+      "High": "€869,00"
+    },
+    "Color": {
+      "Color1": ""
+    },
+    "Description": "Eettafel Dunes rond is een uniek en stijlvol meubelstuk en past perfect bij de populaire woonstijl: Japandi. Eettafel Dunes is afgewerkt met eiken fineer en heeft een zwart metalen onderstel. De eettafel Dunes rond is een uitschuifbare tafel. De standaard diameter van de ronde eettafel is 130cm en als je de tafel uitschuift krijg je hier nog is 45cm bij! Als je de ronde eettafel uitschuift wordt deze ovaal met een lengte van 175cm! Dit is ideaal voor als je een verjaardag hebt en er visite over de vloer komt. De tafel is ook verkrijgbaar in een standaard ovalen variant.",
+    "Stock": 3,
+    "Category": "Dining Tables",
+    "Room": {
+      "Room1": "Eetkamer"
+    }
+  },
+  {
+    "Id": "81",
+    "Images": {
+      "Image1": "./src/assets/9927-1-768x768.jpg",
+      "Image2": "./src/assets/9927-6-768x768.jpg"
+    },
+    "Measurement": {
+      "Length": "76,5cm",
+      "Width": "76,5cm",
+      "Height": "75cm"
+    },
+    "Name": "Eettafel Jagger",
+    "Price": {
+      "Middle": "€635,00"
+    },
+    "Description": "Tafel",
+    "Stock": 3,
+    "Category": "Dining Tables",
+    "Room": {
+      "Room1": "Eetkamer"
+    }
+  },
+  {
+    "Id": "82",
+    "Images": {
+      "Image1": "./src/assets/Nairobi-140×80-cm.jpg",
+      "Image2": "./src/assets/12412_5-768x534.jpg"
+    },
+    "Measurement": {
+      "Length": "140cm",
+      "Width": "80cm",
+      "Height": "90cm"
+    },
+    "Name": "Nairobi bartafel",
+    "Price": {
+      "Middle": "€479,00"
+    },
+    "Description": "Material : Mangohout / Gecoat Staal Brandserie : Nairobi",
+    "Stock": 3,
+    "Category": "Dining Tables",
+    "Room": {
+      "Room1": "Eetkamer"
+    }
+  },
+  {
+    "Id": "83",
+    "Images": {
+      "Image1": "./src/assets/S5152_FR_CREAM_FUSION-1-768x768.jpg",
+      "Image2": "./src/assets/S5152_FR_CREAM_FUSION-6.jpg"
+    },
+    "Measurement": {
+      "Length": "120cm",
+      "Width": "95cm",
+      "Height": "70cm"
+    },
+    "Name": "Fauteuil Merrol cream fusion fire retardant",
+    "Price": {
+      "High": "€849,00"
+    },
+    "Color": {
+      "Color1": "FR-Fusion 02 Cream"
+    },
+    "Description": "",
+    "Stock": 3,
+    "Category": "Sofa",
+    "Room": {
+      "Room1": "Woonkamer"
+    }
+  },
+  {
+    "Id": "84",
+    "Images": {
+      "Image1": "./src/assets/S4736_LOVELY_CREAM-1.jpg",
+      "Image2": "./src/assets/S4736_LOVELY_CREAM-6-768x768.jpg"
+    },
+    "Measurement": {
+      "Length": "78cm",
+      "Width": "86cm",
+      "Height": "76cm"
+    },
+    "Name": "Draaifauteuil Jace lovely cream",
+    "Price": {
+      "Middle": "€585,00"
+    },
+    "Color": {
+      "Color1": "Be Lovely 11 Cream"
+    },
+    "Description": "",
+    "Stock": 3,
+    "Category": "Sofa",
+    "Room": {
+      "Room1": "Woonkamer"
+    }
+  },
+  {
+    "Id": "85",
+    "Images": {
+      "Image1": "./src/assets/S4719_SHEEP_NATURE-1.jpg",
+      "Image2": "./src/assets/S4719_SHEEP_NATURE-2.jpg"
+    },
+    "Measurement": {
+      "Length": "91cm",
+      "Width": "77cm",
+      "Height": "72cm"
+    },
+    "Name": "Fauteuil Ophelia sheep nature",
+    "Price": {
+      "Middle": "€549,00"
+    },
+    "Color": {
+      "Color1": "Sheep 01 nature"
+    },
+    "Description": "",
+    "Stock": 3,
+    "Category": "Sofa",
+    "Room": {
+      "Room1": "Woonkamer"
+    }
+  },
+  {
+    "Id": "86",
+    "Images": {
+      "Image1": "./src/assets/center-2.jpg",
+      "Image2": "./src/assets/center-768x842.jpg"
+    },
+    "Measurement": {
+      "Length": "",
+      "Width": "",
+      "Height": ""
+    },
+    "Name": "Center",
+    "Price": {
+      "Low": "€159,00"
+    },
+    "Color": {
+      "Color1": "Beige"
+    },
+    "Description": "Lounge chair in beige",
+    "Stock": 3,
+    "Category": "Sofa",
+    "Room": {
+      "Room1": "Woonkamer"
+    }
+  },
+  {
+    "Id": "87",
+    "Images": {
+      "Image1": "./src/assets/RIA-SFEERFOTO-2ZIT-GRIJS-GECAPITONEERD-scaled.jpg",
+      "Image2": "./src/assets/RIA-3ZIT-ZIJAANZICHT-GECAPITONNEERD-GRIJS-VELVET-FLUWEEL-scaled.jpg"
+    },
+    "Measurement": {
+      "Length": "191cm",
+      "Width": "84cm",
+      "Height": "78cm"
+    },
+    "Name": "Ria 3 Zit",
+    "Price": {
+      "Middle": "€585,00"
+    },
+    "Color": {
+      "Color1": ""
+    },
+    "Description": "Deze fijne 3-zitter vormt een prachtig geheel waarin het comfort echt op de eerste plaats is gezet. De Ria bank is bekleedt met een velvet stof in de kleur grijs, een zachte structuur die het aangenaam maakt om een hele avond op je sofa door te brengen. Het onderstel bestaat uit vier zwartgelakte poten van rubberwood, deze zijn licht kegelvormig en zorgen voor de stevigheid van de bank. Dit maakt de retro look niet alleen compleet, het geeft de zetel ook een stoere uitstraling die perfect past bij de woonkamer van nu. Voor kleine ruimten of grote salons, ontdek hier al onze zitbanken.",
+    "Stock": 3,
+    "Category": "Sofa",
+    "Room": {
+      "Room1": "Woonkamer"
+    }
+  },
+  {
+    "Id": "88",
+    "Images": {
+      "Image1": "./src/assets/blain-zetelbed-2.jpg",
+      "Image2": "./src/assets/Giveaway-Time-Instagram-Post-3.jpg"
+    },
+    "Measurement": {
+      "Length": "200cm",
+      "Width": "105cm",
+      "Height": "83cm"
+    },
+    "Name": "Zetelbed Blain",
+    "Price": {
+      "Middle": "€585,00"
+    },
+    "Color": {
+      "Color1": ""
+    },
+    "Description": "Geschikt voor een multifunctionele ruimte of kleine appartement/kot. Deze slaapbank is niet alleen chic, maar biedt ook een veelzijdige oplossing. Het is gemakkelijk om te bouwen tot bed en de pocketveren zorgen ervoor dat uw overnachtende gasten comfortabel slapen.",
+    "Stock": 3,
+    "Category": "Sofa",
+    "Room": {
+      "Room1": "Woonkamer"
+    }
+  },
+  {
+    "Id": "89",
+    "Images": {
+      "Image1": "./src/assets/951b056a-9a7e-4158-a102-466a9fc9fc94.jpg",
+      "Image2": "./src/assets/3c9500ab-9b4f-488c-9226-ab5e960c5a7d.jpg"
+    },
+    "Measurement": {
+      "Length": "196cm",
+      "Width": "98cm",
+      "Height": "91cm"
+    },
+    "Name": "Zetelbed Faith",
+    "Price": {
+      "Middle": "€429,00"
+    },
+    "Color": {
+      "Color1": "licht grijs",
+      "Color2": "Zwart",
+      "Color3": "Grijs"
+    },
+    "Description": "Faith slaapbank lederlook zwart PU200, metalen poten chroom, matras.",
+    "Stock": 3,
+    "Category": "Sofa",
+    "Room": {
+      "Room1": "Woonkamer"
+    }
+  },
+  {
+    "Id": "90",
+    "Images": {
+      "Image1": "./src/assets/Rousseau201040-120slaapbank20lit-canapC3A920Adana201-14.jpg",
+      "Image2": "./src/assets/Rousseau201040-120slaapbank20lit-canapC3A920Adana209-7.jpg"
+    },
+    "Measurement": {
+      "Length": "214cm",
+      "Width": "84cm",
+      "Height": "84cm"
+    },
+    "Name": "Slaapbank Adana",
+    "Price": {
+      "Medium": "€355,00"
+    },
+    "Color": {
+      "Color1": "Beige",
+      "Color2": "Grijs"
+    },
+    "Description": "Eucalyptushouten frame, koudschuim matras",
+    "Stock": 3,
+    "Category": "Sofa",
+    "Room": {
+      "Room1": "Woonkamer"
+    }
+  },
+  {
+    "Id": "91",
+    "Images": {
+      "Image1": "./src/assets/Rousseau2088109-120Bed20Lit20Sablo201.jpg",
+      "Image2": "./src/assets/Rousseau2088109-220Bed20Lit20Sablo206.jpg"
+    },
+    "Measurement": {
+      "Length": "208cm",
+      "Width": "95cm",
+      "Height": "92cm"
+    },
+    "Name": "Bed Sablo",
+    "Price": {
+      "Low": "€135,00"
+    },
+    "Color": {
+      "Color1": "Zwart",
+      "Color2": "Wit"
+    },
+    "Description": "Structuur metaal, met lattenbodem",
+    "Stock": 3,
+    "Category": "Bed",
+    "Room": {
+      "Room1": "Slaapkamer"
+    }
+  },
+  {
+    "Id": "92",
+    "Images": {
+      "Image1": "./src/assets/kiddygrijs_resultaat-1.jpg",
+      "Image2": "./src/assets/KIBE9014-INF_resultaat.jpg"
+    },
+    "Measurement": {
+      "Length": "205,5cm",
+      "Width": "95cm",
+      "Height": ""
+    },
+    "Name": "Kiddy Bed",
+    "Price": {
+      "Medium": "€229,00"
+    },
+    "Color": {
+      "Color1": "Grijs",
+      "Color2": "Wit",
+      "Color3": "Mint",
+      "Color4": "Roze"
+    },
+    "Description": "Dit leuke Kiddy bed van Vipack is een echte aanwinst voor iedere kinderkamer! Door de zachte kleuren en speelse vormen, heeft het daarnaast een rustgevende uitstraling. Het Kiddy bed heeft een afmeting van 90×200 cm en past hierdoor moeiteloos in elke kinderkamer. De lattenbodem is inbegrepen in het bed en optioneel kan u hierbij een matras bestellen. Om de kinderslaapkamer compleet te maken is het bed aan te vullen met de nachttafel van de Kiddy collectie. Daarnaast is Kiddy ook verkrijgbaar in het grijs, roze en mint groen. Welke is jouw favoriet?",
+    "Stock": 3,
+    "Category": "Bed",
+    "Room": {
+      "Room1": "Slaapkamer"
+    }
+  },
+  {
+    "Id": "93",
+    "Images": {
+      "Image1": "./src/assets/Rousseau20891220plooibed20lit20pliable20Bruxelles201.jpg",
+      "Image2": "./src/assets/Rousseau20891220plooibed20lit20pliable20Bruxelles207-768x512.jpg"
+    },
+    "Measurement": {
+      "Length": "200cm",
+      "Width": "90cm",
+      "Height": "27cm"
+    },
+    "Name": "Plooibed Bruxelles",
+    "Price": {
+      "Low": "€175,00"
+    },
+    "Color": {
+      "Color1": ""
+    },
+    "Description": "Mousse 21 kg., dikte 11 cm, 15 latten",
+    "Stock": 3,
+    "Category": "Bed",
+    "Room": {
+      "Room1": "Slaapkamer"
+    }
+  },
+  {
+    "Id": "94",
+    "Images": {
+      "Image1": "./src/assets/wimex-verticaal-opklapbed-juist-verticaal-inklapbaar-bruin-5.webp",
+      "Image2": "./src/assets/wimex-verticaal-opklapbed-juist-verticaal-inklapbaar-bruin-6.webp"
+    },
+    "Measurement": {
+      "Length": "200cm",
+      "Width-Small": "90cm",
+      "Width-Medium": "120cm",
+      "Width": "140cm",
+      "Height": ""
+    },
+    "Name": "Verticaal opklapbed Juist",
+    "Price": {
+      "Low": "€755,00",
+      "Middle":"€836,00",
+      "High": "€934,00"
+    },
+    "Color": {
+      "Color1": "Wit",
+      "Color2": "Sanremo"
+    },
+    "Description": "Inclusief lattenbodem Ruimtebesparend Optimaal voor kleine vertrekken of als logeerbed",
+    "Stock": 3,
+    "Category": "Bed",
+    "Room": {
+      "Room1": "Slaapkamer"
+    }
+  },
+  {
+    "Id": "95",
+    "Images": {
+      "Image1": "./src/assets/AMBE9014_INF_2326-scaled.jpg",
+      "Image2": "./src/assets/AMBE9014_dcce.jpg"
+    },
+    "Measurement": {
+      "Length": "200cm",
+      "Width": "90cm",
+      "Height": ""
+    },
+    "Name": "Amori Bed",
+    "Price": {
+      "Middle": "€332,00"
+    },
+    "Color": {
+      "Color1": "Wit"
+    },
+    "Description": "Het AMORI bed is een wit bed van 90x200cm. Dit bed heeft een romantische uitstraling, mede dankzij het hart in het hoofdbord en voeteinde en de sierlijke afwerking. Bij dit bed is de lattenbodem niet inbegrepen.",
+    "Stock": 3,
+    "Category": "Bed",
+    "Room": {
+      "Room1": "Slaapkamer"
+    }
+  },
+  {
+    "Id": "96",
+    "Images": {
+      "Image1": "./src/assets/BARNIE.jpg",
+      "Image2": "./src/assets/barnie__-scaled.jpg"
+    },
+    "Measurement": {
+      "Length": "200cm",
+      "Width": "90cm",
+      "Height": ""
+    },
+    "Name": "Barnie",
+    "Price": {
+      "Middle": " €699,00"
+    },
+    "Color": {
+      "Color1": "Wit"
+    },
+    "Description": "Het Barnie boomhutbed is geïnspireerd op een schuur en is een geweldige plek om te slapen of te spelen! Je bereikt het bed met de ladder in het midden, de 2 deurtjes zijn vastgemaakt voor de veiligheid. Onder het bed kun je bovendien heel wat speelgoed en andere zaken opbergen. Het stevige, wit gelakte bed is gemaakt van MDF en is geschikt voor een vaste lattenbodem en een matras van 90 x 200 cm. Dit bed is eenvoudig te monteren aan de hand van de meegeleverde montagefiche. Opgelet: het dak mag niet beklommen worden.",
+    "Stock": 3,
+    "Category": "Bed",
+    "Room": {
+      "Room1": "Slaapkamer"
+    }
+  },
+  {
+    "Id": "97",
+    "Images": {
+      "Image1": "./src/assets/S4554_WHITE_CHENILLE-1.jpg",
+      "Image2": "./src/assets/S4554_WHITE_CHENILLE-6-768x768.jpg"
+    },
+    "Measurement": {
+      "Length": "57cm",
+      "Width": "56cm",
+      "Height": "86cm"
+    },
+    "Name": "Barstoel Zabi draaibaar white chenille",
+    "Price": {
+      "Middle": "€575,00"
+    },
+    "Color": {
+      "Color1": "Bergen 900 white chenille"
+    },
+    "Description": "",
+    "Stock": 3,
+    "Category": "Chair",
+    "Room": {
+      "Room1": "Eetkamer"
+    }
+  },
+  {
+    "Id": "98",
+    "Images": {
+      "Image1": "./src/assets/S4584_WOOD_RENEGADE-1.jpg",
+      "Image2": "./src/assets/S4584_WOOD_RENEGADE-6.jpg"
+    },
+    "Measurement": {
+      "Length": "49cm",
+      "Width": "51cm",
+      "Height": "93cm"
+    },
+    "Name": "Counterstoel Alyssa wood renegade ",
+    "Price": {
+      "Middle": "€289,00"
+    },
+    "Color": {
+      "Color1": "Renegade wood 108)"
+    },
+    "Description": "",
+    "Stock": 3,
+    "Category": "Chair",
+    "Room": {
+      "Room1": "Eetkamer"
+    }
+  },
+  {
+    "Id": "99",
+    "Images": {
+      "Image1": "./src/assets/S4716_MUSTARD_FUSION-1.jpg",
+      "Image2": "./src/assets/S4716_MUSTARD_FUSION-6-800x800.jpg"
+    },
+    "Measurement": {
+      "Length": "52cm",
+      "Width": "53cm",
+      "Height": "103cm"
+    },
+    "Name": "Barstoel Taylor mustard fusion",
+    "Price": {
+      "Middle": "€255,00"
+    },
+    "Color": {
+      "Color1": "Fusion mustard 06"
+    },
+    "Description": "",
+    "Stock": 3,
+    "Category": "Chair",
+    "Room": {
+      "Room1": "Eetkamer"
+    }
+  },
+  {
+    "Id": "100",
+    "Images": {
+      "Image1": "./src/assets/MNBE9014_1_8bc7.jpg",
+      "Image2": "./src/assets/MNBE9093_INF_M_9d43.jpg"
+    },
+    "Measurement": {
+      "Length": "200cm",
+      "Width-Small": "90cm",
+      "Width-Medium": "140cm",
+      "Height": ""
+    },
+    "Name": "Moon Bed",
+    "Price": {
+      "Middle": "€299,00"
+    },
+    "Color": {
+      "Color1": "Wit",
+      "Color2": "Grijs",
+      "Color3": "Groen",
+      "Color4": "Rose"
+    },
+    "Description": "MOON is een nieuwe collectie van gestoffeerde bedden en nachttafels in een unieke bouclé stof. De bedden zijn beschikbaar in zowel 90 x 200 cm als 140 x 200 cm en dit in de kleuren wit, roze, groen en grijs. De combinatie van deze stofbekleding en het afgeronde hoofdbord geven het bed een warme uitstraling en gezellig karakter. Deze collectie past in elk interieur en kan makkelijk gecombineerd worden. De lattenbodem is standaard inbegrepen. Een matras van 90×200 kun je direct meebestellen.",
+    "Stock": 3,
+    "Category": "Bed",
+    "Room": {
+      "Room1": "Slaapkamer"
+    }
+  }
+]
