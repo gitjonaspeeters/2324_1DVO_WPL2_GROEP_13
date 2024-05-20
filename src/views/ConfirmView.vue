@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import ConfirmService from '../services/ConfirmService.js'
+import ConfirmService from '../stores/ConfirmService.js'
 
 export default {
     methods: {
