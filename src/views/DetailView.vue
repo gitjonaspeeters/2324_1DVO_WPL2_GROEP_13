@@ -194,7 +194,7 @@
 <script>
 import BestProducts from "@/components/Best-products.vue";
 import reviewsData from '@/data/reviews.json';
-import productsData from '@/product.json';
+import productsData from '@/data/product.json';
 import {ref} from 'vue';
 
 import {Carousel, Slide, Navigation} from 'vue3-carousel'
