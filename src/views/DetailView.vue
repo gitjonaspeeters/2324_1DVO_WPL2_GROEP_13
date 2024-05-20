@@ -7,7 +7,7 @@
 
         <Carousel class="horizontal-carousel">
           <template #slides>
-            <Slide v-for="(item, index) in product.Images" :key="index">
+            <Slide v-for="item in product.Images" :key="item">
               <div>
                 <img :src="item" alt="een foto">
               </div>
@@ -21,7 +21,6 @@
       </div>
       <div id="container-right-upper">
         <h1>{{ product.Name }}</h1>
-        <p>ID: {{ currentProductIndex }}</p>
 
         <p id="text-kleur">kleuren:</p>
         <div id="kleuren">
@@ -40,15 +39,16 @@
       </div>
     </div>
     <div id="mid-container">
-      <h3>Misschien ben je ook geintresseerd in dit?</h3>
-      <carouselComponent :items-to-show="3"/>
+      <BestProducts/>
     </div>
     <div id="container-bottem">
       <div id="container-bottem-left">
         <h2>Reviews</h2>
         <div id="reviews">
           <div class="icons">
-            <i v-for="star in 5" :key="star" class="fa-regular fa-star fa-rotate-180" style="color: #F2B66D;"></i>
+            <span v-for="index in 5" :key="index" class="star">
+              <i class="fa-regular fa-star"></i>
+            </span>
           </div>
           <p>{{ averageStars.toFixed(1) }} ({{ totalReviews }} reviews)</p>
         </div>
@@ -96,9 +96,12 @@
             <p>Zitgemak</p>
             <div>
               <template v-for="star in 5">
-                <i v-if="star <= averageRatings.zitgemak" class="fa-regular fa-star fa-rotate-180"
-                  style="color: #F2B66D;"></i>
-                <i v-else class="fa-regular fa-star fa-rotate-180" style="color: #FFFFFF;"></i>
+                <span v-if="star <= averageRatings.zitgemak" class="star">
+                  <i class="fa-regular fa-star fa-rotate-180"></i>
+                </span>
+                <span v-else class="star">
+                  <i class="fa-regular fa-star fa-rotate-180"></i>
+                </span>
               </template>
             </div>
             <p>{{ averageRatings.zitgemak.toFixed(1) }}</p>
@@ -107,9 +110,12 @@
             <p>Liggemak</p>
             <div>
               <template v-for="star in 5">
-                <i v-if="star <= averageRatings.liggemak" class="fa-regular fa-star fa-rotate-180"
-                  style="color: #F2B66D;"></i>
-                <i v-else class="fa-regular fa-star fa-rotate-180" style="color: #FFFFFF;"></i>
+                <span v-if="star <= averageRatings.liggemak" class="star">
+                  <i class="fa-regular fa-star fa-rotate-180"></i>
+                </span>
+                <span v-else class="star">
+                  <i class="fa-regular fa-star fa-rotate-180"></i>
+                </span>
               </template>
             </div>
             <p>{{ averageRatings.liggemak.toFixed(1) }}</p>
@@ -118,9 +124,12 @@
             <p>Kwaliteit</p>
             <div>
               <template v-for="star in 5">
-                <i v-if="star <= averageRatings.kwaliteit" class="fa-regular fa-star fa-rotate-180"
-                  style="color: #F2B66D;"></i>
-                <i v-else class="fa-regular fa-star fa-rotate-180" style="color: #FFFFFF;"></i>
+                <span v-if="star <= averageRatings.kwaliteit" class="star">
+                  <i class="fa-regular fa-star fa-rotate-180"></i>
+                </span>
+                <span v-else class="star">
+                  <i class="fa-regular fa-star fa-rotate-180"></i>
+                </span>
               </template>
             </div>
             <p>{{ averageRatings.kwaliteit.toFixed(1) }}</p>
@@ -129,21 +138,27 @@
             <p>Montage</p>
             <div>
               <template v-for="star in 5">
-                <i v-if="star <= averageRatings.montage" class="fa-regular fa-star fa-rotate-180"
-                  style="color: #F2B66D;"></i>
-                <i v-else class="fa-regular fa-star fa-rotate-180" style="color: #FFFFFF;"></i>
+                <span v-if="star <= averageRatings.montage" class="star">
+                  <i class="fa-regular fa-star fa-rotate-180"></i>
+                </span>
+                <span v-else class="star">
+                  <i class="fa-regular fa-star fa-rotate-180"></i>
+                </span>
               </template>
             </div>
             <p>{{ averageRatings.montage.toFixed(1) }}</p>
           </div>
-          
+
           <div class="part">
             <p>Trendy</p>
             <div>
               <template v-for="star in 5">
-                <i v-if="star <= averageRatings.trendy" class="fa-regular fa-star fa-rotate-180"
-                  style="color: #F2B66D;"></i>
-                <i v-else class="fa-regular fa-star fa-rotate-180" style="color: #FFFFFF;"></i>
+                <span v-if="star <= averageRatings.trendy" class="star">
+                  <i class="fa-regular fa-star fa-rotate-180"></i>
+                </span>
+                <span v-else class="star">
+                  <i class="fa-regular fa-star fa-rotate-180"></i>
+                </span>
               </template>
             </div>
             <p>{{ averageRatings.trendy.toFixed(1) }}</p>
@@ -153,8 +168,9 @@
       <div id="container-bottem-right">
         <div v-for="(review, index) in filteredReviews" :key="index" class="review">
           <div class="icons">
-            <i v-for="star in review.stars" :key="star" class="fa-solid fa-star fa-rotate-180"
-              style="color: #F2B66D;"></i>
+            <span v-for="star in review.stars" :key="star" class="star">
+                  <i class="fa-regular fa-star fa-rotate-180"></i>
+            </span>
           </div>
           <h2>{{ review.title }}</h2>
           <p>{{ review.review_text }}</p>
@@ -176,15 +192,14 @@
   </div>
 </template>
 <script>
-import carouselComponent from "@/components/CarouselComponent.vue";
+import BestProducts from "@/components/Best-products.vue";
 import reviewsData from '@/data/reviews.json';
 import productsData from '@/product.json';
-import { ref } from 'vue';
+import {ref} from 'vue';
 
-import { Carousel, Slide, Navigation } from 'vue3-carousel'
+import {Carousel, Slide, Navigation} from 'vue3-carousel'
 import 'fotorama/fotorama.css';
 import 'jquery'
-
 
 
 export default {
@@ -193,21 +208,21 @@ export default {
     Carousel,
     Slide,
     Navigation,
-    carouselComponent,
+    BestProducts,
   },
   props: {
     currentProductIndex: {
-      type: [Number,String],
+      type: [Number, String],
       required: true,
     },
   },
 
   data() {
     const colors = [
-        '#FFFFFF',
-        '#121212',
-        '#000000',
-        '#343434',
+      '#FFFFFF',
+      '#121212',
+      '#000000',
+      '#343434',
     ]
     return {
       colors,
@@ -223,7 +238,7 @@ export default {
     };
 
   },
-  
+
   mounted() {
 
 
@@ -324,15 +339,15 @@ export default {
 
   },
   watch: {
-  '$route.params.currentProductIndex'(newIndex) {
-    console.log("Route param changed:", newIndex);
-    this.currentProductIndex = newIndex;
-    this.averageStars = this.calculateAverageStars;
-    this.totalReviews = this.calculateTotalReviews;
-    this.averageRatings = this.calculateAverageRatings;
+    '$route.params.currentProductIndex'(newIndex) {
+      console.log("Route param changed:", newIndex);
+      this.currentProductIndex = newIndex;
+      this.averageStars = this.calculateAverageStars;
+      this.totalReviews = this.calculateTotalReviews;
+      this.averageRatings = this.calculateAverageRatings;
+    },
   },
-},
-  
+
 };
 
 </script>
@@ -371,13 +386,17 @@ $with-buttons: calc(100% / 4);
   display: flex;
   flex-direction: row;
   color: #515151;
+
   #container-right-upper {
     width: 40vw;
     margin: 10rem 5rem 0rem 0rem;
+
     h1 {
+      font-weight: bold;
       margin-bottom: 1rem;
       color: #485059;
     }
+
     #text-kleur {
       color: #515151;
       margin-bottom: 1rem;
@@ -385,12 +404,13 @@ $with-buttons: calc(100% / 4);
 
     #kleuren {
       display: flex;
+
       .kleur {
         display: flex;
-        width: 2rem;
-        height: 2rem;
+        width: 3rem;
+        height: 3rem;
         border-radius: 50px;
-        margin: 1rem 1rem;
+        margin: 1rem 1.5rem;
       }
     }
 
@@ -472,8 +492,8 @@ $with-buttons: calc(100% / 4);
 }
 
 #mid-container {
-  width: 95%;
-  margin: 0 auto 5rem;
+  width: 100vw;
+  margin: 5rem 0;
   h3 {
     color: #485059;
     font-size: 2rem;
@@ -491,6 +511,21 @@ $with-buttons: calc(100% / 4);
     left: 2rem;
   }
 
+  .star {
+    width: 40px;
+    height: 40px;
+    background-color: #374048;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 5px;
+    i {
+      background-color: transparent;
+      color: #F2B66D;
+    }
+  }
+
   #container-bottem-left {
     display: flex;
     flex-direction: column;
@@ -501,18 +536,22 @@ $with-buttons: calc(100% / 4);
     }
 
     h2 {
+      color: #485059;
       font-weight: 600;
     }
 
     #reviews {
       display: flex;
+
       .icons {
-        font-size: 2rem;
+        display: flex;
+        font-size: 1.5rem;
         margin: {
           top: 1rem;
           right: 2rem;
         }
       }
+
       p {
         position: relative;
         top: 1.5rem;
@@ -569,73 +608,77 @@ $with-buttons: calc(100% / 4);
     }
   }
 
-    #review-per-part {
-      display: flex;
-      flex-direction: column;
-
-      .part {
-        display: flex;
-
-        margin: {
-          left: 15%;
-          top: 1rem;
-        }
-
-        i {
-          font-size: 2.5rem;
-        }
-
-        p:nth-child(1) {
-          font: {
-            size: 26px;
-          }
-
-          margin: {
-            right: 3rem;
-          }
-        }
-
-        p {
-          margin-left: 0.5rem;
-          font-size: 17px;
-        }
-      }
-
-      h2 {
-        margin-bottom: 1rem;
-      }
-    }
-  }
-
-  #container-bottem-right {
+  #review-per-part {
     display: flex;
     flex-direction: column;
-    width: 50vw;
 
-    margin: {
-      right: 2rem;
-      bottom: 5rem;
+    .part {
+      display: flex;
+
+      margin: {
+        left: 15%;
+        top: 1rem;
+      }
+
+      i {
+        font-size: 1.5rem;
+      }
+      div {
+        display: flex;
+      }
+
+      p:nth-child(1) {
+        font: {
+          size: 26px;
+        }
+
+        margin: {
+          right: 3rem;
+        }
+      }
+
+      p {
+        margin-left: 0.5rem;
+        font-size: 17px;
+      }
     }
 
     h2 {
-      font: {
-        weight: bold;
-        size: 1.5rem;
-      }
-
-      ;
+      margin-bottom: 1rem;
     }
+  }
+}
 
-    .review {
-      margin-bottom: 5rem;
-    }
+#container-bottem-right {
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
 
-    i {
-      font-size: 1.5rem;
+  margin: {
+    right: 2rem;
+    bottom: 5rem;
+  }
+
+  .icons {
+    display: flex;
+  }
+
+  h2 {
+    color: #4C4C4C;
+    font: {
+      weight: bold;
+      size: 1.5rem;
     }
   }
 
+  .review {
+    margin-bottom: 5rem;
+  }
 
+  i {
+    font-size: 1.5rem;
+  }
+}
 
 
 #qr-popup {
@@ -653,12 +696,14 @@ $with-buttons: calc(100% / 4);
   border: {
     radius: 25px;
   };
+
   #close {
     position: absolute;
     top: 0.25rem;
     right: 1rem;
     font-size: 3rem;
     background-color: #F2B66D;
+
     i {
       background-color: #F2B66D;
     }
@@ -666,16 +711,19 @@ $with-buttons: calc(100% / 4);
 
   #popup-container {
     background-color: #F2B66D;
+
     img {
       background-color: #F2B66D;
       height: 15rem;
       width: 15rem;
     }
+
     i {
       background-color: #F2B66D;
       font-size: 2rem;
       margin-right: 1rem;
     }
+
     #icons {
       background-color: #F2B66D;
       margin: {
@@ -691,6 +739,7 @@ $with-buttons: calc(100% / 4);
     width: 100%;
     flex-direction: column;
     align-items: center;
+
     #container-right-upper {
       display: flex;
       flex-direction: column;
@@ -698,24 +747,23 @@ $with-buttons: calc(100% / 4);
       width: 90vw;
       margin-left: 10vw;
       margin-top: 0;
+
       i {
         font-size: 1.5rem;
       }
     }
+
     #container-left-upper {
       margin: 10rem auto 2rem;
       width: 90vw;
 
     }
+
     #describtion {
       display: none;
     }
   }
 
-  #mid-container {
-    width: 95%;
-    margin-bottom: 2rem;
-  }
 
   #container-bottem {
     display: none;
@@ -728,6 +776,7 @@ $with-buttons: calc(100% / 4);
     align-items: center;
     width: 100%;
     margin-top: 5rem;
+
     #container-right-upper {
       width: 90%;
       margin: 2rem 0;
@@ -744,6 +793,7 @@ $with-buttons: calc(100% / 4);
       #kleuren {
         justify-content: center;
         width: 100vw;
+
         .kleur {
           width: 3rem;
           height: 3rem;
@@ -765,6 +815,7 @@ $with-buttons: calc(100% / 4);
           width: 20%;
           margin-bottom: 0.5rem;
         }
+
         button {
           position: relative;
           right: 3rem;
@@ -774,6 +825,7 @@ $with-buttons: calc(100% / 4);
           margin-right: 0.5rem;
         }
       }
+
       i {
         position: relative;
         left: 37vw;
@@ -796,6 +848,7 @@ $with-buttons: calc(100% / 4);
             display: none;
           }
         }
+
         img {
           width: 100%;
           height: auto;
@@ -806,7 +859,6 @@ $with-buttons: calc(100% / 4);
   }
 
   #mid-container {
-    width: 100%;
     h3 {
       display: none;
     }
@@ -820,6 +872,7 @@ $with-buttons: calc(100% / 4);
     width: 90%;
     height: auto;
     padding: 1rem;
+
     #popup-container {
       img {
         margin: 4rem auto 0;

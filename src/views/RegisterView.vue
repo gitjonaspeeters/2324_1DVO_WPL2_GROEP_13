@@ -6,8 +6,6 @@ export default {
     const loginstore = useLoginStore();
     return {
       loginstore,
-      email: [],
-      password: [],
     }
   }
 }
@@ -26,9 +24,9 @@ export default {
             <label for="first-name"></label>
             <input type="text" class="input" id="first-name" name="First-name" placeholder="Voornaam">
             <label for="email"></label>
-            <input type="email"  v-model="this.email" class="input" id="email" name="email" placeholder="Email">
+            <input type="email"  v-model="this.loginstore.email" class="input" id="email" name="email" placeholder="Email">
             <label for="password"></label>
-            <input type="password" v-model="this.password" class="input" id="password" name="password" placeholder="Wachtwoord">
+            <input type="password" v-model="this.loginstore.password" class="input" id="password" name="password" placeholder="Wachtwoord">
             <label for="password"></label>
             <input type="password" id="password2" name="password" placeholder="Herhaal Wachtwoord">
             <p @click="loginstore.register(this.email, this.password)" id="register">Registreren</p>
