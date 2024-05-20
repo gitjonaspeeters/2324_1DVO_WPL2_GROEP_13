@@ -88,6 +88,7 @@
     <div id="news-content">
       <h1><i>Nieuwsbrief</i></h1>
     <div class="news-input">
+      <input type="text" id="naam" name="naam" placeholder="Naam">
       <input type="email" id="email" name="email" placeholder="Email">
       <button>inschrijven</button>
     </div>
@@ -520,24 +521,26 @@ margin-left: 0.5rem;
 
 .news-input{
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   font-family: "Century Gothic", sans-serif;
   color: #485059;
   font-size: 1.2rem;
+  gap: 0.5rem;
 }
 
-#email{
+.news-input input{
   border: none;
-  border-radius: 20px  0 0 20px;
   padding: 0.8rem  1.5rem;
+  
 }
 
 .news-input button{
   background-color: #F2B66D;
-  border-radius: 0 20px 20px 0;
+  /* border-radius: 0 20px 20px 0; */
   padding: 0.8rem  1.5rem;
   border: none;
+  width: 100%;
 }
 
 .news-input button:hover{
@@ -627,13 +630,8 @@ font-size: 1.2rem;
   align-items: center;
 }
 
-#email{
-  width: 60%;
-}
-
 .news-input button{
   padding: 0.8rem  1rem;
-  width: 40%;
 }
 
 .news-input button:hover{
