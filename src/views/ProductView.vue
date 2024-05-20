@@ -138,7 +138,7 @@ export default {
             location.reload();
         },
         fetchProducts() {
-            axios.get('/src/product.json')
+            axios.get('./src/product.json')
                 .then(response => {
                     this.products = response.data;
                     this.initializeWishlist();
