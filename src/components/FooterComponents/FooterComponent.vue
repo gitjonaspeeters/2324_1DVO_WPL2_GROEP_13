@@ -18,7 +18,7 @@ export default {
             <div id="footer-main">
                 <a href="#"><p>Copyright 2024 ©</p></a>
 
-                <p><router-link to="/voorwaarden" @click.native="scrollToTop">Algemene voorwaarden</router-link> / <router-link to="/cookies" @click.native="scrollToTop">Cookies</router-link> / <router-link to="/privacy" @click.native="scrollToTop">Privacybeleid</router-link></p>
+                <p><router-link to="/voorwaarden" @click="scrollToTop">Algemene voorwaarden</router-link> / <router-link to="/cookies" @click="scrollToTop">Cookies</router-link> / <router-link to="/privacy" @click="scrollToTop">Privacybeleid</router-link></p>
 
             </div>
             <div id="footer-right">

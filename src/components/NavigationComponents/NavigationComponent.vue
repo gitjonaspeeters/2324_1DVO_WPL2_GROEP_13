@@ -325,7 +325,7 @@ export default {
 }
 
 #cart-popup-container {
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
   position: relative;
 }
@@ -333,21 +333,15 @@ export default {
 #cart-popup {
   position: fixed;
   top: 15%;
-  /* Plaats het onder de winkelwagenknop */
-  left: 86%;
+  right: 3%; 
   width: 350px;
-  margin-right: 5px;
-  transform: translateX(-50%);
-  z-index: 999;
-  /* Zorg ervoor dat het bovenop andere elementen staat */
+  z-index: 4;
   background-color: #ffffff;
   padding: 1rem;
   border: 1px solid #ccc;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: margin-top 1s ease-in-out;
-  padding-bottom: -6rem;
-
 }
 
 #cart-popup img {
@@ -358,7 +352,7 @@ export default {
 
 #cart-popup h4 {
   color: #485059;
-  padding: 0.5rem;
+  padding: 0  0 0.5rem 0;
   width: 90%;
 }
 

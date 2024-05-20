@@ -15,29 +15,54 @@
     </div>
   </div>
   <div id="rooms" class="rooms">
-    <div class="gallery-buttons">
-      <img src="/src/assets/leftbtn.png" alt="arrow-left" id="backbtn" @click="scrollLeft">
-      <div class="gallery" id="image-gallery">
-        <div class="images">
-          <span class="image-container"><img src="/src/assets/Gio-zetel.jpg" alt="Reflection image"><span
-              class="overlay">Woonkamer</span></span>
-          <span class="image-container"><img src="/src/assets/Tafel.jpg" alt="Reflection image 2"><span
-              class="overlay">Eetkamer</span></span>
-          <span class="image-container"><img src="/src/assets/vanaf-1699-euro.jpeg" alt="Corekwadrant image"><span
-              class="overlay">Slaapkamer</span></span>
-        </div>
-        <div class="images">
-          <span class="image-container"><img src="/src/assets/Bureastoel.jpg" alt="Seminair image"><span
-              class="overlay">Bureau</span></span>
-          <span class="image-container"><img src="/src/assets/RuimtesImage2.png" alt="Dashboard of groupwork design"><span
-              class="overlay">Hal</span></span>
-          <span class="image-container"><img src="/src/assets/Gio-zetel.jpg" alt="Reflection image"><span
-              class="overlay">Woonkamer</span></span>
-        </div>
+  <div class="gallery-buttons">
+    <img src="/src/assets/leftbtn.png" alt="arrow-left" id="backbtn" @click="scrollLeft">
+    <div class="gallery" id="image-gallery">
+      <div class="images">
+        <span class="image-container">
+          <router-link :to="{ name: 'products', query: { category: 'Sofa' } }">
+            <img src="/src/assets/Gio-zetel.jpg" alt="Reflection image">
+            <span class="overlay">Woonkamer</span>
+          </router-link>
+        </span>
+        <span class="image-container">
+          <router-link :to="{ name: 'products', query: { category: 'Dining Tables' } }">
+            <img src="/src/assets/Tafel.jpg" alt="Reflection image 2">
+            <span class="overlay">Eetkamer</span>
+          </router-link>
+        </span>
+        <span class="image-container">
+          <router-link :to="{ name: 'products', query: { category: 'Bed' } }">
+            <img src="/src/assets/vanaf-1699-euro.jpeg" alt="Corekwadrant image">
+            <span class="overlay">Slaapkamer</span>
+          </router-link>
+        </span>
       </div>
-      <img src="/src/assets/rightbtn.png" alt="arrow-right" id="nextbtn" @click="scrollRight">
+      <div class="images">
+        <span class="image-container">
+          <router-link :to="{ name: 'products', query: { category: 'Desk' } }">
+            <img src="/src/assets/Bureastoel.jpg" alt="Seminair image">
+            <span class="overlay">Bureau</span>
+          </router-link>
+        </span>
+        <span class="image-container">
+          <router-link :to="{ name: 'products', query: { category: 'Home accessories' } }">
+            <img src="/src/assets/RuimtesImage2.png" alt="Dashboard of groupwork design">
+            <span class="overlay">Hal</span>
+          </router-link>
+        </span>
+        <span class="image-container">
+          <router-link :to="{ name: 'products', query: { category: 'Sofa' } }">
+            <img src="/src/assets/Gio-zetel.jpg" alt="Reflection image">
+            <span class="overlay">Woonkamer</span>
+          </router-link>
+        </span>
+      </div>
     </div>
+    <img src="/src/assets/rightbtn.png" alt="arrow-right" id="nextbtn" @click="scrollRight">
   </div>
+</div>
+
 
   <!-- best products -->
   <div id="best-container">
@@ -136,6 +161,9 @@ export default {
     currentSlide(index) {
       this.currentSlideIndex = index;
     },
+    navigateToCategory(category) {
+    this.$router.push({ name: 'products', query: { category } });
+  },
     toggleLike(index) {
       event.preventDefault();
       this.products[index].liked = !this.products[index].liked;
@@ -343,6 +371,7 @@ img {
   font-size: 1.5rem;
   margin-left: 0.5rem;
   font-weight: 500;
+  margin-bottom: 0.5rem;
 }
 
 .product-content-left h2 {
@@ -694,6 +723,9 @@ img {
     align-items: center
   }
 
+  #slogan-container{
+    padding: 0 0 5rem 0;
+  }
 
   .slogan-container {
     display: block;
