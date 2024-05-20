@@ -81,7 +81,7 @@ export default {
 
         methods: {
             fetchProducts() {
-                axios.get('/src/product.json')
+                axios.get('/data/product.json')
                     .then(response => {
                         //if the id of the cartItem is in allProducts then add it to cartItems
                         const cartItemsLocal = localStorage.getItem('cartItems') ? JSON.parse(localStorage.getItem('cartItems')) : [];

@@ -79,35 +79,35 @@
   <!-- Cart Popup -->
   <div id="cart-popup-container">
     <div id="cart-popup" v-if="cartPopupVisible">
-    <div class="cart-content">
-      <h4>Winkelwagen</h4>
-      <div class="container">
-        <div class="row" v-for="(item, index) in cartItems" :key="index">
-          <div class="col-4">
-            <img :src="item.Images.Image1" alt="product">
-          </div>
-          <div class="product-text col-7">
-            <p>{{ item.Name }}</p>
-            <p class="price"><strong>{{ item.Price.Low }}</strong></p>
-            <div class="quantity">
-              <div class="quantitydelete-container">
-                <div class="quantity">
-                  <button @click="decrement(index)">-</button>
-                  <p class="quantity-number">{{ item.quantity }}</p>
-                  <button @click="increment(index)">+</button>
+      <div class="cart-content">
+        <h4>Winkelwagen</h4>
+        <div class="container">
+          <div class="row" v-for="(item, index) in cartItems" :key="index">
+            <div class="col-4">
+              <img :src="item.Images.Image1" alt="product">
+            </div>
+            <div class="product-text col-7">
+              <p>{{ item.Name }}</p>
+              <p class="price"><strong>{{ item.Price.Low }}</strong></p>
+              <div class="quantity">
+                <div class="quantitydelete-container">
+                  <div class="quantity">
+                    <button @click="decrement(index)">-</button>
+                    <p class="quantity-number">{{ item.quantity }}</p>
+                    <button @click="increment(index)">+</button>
+                  </div>
+                  <i class="trash fa-solid fa-trash" @click="removeItem(item.Id)"></i>
                 </div>
-                <i class="trash fa-solid fa-trash" @click="removeItem(item.Id)"></i>
               </div>
             </div>
           </div>
         </div>
+        <p><strong>Totaal: € {{ totalPrice }}</strong></p>
+        <router-link @click="scrollToTop" to="/cart">
+          <button @click="hideCartPopup" type="button" class="cart-button btn btn-warning">Bekijk winkelwagen</button>
+        </router-link>
       </div>
-      <p><strong>Totaal: € {{ totalPrice }}</strong></p>
-      <router-link @click="scrollToTop" to="/cart">
-        <button @click="hideCartPopup" type="button" class="cart-button btn btn-warning">Bekijk winkelwagen</button>
-      </router-link>
     </div>
-  </div>
   </div>
   <!-- navigation media screen -->
   <div id="media-navigation-container">
@@ -142,7 +142,7 @@
 
 <script>
 import router from '@/router';
-import {useLoginStore} from '@/stores/LoginStore.js';
+import { useLoginStore } from '@/stores/LoginStore.js';
 import axios from 'axios';
 
 export default {
@@ -168,7 +168,7 @@ export default {
   },
   methods: {
     scrollToTop() {
-      window.scrollTo({top: 0, behavior: 'smooth'});
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     },
     increment1() {
       this.quantity1++;
@@ -202,25 +202,25 @@ export default {
       return localStorage.getItem('id') !== null;
     },
     fetchProducts() {
-      axios.get('/src/product.json')
-          .then(response => {
-            //if the id of the cartItem is in allProducts then add it to cartItems
-            const cartItemsLocal = localStorage.getItem('cartItems') ? JSON.parse(localStorage.getItem('cartItems')) : [];
-            const allProducts = response.data;
-            for (let i = 0; i < cartItemsLocal.length; i++) {
-              console.log("cartItemsLocal", cartItemsLocal[i]);
-              for (let j = 0; j < allProducts.length; j++) {
-                if (cartItemsLocal[i] === allProducts[j].Id) {
-                  console.log('Juist: ', cartItemsLocal[i], " = ", allProducts[i]);
-                  this.cartItems.push(allProducts[j]);
-                }
+      axios.get('/data/product.json')
+        .then(response => {
+          //if the id of the cartItem is in allProducts then add it to cartItems
+          const cartItemsLocal = localStorage.getItem('cartItems') ? JSON.parse(localStorage.getItem('cartItems')) : [];
+          const allProducts = response.data;
+          for (let i = 0; i < cartItemsLocal.length; i++) {
+            console.log("cartItemsLocal", cartItemsLocal[i]);
+            for (let j = 0; j < allProducts.length; j++) {
+              if (cartItemsLocal[i] === allProducts[j].Id) {
+                console.log('Juist: ', cartItemsLocal[i], " = ", allProducts[i]);
+                this.cartItems.push(allProducts[j]);
               }
             }
-            console.log("cartItems", this.cartItems);
-          })
-          .catch(error => {
-            console.error('Error fetching products:', error);
-          });
+          }
+          console.log("cartItems", this.cartItems);
+        })
+        .catch(error => {
+          console.error('Error fetching products:', error);
+        });
     },
     removeItem(id) {
       // Haal items uit localStorage
@@ -278,20 +278,21 @@ export default {
       return (navItemURL) => {
         return navItemURL === this.currentPage;
       };
-    }
+    },
+    totalPrice() {
+      console.log("price: ", this.cartItems.reduce((acc, item) => acc + Number(item.Price.Low.replace(/€|\.|,|00/g, '')), 0))
+      return this.cartItems.reduce((acc, item) => acc + Number(item.Price.Low.replace(/€|\.|,|00/g, '')), 0);
+
+
+    },
   },
   isNavItemActive() {
     return (navItemURL) => {
       return navItemURL === this.currentPage;
     };
   },
-  totalPrice() {
-    //item price low looks like this "€ 1.000,00" so we need to remove the € and the , and . and remove 00 from the back convert it to a number
-    return this.cartItems.reduce((acc, item) => acc + Number(item.Price.Low.replace(/€|\.|,|00/g, '')), 0);
 
-
-  },
-  components: {router}
+  components: { router }
 }
 </script>
 <style scoped>
@@ -326,7 +327,7 @@ export default {
 #cart-popup-container {
   width: 80%;
   margin: 0 auto;
-  position: relative; 
+  position: relative;
 }
 
 #cart-popup {
@@ -641,7 +642,7 @@ nav p {
   display: none;
 }
 
-.shopping-counter{
+.shopping-counter {
   margin-left: 0.2rem;
 }
 
@@ -688,16 +689,15 @@ nav p {
   }
 }
 
-@media screen and (max-width: 1300px){
-  #cart-popup{
+@media screen and (max-width: 1300px) {
+  #cart-popup {
     /* left: 50%; */
   }
 }
 
-@media screen and (max-width: 1063px){
-  #cart-popup{
+@media screen and (max-width: 1063px) {
+  #cart-popup {
     /* left: 75%; */
   }
 }
-
 </style>
