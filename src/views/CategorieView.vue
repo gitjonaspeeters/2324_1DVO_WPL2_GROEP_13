@@ -87,7 +87,7 @@ a {
 }
 
 .home-accessories {
-  background-image: url("@/assets/homeaccessoriesCategorie.png");
+  background-image: url("@/assets/HomeAccessoriesCategorie.png");
    
   width: 1300px;
   height: 316px;
