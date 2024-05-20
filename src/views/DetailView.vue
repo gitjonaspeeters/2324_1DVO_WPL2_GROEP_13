@@ -2,21 +2,30 @@
   <div id="container">
     <div id="container-upper">
       <div id="container-left-upper">
+
         <p>Home/Categorieen/zetels/</p>
 
-        <div class="fotorama">
-          <div v-for="(image, index) in product.Images" :key="index">
-            <img :src="image" alt="Product image">
-          </div>
-        </div>
+        <Carousel class="horizontal-carousel">
+          <template #slides>
+            <Slide v-for="(item, index) in product.Images" :key="index">
+              <div>
+                <img :src="item" alt="een foto">
+              </div>
+            </Slide>
+          </template>
+          <template #addons>
+            <Navigation class="buttons"/>
+          </template>
+        </Carousel>
 
       </div>
       <div id="container-right-upper">
-        <h1>{{ product.name }}</h1>
+        <h1>{{ product.Name }}</h1>
         <p>ID: {{ currentProductIndex }}</p>
+
         <p id="text-kleur">kleuren:</p>
         <div id="kleuren">
-          <div class="kleur" v-for="(color, index) in product.Color" :key="index" :style="{ 'background-color': color }"></div>
+          <div class="kleur" v-for="color in colors" :key="color" :style="{ backgroundColor: color }"></div>
         </div>
         <div id="flex">
           <p id="price">{{ product.Price.Low }}</p>
@@ -31,12 +40,13 @@
       </div>
     </div>
     <div id="mid-container">
-      <CarouselComponent :items-to-show="3"/>
+      <h3>Misschien ben je ook geintresseerd in dit?</h3>
+      <carouselComponent :items-to-show="3"/>
     </div>
     <div id="container-bottem">
       <div id="container-bottem-left">
+        <h2>Reviews</h2>
         <div id="reviews">
-          <h2>Reviews</h2>
           <div class="icons">
             <i v-for="star in 5" :key="star" class="fa-regular fa-star fa-rotate-180" style="color: #F2B66D;"></i>
           </div>
@@ -160,12 +170,13 @@
         </div>
       </div>
       <div id="close">
-        <i class="fa-solid fa-circle-xmark"></i>
+        <i @click="showQr" class="fa-solid fa-circle-xmark"></i>
       </div>
     </div>
   </div>
 </template>
 <script>
+import carouselComponent from "@/components/CarouselComponent.vue";
 import reviewsData from '@/data/reviews.json';
 import productsData from '@/product.json';
 import { ref } from 'vue';
@@ -178,12 +189,11 @@ import 'jquery'
 
 export default {
   name: 'DetailView',
-  components:
-
-  {
+  components: {
     Carousel,
     Slide,
     Navigation,
+    carouselComponent,
   },
   props: {
     currentProductIndex: {
@@ -193,35 +203,31 @@ export default {
   },
 
   data() {
-    const items = ref([
-      "src/assets/Banner1.png",
-      "src/assets/Banner1.png",
-      "src/assets/Banner1.png",
-      "src/assets/Banner1.png",
-      "src/assets/Banner1.png",
-      "src/assets/Banner1.png",
-      // Add more image URLs as needed
-    ]);
-
+    const colors = [
+        '#FFFFFF',
+        '#121212',
+        '#000000',
+        '#343434',
+    ]
     return {
-      items,
+      colors,
       reviewsData: reviewsData,
       productsData: productsData,
-      currentProductIndex: this.$route.params.currentProductIndex,
+
+      currentProductIndex: this.$route.params.currentProductIndex - 1,
       quantity: 1,
       averageStars: 0, // Gemiddeld aantal sterren
       totalReviews: 0, // Totaal aantal beoordelingen
       averageRatings: {}, // Gemiddelde beoordelingen per aspect
       qrCodePopup: false,
     };
-  }
-  ,
+
+  },
   
   mounted() {
 
-    
-  },
 
+  },
   computed: {
     product() {
       console.log("id", this.currentProductIndex)
@@ -364,25 +370,28 @@ $with-buttons: calc(100% / 4);
 #container-upper {
   display: flex;
   flex-direction: row;
-
+  color: #515151;
   #container-right-upper {
     width: 40vw;
     margin: 10rem 5rem 0rem 0rem;
-
     h1 {
       margin-bottom: 1rem;
+      color: #485059;
     }
-
     #text-kleur {
+      color: #515151;
       margin-bottom: 1rem;
     }
 
-    #kleur {
+    #kleuren {
       display: flex;
-      width: 2rem;
-      height: 2rem;
-      border-radius: 50px;
-      margin: 1rem 0.5rem;
+      .kleur {
+        display: flex;
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50px;
+        margin: 1rem 1rem;
+      }
     }
 
     #flex {
@@ -394,6 +403,7 @@ $with-buttons: calc(100% / 4);
       }
 
       #price {
+        color: #485059;
         margin-right: 1rem;
 
         font: {
@@ -403,8 +413,9 @@ $with-buttons: calc(100% / 4);
       }
 
       input {
-        width: $with-buttons;
+        width: 5rem;
         margin-right: 1rem;
+        padding-left: 3rem;
         border-radius: 15px;
         background-color: #FFFFFF;
         border: none;
@@ -425,6 +436,10 @@ $with-buttons: calc(100% / 4);
       #AR {
         background-color: #485059;
       }
+    }
+
+    i {
+      font-size: 1.5rem;
     }
 
     .describtion {
@@ -459,6 +474,11 @@ $with-buttons: calc(100% / 4);
 #mid-container {
   width: 95%;
   margin: 0 auto 5rem;
+  h3 {
+    color: #485059;
+    font-size: 2rem;
+    margin-left: 2.5%;
+  }
 }
 
 #container-bottem {
@@ -482,6 +502,21 @@ $with-buttons: calc(100% / 4);
 
     h2 {
       font-weight: 600;
+    }
+
+    #reviews {
+      display: flex;
+      .icons {
+        font-size: 2rem;
+        margin: {
+          top: 1rem;
+          right: 2rem;
+        }
+      }
+      p {
+        position: relative;
+        top: 1.5rem;
+      }
     }
 
     #review {
@@ -618,6 +653,16 @@ $with-buttons: calc(100% / 4);
   border: {
     radius: 25px;
   };
+  #close {
+    position: absolute;
+    top: 0.25rem;
+    right: 1rem;
+    font-size: 3rem;
+    background-color: #F2B66D;
+    i {
+      background-color: #F2B66D;
+    }
+  }
 
   #popup-container {
     background-color: #F2B66D;
@@ -643,34 +688,153 @@ $with-buttons: calc(100% / 4);
 
 @media screen and (max-width: 1000px) {
   #container-upper {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    #container-right-upper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 90vw;
+      margin-left: 10vw;
+      margin-top: 0;
+      i {
+        font-size: 1.5rem;
+      }
+    }
+    #container-left-upper {
+      margin: 10rem auto 2rem;
+      width: 90vw;
+
+    }
+    #describtion {
+      display: none;
+    }
+  }
+
+  #mid-container {
+    width: 95%;
+    margin-bottom: 2rem;
+  }
+
+  #container-bottem {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #container-upper {
     flex-direction: column;
     align-items: center;
     width: 100%;
-
+    margin-top: 5rem;
     #container-right-upper {
-      flex-direction: column;
-      margin-top: 0;
+      width: 90%;
+      margin: 2rem 0;
+      text-align: center;
+
+      h1 {
+        font-size: 1.5rem;
+      }
+
+      #text-kleur {
+        display: none;
+      }
+
+      #kleuren {
+        justify-content: center;
+        width: 100vw;
+        .kleur {
+          width: 3rem;
+          height: 3rem;
+          margin: 2rem;
+        }
+      }
+
+      #flex {
+        flex-direction: row-reverse;
+        align-items: center;
+
+        #price {
+          display: none;
+        }
+
+        input {
+          position: relative;
+          right: 3rem;
+          width: 20%;
+          margin-bottom: 0.5rem;
+        }
+        button {
+          position: relative;
+          right: 3rem;
+          width: 25vw;
+          margin-bottom: 0.5rem;
+          margin-left: 0;
+          margin-right: 0.5rem;
+        }
+      }
+      i {
+        position: relative;
+        left: 37vw;
+        bottom: 3rem;
+      }
+
+      .meusurements {
+        font-size: 0.875rem;
+      }
     }
 
     #container-left-upper {
-      flex-direction: column;
-    }
+      width: 90%;
+      margin: 0;
+      margin-top: 2rem;
 
-    #describtion {
-      display: none; /* Beschrijving verbergen op klein scherm */
+      .horizontal-carousel {
+        navigation {
+          button {
+            display: none;
+          }
+        }
+        img {
+          width: 100%;
+          height: auto;
+          border-radius: 15px;
+        }
+      }
     }
   }
 
   #mid-container {
     width: 100%;
-    height: 200px;
+    h3 {
+      display: none;
+    }
   }
 
   #container-bottem {
-    display: none; /* Onderste container verbergen op klein scherm */
+    display: none;
+  }
+
+  #qr-popup {
+    width: 90%;
+    height: auto;
+    padding: 1rem;
+    #popup-container {
+      img {
+        margin: 4rem auto 0;
+        width: 100%;
+        height: auto;
+      }
+
+      #icons {
+        justify-content: center;
+        margin: {
+          top: 1rem;
+        }
+      }
+    }
   }
 }
 </style>
-
-
 

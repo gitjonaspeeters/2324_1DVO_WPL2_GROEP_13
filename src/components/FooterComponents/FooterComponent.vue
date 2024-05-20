@@ -2,6 +2,11 @@
 
 export default {
   name: 'footer',
+  methods: {
+    scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  },
 };
 </script>
 <template>
@@ -12,7 +17,9 @@ export default {
             </div>
             <div id="footer-main">
                 <a href="#"><p>Copyright 2024 ©</p></a>
-                <p><router-link to="/privacy">Algemene voorwaarden</router-link> / <router-link to="/privacy">Cookies</router-link>  / <router-link to="/privacy">Privacybeleid</router-link> </p>
+
+                <p><router-link to="/voorwaarden" @click.native="scrollToTop">Algemene voorwaarden</router-link> / <router-link to="/cookies" @click.native="scrollToTop">Cookies</router-link> / <router-link to="/privacy" @click.native="scrollToTop">Privacybeleid</router-link></p>
+
             </div>
             <div id="footer-right">
                 <div class="footer-icons">

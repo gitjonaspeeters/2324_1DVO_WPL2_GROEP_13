@@ -1,5 +1,3 @@
-
-
 <template>
   <div id="account-container">
     <h1>Account information</h1>
@@ -23,10 +21,10 @@
             <input type="text" id="password" name="password" placeholder="Wachtwoord">
             <i class="fa-solid fa-pencil icon"></i>
           </div>
-                    <button class='btn btn-danger' @click="logOut">Logout</button>
- 
+          <button class='btn btn-danger' @click="logOut">Logout</button>
+
         </form>
-        
+
       </div>
       <div id="account-right">
         <div id="image">
@@ -36,9 +34,9 @@
   </div>
 </template>
 
-<script >
+<script>
 
-import { useLoginStore } from '@/stores/LoginStore.js';
+import {useLoginStore} from '@/stores/LoginStore.js';
 
 export default {
   name: "AccountView",
@@ -53,14 +51,13 @@ export default {
 </script>
 
 <style scoped>
-
+@import url('@fortawesome/fontawesome-free/css/all.css');
 
 #account-container {
   padding-top: 9rem !important;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 10rem;
   height: 100%;
   background-color: #D9CAC5;
   margin: 0;
@@ -90,6 +87,7 @@ h1 {
   margin-left: 10vw;
   align-self: flex-start;
 }
+
 hr {
   width: 80vw;
   align-self: center;
@@ -135,6 +133,7 @@ hr {
   align-self: center;
   right: 15px;
   background-color: transparent;
+  color: #485059;
 }
 
 #form input::placeholder {
@@ -153,24 +152,30 @@ hr {
 
 @media screen and (max-width: 1050px) {
   #account-left {
-    margin-left: 2.5rem;
+    margin-left: -15rem;
   }
 
   #account-right {
-    margin: 0 auto;
-    display: flex;
-    height: 100%;
+    display: none;
   }
 }
 
 @media screen and (max-width: 850px) {
-  #account-right {
-    display: none;
-    margin: 0;
-  }
-
   #account-left {
     width: 100vw;
+  }
+
+  #account-container {
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 480px) {
+  #account-left {
+    width: 90vw;
+    margin-bottom: 2rem;
+    .input {
+      width: 60vw;
+    }
   }
 
   #account-container {

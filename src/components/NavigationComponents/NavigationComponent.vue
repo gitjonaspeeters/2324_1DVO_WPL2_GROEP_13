@@ -1,140 +1,140 @@
 <template>
-    <div id="navigation-container">
-        <nav>
-            <div id="navigation-left">
-                <router-link to="/"><img src="@/assets/Comfortmeubel wit.svg"></router-link>
-            </div>
-            <div id="navigation-main" :style="{ 'margin-top': navbarMarginTop }">
-                <div class="navigation-main-section">
-                    <router-link to="/categorie">
-                        <i class="fa-solid fa-book"></i>
-                        <p>Categorieën</p>
-                    </router-link>
-                </div>
-                <div class="navigation-main-section">
-                    <router-link to="/ruimtes">
-                        <i class="fa-solid fa-house"></i>
-                        <p>Ruimtes</p>
-
-                    </router-link>
-
-                </div>
-                <div class="navigation-main-section">
-
-                    <router-link to="/products">
-
-                        <i class="fa-solid fa-layer-group"></i>
-                        <p>Alle items</p>
-                    </router-link>
-                </div>
-                <div class="navigation-main-section">
-                    <router-link to="/about">
-                        <i class="fa-solid fa-users"></i>
-                        <p>Over Ons</p>
-                    </router-link>
-                </div>
-                <div class="navigation-main-search">
-                    <a @click="toggleSearch">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                    </a>
-                </div>
-            </div>
-            <div id="navigation-right">
-                <div class="navigation-right-sextion">
-                    <router-link v-if="!isLoggedIn" to="/login">
-                        <button class="login">Login</button>
-                    </router-link>
-                </div>
-
-
-                <div v-if="isLoggedIn" class="navigation-right-sextion">
-                    <router-link to="/account">
-                        <i class="fa-solid fa-user"></i>
-                    </router-link>
-                </div>
-                <div class="navigation-right-sextion">
-                    <router-link to="/wishlist">
-                        <i class="fa-solid fa-heart"></i>
-                    </router-link>
-                </div>
-                <div id="navigation-right-sextion">
-                    <a @click="toggleCartPopup">
-                        <i class="fa-solid fa-cart-shopping">({{ cartItems.length }})</i>
-                    </a>
-                </div>
-            </div>
-        </nav>
-    </div>
-    <!-- searchbar -->
-    <div id="search-container" v-if="searchVisible">
-        <div id="search">
-            <div id="search-inhoud">
-                <i class="fa-solid fa-magnifying-glass"></i>
-                <input type="text" placeholder="Search...">
-                <i class="fa-solid fa-chevron-up" @click="toggleSearch"></i>
-            </div>
+  <div id="navigation-container">
+    <nav>
+      <div id="navigation-left">
+        <router-link to="/"><img src="@/assets/Comfortmeubel wit.svg"></router-link>
+      </div>
+      <div id="navigation-main" :style="{ 'margin-top': navbarMarginTop }">
+        <div class="navigation-main-section">
+          <router-link to="/categorie">
+            <i class="fa-solid fa-book"></i>
+            <p>Categorieën</p>
+          </router-link>
         </div>
+        <div class="navigation-main-section">
+          <router-link to="/ruimtes">
+            <i class="fa-solid fa-house"></i>
+            <p>Ruimtes</p>
+
+          </router-link>
+
+        </div>
+        <div class="navigation-main-section">
+
+          <router-link to="/products">
+
+            <i class="fa-solid fa-layer-group"></i>
+            <p>Alle items</p>
+          </router-link>
+        </div>
+        <div class="navigation-main-section">
+          <router-link to="/about">
+            <i class="fa-solid fa-users"></i>
+            <p>Over Ons</p>
+          </router-link>
+        </div>
+        <div class="navigation-main-search">
+          <a @click="toggleSearch">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </a>
+        </div>
+      </div>
+      <div id="navigation-right">
+        <div class="navigation-right-sextion">
+          <router-link v-if="!isLoggedIn" to="/login">
+            <button class="login">Login</button>
+          </router-link>
+        </div>
+
+
+        <div v-if="isLoggedIn" class="navigation-right-sextion">
+          <router-link to="/account">
+            <i class="fa-solid fa-user"></i>
+          </router-link>
+        </div>
+        <div class="navigation-right-sextion">
+          <router-link to="/wishlist">
+            <i class="fa-solid fa-heart"></i>
+          </router-link>
+        </div>
+        <div id="navigation-right-sextion">
+          <a @click="toggleCartPopup">
+            <i class="fa-solid fa-cart-shopping">({{ cartItems.length }})</i>
+          </a>
+        </div>
+      </div>
+    </nav>
+  </div>
+  <!-- searchbar -->
+  <div id="search-container" v-if="searchVisible">
+    <div id="search">
+      <div id="search-inhoud">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" placeholder="Search...">
+        <i class="fa-solid fa-chevron-up" @click="toggleSearch"></i>
+      </div>
     </div>
-    <!-- Cart Popup -->
-    <div id="cart-popup" v-if="cartPopupVisible">
-        <div class="cart-content">
-            <h4>Winkelwagen</h4>
-            <div class="container">
-                <div class="row" v-for="(item, index) in cartItems" :key="index">
-                    <div class="col-4">
-                        <img :src="item.Images.Image1" alt="product">
-                    </div>
-                    <div class="product-text col-7">
-                        <p>{{ item.Name }}</p>
-                        <p class="price"><strong>{{ item.Price.Low }}</strong></p>
-                        <div class="quantity">
-                            <div class="quantitydelete-container">
-                                <div class="quantity">
-                                    <button @click="decrement(index)">-</button>
-                                    <p class="quantity-number">{{ item.quantity }}</p>
-                                    <button @click="increment(index)">+</button>
-                                </div>
-                                <i class="trash fa-solid fa-trash" @click="removeItem(item.Id)"></i>
-                            </div>
-                        </div>
-                    </div>
+  </div>
+  <!-- Cart Popup -->
+  <div id="cart-popup" v-if="cartPopupVisible">
+    <div class="cart-content">
+      <h4>Winkelwagen</h4>
+      <div class="container">
+        <div class="row" v-for="(item, index) in cartItems" :key="index">
+          <div class="col-4">
+            <img :src="item.Images.Image1" alt="product">
+          </div>
+          <div class="product-text col-7">
+            <p>{{ item.Name }}</p>
+            <p class="price"><strong>{{ item.Price.Low }}</strong></p>
+            <div class="quantity">
+              <div class="quantitydelete-container">
+                <div class="quantity">
+                  <button @click="decrement(index)">-</button>
+                  <p class="quantity-number">{{ item.quantity }}</p>
+                  <button @click="increment(index)">+</button>
                 </div>
+                <i class="trash fa-solid fa-trash" @click="removeItem(item.Id)"></i>
+              </div>
             </div>
-            <p><strong>Totaal: € {{ totalPrice }}</strong></p>
-            <router-link to="/cart">
-                <button @click="hideCartPopup" type="button" class="cart-button btn btn-warning">Bekijk winkelwagen</button>
-            </router-link>
+          </div>
         </div>
+      </div>
+      <p><strong>Totaal: € {{ totalPrice }}</strong></p>
+      <router-link to="/cart">
+        <button @click="hideCartPopup" type="button" class="cart-button btn btn-warning">Bekijk winkelwagen</button>
+      </router-link>
     </div>
-    <!-- navigation media screen -->
-    <div id="media-navigation-container">
-        <div id="media-navigation-main">
-            <div class="media-navigation-main-section">
-                <router-link to="/categorie">
-                    <i class="fa-solid fa-book"></i>
-                    <p>Categorieen</p>
-                </router-link>
-            </div>
-            <div class="media-navigation-main-section">
-                <router-link to="/ruimtes">
-                    <i class="fa-solid fa-house"></i>
-                    <p>Ruimtes</p>
-                </router-link>
-            </div>
-            <div class="media-navigation-main-section">
-                <router-link to="/products">
-                    <i class="fa-solid fa-layer-group"></i>
-                    <p>Alle items</p>
-                </router-link>
-            </div>
-            <div class="media-navigation-main-section">
-                <router-link to="/about">
-                    <i class="fa-solid fa-users"></i>
-                    <p>Over Ons</p>
-                </router-link>
-            </div>
-        </div>
+  </div>
+  <!-- navigation media screen -->
+  <div id="media-navigation-container">
+    <div id="media-navigation-main">
+      <div class="media-navigation-main-section">
+        <router-link to="/categorie">
+          <i class="fa-solid fa-book"></i>
+          <p>Categorieen</p>
+        </router-link>
+      </div>
+      <div class="media-navigation-main-section">
+        <router-link to="/ruimtes">
+          <i class="fa-solid fa-house"></i>
+          <p>Ruimtes</p>
+        </router-link>
+      </div>
+      <div class="media-navigation-main-section">
+        <router-link to="/products">
+          <i class="fa-solid fa-layer-group"></i>
+          <p>Alle items</p>
+        </router-link>
+      </div>
+      <div class="media-navigation-main-section">
+        <router-link to="/about">
+          <i class="fa-solid fa-users"></i>
+          <p>Over Ons</p>
+        </router-link>
+      </div>
     </div>
+  </div>
 </template>
 
 <script>
@@ -267,6 +267,12 @@ export default {
     computed: {
         loginStore() {
             return useLoginStore();
+          },
+          isNavItemActive() {
+            return (navItemURL) => {
+              return navItemURL === this.currentPage;
+            };
+          }
         },
         isNavItemActive() {
         return (navItemURL) => {
@@ -279,7 +285,6 @@ export default {
             
 
         },
-    },
     components: { router }
 }
 </script>
@@ -291,7 +296,6 @@ export default {
 }
 
 .login {
-
     color: #485059;
     border: none;
     background-color: transparent !important;
@@ -305,7 +309,7 @@ export default {
 }
 
 .login a.router-link-active {
-    color: #F2B66D;
+  color: #F2B66D;
 }
 
 .cart-content {
@@ -495,23 +499,38 @@ nav {
     gap: 1rem;
 }
 
-.navigation-main-section a:hover{
-    color: #F2B66D;
+.navigation-main-section a:hover {
+  color: #F2B66D;
 }
 
 .navigation-main-section a.router-link-active {
-    color: #F2B66D;
+  color: #F2B66D;
 }
 
 .navigation-main-search {
+
+  display: flex;
+  align-items: center;
+  color: #4C4C4C;
+  cursor: pointer;
+}
+
+.navigation-main-search:hover {
+  color: #F2B66D;
+
+  display: flex;
+  align-items: center;
+}
+
+.navigation-main-search a {
+  color: #4C4C4C;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
     display: flex;
     align-items: center;
     color: #4C4C4C;
     cursor: pointer;
-}
-
-.navigation-main-search:hover{
-    color: #F2B66D;
 }
 
 nav i {
@@ -551,11 +570,18 @@ nav p {
 }
 
 .navigation-right-sextion a:hover,
-#navigation-right-sextion a:hover{
-    color: #F2B66D;
+#navigation-right-sextion a:hover {
+  color: #F2B66D;
 }
 
 .navigation-right-sextion a.router-link-active {
+  color: #F2B66D;
+
+  display: flex;
+  color: #4C4C4C;
+  align-items: center;
+  text-decoration: none;
+
     color: #F2B66D;
 }
 
@@ -605,44 +631,44 @@ nav p {
 
 /* media querys */
 @media screen and (max-width: 1382px) {
-    #navigation-main {
-        display: none;
-    }
+  #navigation-main {
+    display: none;
+  }
 
-    #media-navigation-container {
-        display: block;
-        position: fixed;
-        bottom: 0;
-        width: 100%;
-        z-index: 3;
-    }
+  #media-navigation-container {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 3;
+  }
 
-    #media-navigation-main {
-        height: 4rem;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 2.5rem 1.5rem;
-        background-color: #ffffff;
-        gap: 1rem;
-    }
+  #media-navigation-main {
+    height: 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2.5rem 1.5rem;
+    background-color: #ffffff;
+    gap: 1rem;
+  }
 
-    .media-navigation-main-section {
-        text-align: center;
-    }
+  .media-navigation-main-section {
+    text-align: center;
+  }
 
-    .media-navigation-main-section a.router-link-active {
+  .media-navigation-main-section a.router-link-active {
     color: #F2B66D;
-}
+  }
 
-    .media-navigation-main-section a {
-        text-decoration: none;
-        color: #4C4C4C;
+  .media-navigation-main-section a {
+    text-decoration: none;
+    color: #4C4C4C;
+  }
 
-    }
 
-    .media-navigation-main-section i {
-        font-size: 1.5rem;
-    }
+  .media-navigation-main-section i {
+    font-size: 1.5rem;
+  }
 }
 </style>

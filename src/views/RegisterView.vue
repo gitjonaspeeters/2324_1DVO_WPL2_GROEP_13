@@ -1,5 +1,16 @@
-<script setup>
-
+<script>
+import {useLoginStore} from "@/stores/LoginStore.js";
+export default {
+  name: "RegisterView",
+  data() {
+    const loginstore = useLoginStore();
+    return {
+      loginstore,
+      email: [],
+      password: [],
+    }
+  }
+}
 </script>
 
 <template>
@@ -15,12 +26,12 @@
             <label for="first-name"></label>
             <input type="text" class="input" id="first-name" name="First-name" placeholder="Voornaam">
             <label for="email"></label>
-            <input type="email" class="input" id="email" name="email" placeholder="Email">
+            <input type="email"  v-model="this.email" class="input" id="email" name="email" placeholder="Email">
             <label for="password"></label>
-            <input type="password" class="input" id="password" name="password" placeholder="Wachtwoord">
+            <input type="password" v-model="this.password" class="input" id="password" name="password" placeholder="Wachtwoord">
             <label for="password"></label>
             <input type="password" id="password2" name="password" placeholder="Herhaal Wachtwoord">
-            <p id="register">Registreren</p>
+            <p @click="loginstore.register(this.email, this.password)" id="register">Registreren</p>
           </form>
 
       </div>
@@ -117,7 +128,7 @@
 
 input {
   height: 40px;
-  width: 270px;
+  width: 80%;
   padding-left: 20px;
 }
 
@@ -166,6 +177,17 @@ input::placeholder {
 
   #registration-container {
     justify-content: center;
+  }
+}
+@media screen and (max-width: 480px) {
+  #form-kader {
+    width: 80vw;
+  }
+  #form {
+    width: 60vw;
+  }
+  #register {
+    width: 40vw;
   }
 }
 </style>

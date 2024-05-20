@@ -132,7 +132,7 @@ a {
 }
 
 #form input {
-  width: 250px;
+  width: 80%;
   height: 36px;
   background-color: darkblue;
   border-radius: 12px;
@@ -216,4 +216,19 @@ a {
     justify-content: center;
   }
 }
+@media screen and (max-width: 480px) {
+  #form-kader {
+    width: 80vw;
+  }
+  #form {
+    width: 60vw;
+  }
+  #register, #login {
+    width: 40vw;
+  }
+  #remember-button {
+    margin-left: 3rem;
+  }
+}
+
 </style>
