@@ -125,7 +125,7 @@ export default {
 }
 
 .form-row textarea {
-  height: 230px;
+  height: 20vh;
   margin-bottom: -1.5rem;
 }
 
@@ -158,6 +158,10 @@ export default {
 
 input::placeholder, textarea::placeholder {
   color: #FFFFFF;
+}
+
+@media screen and (max-width: 1024px) {
+
 }
 
 /* Media query voor tablets */

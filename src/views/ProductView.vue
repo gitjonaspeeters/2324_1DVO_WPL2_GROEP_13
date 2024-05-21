@@ -108,6 +108,10 @@ export default {
         this.initializePriceSlider();
     },
     methods: {
+        filterByCategory(category) {
+    this.filter.selectedCategory = category;
+    this.applyCategoryFilter();
+    },
         initializePriceSlider() {
             const priceSlider = document.getElementById('priceSlider');
             noUiSlider.create(priceSlider, {
@@ -138,7 +142,7 @@ export default {
             location.reload();
         },
         fetchProducts() {
-            axios.get('/src/product.json')
+            axios.get('/data/product.json')
                 .then(response => {
                     this.products = response.data;
                     this.initializeWishlist();
@@ -193,13 +197,23 @@ export default {
             return priceStr;
         },
         applyCategoryFilter() {
-            if (this.filter.selectedCategory === 'all') {
-                this.filteredProducts = this.products;
-            } else {
-                this.filteredProducts = this.products.filter(product => product.Category === this.filter.selectedCategory);
-            }
-            this.currentPage = 1; // Reset to the first page
-        },
+    let category;
+    if (this.$route.query.category) {
+        category = this.$route.query.category;
+    } else {
+        category = this.filter.selectedCategory || 'all';
+    }
+
+    if (category === 'all') {
+        this.filteredProducts = this.products;
+    } else {
+        this.filteredProducts = this.products.filter(product => product.Category === category);
+    }
+    this.currentPage = 1; 
+},
+
+
+
         updateColors() {
             const allColors = new Set();
             this.products.forEach(product => {
@@ -315,6 +329,10 @@ export default {
 </script>
 
 <style scoped>
+
+p{
+    margin-bottom: 0;
+}
  
  a  {
     text-decoration: none !important;
@@ -329,7 +347,7 @@ export default {
     padding: 20px;
     min-width: 280px;
     color: #485059;
-    background-color: #BF9A84;
+    background-color: #ffffff !important;
     border-radius: 0 10px 10px 0;
     font-family: Arial, sans-serif;
     max-height: 500px;
@@ -356,9 +374,9 @@ export default {
     margin-bottom: 10px;
     border: 1px solid transparent;
     border-radius: 5px;
-    background-color: #f9d3bd;
+    background-color: #cacaca;;
     font-size: 16px;
-    color: #444;
+    color: #555;
 }
  
 .fil .filter select {
@@ -571,8 +589,12 @@ export default {
     }
  
     .product-content-right i {
-        font-size: 2.4rem;
+        font-size: 1.2rem;
         padding: 0 0.30rem 0 0.50rem;
+    }
+
+    .product-content-left h1{
+        font-size: 1.2rem;
     }
 }
 
@@ -600,5 +622,19 @@ export default {
 .pagination-container button:disabled {
     background-color: #ccc;
     cursor: not-allowed;
+}
+
+@media screen and (max-width: 600px) {
+    .product-content-left p{
+        font-size: 1rem;
+    }
+
+    .product-content-left h2{
+        font-size: 1rem;
+    }
+
+    .product-content-left h1{
+        margin-bottom: 0;
+    }
 }
 </style>

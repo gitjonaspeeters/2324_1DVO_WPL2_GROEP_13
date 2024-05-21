@@ -15,7 +15,7 @@ export const useLoginStore = defineStore({
     actions: {
         async login() {
             try {
-                const response = await axios.get('./login.json');
+                const response = await axios.get('../login.json');
                 const userData = response.data;
                 const user = userData.find((user) => user.email === this.email && user.password === this.password);
                 if (user) {
@@ -34,8 +34,8 @@ export const useLoginStore = defineStore({
         },
         async register(email, password) {
             try {
-                // Lees de huidige gebruikersdata
-                const response = await axios.get('~/login.json');
+                console.log(this)
+                const response = await axios.get('../login.json');
                 const userData = response.data;
 
                 // Controleer of de gebruiker al bestaat

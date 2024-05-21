@@ -1,7 +1,7 @@
 <template>
   <div id="head-container">
     <div v-for="(slide, index) in slides" :key="index" v-show="index === currentSlideIndex">
-      <img class="banner-img" :src="slide.imageUrl" style="width:100%" >
+      <img class="banner-img" :src="slide.imageUrl" style="width:100%">
 
       <div style="text-align:center">
         <div class="head-content">
@@ -15,31 +15,56 @@
     </div>
   </div>
   <div id="rooms" class="rooms">
-    <div class="gallery-buttons">
-      <img src="/src/assets/leftbtn.png" alt="arrow-left" id="backbtn" @click="scrollLeft">
-      <div class="gallery" id="image-gallery">
-        <div class="images">
-          <span class="image-container"><img src="/src/assets/Gio-zetel.jpg" alt="Reflection image"><span
-              class="overlay">Woonkamer</span></span>
-          <span class="image-container"><img src="/src/assets/Tafel.jpg"
-              alt="Reflection image 2"><span class="overlay">Eetkamer</span></span>
-          <span class="image-container"><img src="/src/assets/vanaf-1699-euro.jpeg" alt="Corekwadrant image"><span
-              class="overlay">Slaapkamer</span></span>
-        </div>
-        <div class="images">
-          <span class="image-container"><img src="/src/assets/Bureastoel.jpg" alt="Seminair image"><span
-              class="overlay">Bureau</span></span>
-          <span class="image-container"><img src="/src/assets/RuimtesImage2.png" alt="Dashboard of groupwork design"><span
-              class="overlay">Hal</span></span>
-          <span class="image-container"><img src="/src/assets/Gio-zetel.jpg" alt="Reflection image"><span
-              class="overlay">Woonkamer</span></span>
-        </div>
+  <div class="gallery-buttons">
+    <img src="/src/assets/leftbtn.png" alt="arrow-left" id="backbtn" @click="scrollLeft">
+    <div class="gallery" id="image-gallery">
+      <div class="images">
+        <span class="image-container">
+          <router-link :to="{ name: 'products', query: { category: 'Sofa' } }">
+            <img src="/src/assets/Gio-zetel.jpg" alt="Reflection image">
+            <span class="overlay">Woonkamer</span>
+          </router-link>
+        </span>
+        <span class="image-container">
+          <router-link :to="{ name: 'products', query: { category: 'Dining Tables' } }">
+            <img src="/src/assets/Tafel.jpg" alt="Reflection image 2">
+            <span class="overlay">Eetkamer</span>
+          </router-link>
+        </span>
+        <span class="image-container">
+          <router-link :to="{ name: 'products', query: { category: 'Bed' } }">
+            <img src="/src/assets/vanaf-1699-euro.jpeg" alt="Corekwadrant image">
+            <span class="overlay">Slaapkamer</span>
+          </router-link>
+        </span>
       </div>
-      <img src="/src/assets/rightbtn.png" alt="arrow-right" id="nextbtn" @click="scrollRight">
+      <div class="images">
+        <span class="image-container">
+          <router-link :to="{ name: 'products', query: { category: 'Desk' } }">
+            <img src="/src/assets/Bureastoel.jpg" alt="Seminair image">
+            <span class="overlay">Bureau</span>
+          </router-link>
+        </span>
+        <span class="image-container">
+          <router-link :to="{ name: 'products', query: { category: 'Home accessories' } }">
+            <img src="/src/assets/RuimtesImage2.png" alt="Dashboard of groupwork design">
+            <span class="overlay">Hal</span>
+          </router-link>
+        </span>
+        <span class="image-container">
+          <router-link :to="{ name: 'products', query: { category: 'Sofa' } }">
+            <img src="/src/assets/Gio-zetel.jpg" alt="Reflection image">
+            <span class="overlay">Woonkamer</span>
+          </router-link>
+        </span>
+      </div>
     </div>
+    <img src="/src/assets/rightbtn.png" alt="arrow-right" id="nextbtn" @click="scrollRight">
   </div>
+</div>
 
-<!-- best products -->
+
+  <!-- best products -->
   <div id="best-container">
     <div id="best-content">
       <div id="best-text">
@@ -62,7 +87,8 @@
             <div class="product-content-right">
               <a @click="toggleCart(index)">
                 <i class="fa-solid fa-cart-shopping"></i>
-                <i class="fa-solid" :class="{ 'fa-solid fa-plus': !product.addedToCart, 'fa-check': product.addedToCart }"></i>
+                <i class="fa-solid"
+                  :class="{ 'fa-solid fa-plus': !product.addedToCart, 'fa-check': product.addedToCart }"></i>
               </a>
             </div>
           </div>
@@ -75,7 +101,7 @@
       <div class="slogan-content-left">
         <div class="slogan-left-text">
           <p>Comfort, <br>
-          Betaalbaar en Betrouwbaar</p>
+            Betaalbaar en Betrouwbaar</p>
         </div>
       </div>
       <div class="slogan-content-right">
@@ -85,20 +111,30 @@
   </div>
   <!-- nieuwsbrief -->
   <div id="news-container">
-    <div id="news-content">
+    <div id="news-content" v-if="!submitted">
       <h1><i>Nieuwsbrief</i></h1>
-    <div class="news-input">
-      <input type="email" id="email" name="email" placeholder="Email">
-      <button>inschrijven</button>
+      <div class="news-input">
+        <input type="text" id="naam" name="naam" placeholder="Naam" v-model="naam" />
+        <input type="email" id="email" name="email" placeholder="Email" v-model="email" />
+        <button @click="submitForm">Inschrijven</button>
+      </div>
     </div>
+    <div class="news-input"  v-else>
+      <p>Je hebt een mail ontvangen</p>
     </div>
   </div>
 </template>
 <script>
+
+
+
 export default {
   data() {
     return {
       currentSlideIndex: 0,
+      naam: '',
+      email: '',
+      submitted: false,
       slides: [
         { imageUrl: "/assets/Banner1.png", headTitle: "Nieuwe collectie", headText: "Probeer nu onze nieuwe winter collectie!", headButton: "Bekijk" },
         { imageUrl: "/assets/Banner2.png", headTitle: "Nieuwe collectie", headText: "Probeer nu onze nieuwe winter collectie!", headButton: "Bekijk" },
@@ -115,6 +151,8 @@ export default {
     this.showSlides();
   },
   methods: {
+
+
     showSlides() {
       setInterval(() => {
         this.currentSlideIndex = (this.currentSlideIndex + 1) % this.slides.length;
@@ -123,6 +161,9 @@ export default {
     currentSlide(index) {
       this.currentSlideIndex = index;
     },
+    navigateToCategory(category) {
+    this.$router.push({ name: 'products', query: { category } });
+  },
     toggleLike(index) {
       event.preventDefault();
       this.products[index].liked = !this.products[index].liked;
@@ -139,29 +180,48 @@ export default {
       });
     },
 
-scrollRight() {
-  const gallery = document.querySelector('.gallery');
-  gallery.scroll({
-    left: gallery.scrollLeft + 300,
-    behavior: 'smooth'
-  });
-},
-toggleCart(index){
-  this.products[index].addedToCart = !this.products[index].addedToCart;
-}
-   
+    scrollRight() {
+      const gallery = document.querySelector('.gallery');
+      gallery.scroll({
+        left: gallery.scrollLeft + 300,
+        behavior: 'smooth'
+      });
+    },
+    toggleCart(index) {
+      this.products[index].addedToCart = !this.products[index].addedToCart;
+    },
 
+    
+    async submitForm() {
+      const response = await fetch('http://localhost:3000/api/subscriptions', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          name: this.naam,
+          email: this.email
+        })
+      });
+      if (response.ok) {
+        this.submitted = true;
+      }
+    }
   }
 };
+
+
+ 
 </script>
 
 
 <style scoped>
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
 img {
   vertical-align: middle;
 }
@@ -227,7 +287,7 @@ img {
   background-color: #485059;
 }
 
-.banner-img img{
+.banner-img img {
   width: 100%;
 
 }
@@ -288,52 +348,53 @@ img {
 
 }
 
-.product-like a{
-text-decoration: none;
-color:  #ffffff;
-font-size: 2rem;
+.product-like a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 2rem;
 }
 
-.product-content{
-display: flex;
-justify-content: space-between;
-font-family: "Century Gothic", sans-serif;
+.product-content {
+  display: flex;
+  justify-content: space-between;
+  font-family: "Century Gothic", sans-serif;
 }
 
-.product-content-left p{
-color: #888787;
-font-size: 1.2rem;
-margin-left: 0.5rem;
-margin-top: 0.5rem;
+.product-content-left p {
+  color: #888787;
+  font-size: 1.2rem;
+  margin-left: 0.5rem;
+  margin-top: 0.5rem;
 }
 
-.product-content-left h1{
-font-size: 1.5rem;
-margin-left: 0.5rem;
-font-weight: 500;
+.product-content-left h1 {
+  font-size: 1.5rem;
+  margin-left: 0.5rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
 }
 
-.product-content-left h2{
-color: #000000;
-font-weight: bold;
-font-size: 1.2rem;
-margin-left: 0.5rem;
+.product-content-left h2 {
+  color: #000000;
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-left: 0.5rem;
 }
 
 /* product right */
-.product-content-right{
+.product-content-right {
   display: flex;
   align-items: center;
 }
 
-.product-content-right a{
+.product-content-right a {
   background-color: #F2B66D;
   padding: 0.8rem 0 0.5rem 0;
   border-radius: 10px;
   cursor: pointer;
 }
 
-.product-content-right i{
+.product-content-right i {
   font-size: 1.5rem;
   padding: 0 0.30rem 0 0.5rem;
 }
@@ -396,7 +457,7 @@ margin-left: 0.5rem;
 
 #container {
   display: grid;
-    grid-template-columns: auto auto;
+  grid-template-columns: auto auto;
 }
 
 #avatar {
@@ -411,16 +472,16 @@ margin-left: 0.5rem;
 }
 
 .gallery,
-  .gallery1 {
-    width: 80%;
-    display: flex;
-    overflow-x: scroll;
-  }
+.gallery1 {
+  width: 80%;
+  display: flex;
+  overflow-x: scroll;
+}
 
-  .images {
-    display: flex;
-    gap: 1rem;
-  }
+.images {
+  display: flex;
+  gap: 1rem;
+}
 
 .image-container {
   position: relative;
@@ -453,24 +514,25 @@ margin-left: 0.5rem;
 }
 
 /* slogan onderaan home */
-#slogan-container{
+#slogan-container {
   background-color: #E8DFDC;
   padding: 5rem 0;
 }
 
-#slogan-content{
+#slogan-content {
   display: flex;
   width: 80%;
   margin: 0 auto;
 }
 
-.slogan-content-left{
- display: flex;
- justify-content: right;
- align-items: center;
- width: calc(50%);
+.slogan-content-left {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  width: calc(50%);
   margin-right: -0.5rem;
 }
+
 .slogan-left-text {
   font-family: Georgia, sans-serif;
   color: #485059;
@@ -485,24 +547,26 @@ margin-left: 0.5rem;
   padding-left: 10%;
   align-items: center;
   margin-top: 3rem;
-  max-height: calc(50% - 1rem); 
+  max-height: calc(50% - 1rem);
 }
-.slogan-content-right{
+
+.slogan-content-right {
   width: calc(50%);
   z-index: 2;
-  
+
 }
-.slogan-content-right img{
+
+.slogan-content-right img {
   width: 100%;
 }
 
 /* news letter */
-#news-container{
+#news-container {
   background-color: #E8DFDC;
   padding-bottom: 5rem;
 }
 
-#news-content{
+#news-content {
   margin: 0 auto;
   width: 80%;
   display: flex;
@@ -510,7 +574,7 @@ margin-left: 0.5rem;
   align-items: start;
 }
 
-#news-content h1{
+#news-content h1 {
   color: #485059;
   margin-bottom: 1.5rem;
   text-decoration: underline;
@@ -518,29 +582,31 @@ margin-left: 0.5rem;
   font-size: 2rem;
 }
 
-.news-input{
+.news-input {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   font-family: "Century Gothic", sans-serif;
   color: #485059;
   font-size: 1.2rem;
+  gap: 0.5rem;
 }
 
-#email{
+.news-input input {
   border: none;
-  border-radius: 20px  0 0 20px;
-  padding: 0.8rem  1.5rem;
+  padding: 0.8rem 1.5rem;
+
 }
 
-.news-input button{
+.news-input button {
   background-color: #F2B66D;
-  border-radius: 0 20px 20px 0;
-  padding: 0.8rem  1.5rem;
+  /* border-radius: 0 20px 20px 0; */
+  padding: 0.8rem 1.5rem;
   border: none;
+  width: 100%;
 }
 
-.news-input button:hover{
+.news-input button:hover {
   background-color: #485059;
   color: #ffffff;
   transition: transform 0.3s ease, background-color 0.3s ease;
@@ -548,98 +614,103 @@ margin-left: 0.5rem;
 
 @media screen and (max-width: 1584px) {
   #best-text h1 {
-  font-size:  2.5rem;
-}
-#best-text p {
-  font-size: 1.5rem;
-}
+    font-size: 2.5rem;
+  }
+
+  #best-text p {
+    font-size: 1.5rem;
+  }
+
   .slogan-left-text {
     font-size: 2.5rem;
   }
 }
-@media screen and (max-width: 1448px){
+
+@media screen and (max-width: 1448px) {
   #best-text h1 {
-  font-size:  1.8rem;
-}
-#best-text p {
-  font-size: 1.3rem;
-}
+    font-size: 1.8rem;
+  }
+
+  #best-text p {
+    font-size: 1.3rem;
+  }
+
   .slogan-left-text {
     font-size: 1.8rem;
-  } 
+  }
 }
-@media screen and (max-width: 1382px){
-  .dot{
+
+@media screen and (max-width: 1382px) {
+  .dot {
     bottom: 9rem;
   }
+
   .head-content {
-  bottom: 10rem;
-  left: 4rem;
+    bottom: 10rem;
+    left: 4rem;
 
-  max-width: 15rem;
-}
+    max-width: 15rem;
+  }
+
   .head-content h1 {
-  font-size: 2rem;
-}
+    font-size: 2rem;
+  }
 
-.head-content h2 {
-  font-size: 1rem;
-}
+  .head-content h2 {
+    font-size: 1rem;
+  }
 
-.head-content button {
-  font-size: 1rem;
-}
-  .product-content-left p{
-font-size: 1rem;
-}
+  .head-content button {
+    font-size: 1rem;
+  }
 
-.product-content-left h1{
-font-size: 1.2rem;
-}
+  .product-content-left p {
+    font-size: 1rem;
+  }
 
-.product-content-left h2{
-font-size: 1rem;
-}
+  .product-content-left h1 {
+    font-size: 1.2rem;
+  }
+
+  .product-content-left h2 {
+    font-size: 1rem;
+  }
+
   .product-like {
-  padding: 0.20rem 0.3rem;
+    padding: 0.20rem 0.3rem;
 
-}
+  }
 
-.product-like a{
-font-size: 1.2rem;
-}
+  .product-like a {
+    font-size: 1.2rem;
+  }
 
-  .product-content-right a{
-   padding: 0.45rem 0 0.3rem 0;
-}
+  .product-content-right a {
+    padding: 0.45rem 0 0.3rem 0;
+  }
 
-.product-content-right i{
-  font-size: 1.2rem;
-  padding: 0 0.15rem 0 0.25rem;
-}
+  .product-content-right i {
+    font-size: 1.2rem;
+    padding: 0 0.15rem 0 0.25rem;
+  }
 }
 
 @media screen and (max-width: 1000px) {
 
   /* news letter */
 
-#news-content{
-  align-items: center;
-}
+  #news-content {
+    align-items: center;
+  }
 
-#email{
-  width: 60%;
-}
+  .news-input button {
+    padding: 0.8rem 1rem;
+  }
 
-.news-input button{
-  padding: 0.8rem  1rem;
-  width: 40%;
-}
-
-.news-input button:hover{
-  background-color: #485059;
-  color: #ffffff;
-}
+  .news-input button:hover {
+    background-color: #485059;
+    color: #ffffff;
+  }
 
 
   .overlay {
@@ -651,121 +722,131 @@ font-size: 1.2rem;
     justify-content: center;
     align-items: center
   }
- 
 
-  .slogan-container{
+  #slogan-container{
+    padding: 0 0 5rem 0;
+  }
+
+  .slogan-container {
     display: block;
     padding: 1rem;
     max-width: 100%;
     height: auto;
   }
 
-  .dot{
+  .dot {
     bottom: 9rem;
   }
 
   /* best products */
-  #best-products{
+  #best-products {
     flex-direction: column;
     align-items: center;
   }
+
   .best-product {
-  width: 100%;
-  margin-right: 0;
-  margin-bottom: 3rem;
-}
-.best-product:last-child {
-  margin-bottom: 0;
-}
-.product-like {
-  padding: 0.40rem 0.6rem;
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 3rem;
+  }
 
+  .best-product:last-child {
+    margin-bottom: 0;
+  }
+
+  .product-like {
+    padding: 0.40rem 0.6rem;
+
+  }
+
+  .product-like a {
+    font-size: 1.5rem;
+  }
+
+  .product-content-left p {
+    font-size: 1.5rem;
+  }
+
+  .product-content-left h1 {
+    font-size: 1.7rem;
+  }
+
+  .product-content-left h2 {
+    font-size: 1.5rem;
+  }
+
+  .product-content-right a {
+    padding: 0.90rem 0 0.6rem 0;
+  }
+
+  .product-content-right i {
+    font-size: 2.4rem;
+    padding: 0 0.30rem 0 0.50rem;
+  }
+
+  /* slogan */
+  #slogan-content {
+    flex-direction: column;
+  }
+
+  .slogan-content-left {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .slogan-left-text {
+    box-shadow: none;
+    border-radius: 0;
+    font-size: 2.5rem;
+    height: calc(50% - 1rem);
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    padding: 3% 5%;
+    align-items: center;
+    margin-top: 3rem;
+    max-height: calc(50% - 1rem);
+  }
+
+  .slogan-content-right {
+    width: 100%;
+    z-index: 0;
+
+  }
+
+  .slogan-content-right img {
+    width: 100%;
+    border-radius: 0;
+  }
 }
 
-.product-like a{
-font-size: 1.5rem;
-}
-
-.product-content-left p{
-font-size: 1.5rem;
-}
-
-.product-content-left h1{
-font-size: 1.7rem;
-}
-
-.product-content-left h2{
-font-size: 1.5rem;
-}
-
-.product-content-right a{
-   padding: 0.90rem 0 0.6rem 0;
-}
-
-.product-content-right i{
-  font-size: 2.4rem;
-  padding: 0 0.30rem 0 0.50rem;
-}
-
-/* slogan */
-#slogan-content{
-  flex-direction: column;
-}
-
-.slogan-content-left{
- width: 100%;
-  margin-right: 0;
-}
-
-.slogan-left-text {
-  box-shadow: none;
-  border-radius: 0;
-  font-size: 2.5rem;
-  height: calc(50% - 1rem);
-  width: 100%;
-  display: flex;
-  justify-content: left;
-  padding: 3% 5%;
-  align-items: center;
-  margin-top: 3rem;
-  max-height: calc(50% - 1rem); 
-}
-.slogan-content-right{
-  width: 100%;
-  z-index: 0;
-  
-}
-.slogan-content-right img{
-  width: 100%;
-  border-radius: 0;
-}
-}
-
-@media screen and (max-width: 600px){
-  .head-content{
+@media screen and (max-width: 600px) {
+  .head-content {
     left: 1rem;
   }
 
   .dot {
     display: none;
-}
-  
-  .banner-img{
-    height: 300px !important;
-    
   }
+
+  .banner-img {
+    height: 300px !important;
+
+  }
+
   .rooms {
     margin-top: -8rem !important;
   }
-  
-  .gallery{
+
+  .gallery {
     display: block;
     margin-top: 1rem;
   }
+
   .gallery div,
   .gallery1 div {
     grid-template-columns: auto;
-    overflow-x: hidden; 
+    overflow-x: hidden;
     width: 102%;
   }
 
@@ -780,28 +861,28 @@ font-size: 1.5rem;
   #nextbtn1 {
     display: none;
   }
-  
-  
-  
-  .product-content-left p{
-font-size: 1rem;
-}
 
-.product-content-left h1{
-font-size: 1.2rem;
-}
 
-.product-content-left h2{
-font-size: 1rem;
-}
-.product-content-right a{
-   padding: 0.45rem 0 0.3rem 0;
-}
 
-.product-content-right i{
-  font-size: 1.2rem;
-  padding: 0 0.15rem 0 0.25rem;
-}
-}
-</style>
+  .product-content-left p {
+    font-size: 1rem;
+  }
+
+  .product-content-left h1 {
+    font-size: 1.2rem;
+  }
+
+  .product-content-left h2 {
+    font-size: 1rem;
+  }
+
+  .product-content-right a {
+    padding: 0.45rem 0 0.3rem 0;
+  }
+
+  .product-content-right i {
+    font-size: 1.2rem;
+    padding: 0 0.15rem 0 0.25rem;
+  }
+}</style>
 

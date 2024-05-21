@@ -1,4 +1,4 @@
-import {createRouter, createWebHistory} from "vue-router";
+import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
 import AboutView from "../views/AboutView.vue";
 
@@ -24,6 +24,7 @@ import formulierView from "@/views/FormulierView.vue"
 import Privacypolicy from "@/views/PrivacyView.vue";
 import Cookies from "@/views/CookiesView.vue";
 import Voorwaarden from "@/views/AlgemenevoorwaardenView.vue";
+import ConfirmView from "@/views/ConfirmView.vue";
 
 
 const router = createRouter({
@@ -94,11 +95,19 @@ const router = createRouter({
             props: true,
         },
         {
+            path: "/confirm/:token",
+            name: "confirm",
+            component: ConfirmView,
+            props: true,
+        },
+
+        {
             path: "/detailview",
             name: "detailview",
             component: DetailView,
             props: true,
-
+        },
+        {
             path: "/privacy",
             name: "privacy",
             component: Privacypolicy,
@@ -109,9 +118,9 @@ const router = createRouter({
             component: Cookies,
         },
         {
-         path: "/voorwaarden",
-         name: "voorwaarden",
-         component: Voorwaarden,
+            path: "/voorwaarden",
+            name: "voorwaarden",
+            component: Voorwaarden,
 
         }
     ],
