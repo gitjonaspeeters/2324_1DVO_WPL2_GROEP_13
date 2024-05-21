@@ -7,27 +7,27 @@
       <div class="container-first">
         <div class="container-hallway-desk">
           <div class="hallway">
-           <router-link to="/products"><p class="hover-effect">Hal</p></router-link> 
+           <router-link :to="{ name: 'products', query: { category: 'Home accessories' } }"><p class="hover-effect">Hal</p></router-link> 
           </div>
           <div class="desk">
-            <router-link to="/products"><p class="hover-effect">Bureaus</p></router-link>
+            <router-link :to="{ name: 'products', query: { category: 'Desk' } }"><p class="hover-effect">Bureaus</p></router-link>
           </div>
         </div>
         <div class="container-livingroom">
           <div class="livingroom">
-            <router-link to="/products"><p class="hover-effect">Woonkamer</p></router-link>
+            <router-link :to="{ name: 'products', query: { category: 'Sofa' } }"><p class="hover-effect">Woonkamer</p></router-link>
           </div>
         </div>
       </div>
       <div class="container-second">
         <div class="container-bedroom">
           <div class="bedroom">
-            <router-link to="/products"><p class="hover-effect">Slaapkamer</p></router-link>
+            <router-link :to="{ name: 'products', query: { category: 'Bed' } }"><p class="hover-effect">Slaapkamer</p></router-link>
           </div>
         </div>
         <div class="container-diningroom">
           <div class="diningroom">
-            <router-link to="/products"><p class="hover-effect">Eetkamer</p></router-link>
+            <router-link :to="{ name: 'products', query: { category: 'Dining Tables' } }"><p class="hover-effect">Eetkamer</p></router-link>
           </div>
         </div>
       </div>
