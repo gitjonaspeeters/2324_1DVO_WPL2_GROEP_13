@@ -97,7 +97,7 @@ export default {
 
 #image {
   width: 150rem;
-  background-image: url("src/assets/undraw_ideation_re_8i2h.svg");
+  background-image: url("/assets/undraw_ideation_re_8i2h.svg");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
