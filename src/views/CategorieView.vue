@@ -498,7 +498,7 @@ image {
   }
 
   .bed {
-    background-image: url("@/assets/bedden VD.png");
+    background-image: url("@/assets/Bedden VD.png");
     width: 360px;
     height: 360px;
     margin: 25px 15px 25px 15px;
