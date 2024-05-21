@@ -108,6 +108,10 @@ export default {
         this.initializePriceSlider();
     },
     methods: {
+        filterByCategory(category) {
+    this.filter.selectedCategory = category;
+    this.applyCategoryFilter();
+    },
         initializePriceSlider() {
             const priceSlider = document.getElementById('priceSlider');
             noUiSlider.create(priceSlider, {
@@ -193,13 +197,23 @@ export default {
             return priceStr;
         },
         applyCategoryFilter() {
-            if (this.filter.selectedCategory === 'all') {
-                this.filteredProducts = this.products;
-            } else {
-                this.filteredProducts = this.products.filter(product => product.Category === this.filter.selectedCategory);
-            }
-            this.currentPage = 1; // Reset to the first page
-        },
+    let category;
+    if (this.$route.query.category) {
+        category = this.$route.query.category;
+    } else {
+        category = this.filter.selectedCategory || 'all';
+    }
+
+    if (category === 'all') {
+        this.filteredProducts = this.products;
+    } else {
+        this.filteredProducts = this.products.filter(product => product.Category === category);
+    }
+    this.currentPage = 1; 
+},
+
+
+
         updateColors() {
             const allColors = new Set();
             this.products.forEach(product => {
