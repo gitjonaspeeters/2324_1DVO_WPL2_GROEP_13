@@ -2,8 +2,8 @@
   {
     "Id": "1",
     "Images": {
-      "Image1": "./src/assets/Eet-tafel.jpg",
-      "Image2": "./src/assets/Maré.jpg"
+      "Image1": "/assets/Eet-tafel.jpg",
+      "Image2": "/assets/Maré.jpg"
     },
     "Name": "Eetkamertafel Maré Mangohout",
     "Price": {
@@ -24,8 +24,8 @@
   {
     "Id": "2",
     "Images": {
-      "Image1": "./src/assets/HEAVEN-EETTAFEL.jpg",
-      "Image2": "./src/assets/dining-tableheaven.jpg"
+      "Image1": "/assets/HEAVEN-EETTAFEL.jpg",
+      "Image2": "/assets/dining-tableheaven.jpg"
     },
     "Name": "Eettafel Heaven",
     "Price": {
@@ -50,8 +50,8 @@
   {
     "Id": "3",
     "Images": {
-      "Image1": "./src/assets/55-22.png",
-      "Image2": "./src/assets/13862_2.jpg"
+      "Image1": "/assets/55-22.png",
+      "Image2": "/assets/13862_2.jpg"
     },
     "Name": "Jesper Danish Oval",
     "Price": {
@@ -70,8 +70,8 @@
   {
     "Id": "4",
     "Images": {
-      "Image1": "./src/assets/eettafel-240-daytona-1.jpg",
-      "Image2": "./src/assets/2044_21_6.jpg"
+      "Image1": "/assets/eettafel-240-daytona-1.jpg",
+      "Image2": "/assets/2044_21_6.jpg"
     },
     "Name": "Eetkamertafel Daytona",
     "Price": {
@@ -92,8 +92,8 @@
   {
     "Id": "5",
     "Images": {
-      "Image1": "./src/assets/Raphael_sfeer_Bib_TF2101_ST2105.jpg",
-      "Image2": "./src/assets/raphael-1.jpg"
+      "Image1": "/assets/Raphael_sfeer_Bib_TF2101_ST2105.jpg",
+      "Image2": "/assets/raphael-1.jpg"
     },
     "Name": "Eetkamertafel Raphael",
     "Price": {
@@ -111,8 +111,8 @@
   {
     "Id": "6",
     "Images": {
-      "Image1": "./src/assets/Rousseau2089519-420Bed20Parma201.jpg",
-      "Image2": "./src/assets/Rousseau2089519-420Bed20Parma204.jpg"
+      "Image1": "/assets/Rousseau2089519-420Bed20Parma201.jpg",
+      "Image2": "/assets/Rousseau2089519-420Bed20Parma204.jpg"
     },
     "Name": "Bed Parma",
     "Price": {
@@ -134,7 +134,7 @@
   {
     "Id": "7",
     "Images": {
-      "Image1": "./src/assets/Chambre-enfant-Ellen-decor-bois-acacia-armoire2portes-Oosterlynck.jpg"
+      "Image1": "/assets/Chambre-enfant-Ellen-decor-bois-acacia-armoire2portes-Oosterlynck.jpg"
     },
     "Name": "Kinderkamer Ellen",
     "Price": {
@@ -152,8 +152,8 @@
   {
     "Id": "8",
     "Images": {
-      "Image1": "./src/assets/Rousseau2089514-220Bed20lit20Roma200.jpg",
-      "Image2": "./src/assets/Rousseau2089514-220Bed20Lit20Roma206.jpg"
+      "Image1": "/assets/Rousseau2089514-220Bed20lit20Roma200.jpg",
+      "Image2": "/assets/Rousseau2089514-220Bed20Lit20Roma206.jpg"
     },
     "Name": "Bed Roma",
     "Price": {
@@ -178,8 +178,8 @@
   {
     "Id": "9",
     "Images": {
-      "Image1": "./src/assets/Vogue.jpg",
-      "Image2": "./src/assets/urun-vogue-fonksiyonel-yatak-02.jpg"
+      "Image1": "/assets/Vogue.jpg",
+      "Image2": "/assets/urun-vogue-fonksiyonel-yatak-02.jpg"
     },
     "Name": "Vogue",
     "Price": {
@@ -198,7 +198,7 @@
   {
     "Id": "10",
     "Images": {
-      "Image1": "./src/assets/Group16.png"
+      "Image1": "/assets/Group16.png"
     },
     "Name": "Hoekzetel Lima",
     "Price": {
@@ -217,8 +217,8 @@
   {
     "Id": "11",
     "Images": {
-      "Image1": "./src/assets/STF-3306-1-1.png",
-      "Image2": "./src/assets/STF-3306-5.png"
+      "Image1": "/assets/STF-3306-1-1.png",
+      "Image2": "/assets/STF-3306-5.png"
     },
     "Name": "Vakkenkast Brussel Sand XL",
     "Measurement": {
@@ -243,8 +243,8 @@
   {
     "Id": "12",
     "Images": {
-      "Image1": "./src/assets/9872-6.jpg",
-      "Image2": "./src/assets/9872-1.jpg"
+      "Image1": "/assets/9872-6.jpg",
+      "Image2": "/assets/9872-1.jpg"
     },
     "Name": "Boekenkast Kensington",
     "Price": {
@@ -264,8 +264,8 @@
   {
     "Id": "13",
     "Images": {
-      "Image1": "./src/assets/7521-6.jpg",
-      "Image2": "./src/assets/7521-5.jpg"
+      "Image1": "/assets/7521-6.jpg",
+      "Image2": "/assets/7521-5.jpg"
     },
     "Name": "Dressoir Bloomville 4-deuren",
     "Measurement": {
@@ -290,8 +290,8 @@
   {
     "Id": "14",
     "Images": {
-      "Image1": "./src/assets/Rousseau206925-220Kledingkast20armoire20Marc201.jpg",
-      "Image2": "./src/assets/Rousseau206925-220Kledingkast20armoire20Marc20209.jpg"
+      "Image1": "/assets/Rousseau206925-220Kledingkast20armoire20Marc201.jpg",
+      "Image2": "/assets/Rousseau206925-220Kledingkast20armoire20Marc20209.jpg"
     },
     "Name": "Kledingkast Marc 4 deuren met 2 spiegels Sonoma",
     "Measurement": {
@@ -312,7 +312,7 @@
   {
     "Id": "15",
     "Images": {
-      "Image1": "./src/assets/Hoeksalongrey.png"
+      "Image1": "/assets/Hoeksalongrey.png"
     },
     "Name": "Hoeksalon Grey",
     "Measurement": {
@@ -330,8 +330,8 @@
   {
     "Id": "16",
     "Images": {
-      "Image1": "./src/assets/S5133_CREAM_UNICORN-1-scaled.jpg",
-      "Image2": "./src/assets/S5133_CREAM_UNICORN-6.jpg"
+      "Image1": "/assets/S5133_CREAM_UNICORN-1-scaled.jpg",
+      "Image2": "/assets/S5133_CREAM_UNICORN-6.jpg"
     },
     "Name": "Fauteuil Beauchamp cream unicorn",
     "Measurement": {
@@ -353,8 +353,8 @@
   {
     "Id": "17",
     "Images": {
-      "Image1": "./src/assets/S4552_WHITE_FURRY-1.jpg",
-      "Image2": "./src/assets/S4552_WHITE_FURRY-6.jpg"
+      "Image1": "/assets/S4552_WHITE_FURRY-1.jpg",
+      "Image2": "/assets/S4552_WHITE_FURRY-6.jpg"
     },
     "Name": "Fauteuil Charmaine white furry",
     "Measurement": {
@@ -376,8 +376,8 @@
   {
     "Id": "18",
     "Images": {
-      "Image1": "./src/assets/S4491_KHAKI_VELVET-1.jpg",
-      "Image2": "./src/assets/S4491_KHAKI_VELVET-6.jpg"
+      "Image1": "/assets/S4491_KHAKI_VELVET-1.jpg",
+      "Image2": "/assets/S4491_KHAKI_VELVET-6.jpg"
     },
     "Measurement": {
       "Length": "90cm",
@@ -399,8 +399,8 @@
   {
     "Id": "19",
     "Images": {
-      "Image1": "./src/assets/S4702_TAUPE_CHENILLE-1.jpg",
-      "Image2": "./src/assets/S4702_TAUPE_CHENILLE-6.jpg"
+      "Image1": "/assets/S4702_TAUPE_CHENILLE-1.jpg",
+      "Image2": "/assets/S4702_TAUPE_CHENILLE-6.jpg"
     },
     "Measurement": {
       "Length": "73cm",
@@ -422,8 +422,8 @@
   {
     "Id": "20",
     "Images": {
-      "Image1": "./src/assets/S4583_CREAM_FUSION-1.jpg",
-      "Image2": "./src/assets/S4583_CREAM_FUSION-6.jpg"
+      "Image1": "/assets/S4583_CREAM_FUSION-1.jpg",
+      "Image2": "/assets/S4583_CREAM_FUSION-6.jpg"
     },
     "Measurement": {
       "Length": "56cm",
@@ -448,8 +448,8 @@
   {
     "Id": "21",
     "Images": {
-      "Image1": "./src/assets/10bf1d48-6173-47d8-adf8-c30bc16fba4c.jpg",
-      "Image2": "./src/assets/55-6.jpg"
+      "Image1": "/assets/10bf1d48-6173-47d8-adf8-c30bc16fba4c.jpg",
+      "Image2": "/assets/55-6.jpg"
     },
     "Measurement": {},
     "Name": "I_York",
@@ -467,8 +467,8 @@
   {
     "Id": "22",
     "Images": {
-      "Image1": "./src/assets/888.jpg",
-      "Image2": "./src/assets/Sunny-Stoel.jpg"
+      "Image1": "/assets/888.jpg",
+      "Image2": "/assets/Sunny-Stoel.jpg"
     },
     "Measurement": {},
     "Name": "Sunny Stoel",
@@ -486,8 +486,8 @@
   {
     "Id": "23",
     "Images": {
-      "Image1": "./src/assets/1-2.png",
-      "Image2": "./src/assets/2-2.png"
+      "Image1": "/assets/1-2.png",
+      "Image2": "/assets/2-2.png"
     },
     "Measurement": {
       "Length": "56cm",
@@ -513,8 +513,8 @@
   {
     "Id": "24",
     "Images": {
-      "Image1": "./src/assets/WA-0011-1.jpg",
-      "Image2": "./src/assets/WA-0011-6.jpg"
+      "Image1": "/assets/WA-0011-1.jpg",
+      "Image2": "/assets/WA-0011-6.jpg"
     },
     "Measurement": {
       "Length": "158cm",
@@ -539,7 +539,7 @@
   {
     "Id": "25",
     "Images": {
-      "Image1": "./src/assets/AD-0045-1.jpg"
+      "Image1": "/assets/AD-0045-1.jpg"
     },
     "Measurement": {
       "Length": "46cm",
@@ -564,8 +564,8 @@
   {
     "Id": "26",
     "Images": {
-      "Image1": "./src/assets/AD-0032-1.jpg",
-      "Image2": "./src/assets/AD-0032-6.jpg"
+      "Image1": "/assets/AD-0032-1.jpg",
+      "Image2": "/assets/AD-0032-6.jpg"
     },
     "Measurement": {
       "Length": "21cm",
@@ -590,8 +590,8 @@
   {
     "Id": "27",
     "Images": {
-      "Image1": "./src/assets/AD-0046-1.jpg",
-      "Image2": "./src/assets/AD-0046-4.jpg"
+      "Image1": "/assets/AD-0046-1.jpg",
+      "Image2": "/assets/AD-0046-4.jpg"
     },
     "Measurement": {
       "Length": "130cm",
@@ -613,8 +613,8 @@
   {
     "Id": "28",
     "Images": {
-      "Image1": "./src/assets/7491-1.jpg",
-      "Image2": "./src/assets/7491-6.jpg"
+      "Image1": "/assets/7491-1.jpg",
+      "Image2": "/assets/7491-6.jpg"
     },
     "Measurement": {
       "Length": "150cm",
@@ -636,7 +636,7 @@
   {
     "Id": "29",
     "Images": {
-      "Image1": "./src/assets/Cindy2-B18-304-scaled.jpg"
+      "Image1": "/assets/Cindy2-B18-304-scaled.jpg"
     },
     "Measurement": {
       "Length": "140cm",
@@ -654,7 +654,7 @@
   {
     "Id": "30",
     "Images": {
-      "Image1": "./src/assets/MTL39.jpg"
+      "Image1": "/assets/MTL39.jpg"
     },
     "Measurement": {
       "Length": "121cm",
@@ -673,7 +673,7 @@
   {
     "Id": "31",
     "Images": {
-      "Image1": "./src/assets/55-10.png"
+      "Image1": "/assets/55-10.png"
     },
     "Measurement": {
       "Length": "121cm",
@@ -692,8 +692,8 @@
   {
     "Id": "32",
     "Images": {
-      "Image1": "./src/assets/S4523_WHITE_BOUCLE-1.jpg",
-      "Image2": "./src/assets/S4523_WHITE_BOUCLE-6.jpg"
+      "Image1": "/assets/S4523_WHITE_BOUCLE-1.jpg",
+      "Image2": "/assets/S4523_WHITE_BOUCLE-6.jpg"
     },
     "Measurement": {
       "Length": "53cm",
@@ -718,8 +718,8 @@
   {
     "Id": "33",
     "Images": {
-      "Image1": "./src/assets/Rousseau208960920Bed20lit20Davy201.jpg",
-      "Image2": "./src/assets/Rousseau208960920Bed20lit20Davy206.jpg"
+      "Image1": "/assets/Rousseau208960920Bed20lit20Davy201.jpg",
+      "Image2": "/assets/Rousseau208960920Bed20lit20Davy206.jpg"
     },
     "Measurement": {
       "Length": "215cm",
@@ -744,9 +744,9 @@
   {
     "Id": "34",
     "Images": {
-      "Image1": "./src/assets/urun-velar-fonksiyonel-yatak-03.jpeg",
+      "Image1": "/assets/urun-velar-fonksiyonel-yatak-03.jpeg",
 
-      "Image2": "./src/assets/urun-velar-fonksiyonel-yatak-02.jpeg"
+      "Image2": "/assets/urun-velar-fonksiyonel-yatak-02.jpeg"
 
     },
     "Measurement": {
@@ -768,8 +768,8 @@
   {
     "Id": "35",
     "Images": {
-      "Image1": "./src/assets/Rousseau208952020stapelbed20lit20superposC3A920Sammy201.jpg",
-      "Image2": "./src/assets/Rousseau208952020stapelbed20lit20superposC3A920Sammy207.jpg"
+      "Image1": "/assets/Rousseau208952020stapelbed20lit20superposC3A920Sammy201.jpg",
+      "Image2": "/assets/Rousseau208952020stapelbed20lit20superposC3A920Sammy207.jpg"
     },
     "Measurement": {
       "Length": "210cm",
@@ -793,8 +793,8 @@
   {
     "Id": "36",
     "Images": {
-      "Image1": "./src/assets/SCTDFT_INF_3663.jpg",
-      "Image2": "./src/assets/SCTDFT_KIDS_01_74e0.jpg"
+      "Image1": "/assets/SCTDFT_INF_3663.jpg",
+      "Image2": "/assets/SCTDFT_KIDS_01_74e0.jpg"
     },
     "Measurement": {
       "Length": "210cm",
@@ -818,8 +818,8 @@
   {
     "Id": "37",
     "Images": {
-      "Image1": "./src/assets/Rousseau209805-120gamingstoel20chaise20de20jeu20Taylor201.jpg",
-      "Image2": "./src/assets/Rousseau209805-120gamingstoel20chaise20de20jeu20Taylor202.jpg"
+      "Image1": "/assets/Rousseau209805-120gamingstoel20chaise20de20jeu20Taylor201.jpg",
+      "Image2": "/assets/Rousseau209805-120gamingstoel20chaise20de20jeu20Taylor202.jpg"
     },
     "Measurement": {
     },
@@ -840,12 +840,12 @@
   {
     "Id": "38",
     "Images": {
-      "Image1": "./src/assets/Rousseau209708-220bureaustoel20chaise20de20bureau20Claude201.jpg",
-      "Image2": "./src/assets/Rousseau209708-220bureaustoel20chaise20de20bureau20Claude202.jpg"
+      "Image1": "/assets/Rousseau209708-220bureaustoel20chaise20de20bureau20Claude201.jpg",
+      "Image2": "/assets/Rousseau209708-220bureaustoel20chaise20de20bureau20Claude202.jpg"
     },
     "Measurement": {
     },
-    "Name": "./src/assets/Bureaustoel Claude Mesh",
+    "Name": "/assets/Bureaustoel Claude Mesh",
     "Price": {
       "Low": "€95,00"
     },
@@ -863,8 +863,8 @@
   {
     "Id": "39",
     "Images": {
-      "Image1": "./src/assets/87d5e457-15b6-4985-9d99-f6ad7fb2c355.jpg",
-      "Image2": "./src/assets/d7056fce-3dc1-41c6-a9d3-4dda884394dd.jpg"
+      "Image1": "/assets/87d5e457-15b6-4985-9d99-f6ad7fb2c355.jpg",
+      "Image2": "/assets/d7056fce-3dc1-41c6-a9d3-4dda884394dd.jpg"
     },
     "Measurement": {
     },
@@ -887,8 +887,8 @@
   {
     "Id": "40",
     "Images": {
-      "Image1": "./src/assets/Rousseau202155-120TV20meubel20meuble20TV20Madeira203.jpg",
-      "Image2": "./src/assets/Rousseau202155-220Madeira206.jpg"
+      "Image1": "/assets/Rousseau202155-120TV20meubel20meuble20TV20Madeira203.jpg",
+      "Image2": "/assets/Rousseau202155-220Madeira206.jpg"
     },
     "Measurement": {
       "Length": "140cm",
@@ -914,8 +914,8 @@
   {
     "Id": "41",
     "Images": {
-      "Image1": "./src/assets/Rousseau201180-220schoenenrek20C3A9tagC3A8re20C3A020chaussures20Sam201.jpg",
-      "Image2": "./src/assets/Rousseau201180-220schoenenrek20C3A9tagC3A8re20C3A020chaussures20Sam203 (1).jpg"
+      "Image1": "/assets/Rousseau201180-220schoenenrek20C3A9tagC3A8re20C3A020chaussures20Sam201.jpg",
+      "Image2": "/assets/Rousseau201180-220schoenenrek20C3A9tagC3A8re20C3A020chaussures20Sam203 (1).jpg"
     },
     "Measurement": {
       "Length": "80cm",
@@ -940,8 +940,8 @@
   {
     "Id": "42",
     "Images": {
-      "Image1": "./src/assets/Rousseau206625-220boekenkast20bibliothC3A8que20Space201.jpg",
-      "Image2": "./src/assets/Rousseau206625-220boekenkast20bibliothC3A8que20Space207.jpg"
+      "Image1": "/assets/Rousseau206625-220boekenkast20bibliothC3A8que20Space201.jpg",
+      "Image2": "/assets/Rousseau206625-220boekenkast20bibliothC3A8que20Space207.jpg"
     },
     "Measurement": {
       "Length": "55cm",
@@ -963,7 +963,7 @@
   {
     "Id": "43",
     "Images": {
-      "Image1": "./src/assets/MTL12.jpg"
+      "Image1": "/assets/MTL12.jpg"
     },
     "Measurement": {
       "Length": "120cm",
@@ -986,7 +986,7 @@
   {
     "Id": "44",
     "Images": {
-      "Image1": "./src/assets/Screenshot_4.png"
+      "Image1": "/assets/Screenshot_4.png"
     },
     "Measurement": {
       "Length": "94cm",
@@ -1007,8 +1007,8 @@
   {
     "Id": "45",
     "Images": {
-      "Image1": "./src/assets/Rousseau20126520Bureau20Malino201-768x512.jpg",
-      "Image2": "./src/assets/Rousseau20126520Bureau20Malino202.jpg"
+      "Image1": "/assets/Rousseau20126520Bureau20Malino201-768x512.jpg",
+      "Image2": "/assets/Rousseau20126520Bureau20Malino202.jpg"
     },
     "Measurement": {
       "Length": "120cm",
@@ -1029,8 +1029,8 @@
   {
     "Id": "46",
     "Images": {
-      "Image1": "./src/assets/Rousseau201280-120Bureau20Mateo201.jpg",
-      "Image2": "./src/assets/Rousseau201280-120Bureau20Mateo208.jpg"
+      "Image1": "/assets/Rousseau201280-120Bureau20Mateo201.jpg",
+      "Image2": "/assets/Rousseau201280-120Bureau20Mateo208.jpg"
     },
     "Measurement": {
       "Length": "120,7cm",
@@ -1056,7 +1056,7 @@
   {
     "Id": "47",
     "Images": {
-      "Image1": "./src/assets/Cindy2-B18-487-scaled.jpg"
+      "Image1": "/assets/Cindy2-B18-487-scaled.jpg"
     },
     "Measurement": {
       "Length": "48cm",
@@ -1078,8 +1078,8 @@
   {
     "Id": "48",
     "Images": {
-      "Image1": "./src/assets/STF-6753-scaled-1.jpg",
-      "Image2": "./src/assets/madsion.png"
+      "Image1": "/assets/STF-6753-scaled-1.jpg",
+      "Image2": "/assets/madsion.png"
     },
     "Measurement": {
       "Length": "80cm",
@@ -1100,8 +1100,8 @@
   {
     "Id": "49",
     "Images": {
-      "Image1": "./src/assets/12460_1-scaled.jpg",
-      "Image2": "./src/assets/Anthony-blackbrass.png"
+      "Image1": "/assets/12460_1-scaled.jpg",
+      "Image2": "/assets/Anthony-blackbrass.png"
     },
     "Measurement": {
       "Length": "110cm",
@@ -1125,8 +1125,8 @@
   {
     "Id": "50",
     "Images": {
-      "Image1": "./src/assets/Rousseau203925-120console20Ace201.jpg",
-      "Image2": "./src/assets/Rousseau203925-120console20Ace207.jpg"
+      "Image1": "/assets/Rousseau203925-120console20Ace201.jpg",
+      "Image2": "/assets/Rousseau203925-120console20Ace207.jpg"
     },
     "Measurement": {
       "Length": "100cm",
@@ -1149,8 +1149,8 @@
   {
     "Id": "51",
     "Images": {
-      "Image1": "./src/assets/S4541_WHITE_CHENILLE-4-800x800.jpg",
-      "Image2": "./src/assets/S4541_WHITE_CHENILLE-5-800x800.jpg"
+      "Image1": "/assets/S4541_WHITE_CHENILLE-4-800x800.jpg",
+      "Image2": "/assets/S4541_WHITE_CHENILLE-5-800x800.jpg"
     },
     "Measurement": {
       "Length": "64cm",
@@ -1172,8 +1172,8 @@
   {
     "Id": "52",
     "Images": {
-      "Image1": "./src/assets/S4508_WHITE_BOUCLE-1.jpg",
-      "Image2": "./src/assets/S4508_WHITE_BOUCLE-6.jpg"
+      "Image1": "/assets/S4508_WHITE_BOUCLE-1.jpg",
+      "Image2": "/assets/S4508_WHITE_BOUCLE-6.jpg"
     },
     "Measurement": {
       "Length": "49cm",
@@ -1194,8 +1194,8 @@
   {
     "Id": "53",
     "Images": {
-      "Image1": "./src/assets/323-scaled.jpg",
-      "Image2": "./src/assets/BONO-bruin-voor-510x671__.jpeg"
+      "Image1": "/assets/323-scaled.jpg",
+      "Image2": "/assets/BONO-bruin-voor-510x671__.jpeg"
     },
     "Measurement": {
       "Length": "",
@@ -1222,8 +1222,8 @@
   {
     "Id": "54",
     "Images": {
-      "Image1": "./src/assets/Screenshot_9-3.png",
-      "Image2": "./src/assets/Office-Desk-Joe-–-3-kleuren.jpg"
+      "Image1": "/assets/Screenshot_9-3.png",
+      "Image2": "/assets/Office-Desk-Joe-–-3-kleuren.jpg"
     },
     "Measurement": {
       "Length": "100cm",
@@ -1249,8 +1249,8 @@
   {
     "Id": "55",
     "Images": {
-      "Image1": "./src/assets/Screenshot_1-8.png",
-      "Image2": "./src/assets/Screenshot_6-3.png"
+      "Image1": "/assets/Screenshot_1-8.png",
+      "Image2": "/assets/Screenshot_6-3.png"
     },
     "Measurement": {
       "Length": "130cm",
@@ -1271,8 +1271,8 @@
   {
     "Id": "56",
     "Images": {
-      "Image1": "./src/assets/5fd8da8e-2781-4df6-af30-882830df489c.jpg",
-      "Image2": "./src/assets/627d7467-d97e-4713-ada0-82a38831d6d6.jpg"
+      "Image1": "/assets/5fd8da8e-2781-4df6-af30-882830df489c.jpg",
+      "Image2": "/assets/627d7467-d97e-4713-ada0-82a38831d6d6.jpg"
     },
     "Measurement": {
       "Length": "120cm",
@@ -1297,8 +1297,8 @@
   {
     "Id": "57",
     "Images": {
-      "Image1": "./src/assets/WA-0023-2.jpg",
-      "Image2": "./src/assets/WA-0023-6-800x800.jpg"
+      "Image1": "/assets/WA-0023-2.jpg",
+      "Image2": "/assets/WA-0023-6-800x800.jpg"
     },
     "Measurement": {
       "Length": "96,5cm",
@@ -1324,8 +1324,8 @@
   {
     "Id": "58",
     "Images": {
-      "Image1": "./src/assets/AD-0040-5.jpg",
-      "Image2": "./src/assets/AD-0040-6.jpg"
+      "Image1": "/assets/AD-0040-5.jpg",
+      "Image2": "/assets/AD-0040-6.jpg"
     },
     "Measurement": {
       "Length": "16cm",
@@ -1350,8 +1350,8 @@
   {
     "Id": "59",
     "Images": {
-      "Image1": "./src/assets/AD-0043-1.jpg",
-      "Image2": "./src/assets/AD-0043-6.jpg"
+      "Image1": "/assets/AD-0043-1.jpg",
+      "Image2": "/assets/AD-0043-6.jpg"
     },
     "Measurement": {
       "Length": "9cm",
@@ -1376,8 +1376,8 @@
   {
     "Id": "60",
     "Images": {
-      "Image1": "./src/assets/AD-0033-1.jpg",
-      "Image2": "./src/assets/AD-0033-6.jpg"
+      "Image1": "/assets/AD-0033-1.jpg",
+      "Image2": "/assets/AD-0033-6.jpg"
     },
     "Measurement": {
       "Length": "11,5cm",
@@ -1403,8 +1403,8 @@
   {
     "Id": "61",
     "Images": {
-      "Image1": "./src/assets/JB-0066-8.jpg",
-      "Image2": "./src/assets/JB-0066-6.jpg"
+      "Image1": "/assets/JB-0066-8.jpg",
+      "Image2": "/assets/JB-0066-6.jpg"
     },
     "Measurement": {
       "Length": "25cm",
@@ -1429,8 +1429,8 @@
   {
     "Id": "62",
     "Images": {
-      "Image1": "./src/assets/WA-0001-9.jpg",
-      "Image2": "./src/assets/WA-0001-2.jpg"
+      "Image1": "/assets/WA-0001-9.jpg",
+      "Image2": "/assets/WA-0001-2.jpg"
     },
     "Measurement": {
       "Length": "55cm",
@@ -1453,8 +1453,8 @@
   {
     "Id": "63",
     "Images": {
-      "Image1": "./src/assets/ZL-0006-1.jpg",
-      "Image2": "./src/assets/ZL-0006-6.jpg"
+      "Image1": "/assets/ZL-0006-1.jpg",
+      "Image2": "/assets/ZL-0006-6.jpg"
     },
     "Measurement": {
       "Length": "10,5cm",
@@ -1476,8 +1476,8 @@
   {
     "Id": "64",
     "Images": {
-      "Image1": "./src/assets/KK-0098-1.jpg",
-      "Image2": "./src/assets/KK-0098-6.jpg"
+      "Image1": "/assets/KK-0098-1.jpg",
+      "Image2": "/assets/KK-0098-6.jpg"
     },
     "Measurement": {
       "Length": "74cm",
@@ -1504,8 +1504,8 @@
   {
     "Id": "65",
     "Images": {
-      "Image1": "./src/assets/KK-0066-1.jpg",
-      "Image2": "./src/assets/KK-0066-6.jpg"
+      "Image1": "/assets/KK-0066-1.jpg",
+      "Image2": "/assets/KK-0066-6.jpg"
     },
     "Measurement": {
       "Length": "76cm",
@@ -1532,8 +1532,8 @@
   {
     "Id": "66",
     "Images": {
-      "Image1": "./src/assets/MI-0089-1.jpg",
-      "Image2": "./src/assets/MI-0089-4-768x768.jpg"
+      "Image1": "/assets/MI-0089-1.jpg",
+      "Image2": "/assets/MI-0089-4-768x768.jpg"
     },
     "Measurement": {
       "Length": "39cm",
@@ -1558,8 +1558,8 @@
   {
     "Id": "67",
     "Images": {
-      "Image1": "./src/assets/ORANGE_E9.jpg",
-      "Image2": "./src/assets/ORANGE_V6.jpg"
+      "Image1": "/assets/ORANGE_E9.jpg",
+      "Image2": "/assets/ORANGE_V6.jpg"
     },
     "Measurement": {
       "Length": "144cm",
@@ -1582,7 +1582,7 @@
   {
     "Id": "68",
     "Images": {
-      "Image1": "./src/assets/KENT_E1.jpg"
+      "Image1": "/assets/KENT_E1.jpg"
     },
     "Measurement": {
       "Length": "125cm",
@@ -1605,7 +1605,7 @@
   {
     "Id": "69",
     "Images": {
-      "Image1": "./src/assets/YORK_KV1RK467.jpg"
+      "Image1": "/assets/YORK_KV1RK467.jpg"
     },
     "Measurement": {
     },
@@ -1625,8 +1625,8 @@
   {
     "Id": "70",
     "Images": {
-      "Image1": "./src/assets/rasant-4deurkast.png",
-      "Image2": "./src/assets/rasant-4deurkast-indeling.png"
+      "Image1": "/assets/rasant-4deurkast.png",
+      "Image2": "/assets/rasant-4deurkast-indeling.png"
     },
     "Measurement": {
       "Length": "168cm",
@@ -1647,8 +1647,8 @@
   {
     "Id": "71",
     "Images": {
-      "Image1": "./src/assets/Aiden2.jpg",
-      "Image2": "./src/assets/Aiden.jpg"
+      "Image1": "/assets/Aiden2.jpg",
+      "Image2": "/assets/Aiden.jpg"
     },
     "Measurement": {
       "Length": "120cm",
@@ -1672,8 +1672,8 @@
   {
     "Id": "72",
     "Images": {
-      "Image1": "./src/assets/Screenshot_2-10.png",
-      "Image2": "./src/assets/Screenshot_3-9.png"
+      "Image1": "/assets/Screenshot_2-10.png",
+      "Image2": "/assets/Screenshot_3-9.png"
     },
     "Measurement": {
       "Length": "110cm",
@@ -1699,8 +1699,8 @@
   {
     "Id": "73",
     "Images": {
-      "Image1": "./src/assets/Screenshot_3-8.png",
-      "Image2": "./src/assets/Screenshot_1-11.png"
+      "Image1": "/assets/Screenshot_3-8.png",
+      "Image2": "/assets/Screenshot_1-11.png"
     },
     "Measurement": {
       "Length": "120cm",
@@ -1721,8 +1721,8 @@
   {
     "Id": "74",
     "Images": {
-      "Image1": "./src/assets/Screenshot_4-6.png",
-      "Image2": "./src/assets/Screenshot_5-5.png"
+      "Image1": "/assets/Screenshot_4-6.png",
+      "Image2": "/assets/Screenshot_5-5.png"
     },
     "Measurement": {
       "Length": "110cm",
@@ -1747,8 +1747,8 @@
   {
     "Id": "75",
     "Images": {
-      "Image1": "./src/assets/Office-Desk-Chara.jpg",
-      "Image2": "./src/assets/Screenshot_1-9.png"
+      "Image1": "/assets/Office-Desk-Chara.jpg",
+      "Image2": "/assets/Screenshot_1-9.png"
     },
     "Measurement": {
       "Length": "117cm",
@@ -1769,8 +1769,8 @@
   {
     "Id": "76",
     "Images": {
-      "Image1": "./src/assets/7492-2-768x768.jpg",
-      "Image2": "./src/assets/7492-6.jpg"
+      "Image1": "/assets/7492-2-768x768.jpg",
+      "Image2": "/assets/7492-6.jpg"
     },
     "Measurement": {
       "Length": "230cm",
@@ -1794,8 +1794,8 @@
   {
     "Id": "77",
     "Images": {
-      "Image1": "./src/assets/Rousseau2051525-120tafel20table20Elena201.jpg",
-      "Image2": "./src/assets/Rousseau2051525-220tafel20table20Elena208.jpg"
+      "Image1": "/assets/Rousseau2051525-120tafel20table20Elena201.jpg",
+      "Image2": "/assets/Rousseau2051525-220tafel20table20Elena208.jpg"
     },
     "Measurement": {
       "Length": "200cm",
@@ -1820,8 +1820,8 @@
   {
     "Id": "78",
     "Images": {
-      "Image1": "./src/assets/Rousseau2051735-120Tafel20table20Miguel201.jpg",
-      "Image2": "./src/assets/Rousseau2051735-220Tafel20table20Miguel205.jpg"
+      "Image1": "/assets/Rousseau2051735-120Tafel20table20Miguel201.jpg",
+      "Image2": "/assets/Rousseau2051735-220Tafel20table20Miguel205.jpg"
     },
     "Measurement": {
       "Length": "130cm",
@@ -1846,8 +1846,8 @@
   {
     "Id": "79",
     "Images": {
-      "Image1": "./src/assets/Rousseau2051918-120tafel20table20Zeus201.jpg",
-      "Image2": "./src/assets/Rousseau2051918-320tafel20table20Zeus208.jpg"
+      "Image1": "/assets/Rousseau2051918-120tafel20table20Zeus201.jpg",
+      "Image2": "/assets/Rousseau2051918-320tafel20table20Zeus208.jpg"
     },
     "Measurement": {
       "Length": "180cm",
@@ -1873,7 +1873,7 @@
   {
     "Id": "80",
     "Images": {
-      "Image1": "./src/assets/dunes-2023-eetkamer.jpg"
+      "Image1": "/assets/dunes-2023-eetkamer.jpg"
     },
     "Measurement": {
       "Length-Small" :"130cm",
@@ -1898,8 +1898,8 @@
   {
     "Id": "81",
     "Images": {
-      "Image1": "./src/assets/9927-1-768x768.jpg",
-      "Image2": "./src/assets/9927-6-768x768.jpg"
+      "Image1": "/assets/9927-1-768x768.jpg",
+      "Image2": "/assets/9927-6-768x768.jpg"
     },
     "Measurement": {
       "Length": "76,5cm",
@@ -1920,8 +1920,8 @@
   {
     "Id": "82",
     "Images": {
-      "Image1": "./src/assets/Nairobi-140×80-cm.jpg",
-      "Image2": "./src/assets/12412_5-768x534.jpg"
+      "Image1": "/assets/Nairobi-140×80-cm.jpg",
+      "Image2": "/assets/12412_5-768x534.jpg"
     },
     "Measurement": {
       "Length": "140cm",
@@ -1942,8 +1942,8 @@
   {
     "Id": "83",
     "Images": {
-      "Image1": "./src/assets/S5152_FR_CREAM_FUSION-1-768x768.jpg",
-      "Image2": "./src/assets/S5152_FR_CREAM_FUSION-6.jpg"
+      "Image1": "/assets/S5152_FR_CREAM_FUSION-1-768x768.jpg",
+      "Image2": "/assets/S5152_FR_CREAM_FUSION-6.jpg"
     },
     "Measurement": {
       "Length": "120cm",
@@ -1967,8 +1967,8 @@
   {
     "Id": "84",
     "Images": {
-      "Image1": "./src/assets/S4736_LOVELY_CREAM-1.jpg",
-      "Image2": "./src/assets/S4736_LOVELY_CREAM-6-768x768.jpg"
+      "Image1": "/assets/S4736_LOVELY_CREAM-1.jpg",
+      "Image2": "/assets/S4736_LOVELY_CREAM-6-768x768.jpg"
     },
     "Measurement": {
       "Length": "78cm",
@@ -1992,8 +1992,8 @@
   {
     "Id": "85",
     "Images": {
-      "Image1": "./src/assets/S4719_SHEEP_NATURE-1.jpg",
-      "Image2": "./src/assets/S4719_SHEEP_NATURE-2.jpg"
+      "Image1": "/assets/S4719_SHEEP_NATURE-1.jpg",
+      "Image2": "/assets/S4719_SHEEP_NATURE-2.jpg"
     },
     "Measurement": {
       "Length": "91cm",
@@ -2017,8 +2017,8 @@
   {
     "Id": "86",
     "Images": {
-      "Image1": "./src/assets/center-2.jpg",
-      "Image2": "./src/assets/center-768x842.jpg"
+      "Image1": "/assets/center-2.jpg",
+      "Image2": "/assets/center-768x842.jpg"
     },
     "Measurement": {
       "Length": "",
@@ -2042,8 +2042,8 @@
   {
     "Id": "87",
     "Images": {
-      "Image1": "./src/assets/RIA-SFEERFOTO-2ZIT-GRIJS-GECAPITONEERD-scaled.jpg",
-      "Image2": "./src/assets/RIA-3ZIT-ZIJAANZICHT-GECAPITONNEERD-GRIJS-VELVET-FLUWEEL-scaled.jpg"
+      "Image1": "/assets/RIA-SFEERFOTO-2ZIT-GRIJS-GECAPITONEERD-scaled.jpg",
+      "Image2": "/assets/RIA-3ZIT-ZIJAANZICHT-GECAPITONNEERD-GRIJS-VELVET-FLUWEEL-scaled.jpg"
     },
     "Measurement": {
       "Length": "191cm",
@@ -2067,8 +2067,8 @@
   {
     "Id": "88",
     "Images": {
-      "Image1": "./src/assets/blain-zetelbed-2.jpg",
-      "Image2": "./src/assets/Giveaway-Time-Instagram-Post-3.jpg"
+      "Image1": "/assets/blain-zetelbed-2.jpg",
+      "Image2": "/assets/Giveaway-Time-Instagram-Post-3.jpg"
     },
     "Measurement": {
       "Length": "200cm",
@@ -2092,8 +2092,8 @@
   {
     "Id": "89",
     "Images": {
-      "Image1": "./src/assets/951b056a-9a7e-4158-a102-466a9fc9fc94.jpg",
-      "Image2": "./src/assets/3c9500ab-9b4f-488c-9226-ab5e960c5a7d.jpg"
+      "Image1": "/assets/951b056a-9a7e-4158-a102-466a9fc9fc94.jpg",
+      "Image2": "/assets/3c9500ab-9b4f-488c-9226-ab5e960c5a7d.jpg"
     },
     "Measurement": {
       "Length": "196cm",
@@ -2119,8 +2119,8 @@
   {
     "Id": "90",
     "Images": {
-      "Image1": "./src/assets/Rousseau201040-120slaapbank20lit-canapC3A920Adana201-14.jpg",
-      "Image2": "./src/assets/Rousseau201040-120slaapbank20lit-canapC3A920Adana209-7.jpg"
+      "Image1": "/assets/Rousseau201040-120slaapbank20lit-canapC3A920Adana201-14.jpg",
+      "Image2": "/assets/Rousseau201040-120slaapbank20lit-canapC3A920Adana209-7.jpg"
     },
     "Measurement": {
       "Length": "214cm",
@@ -2145,8 +2145,8 @@
   {
     "Id": "91",
     "Images": {
-      "Image1": "./src/assets/Rousseau2088109-120Bed20Lit20Sablo201.jpg",
-      "Image2": "./src/assets/Rousseau2088109-220Bed20Lit20Sablo206.jpg"
+      "Image1": "/assets/Rousseau2088109-120Bed20Lit20Sablo201.jpg",
+      "Image2": "/assets/Rousseau2088109-220Bed20Lit20Sablo206.jpg"
     },
     "Measurement": {
       "Length": "208cm",
@@ -2171,8 +2171,8 @@
   {
     "Id": "92",
     "Images": {
-      "Image1": "./src/assets/kiddygrijs_resultaat-1.jpg",
-      "Image2": "./src/assets/KIBE9014-INF_resultaat.jpg"
+      "Image1": "/assets/kiddygrijs_resultaat-1.jpg",
+      "Image2": "/assets/KIBE9014-INF_resultaat.jpg"
     },
     "Measurement": {
       "Length": "205,5cm",
@@ -2199,8 +2199,8 @@
   {
     "Id": "93",
     "Images": {
-      "Image1": "./src/assets/Rousseau20891220plooibed20lit20pliable20Bruxelles201.jpg",
-      "Image2": "./src/assets/Rousseau20891220plooibed20lit20pliable20Bruxelles207-768x512.jpg"
+      "Image1": "/assets/Rousseau20891220plooibed20lit20pliable20Bruxelles201.jpg",
+      "Image2": "/assets/Rousseau20891220plooibed20lit20pliable20Bruxelles207-768x512.jpg"
     },
     "Measurement": {
       "Length": "200cm",
@@ -2224,8 +2224,8 @@
   {
     "Id": "94",
     "Images": {
-      "Image1": "./src/assets/wimex-verticaal-opklapbed-juist-verticaal-inklapbaar-bruin-5.webp",
-      "Image2": "./src/assets/wimex-verticaal-opklapbed-juist-verticaal-inklapbaar-bruin-6.webp"
+      "Image1": "/assets/wimex-verticaal-opklapbed-juist-verticaal-inklapbaar-bruin-5.webp",
+      "Image2": "/assets/wimex-verticaal-opklapbed-juist-verticaal-inklapbaar-bruin-6.webp"
     },
     "Measurement": {
       "Length": "200cm",
@@ -2254,8 +2254,8 @@
   {
     "Id": "95",
     "Images": {
-      "Image1": "./src/assets/AMBE9014_INF_2326-scaled.jpg",
-      "Image2": "./src/assets/AMBE9014_dcce.jpg"
+      "Image1": "/assets/AMBE9014_INF_2326-scaled.jpg",
+      "Image2": "/assets/AMBE9014_dcce.jpg"
     },
     "Measurement": {
       "Length": "200cm",
@@ -2279,8 +2279,8 @@
   {
     "Id": "96",
     "Images": {
-      "Image1": "./src/assets/BARNIE.jpg",
-      "Image2": "./src/assets/barnie__-scaled.jpg"
+      "Image1": "/assets/BARNIE.jpg",
+      "Image2": "/assets/barnie__-scaled.jpg"
     },
     "Measurement": {
       "Length": "200cm",
@@ -2304,8 +2304,8 @@
   {
     "Id": "97",
     "Images": {
-      "Image1": "./src/assets/S4554_WHITE_CHENILLE-1.jpg",
-      "Image2": "./src/assets/S4554_WHITE_CHENILLE-6-768x768.jpg"
+      "Image1": "/assets/S4554_WHITE_CHENILLE-1.jpg",
+      "Image2": "/assets/S4554_WHITE_CHENILLE-6-768x768.jpg"
     },
     "Measurement": {
       "Length": "57cm",
@@ -2329,8 +2329,8 @@
   {
     "Id": "98",
     "Images": {
-      "Image1": "./src/assets/S4584_WOOD_RENEGADE-1.jpg",
-      "Image2": "./src/assets/S4584_WOOD_RENEGADE-6.jpg"
+      "Image1": "/assets/S4584_WOOD_RENEGADE-1.jpg",
+      "Image2": "/assets/S4584_WOOD_RENEGADE-6.jpg"
     },
     "Measurement": {
       "Length": "49cm",
@@ -2354,8 +2354,8 @@
   {
     "Id": "99",
     "Images": {
-      "Image1": "./src/assets/S4716_MUSTARD_FUSION-1.jpg",
-      "Image2": "./src/assets/S4716_MUSTARD_FUSION-6-800x800.jpg"
+      "Image1": "/assets/S4716_MUSTARD_FUSION-1.jpg",
+      "Image2": "/assets/S4716_MUSTARD_FUSION-6-800x800.jpg"
     },
     "Measurement": {
       "Length": "52cm",
@@ -2379,8 +2379,8 @@
   {
     "Id": "100",
     "Images": {
-      "Image1": "./src/assets/MNBE9014_1_8bc7.jpg",
-      "Image2": "./src/assets/MNBE9093_INF_M_9d43.jpg"
+      "Image1": "/assets/MNBE9014_1_8bc7.jpg",
+      "Image2": "/assets/MNBE9093_INF_M_9d43.jpg"
     },
     "Measurement": {
       "Length": "200cm",

@@ -4,8 +4,8 @@
       <div id="container-left-upper">
 
         <p>Home/Categorieen/zetels/</p>
-
-        <Carousel class="horizontal-carousel">
+     
+        <!-- <Carousel class="horizontal-carousel">
           <template #slides>
             <Slide v-for="item in product.Images" :key="item">
               <div>
@@ -16,8 +16,12 @@
           <template #addons>
             <Navigation class="buttons"/>
           </template>
-        </Carousel>
+        </Carousel> -->
 
+
+        <div class="fotorama">
+          <img v-for="item in product.Images" :src="item" alt="een foto">
+        </div>
       </div>
       <div id="container-right-upper">
         <h1>{{ product.Name }}</h1>
@@ -199,7 +203,7 @@ import {ref} from 'vue';
 
 import {Carousel, Slide, Navigation} from 'vue3-carousel'
 import 'fotorama/fotorama.css';
-import 'jquery'
+import $ from 'jquery';
 
 
 export default {
@@ -328,14 +332,27 @@ export default {
     showQr() {
       this.qrCodePopup = !this.qrCodePopup;
     },
-  }
-  ,
+    loadFotorama() {
+        let script = document.createElement('script');
+        script.src = 'https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js';
+        document.documentElement.firstChild.appendChild(script);
+    },
+    loadJquery() {
+        let script = document.createElement('script');
+        script.src = 'https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js';
+        document.documentElement.firstChild.appendChild(script);
+    }
+},
+  
+  
   created() {
     console.log("currentProductIndex:", this.currentProductIndex);
     // Haal de currentProductIndex op uit de route parameters
     this.averageStars = this.calculateAverageStars;
     this.totalReviews = this.calculateTotalReviews;
     this.averageRatings = this.calculateAverageRatings;
+    this.loadJquery();
+    this.loadFotorama();
 
   },
   watch: {
@@ -354,6 +371,13 @@ export default {
 
 <style lang="scss" scoped>
 @import url('@fortawesome/fontawesome-free/css/all.css');
+//import fotorama
+@import url('fotorama/fotorama.css');
+
+.fotorama {
+  width: 80%;
+  height: 80%;
+}
 
 @mixin carousel-button() {
   position: absolute;
@@ -480,7 +504,7 @@ $with-buttons: calc(100% / 4);
 
   #container-left-upper {
     width: 60vw;
-    margin: 10rem 10rem 15rem 4rem;
+    margin: 10rem -7rem 15rem 4rem;
 
     .horizontal-carousel {
       img {
