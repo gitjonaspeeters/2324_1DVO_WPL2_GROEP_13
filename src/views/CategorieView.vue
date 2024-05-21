@@ -7,34 +7,34 @@
     <div class="container-first">
       <div class="container-closet">
         <div class="closet">
-          <router-link to="/products"><p class="hover-effect">Kasten</p></router-link>
+          <router-link :to="{ name: 'products', query: { category: 'Closet' } }"><p class="hover-effect">Kasten</p></router-link>
         </div>
       </div>
       <div class="container-Chair-desk">
         <div class="Chair">
-          <router-link to="/products"><p class="hover-effect">Stoelen</p></router-link>
+          <router-link :to="{ name: 'products', query: { category: 'Chair' } }"><p class="hover-effect">Stoelen</p></router-link>
         </div>
         <div class="desk">
-          <router-link to="/products"><p class="hover-effect">Bureaus</p></router-link>
+          <router-link :to="{ name: 'products', query: { category: 'Desk' } }"><p class="hover-effect">Bureaus</p></router-link>
         </div>
       </div>
     </div>
     <div class="container-second">
       <div class="container-bed">
         <div class="bed">
-          <router-link to="/products"><p class="hover-effect">Bedden</p></router-link>
+          <router-link :to="{ name: 'products', query: { category: 'Bed' } }"><p class="hover-effect">Bedden</p></router-link>
         </div>
       </div>
       <div class="container-sofa">
         <div class="sofa">
-          <router-link to="/products"><p class="hover-effect">Zetels</p></router-link>
+          <router-link :to="{ name: 'products', query: { category: 'Sofa' } }"><p class="hover-effect">Zetels</p></router-link>
         </div>
       </div>
     </div>
     <div class="container-last">
       <div class="container-home-accessories">
         <div class="home-accessories">
-          <router-link to="/products"><p class="hover-effect">Woonaccessoires</p></router-link>
+          <router-link :to="{ name: 'products', query: { category: 'Home accessories' } }"><p class="hover-effect">Woonaccessoires</p></router-link>
         </div>
       </div>
     </div>
@@ -87,7 +87,7 @@ a {
 }
 
 .home-accessories {
-  background-image: url("@/assets/HomeAccessoriesCategorie.png");
+  background-image: url("@/assets/homeaccessoriesCategorie.png");
    
   width: 1300px;
   height: 316px;
@@ -498,7 +498,7 @@ image {
   }
 
   .bed {
-    background-image: url("@/assets/Bedden VD.png");
+    background-image: url("@/assets/bedden VD.png");
     width: 360px;
     height: 360px;
     margin: 25px 15px 25px 15px;
