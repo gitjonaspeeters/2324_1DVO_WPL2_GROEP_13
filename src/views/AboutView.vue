@@ -187,7 +187,7 @@ ondubbelzinnig meegedeeld.</h2>
         </ul>
         <p>Geniet van uw aankopen!</p>
       </div>
-      <div class="popup-prijzen-content" v-else-if=" popup[selectedItemIndex].productTitle === 'Prijzen'">
+      <div class="popup-prijzen-content" v-else-if=" popup[selectedItemIndex].productTitle === 'Give Away'">
         <h1>{{ popup[selectedItemIndex].productTitle }}</h1>
         <div class="social-icons">
           <a href="https://www.instagram.com/comfortmeubel/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
@@ -216,13 +216,13 @@ export default {
   data() {
     return {
       popup: [
-        { imageUrl: "/assets/levering.png", productTitle: "Levering"},
-        { imageUrl: "/assets/Afhalen.png", productTitle: "Afhalen"},
-        { imageUrl: "/assets/Schade.png", productTitle: "Schade"},
-        { imageUrl: "/assets/Verhuur.png", productTitle: "Verhuur"},
-        { imageUrl: "/assets/Montage.png", productTitle: "Montage"},
-        { imageUrl: "/assets/Prijzen.png", productTitle: "Prijzen"},
-        { imageUrl: "/assets/Vragen.png", productTitle: "Vragen"},
+        { imageUrl: "/assets/Leveringen.jpg", productTitle: "Levering"},
+        { imageUrl: "/assets/Afhalen.jpg", productTitle: "Afhalen"},
+        { imageUrl: "/assets/Schade.jpeg", productTitle: "Schade"},
+        { imageUrl: "/assets/Verhuur.jpg", productTitle: "Verhuur"},
+        { imageUrl: "/assets/Montage.jpg", productTitle: "Montage"},
+        { imageUrl: "/assets/GiveAway.jpg", productTitle: "Give Away"},
+        { imageUrl: "/assets/Vragen.jpg", productTitle: "Vragen"},
         { imageUrl: "/assets/Formulieren.png", productTitle: "Formulieren"}
       ],
       selectedItemIndex: null
@@ -444,7 +444,6 @@ export default {
   text-align: center;
   background-color: #485059; 
   padding: 0  0 1rem 0;
-  border-radius: 1rem;
   cursor: pointer;
   
 }
@@ -464,8 +463,6 @@ export default {
   max-height: 200px; 
   object-fit: cover;
   margin-bottom: 1rem;
-  border-radius: 1rem 1rem 0 0;
-
 }
 
 .popup-title {
