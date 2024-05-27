@@ -13,5 +13,5 @@ Case gaat over, Wij hebben case6 dit is een project van new code. Waar wij een w
 # Bronnen
 - ...
 
-# netlify
+# Netlify
 - https://master--comfortmeubel13.netlify.app/
