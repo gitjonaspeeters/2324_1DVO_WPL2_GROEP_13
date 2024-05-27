@@ -11,7 +11,13 @@ Case gaat over, Wij hebben case6 dit is een project van new code. Waar wij een w
 - Matthias Billen (MatthiasBillen)
 
 # Bronnen
-- ...
+- W3schools https://www.w3schools.com/
+- Adobe stock
+- Chatgpt
+- MDN https://developer.mozilla.org/en-US/
+- Adobe firefly  https://firefly.adobe.com/
+- Stackoverflow https://stackoverflow.com/
+- Gemini
 
 # Netlify
 - https://master--comfortmeubel13.netlify.app/
