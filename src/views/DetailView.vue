@@ -2,26 +2,13 @@
   <div id="container">
     <div id="container-upper">
       <div id="container-left-upper">
-
         <p>Home/Categorieen/zetels/</p>
-
-        <Carousel class="horizontal-carousel">
-          <template #slides>
-            <Slide v-for="item in product.Images" :key="item">
-              <div>
-                <img :src="item" alt="een foto">
-              </div>
-            </Slide>
-          </template>
-          <template #addons>
-            <Navigation class="buttons"/>
-          </template>
-        </Carousel>
-
+        <div class="fotorama">
+          <img v-for="item in product.Images" :src="item" alt="een foto">
+        </div>
       </div>
       <div id="container-right-upper">
         <h1>{{ product.Name }}</h1>
-
         <p id="text-kleur">kleuren:</p>
         <div id="kleuren">
           <div class="kleur" v-for="color in colors" :key="color" :style="{ backgroundColor: color }"></div>
@@ -52,124 +39,13 @@
           </div>
           <p>{{ averageStars.toFixed(1) }} ({{ totalReviews }} reviews)</p>
         </div>
-        <div id="review">
-          <h2>Beoordeling</h2>
-          <div class="rating">
-            <div>5 <span>sterren</span></div>
-            <div>
-              <div :style="{ width: (averageStars / 5) * 100 + '%' }"></div>
-            </div>
-            <p>{{ fiveStarReviews.length }}<span>reviews</span></p>
-          </div>
-          <div class="rating">
-            <div>4 <span>sterren</span></div>
-            <div>
-              <div :style="{ width: (averageStars4 / 5) * 100 + '%' }"></div>
-            </div>
-            <p>{{ fourStarReviews.length }}<span>reviews</span></p>
-          </div>
-          <div class="rating">
-            <div>3 <span>sterren</span></div>
-            <div>
-              <div :style="{ width: (averageStars3 / 5) * 100 + '%' }"></div>
-            </div>
-            <p>{{ threeStarReviews.length }}<span>reviews</span></p>
-          </div>
-          <div class="rating">
-            <div>2 <span>sterren</span></div>
-            <div>
-              <div :style="{ width: (averageStars2 / 5) * 100 + '%' }"></div>
-            </div>
-            <p>{{ twoStarReviews.length }}<span>reviews</span></p>
-          </div>
-          <div class="rating">
-            <div>1 <span>sterren</span></div>
-            <div>
-              <div :style="{ width: (averageStars1 / 5) * 100 + '%' }"></div>
-            </div>
-            <p>{{ oneStarReviews.length }}<span>reviews</span></p>
-          </div>
-        </div>
-        <div id="review-per-part">
-          <h2>Beoordeling per onderdeel</h2>
-          <div class="part">
-            <p>Zitgemak</p>
-            <div>
-              <template v-for="star in 5">
-                <span v-if="star <= averageRatings.zitgemak" class="star">
-                  <i class="fa-regular fa-star fa-rotate-180"></i>
-                </span>
-                <span v-else class="star">
-                  <i class="fa-regular fa-star fa-rotate-180"></i>
-                </span>
-              </template>
-            </div>
-            <p>{{ averageRatings.zitgemak.toFixed(1) }}</p>
-          </div>
-          <div class="part">
-            <p>Liggemak</p>
-            <div>
-              <template v-for="star in 5">
-                <span v-if="star <= averageRatings.liggemak" class="star">
-                  <i class="fa-regular fa-star fa-rotate-180"></i>
-                </span>
-                <span v-else class="star">
-                  <i class="fa-regular fa-star fa-rotate-180"></i>
-                </span>
-              </template>
-            </div>
-            <p>{{ averageRatings.liggemak.toFixed(1) }}</p>
-          </div>
-          <div class="part">
-            <p>Kwaliteit</p>
-            <div>
-              <template v-for="star in 5">
-                <span v-if="star <= averageRatings.kwaliteit" class="star">
-                  <i class="fa-regular fa-star fa-rotate-180"></i>
-                </span>
-                <span v-else class="star">
-                  <i class="fa-regular fa-star fa-rotate-180"></i>
-                </span>
-              </template>
-            </div>
-            <p>{{ averageRatings.kwaliteit.toFixed(1) }}</p>
-          </div>
-          <div class="part">
-            <p>Montage</p>
-            <div>
-              <template v-for="star in 5">
-                <span v-if="star <= averageRatings.montage" class="star">
-                  <i class="fa-regular fa-star fa-rotate-180"></i>
-                </span>
-                <span v-else class="star">
-                  <i class="fa-regular fa-star fa-rotate-180"></i>
-                </span>
-              </template>
-            </div>
-            <p>{{ averageRatings.montage.toFixed(1) }}</p>
-          </div>
-
-          <div class="part">
-            <p>Trendy</p>
-            <div>
-              <template v-for="star in 5">
-                <span v-if="star <= averageRatings.trendy" class="star">
-                  <i class="fa-regular fa-star fa-rotate-180"></i>
-                </span>
-                <span v-else class="star">
-                  <i class="fa-regular fa-star fa-rotate-180"></i>
-                </span>
-              </template>
-            </div>
-            <p>{{ averageRatings.trendy.toFixed(1) }}</p>
-          </div>
-        </div>
+        <!-- Rest of your component -->
       </div>
       <div id="container-bottem-right">
         <div v-for="(review, index) in filteredReviews" :key="index" class="review">
           <div class="icons">
             <span v-for="star in review.stars" :key="star" class="star">
-                  <i class="fa-regular fa-star fa-rotate-180"></i>
+              <i class="fa-regular fa-star fa-rotate-180"></i>
             </span>
           </div>
           <h2>{{ review.title }}</h2>
@@ -191,23 +67,17 @@
     </div>
   </div>
 </template>
+
 <script>
 import BestProducts from "@/components/Best-products.vue";
 import reviewsData from '@/data/reviews.json';
 import productsData from '@/data/product.json';
-import {ref} from 'vue';
-
-import {Carousel, Slide, Navigation} from 'vue3-carousel'
+import { ref } from 'vue';
 import 'fotorama/fotorama.css';
-import 'jquery'
-
 
 export default {
   name: 'DetailView',
   components: {
-    Carousel,
-    Slide,
-    Navigation,
     BestProducts,
   },
   props: {
@@ -216,111 +86,49 @@ export default {
       required: true,
     },
   },
-
   data() {
     const colors = [
       '#FFFFFF',
       '#121212',
       '#000000',
       '#343434',
-    ]
+    ];
     return {
       colors,
       reviewsData: reviewsData,
       productsData: productsData,
-
       currentProductIndex: this.$route.params.currentProductIndex - 1,
       quantity: 1,
-      averageStars: 0, // Gemiddeld aantal sterren
-      totalReviews: 0, // Totaal aantal beoordelingen
-      averageRatings: {}, // Gemiddelde beoordelingen per aspect
+      averageStars: 0,
+      totalReviews: 0,
+      averageRatings: {},
       qrCodePopup: false,
     };
-
-  },
-
-  mounted() {
-
-
   },
   computed: {
     product() {
-      console.log("id", this.currentProductIndex)
       return this.productsData[this.currentProductIndex];
-    }
-    ,
+    },
     filteredReviews() {
       return this.reviewsData.filter(review => review.id === this.currentProductIndex);
-    }
-    ,
+    },
     calculateAverageStars() {
       const totalStars = this.filteredReviews.reduce((acc, review) => acc + review.stars, 0);
       return totalStars / this.filteredReviews.length;
-    }
-    ,
-    // Totaal aantal beoordelingen
+    },
     calculateTotalReviews() {
       return this.filteredReviews.length;
-    }
-    ,
-    // Bereken gemiddelde beoordelingen per aspect
+    },
     calculateAverageRatings() {
       const aspects = ['zitgemak', 'liggemak', 'kwaliteit', 'montage', 'trendy'];
       const averageRatings = {};
       aspects.forEach(aspect => {
-        const aspectTotal = this.filteredReviews.reduce((acc, filteredReviews) => acc + (filteredReviews.ratings_per_aspect[aspect] || 0), 0);
+        const aspectTotal = this.filteredReviews.reduce((acc, review) => acc + (review.ratings_per_aspect[aspect] || 0), 0);
         averageRatings[aspect] = aspectTotal / this.totalReviews;
       });
       return averageRatings;
-    }
-    ,
-    fiveStarReviews() {
-      return this.filteredReviews.filter(review => review.stars === 5);
-    }
-    ,
-    fourStarReviews() {
-      return this.filteredReviews.filter(review => review.stars === 4);
-    }
-    ,
-    threeStarReviews() {
-      return this.filteredReviews.filter(review => review.stars === 3);
-    }
-    ,
-    twoStarReviews() {
-      return this.filteredReviews.filter(review => review.stars === 2);
-    }
-    ,
-    oneStarReviews() {
-      return this.filteredReviews.filter(review => review.stars === 1);
-    }
-    ,
-    averageStars() {
-      const totalStars = this.filteredReviews.reduce((acc, review) => acc + review.stars, 0);
-      return totalStars / this.filteredReviews.length;
-    }
-    ,
-    averageStars4() {
-      const totalStars4 = this.fourStarReviews.reduce((acc, review) => acc + review.stars, 0);
-      return totalStars4 / this.fourStarReviews.length;
-    }
-    ,
-    averageStars3() {
-      const totalStars3 = this.threeStarReviews.reduce((acc, review) => acc + review.stars, 0);
-      return totalStars3 / this.threeStarReviews.length;
-    }
-    ,
-    averageStars2() {
-      const totalStars2 = this.twoStarReviews.reduce((acc, review) => acc + review.stars, 0);
-      return totalStars2 / this.twoStarReviews.length;
-    }
-    ,
-    averageStars1() {
-      const totalStars1 = this.oneStarReviews.reduce((acc, review) => acc + review.stars, 0);
-      return totalStars1 / this.oneStarReviews.length;
-    }
-    ,
-  }
-  ,
+    },
+  },
   methods: {
     addToCart() {
       // Implement add to cart functionality
@@ -328,32 +136,43 @@ export default {
     showQr() {
       this.qrCodePopup = !this.qrCodePopup;
     },
-  }
-  ,
+    loadFotorama() {
+      const script = document.createElement('script');
+      script.src = 'https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js';
+      document.body.appendChild(script);
+    },
+    loadJquery() {
+      const script = document.createElement('script');
+      script.src = 'https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js';
+      document.body.appendChild(script);
+      script.onload = this.loadFotorama;
+    },
+  },
   created() {
-    console.log("currentProductIndex:", this.currentProductIndex);
-    // Haal de currentProductIndex op uit de route parameters
     this.averageStars = this.calculateAverageStars;
     this.totalReviews = this.calculateTotalReviews;
     this.averageRatings = this.calculateAverageRatings;
-
+    this.loadJquery();
   },
   watch: {
     '$route.params.currentProductIndex'(newIndex) {
-      console.log("Route param changed:", newIndex);
       this.currentProductIndex = newIndex;
       this.averageStars = this.calculateAverageStars;
       this.totalReviews = this.calculateTotalReviews;
       this.averageRatings = this.calculateAverageRatings;
     },
   },
-
 };
-
 </script>
 
 <style lang="scss" scoped>
 @import url('@fortawesome/fontawesome-free/css/all.css');
+@import url('fotorama/fotorama.css');
+
+.fotorama {
+  width: 80%;
+  height: 80%;
+}
 
 @mixin carousel-button() {
   position: absolute;
@@ -480,7 +299,7 @@ $with-buttons: calc(100% / 4);
 
   #container-left-upper {
     width: 60vw;
-    margin: 10rem 10rem 15rem 4rem;
+    margin: 10rem -7rem 15rem 4rem;
 
     .horizontal-carousel {
       img {

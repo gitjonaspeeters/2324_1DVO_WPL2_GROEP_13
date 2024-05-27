@@ -290,14 +290,19 @@ export default {
             if (this.currentPage < this.totalPages) {
                 this.currentPage++;
             }
+            window.scrollTo(0, 0);
         },
         prevPage() {
             if (this.currentPage > 1) {
                 this.currentPage--;
             }
+            window.scrollTo(0, 0);
         },
         goToPage(pageNumber) {
             this.currentPage = pageNumber;
+            window.scrollTo(0, 0);
+
+            
         }
     },
     computed: {

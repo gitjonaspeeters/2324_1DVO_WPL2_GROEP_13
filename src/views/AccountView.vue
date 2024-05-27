@@ -97,7 +97,7 @@ hr {
 #image {
   width: 100%;
   height: 100%;
-  background-image: url("src/assets/undraw_access_account_re_8spm.svg");
+  background-image: url("/assets/undraw_access_account_re_8spm.svg");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
